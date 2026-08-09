@@ -1,0 +1,16 @@
+{
+  "id": "esc",
+  "name_ko": "ESC(변속기)",
+  "name_en": "ESCs",
+  "phase": 1,
+  "specs": [
+    {"key": "cont_current_a",  "name_ko": "연속 전류",      "unit": "A",  "type": "numeric", "compare_default": true,  "sort": 10},
+    {"key": "burst_current_a", "name_ko": "순간 전류",      "unit": "A",  "type": "numeric", "requires_conditions": true, "compare_default": true, "sort": 20},
+    {"key": "cells_range",     "name_ko": "지원 셀수",      "unit": null, "type": "text",    "compare_default": true,  "sort": 30},
+    {"key": "max_voltage_v",   "name_ko": "최대 전압",      "unit": "V",  "type": "numeric", "compare_default": false, "sort": 40},
+    {"key": "bec",             "name_ko": "BEC",           "unit": null, "type": "text",    "compare_default": true,  "sort": 50},
+    {"key": "weight_g",        "name_ko": "무게",           "unit": "g",  "type": "numeric", "compare_default": true,  "sort": 60},
+    {"key": "dimensions_mm",   "name_ko": "크기",           "unit": "mm", "type": "text",    "compare_default": false, "sort": 70},
+    {"key": "signal_hz_max",   "name_ko": "최대 신호 주파수", "unit": "Hz", "type": "numeric", "compare_default": false, "sort": 80}
+  ]
+}

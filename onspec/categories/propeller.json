@@ -1,0 +1,15 @@
+{
+  "id": "propeller",
+  "name_ko": "프로펠러",
+  "name_en": "Propellers",
+  "phase": 1,
+  "specs": [
+    {"key": "diameter_in",  "name_ko": "직경",      "unit": "in",  "type": "numeric", "compare_default": true,  "sort": 10},
+    {"key": "pitch_in",     "name_ko": "피치",      "unit": "in",  "type": "numeric", "compare_default": true,  "sort": 20},
+    {"key": "weight_g",     "name_ko": "무게",      "unit": "g",   "type": "numeric", "compare_default": true,  "sort": 30},
+    {"key": "blades",       "name_ko": "블레이드 수", "unit": null,  "type": "integer", "compare_default": true,  "sort": 40},
+    {"key": "material",     "name_ko": "재질",      "unit": null,  "type": "text",    "compare_default": true,  "sort": 50},
+    {"key": "rotation",     "name_ko": "회전 방향",  "unit": null,  "type": "text",    "compare_default": false, "sort": 60},
+    {"key": "hub_bore_mm",  "name_ko": "허브 보어",  "unit": "mm",  "type": "numeric", "compare_default": false, "sort": 70}
+  ]
+}

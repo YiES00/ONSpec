@@ -1,0 +1,497 @@
+{
+  "_comment": "원문 스냅샷 픽스처 — 2026-08-08 실제 웹 수집 결과. 운영 환경에서는 collect.py(크롤러)+extract.py(LLM)가 이 형식을 생성한다. raw_excerpt는 수집 시점 원문 발췌이며, 각 claim의 quote는 해당 값의 근거 원문이다.",
+  "snapshots": [
+    {
+      "snapshot_id": "snap-tmotor-mn505s-official",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
+      "title": "MN505-S KV320 UAV / Drone Motor - IP45 & Overload Protection",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "T-MOTOR MN505-S KV320 Navigator Motor delivers up to 7kg high thrust for UAVs, ideal for multi-rotor and VTOL drones... IP45 & Overload Protection",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "T-Motor", "hq_country": "CN", "website": "https://store.tmotor.com"},
+          "model_name": "MN505-S", "variant": "KV320",
+          "mfg_country": null,
+          "specs": [
+            {"key": "kv", "value": 320, "unit": "rpm/V", "quote": "MN505-S KV320", "conditions": {}},
+            {"key": "max_thrust_g", "value": 7000, "unit": "g", "quote": "delivers up to 7kg high thrust for UAVs", "conditions": {"note": "측정 조건(프로펠러/전압) 미기재 — 마케팅 문구"}},
+            {"key": "ip_rating", "value_text": "IP45", "quote": "IP45 & Overload Protection", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-robotshop-mn505s",
+      "tier": "S2_vendor",
+      "origin_url": "https://www.robotshop.com/products/ligpower-navigator-mn505-s-kv320-waterproof-uav-motor-w-66kg-max-thrust",
+      "title": "LIGPOWER Navigator MN505-S KV320 Waterproof UAV Motor w/ 6.6kg Max Thrust - RobotShop",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "RobotShop", "country": "CA", "trust_weight": 0.6},
+      "raw_excerpt": "Delivers 6.6kg max thrust for powerful performance... 1000-hour MTBF... Stator made of imported silicon steel sheet",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "T-Motor", "hq_country": "CN"},
+          "model_name": "MN505-S", "variant": "KV320",
+          "mfg_country": null,
+          "specs": [
+            {"key": "max_thrust_g", "value": 6600, "unit": "g", "quote": "Delivers 6.6kg max thrust for powerful performance", "conditions": {"note": "측정 조건 미기재"}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-druav-mn505s",
+      "tier": "S2_vendor",
+      "origin_url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
+      "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "DrUAV", "country": null, "trust_weight": 0.5},
+      "raw_excerpt": "6.7 kg Max Thrust... designed by T-Motor in China... Rated voltage: 320V (LiPo)... Peak current (180 seconds): 55A... Maximum power output: 1200W... Motor weight (including cable): 2258 grams... Internal resistance: 38mOhm... Propeller recommendation: 20-22 inches",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "T-Motor", "hq_country": "CN"},
+          "model_name": "MN505-S", "variant": "KV320",
+          "mfg_country": {"country": "CN", "status": "claimed", "quote": "designed by T-Motor in China"},
+          "specs": [
+            {"key": "max_thrust_g", "value": 6700, "unit": "g", "quote": "6.7 kg Max Thrust", "conditions": {"note": "측정 조건 미기재"}},
+            {"key": "max_power_w", "value": 1200, "unit": "W", "quote": "Maximum power output: 1200W", "conditions": {}},
+            {"key": "max_current_a", "value": 55, "unit": "A", "quote": "Peak current (180 seconds): 55A", "conditions": {"duration_s": 180}},
+            {"key": "max_voltage_v", "value": 320, "unit": "V", "quote": "Rated voltage: 320V (LiPo)", "conditions": {"note": "리스팅 원문 그대로 — KV값 혼동 의심"}},
+            {"key": "weight_g", "value": 2258, "unit": "g", "quote": "Motor weight (including cable): 2258 grams", "conditions": {}},
+            {"key": "resistance_mohm", "value": 38, "unit": "mΩ", "quote": "Internal resistance: 38mOhm", "conditions": {}},
+            {"key": "prop_rec", "value_text": "20~22인치", "quote": "Propeller recommendation: 20-22 inches", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-rcdrone-mn505s",
+      "tier": "S2_vendor",
+      "origin_url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
+      "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "RCDrone.top", "country": null, "trust_weight": 0.4},
+      "raw_excerpt": "Motor Size 055.6*38.9mm... Configuration 24N28P... Shaft Diameter 6mm... Origin: Mainland China",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "T-Motor", "hq_country": "CN"},
+          "model_name": "MN505-S", "variant": "KV320",
+          "mfg_country": {"country": "CN", "status": "claimed", "quote": "Origin: Mainland China"},
+          "specs": [
+            {"key": "stator_dia_mm", "value": 55.6, "unit": "mm", "quote": "Motor Size 055.6*38.9mm", "conditions": {"note": "모터 외경 기준"}},
+            {"key": "stator_len_mm", "value": 38.9, "unit": "mm", "quote": "Motor Size 055.6*38.9mm", "conditions": {"note": "모터 전고 기준"}},
+            {"key": "config", "value_text": "24N28P", "quote": "Configuration 24N28P", "conditions": {}},
+            {"key": "shaft_dia_mm", "value": 6, "unit": "mm", "quote": "Shaft Diameter 6mm", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-iflight-xing2-official",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
+      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "KV: 1855KV / 2755KV. Weight(included wire): 31.6g. Dimension: 29.08*32.6mm. Interphase Resistance: 50mOhm / 41.5mOhm. Input Volts: 24V / 16V. Peak Current: 35.08A / 40.35A. Max Watt: 841.90W / 645.60W. Configuration: 12N14P. Shaft Diameter: 5mm",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "iFlight", "hq_country": "CN", "website": "https://shop.iflight.com"},
+          "model_name": "XING2 2207", "variant": "1855KV",
+          "mfg_country": null,
+          "specs": [
+            {"key": "kv", "value": 1855, "unit": "rpm/V", "quote": "KV: 1855KV / 2755KV", "conditions": {}},
+            {"key": "weight_g", "value": 31.6, "unit": "g", "quote": "Weight(included wire): 31.6g", "conditions": {"note": "케이블 포함"}},
+            {"key": "max_power_w", "value": 841.9, "unit": "W", "quote": "Max Watt: 841.90W / 645.60W", "conditions": {"voltage_v": 24, "variant": "1855KV"}},
+            {"key": "max_current_a", "value": 35.08, "unit": "A", "quote": "Peak Current: 35.08A / 40.35A", "conditions": {"voltage_v": 24, "variant": "1855KV"}},
+            {"key": "max_voltage_v", "value": 24, "unit": "V", "quote": "Input Volts: 24V / 16V", "conditions": {"variant": "1855KV"}},
+            {"key": "resistance_mohm", "value": 50, "unit": "mΩ", "quote": "Interphase Resistance: 50mOhm / 41.5mOhm", "conditions": {"variant": "1855KV"}},
+            {"key": "config", "value_text": "12N14P", "quote": "Configuration: 12N14P", "conditions": {}},
+            {"key": "shaft_dia_mm", "value": 5, "unit": "mm", "quote": "Shaft Diameter: 5mm", "conditions": {}},
+            {"key": "cells_range", "value_text": "4~6S", "quote": "XING2 2207 4S 6S FPV Motor", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-defiancerc-xing2",
+      "tier": "S2_vendor",
+      "origin_url": "https://www.defiancerc.com/products/iflight-xing2-2207-1855-kv-motors",
+      "title": "iFlight Xing2 2207 1855/2755 KV Motors - defianceRC",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "DefianceRC", "country": "US", "trust_weight": 0.6},
+      "raw_excerpt": "Stator Diameter: 22mm. Stator Length: 7mm. Weight: 31.6g with short wire. Configuration: 12N14P",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "iFlight", "hq_country": "CN"},
+          "model_name": "XING2 2207", "variant": "1855KV",
+          "mfg_country": null,
+          "specs": [
+            {"key": "stator_dia_mm", "value": 22, "unit": "mm", "quote": "Stator Diameter: 22mm", "conditions": {}},
+            {"key": "stator_len_mm", "value": 7, "unit": "mm", "quote": "Stator Length: 7mm", "conditions": {}},
+            {"key": "weight_g", "value": 31.6, "unit": "g", "quote": "Weight: 31.6g with short wire", "conditions": {"note": "케이블 포함"}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-ebay-xing2-price",
+      "tier": "S2_vendor",
+      "origin_url": "https://www.ebay.de/itm/175385064171",
+      "title": "4PCS iFlight XING2 2207 1855/2755KV - eBay",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "eBay(xintegroup)", "country": "CN", "trust_weight": 0.3},
+      "raw_excerpt": "4PCS iFlight XING2 2207 1855/2755KV... GBP 81.82... Country/Region of Manufacture: China",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "iFlight", "hq_country": "CN"},
+          "model_name": "XING2 2207", "variant": "1855KV",
+          "mfg_country": {"country": "CN", "status": "claimed", "quote": "Country/Region of Manufacture: China"},
+          "specs": [],
+          "price": {"currency": "GBP", "amount": 81.82, "pack_qty": 4, "in_stock": true, "quote": "GBP 81.82 (4PCS)"}
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-synthetic-fakespec",
+      "tier": "S2_vendor",
+      "origin_url": "fixture://synthetic/fakespec-2207-listing",
+      "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "합성 마켓플레이스(테스트)", "country": null, "trust_weight": 0.3},
+      "raw_excerpt": "[검증엔진 테스트용 가상 리스팅 — 실제 제품 아님] FakeSpec 2207 PowerBeast: MAX THRUST 2800g!!! Only 180W! Ultra efficiency 15.5g/W!",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {"name": "FakeSpec(가상 브랜드)", "hq_country": null},
+          "model_name": "2207 PowerBeast", "variant": "2450KV",
+          "is_synthetic_test": true,
+          "mfg_country": null,
+          "specs": [
+            {"key": "kv", "value": 2450, "unit": "rpm/V", "quote": "2450KV", "conditions": {}},
+            {"key": "weight_g", "value": 28, "unit": "g", "quote": "only 28g", "conditions": {}},
+            {"key": "max_thrust_g", "value": 2800, "unit": "g", "quote": "MAX THRUST 2800g!!!", "conditions": {"prop_diameter_in": 5.1}},
+            {"key": "max_power_w", "value": 180, "unit": "W", "quote": "Only 180W!", "conditions": {}},
+            {"key": "prop_rec", "value_text": "5.1인치", "quote": "for 5.1inch props", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-hobbywing-xrotorpro40-official",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://www.hobbywing.com/en/products/xrotor-pro-40a120",
+      "title": "XRotor Pro 40A Drone ESCs / 3-6S Speed Controller - HOBBYWING",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "XRotor Pro 40A... can be easily placed into a carbon-fiber tube with the I.D. of 23mm. Auto Timing Adjustment & Preset Parameters",
+      "claims": [
+        {
+          "category": "esc",
+          "manufacturer": {"name": "Hobbywing", "hq_country": "CN", "website": "https://www.hobbywing.com"},
+          "model_name": "XRotor Pro 40A", "variant": "OPTO",
+          "mfg_country": null,
+          "specs": [
+            {"key": "cont_current_a", "value": 40, "unit": "A", "quote": "XRotor Pro 40A", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-hobbyking-xrotorpro40",
+      "tier": "S2_vendor",
+      "origin_url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
+      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "HobbyKing", "country": "HK", "trust_weight": 0.6},
+      "raw_excerpt": "Constant current: 40A. Burst Current: 60A (10 seconds). BEC Mode: No BEC (OPTO). Lipo Cells: 3~6S (11.3~22.6V). Size: 66 x 22 x 11mm. Weight: 50g. Max support 621Hz throttle signal",
+      "claims": [
+        {
+          "category": "esc",
+          "manufacturer": {"name": "Hobbywing", "hq_country": "CN"},
+          "model_name": "XRotor Pro 40A", "variant": "OPTO",
+          "mfg_country": null,
+          "specs": [
+            {"key": "cont_current_a", "value": 40, "unit": "A", "quote": "Constant current: 40A", "conditions": {}},
+            {"key": "burst_current_a", "value": 60, "unit": "A", "quote": "Burst Current: 60A (10 seconds)", "conditions": {"duration_s": 10}},
+            {"key": "cells_range", "value_text": "3~6S", "quote": "Lipo Cells: 3~6S (11.3~22.6V)", "conditions": {}},
+            {"key": "max_voltage_v", "value": 22.6, "unit": "V", "quote": "Lipo Cells: 3~6S (11.3~22.6V)", "conditions": {}},
+            {"key": "bec", "value_text": "없음(OPTO)", "quote": "BEC Mode: No BEC (OPTO)", "conditions": {}},
+            {"key": "weight_g", "value": 50, "unit": "g", "quote": "Weight: 50g", "conditions": {}},
+            {"key": "dimensions_mm", "value_text": "66×22×11", "quote": "Size: 66 x 22 x 11mm", "conditions": {}},
+            {"key": "signal_hz_max", "value": 621, "unit": "Hz", "quote": "Max support 621Hz throttle signal", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-hobbywing-xrotor40-official",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://www.hobbywing.com/en/products/xrotor-40a122",
+      "title": "XRotor 40A 6S BLDC Brushless Drone ESC for Multirotor 2-6S - HOBBYWING",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "XRotor 40A ESC... Compatible with various flight-control systems and supports a throttle signal frequency of up to 621Hz",
+      "claims": [
+        {
+          "category": "esc",
+          "manufacturer": {"name": "Hobbywing", "hq_country": "CN"},
+          "model_name": "XRotor 40A", "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {"key": "cont_current_a", "value": 40, "unit": "A", "quote": "XRotor 40A ESC", "conditions": {}},
+            {"key": "cells_range", "value_text": "2~6S", "quote": "Drone ESC for Multirotor 2-6S", "conditions": {}},
+            {"key": "signal_hz_max", "value": 621, "unit": "Hz", "quote": "supports a throttle signal frequency of up to 621Hz", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-foxtech-xrotor40",
+      "tier": "S2_vendor",
+      "origin_url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
+      "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "Foxtech", "country": "CN", "trust_weight": 0.6},
+      "raw_excerpt": "Transient current: 60A. Continuous current: 40A. BEC: NO. Battery pack: 2-6S. Weight: 26g. Dimension: 68*25*2.7mm",
+      "claims": [
+        {
+          "category": "esc",
+          "manufacturer": {"name": "Hobbywing", "hq_country": "CN"},
+          "model_name": "XRotor 40A", "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {"key": "burst_current_a", "value": 60, "unit": "A", "quote": "Transient current: 60A", "conditions": {"note": "지속시간 미기재"}},
+            {"key": "cont_current_a", "value": 40, "unit": "A", "quote": "Continuous current: 40A", "conditions": {}},
+            {"key": "bec", "value_text": "없음", "quote": "BEC: NO", "conditions": {}},
+            {"key": "cells_range", "value_text": "2~6S", "quote": "Battery pack: 2-6S", "conditions": {}},
+            {"key": "weight_g", "value": 26, "unit": "g", "quote": "Weight: 26g", "conditions": {}},
+            {"key": "dimensions_mm", "value_text": "68×25×2.7", "quote": "Dimension: 68*25*2.7mm", "conditions": {"note": "두께 2.7mm는 오기 의심"}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-hobbywingdirect-xrotor40",
+      "tier": "S2_vendor",
+      "origin_url": "https://www.hobbywingdirect.com/products/xrotor-40a-esc",
+      "title": "XRotor 40A ESC COB - HOBBYWING North America",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "Hobbywing NA(공식 딜러)", "country": "US", "trust_weight": 0.8},
+      "raw_excerpt": "Size / Weight 68 x 25 x 8.7mm 26g (0.92oz)",
+      "claims": [
+        {
+          "category": "esc",
+          "manufacturer": {"name": "Hobbywing", "hq_country": "CN"},
+          "model_name": "XRotor 40A", "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {"key": "dimensions_mm", "value_text": "68×25×8.7", "quote": "Size / Weight 68 x 25 x 8.7mm", "conditions": {}},
+            {"key": "weight_g", "value": 26, "unit": "g", "quote": "26g (0.92oz)", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-apc-15055mr-official",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://www.apcprop.com/product/15x5-5mr/",
+      "title": "15x5.5MR - APC Propellers",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "15x5.5MR Multi-Rotor. Use LPAR06E adapter rings (not included)",
+      "claims": [
+        {
+          "category": "propeller",
+          "manufacturer": {"name": "APC Propellers", "hq_country": "US", "website": "https://www.apcprop.com"},
+          "model_name": "15x5.5MR", "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {"key": "diameter_in", "value": 15, "unit": "in", "quote": "15x5.5MR", "conditions": {}},
+            {"key": "pitch_in", "value": 5.5, "unit": "in", "quote": "15x5.5MR", "conditions": {}},
+            {"key": "blades", "value": 2, "unit": null, "quote": "Multi-Rotor (2-blade 표준형)", "conditions": {}},
+            {"key": "rotation", "value_text": "CW(트랙터)", "quote": "15x5.5MR Multi-Rotor", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-wheelspin-15055mr",
+      "tier": "S2_vendor",
+      "origin_url": "https://wheelspinmodels.co.uk/i/apc-15x5.5-multirotor-propeller-319093/",
+      "title": "APC APCLP15055MR - APC 15x5.5 Multirotor Propeller - Wheelspin Models",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "Wheelspin Models", "country": "GB", "trust_weight": 0.6},
+      "raw_excerpt": "Weight 36.00g 1.27oz. Product Diameter 381.00mm 15in. Pitch 5.5deg. Colour: Grey. Material: GFRC",
+      "claims": [
+        {
+          "category": "propeller",
+          "manufacturer": {"name": "APC Propellers", "hq_country": "US"},
+          "model_name": "15x5.5MR", "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {"key": "weight_g", "value": 36.0, "unit": "g", "quote": "Weight 36.00g 1.27oz", "conditions": {}},
+            {"key": "diameter_in", "value": 381, "unit": "mm", "quote": "Product Diameter 381.00mm 15in", "conditions": {}},
+            {"key": "pitch_in", "value": 5.5, "unit": "deg", "quote": "Pitch 5.5(도 단위로 오기됨)", "conditions": {"note": "리스팅 단위 오류 의심 — 피치는 인치가 표준"}},
+            {"key": "material", "value_text": "GFRC(유리섬유 복합)", "quote": "Material: GFRC", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-uss-15055mr",
+      "tier": "S2_vendor",
+      "origin_url": "https://www.unmannedsystemssource.com/shop/propellers/apc/15x5-5-mr-multi-rotor-propeller/",
+      "title": "15x5.5MR Multi-Rotor Prop - Unmanned Systems Source",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "Unmanned Systems Source", "country": "US", "trust_weight": 0.6},
+      "raw_excerpt": "15x5.5MR Multi-Rotor Prop by APC Propellers provides composite nylon construction. SKU: LP15055MR",
+      "claims": [
+        {
+          "category": "propeller",
+          "manufacturer": {"name": "APC Propellers", "hq_country": "US"},
+          "model_name": "15x5.5MR", "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {"key": "material", "value_text": "복합 나일론", "quote": "provides composite nylon construction", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-apc-15055mrp-official",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://www.apcprop.com/product/15x5-5mrp/",
+      "title": "15x5.5MRP - APC Propellers",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "Multi-Rotor Pusher. Reverse Rotation. Use LPAR06E adapter rings (not included)",
+      "claims": [
+        {
+          "category": "propeller",
+          "manufacturer": {"name": "APC Propellers", "hq_country": "US"},
+          "model_name": "15x5.5MRP", "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {"key": "diameter_in", "value": 15, "unit": "in", "quote": "15x5.5MRP", "conditions": {}},
+            {"key": "pitch_in", "value": 5.5, "unit": "in", "quote": "15x5.5MRP", "conditions": {}},
+            {"key": "blades", "value": 2, "unit": null, "quote": "Multi-Rotor Pusher (2-blade 표준형)", "conditions": {}},
+            {"key": "rotation", "value_text": "CCW(푸셔)", "quote": "Reverse Rotation", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-genstattu-plus16000-15c",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
+      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "Minimum Capacity: 16000mAh. Configuration: 6S1P / 22.2V / 6Cell. Discharge Rate: 15C. Net Weight(+-20g): 1932g. Dimensions: 203mm x 82mm x 70mm. Discharge Plug: XT90-S",
+      "claims": [
+        {
+          "category": "battery",
+          "manufacturer": {"name": "Tattu (Gens Ace/Grepow)", "hq_country": "CN", "website": "https://tattuworld.com"},
+          "model_name": "Tattu Plus 16000mAh 6S", "variant": "15C/XT90-S",
+          "mfg_country": null,
+          "specs": [
+            {"key": "capacity_mah", "value": 16000, "unit": "mAh", "quote": "Minimum Capacity: 16000mAh", "conditions": {}},
+            {"key": "cells_s", "value": 6, "unit": "S", "quote": "Configuration: 6S1P / 22.2V / 6Cell", "conditions": {}},
+            {"key": "nominal_voltage_v", "value": 22.2, "unit": "V", "quote": "Configuration: 6S1P / 22.2V / 6Cell", "conditions": {}},
+            {"key": "c_rating", "value": 15, "unit": "C", "quote": "Discharge Rate: 15C", "conditions": {"type": "연속"}},
+            {"key": "weight_g", "value": 1932, "unit": "g", "quote": "Net Weight(+-20g): 1932g", "conditions": {}},
+            {"key": "dimensions_mm", "value_text": "203×82×70", "quote": "Dimensions: 203mm x 82mm x 70mm", "conditions": {}},
+            {"key": "discharge_plug", "value_text": "XT90-S", "quote": "Discharge Plug: XT90-S", "conditions": {}},
+            {"key": "chemistry", "value_text": "LiPo", "quote": "Lipo Battery Pack", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-amazon-plus16000",
+      "tier": "S2_vendor",
+      "origin_url": "https://www.amazon.com/Tattu-16000mAh-22-2V-Battery-XT90S/dp/B0C6QRWBGX",
+      "title": "TATTU Plus 16000mAh 15C 22.2V 6S Lipo Battery Pack with XT90S - Amazon",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": {"name": "Amazon", "country": "US", "trust_weight": 0.5},
+      "raw_excerpt": "Discharge Rate: 15C. Max Burst Discharge Rate: 30C. Net Weight(+-20g): 1932g",
+      "claims": [
+        {
+          "category": "battery",
+          "manufacturer": {"name": "Tattu (Gens Ace/Grepow)", "hq_country": "CN"},
+          "model_name": "Tattu Plus 16000mAh 6S", "variant": "15C/XT90-S",
+          "mfg_country": null,
+          "specs": [
+            {"key": "burst_c", "value": 30, "unit": "C", "quote": "Max Burst Discharge Rate: 30C", "conditions": {"note": "지속시간 미기재"}},
+            {"key": "weight_g", "value": 1932, "unit": "g", "quote": "Net Weight(+-20g): 1932g", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-genstattu-16000-30c",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
+      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "Minimum Capacity: 16000mAh. Configuration: 6S / 22.2v. Discharge Rate: 30C. Net Weight(+-20g): 1988g. Dimensions: 192 x 76 x 65mm",
+      "claims": [
+        {
+          "category": "battery",
+          "manufacturer": {"name": "Tattu (Gens Ace/Grepow)", "hq_country": "CN"},
+          "model_name": "Tattu 16000mAh 6S", "variant": "30C/XT90-S",
+          "mfg_country": null,
+          "specs": [
+            {"key": "capacity_mah", "value": 16000, "unit": "mAh", "quote": "Minimum Capacity: 16000mAh", "conditions": {}},
+            {"key": "cells_s", "value": 6, "unit": "S", "quote": "Configuration: 6S / 22.2v", "conditions": {}},
+            {"key": "nominal_voltage_v", "value": 22.2, "unit": "V", "quote": "Configuration: 6S / 22.2v", "conditions": {}},
+            {"key": "c_rating", "value": 30, "unit": "C", "quote": "Discharge Rate: 30C", "conditions": {"type": "연속"}},
+            {"key": "weight_g", "value": 1988, "unit": "g", "quote": "Net Weight(+-20g): 1988g", "conditions": {}},
+            {"key": "dimensions_mm", "value_text": "192×76×65", "quote": "Dimensions: 192 x 76 x 65mm", "conditions": {}},
+            {"key": "discharge_plug", "value_text": "XT90-S(안티스파크)", "quote": "XT90 Anti-Spark plug", "conditions": {}},
+            {"key": "chemistry", "value_text": "LiPo", "quote": "Lipo Battery Pack", "conditions": {}}
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tattuworld-gtech16000",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
+      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
+      "fetched_at": "2026-08-08T02:10:00Z",
+      "vendor": null,
+      "raw_excerpt": "Minimum Capacity 16000mAh. Configuration 12S1P. Nominal Voltage 22.2V. Power 355.2 Wh. Net Weight(+-20g) 2001g. Dimensions 193mm x 76mm x 64mm. Discharge Plug XT90-S",
+      "claims": [
+        {
+          "category": "battery",
+          "manufacturer": {"name": "Tattu (Gens Ace/Grepow)", "hq_country": "CN"},
+          "model_name": "Tattu G-Tech 16000mAh 6S", "variant": "30C/XT90-S",
+          "mfg_country": null,
+          "specs": [
+            {"key": "capacity_mah", "value": 16000, "unit": "mAh", "quote": "Minimum Capacity 16000mAh", "conditions": {}},
+            {"key": "cells_s", "value": 12, "unit": "S", "quote": "Configuration 12S1P", "conditions": {"note": "공식 페이지 원문 그대로"}},
+            {"key": "nominal_voltage_v", "value": 22.2, "unit": "V", "quote": "Nominal Voltage 22.2V", "conditions": {}},
+            {"key": "energy_wh", "value": 355.2, "unit": "Wh", "quote": "Power 355.2 Wh", "conditions": {}},
+            {"key": "c_rating", "value": 30, "unit": "C", "quote": "16000mAh 22.2V 30C G-Tech", "conditions": {"type": "연속"}},
+            {"key": "weight_g", "value": 2001, "unit": "g", "quote": "Net Weight(+-20g) 2001g", "conditions": {}},
+            {"key": "dimensions_mm", "value_text": "193×76×64", "quote": "Dimensions 193mm x 76mm x 64mm", "conditions": {}},
+            {"key": "discharge_plug", "value_text": "XT90-S", "quote": "Discharge Plug XT90-S", "conditions": {}},
+            {"key": "chemistry", "value_text": "LiPo(G-Tech 스마트)", "quote": "G-Tech Battery", "conditions": {}}
+          ]
+        }
+      ]
+    }
+  ]
+}

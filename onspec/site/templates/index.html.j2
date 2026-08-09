@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ONSPEC 온스펙 — 드론 상용부품 검증 DB</title>
+<meta name="description" content="이 부품, 온스펙인가? — 드론 상용부품의 사양·가격·제조국을 출처·물리 검증·신뢰 등급과 함께 비교. 출처 없는 사양은 없다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEFF1; --panel:#FFFFFF; --panel-2:#F6F8F9;
+  --ink:#17242B; --ink-soft:#51646E; --ink-faint:#7E8E97;
+  --line:#C7CFD4; --line-soft:#DDE3E6;
+  --accent:#CF4E0A; --accent-ink:#FFFFFF;
+  --gA:#1C7C43; --gB:#1D5FA8; --gC:#B27400; --gD:#C0392B;
+  --gA-bg:#E2F1E8; --gB-bg:#E4EDF8; --gC-bg:#F7EEDA; --gD-bg:#F8E4E1;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'IBM Plex Sans KR','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  --disp:'Chakra Petch',var(--mono);
+  --r:3px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:14.5px;line-height:1.55;}
+a{color:var(--gB);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+
+/* ---------- 헤더 ---------- */
+header.site{border-bottom:2px solid var(--ink);background:var(--panel)}
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;
+  gap:24px;padding:22px 0 16px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.brand .logo{font-family:var(--disp);font-weight:700;font-size:30px;letter-spacing:.04em}
+.brand .logo .proof{color:var(--accent)}
+.brand .sub{font-size:13px;color:var(--ink-soft);font-weight:500}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--ink-soft);
+  border:1px solid var(--line);border-left:3px solid var(--accent);
+  padding:6px 10px;background:var(--panel-2)}
+.tagline b{color:var(--ink)}
+
+/* ---------- 계측 스트립 (시그니처) ---------- */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  border:1px solid var(--ink);border-radius:var(--r);overflow:hidden;
+  margin:18px 0 6px;background:var(--panel)}
+.gauge{padding:12px 14px 10px;border-right:1px dashed var(--line);position:relative}
+.gauge:last-child{border-right:none}
+.gauge .lab{font-size:11px;letter-spacing:.08em;color:var(--ink-faint);
+  text-transform:uppercase;font-family:var(--mono)}
+.gauge .val{font-family:var(--disp);font-weight:700;font-size:26px;line-height:1.15;margin-top:2px}
+.gauge .val small{font-size:13px;font-weight:600;color:var(--ink-soft)}
+.gauge.cal::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 8px)}
+.gradebar{display:flex;height:8px;border:1px solid var(--line);border-radius:2px;
+  overflow:hidden;margin-top:7px}
+.gradebar span{display:block;height:100%}
+.gradelegend{display:flex;gap:10px;margin-top:5px;font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+.verd{display:flex;gap:12px;margin-top:6px;font-family:var(--mono);font-size:12px}
+.verd b{font-weight:600}
+.strip-note{font-size:11.5px;color:var(--ink-faint);margin:6px 0 16px;font-family:var(--mono)}
+
+/* ---------- 탭 ---------- */
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap;padding:14px 0 0}
+nav.tabs button{appearance:none;border:1px solid var(--line);border-bottom:none;
+  background:var(--panel-2);color:var(--ink-soft);font:inherit;font-weight:500;
+  padding:9px 16px 8px;cursor:pointer;border-radius:var(--r) var(--r) 0 0}
+nav.tabs button[aria-selected="true"]{background:var(--panel);color:var(--ink);
+  border-color:var(--ink);font-weight:700;position:relative}
+nav.tabs button[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;
+  bottom:-2px;height:3px;background:var(--panel)}
+nav.tabs .cnt{font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-left:6px}
+
+/* ---------- 카테고리 패널 ---------- */
+main{padding-bottom:60px}
+section.cat{display:none;background:var(--panel);border:1px solid var(--ink);
+  border-radius:0 var(--r) var(--r) var(--r);padding:18px}
+section.cat.active{display:block}
+.cat-head{display:flex;justify-content:space-between;align-items:center;gap:16px;
+  flex-wrap:wrap;margin-bottom:12px}
+.cat-head h2{font-family:var(--disp);font-size:19px;margin:0;letter-spacing:.02em}
+.cat-head h2 small{font-family:var(--mono);font-size:12px;color:var(--ink-faint);font-weight:500}
+.filter{font:inherit;font-size:13.5px;border:1px solid var(--line);border-radius:var(--r);
+  padding:7px 10px;min-width:220px;background:var(--panel)}
+.tblwrap{overflow-x:auto;border:1px solid var(--line-soft);border-radius:var(--r)}
+table.cmp{border-collapse:collapse;width:100%;min-width:640px}
+table.cmp th,table.cmp td{padding:8px 12px;border-bottom:1px solid var(--line-soft);
+  text-align:left;white-space:nowrap;vertical-align:top}
+table.cmp thead th{background:var(--panel-2);font-size:12.5px;font-weight:700;
+  cursor:pointer;user-select:none;position:sticky;top:0}
+table.cmp thead th .unit{display:block;font-family:var(--mono);font-weight:400;
+  font-size:10.5px;color:var(--ink-faint)}
+table.cmp thead th .arrow{color:var(--accent);font-size:10px;margin-left:3px}
+table.cmp tbody tr{cursor:pointer}
+table.cmp tbody tr:hover{background:#F2F6F8}
+table.cmp td:first-child,table.cmp th:first-child{position:sticky;left:0;background:var(--panel);
+  border-right:1px solid var(--line-soft);max-width:230px;white-space:normal}
+table.cmp thead th:first-child{background:var(--panel-2);z-index:2}
+.mdl{font-weight:700}
+.mdl .var{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);font-weight:500}
+.man{font-size:12px;color:var(--ink-soft)}
+.num{font-family:var(--mono);font-size:13.5px}
+.cell-d .num{color:var(--gD);border-bottom:2px dashed var(--gD)}
+.badge{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:600;
+  line-height:1;padding:2.5px 4.5px;border-radius:2px;margin-left:5px;vertical-align:2px;
+  border:1px solid transparent}
+.bA{background:var(--gA-bg);color:var(--gA);border-color:var(--gA)}
+.bB{background:var(--gB-bg);color:var(--gB);border-color:var(--gB)}
+.bC{background:var(--gC-bg);color:var(--gC);border-color:var(--gC)}
+.bD{background:var(--gD-bg);color:var(--gD);border-color:var(--gD)}
+.tagchip{display:inline-block;font-size:10.5px;font-family:var(--mono);
+  border:1px solid var(--line);border-radius:2px;padding:2px 5px;color:var(--ink-soft);margin-left:6px}
+.tag-syn{border-color:var(--accent);color:var(--accent);font-weight:600}
+.origin{font-family:var(--mono);font-size:12px}
+.origin .st{font-size:10px;color:var(--ink-faint)}
+.dash{color:var(--ink-faint);font-family:var(--mono)}
+.cat-foot{font-size:12px;color:var(--ink-faint);margin-top:10px}
+
+/* ---------- 드로어 ---------- */
+.scrim{position:fixed;inset:0;background:rgba(16,26,32,.45);opacity:0;
+  pointer-events:none;transition:opacity .18s;z-index:40}
+.scrim.on{opacity:1;pointer-events:auto}
+aside.drawer{position:fixed;top:0;right:0;bottom:0;width:min(660px,100vw);
+  background:var(--panel);border-left:2px solid var(--ink);z-index:50;
+  transform:translateX(102%);transition:transform .22s ease;display:flex;flex-direction:column}
+aside.drawer.on{transform:none}
+@media(prefers-reduced-motion:reduce){aside.drawer,.scrim{transition:none}}
+.dr-head{padding:18px 22px 14px;border-bottom:1px solid var(--line);display:flex;
+  justify-content:space-between;gap:14px;align-items:flex-start}
+.dr-head h3{margin:0;font-family:var(--disp);font-size:20px;line-height:1.25}
+.dr-head .meta{font-size:12.5px;color:var(--ink-soft);margin-top:4px}
+.dr-close{appearance:none;border:1px solid var(--line);background:var(--panel-2);
+  font:inherit;font-size:13px;border-radius:var(--r);padding:6px 12px;cursor:pointer}
+.dr-body{overflow-y:auto;padding:16px 22px 40px}
+.dr-sec{margin-bottom:22px}
+.dr-sec>h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-faint);margin:0 0 8px;
+  border-bottom:1px dashed var(--line);padding-bottom:5px}
+.syn-banner{border:1.5px solid var(--accent);background:#FBEFE7;color:#8A3505;
+  border-radius:var(--r);padding:9px 12px;font-size:13px;margin-bottom:14px}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:4px 14px;font-size:13.5px}
+.kv .k{color:var(--ink-soft)}
+.spec-item{border:1px solid var(--line-soft);border-radius:var(--r);margin-bottom:7px;overflow:hidden}
+.spec-row{display:grid;grid-template-columns:1fr auto;gap:6px 12px;padding:8px 12px;
+  cursor:pointer;background:var(--panel)}
+.spec-row:hover{background:var(--panel-2)}
+.spec-row .nm{font-weight:500}
+.spec-row .cond{display:block;font-size:11.5px;color:var(--ink-faint)}
+.spec-row .vv{font-family:var(--mono);font-size:13.5px;text-align:right}
+.spec-row .vv.d{color:var(--gD)}
+.spec-more{display:none;border-top:1px dashed var(--line);background:var(--panel-2);
+  padding:10px 12px;font-size:12.5px}
+.spec-item.open .spec-more{display:block}
+.quote{font-family:var(--mono);font-size:12px;background:#EFF3F5;border-left:3px solid var(--line);
+  padding:6px 9px;margin:6px 0;color:var(--ink-soft);white-space:normal}
+.srcline{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;margin-top:4px}
+.tier{font-family:var(--mono);font-size:10px;border:1px solid var(--line);
+  border-radius:2px;padding:1.5px 4px;color:var(--ink-soft)}
+.tier.s1{border-color:var(--gB);color:var(--gB)}
+.tier.s3,.tier.s4{border-color:var(--gA);color:var(--gA)}
+.gnote{color:var(--gD);font-size:12px;margin-top:6px}
+.allsrc{margin:8px 0 0;padding:0;list-style:none}
+.allsrc li{padding:5px 0;border-top:1px dotted var(--line-soft)}
+.vlog{border:1px solid var(--line-soft);border-left-width:4px;border-radius:var(--r);
+  padding:8px 12px;margin-bottom:7px;font-size:13px}
+.vlog .rid{font-family:var(--mono);font-size:11px;font-weight:600;margin-right:8px}
+.vlog.pass{border-left-color:var(--gA)}
+.vlog.caution{border-left-color:var(--gC)}
+.vlog.flag,.vlog.error{border-left-color:var(--gD)}
+.vlog .vv{font-family:var(--mono);font-size:10.5px;border-radius:2px;padding:1.5px 5px;margin-right:8px}
+.vlog.pass .vv{background:var(--gA-bg);color:var(--gA)}
+.vlog.caution .vv{background:var(--gC-bg);color:var(--gC)}
+.vlog.flag .vv,.vlog.error .vv{background:var(--gD-bg);color:var(--gD)}
+.price-line{font-size:13.5px}
+.price-line .amt{font-family:var(--mono);font-weight:600}
+.muted{color:var(--ink-faint);font-size:12.5px}
+
+/* ---------- 방법론 ---------- */
+section.method{display:none;background:var(--panel);border:1px solid var(--ink);
+  border-radius:0 var(--r) var(--r) var(--r);padding:26px 28px;max-width:900px}
+section.method.active{display:block}
+section.method h2{font-family:var(--disp);margin:0 0 6px}
+section.method h3{font-size:15.5px;margin:26px 0 8px;border-bottom:1px dashed var(--line);padding-bottom:4px}
+section.method p,section.method li{font-size:14px;color:#2A3B44}
+section.method table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0}
+section.method th,section.method td{border:1px solid var(--line-soft);padding:6px 9px;text-align:left}
+section.method th{background:var(--panel-2);font-weight:600}
+section.method .formula{font-family:var(--mono);font-size:13px;background:var(--panel-2);
+  border:1px solid var(--line-soft);border-radius:var(--r);padding:8px 12px;display:inline-block}
+
+footer.site{border-top:1px solid var(--line);margin-top:34px;padding:18px 0 34px;
+  font-size:12.5px;color:var(--ink-soft)}
+footer.site .row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer.site .mono{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint)}
+
+@media(max-width:640px){
+  .brand .logo{font-size:24px}
+  .gauge .val{font-size:21px}
+  section.cat{padding:12px}
+  .kv{grid-template-columns:96px 1fr}
+}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <div class="masthead">
+      <div class="brand">
+        <span class="logo"><span class="proof">ON</span>SPEC</span>
+        <span class="sub">온스펙 · 드론 상용부품 검증 데이터베이스 · Phase 1 MVP</span>
+      </div>
+      <div class="tagline"><b>출처 없는 사양은 없다.</b> 모든 값 = 원문 인용 + 신뢰 등급 + 측정 조건</div>
+    </div>
+
+    <div class="strip" role="group" aria-label="데이터 현황">
+      <div class="gauge cal"><div class="lab">등록 부품</div><div class="val" id="g-comp">0</div></div>
+      <div class="gauge cal"><div class="lab">추적 출처</div><div class="val" id="g-src">0</div></div>
+      <div class="gauge cal" style="min-width:210px">
+        <div class="lab">사양 값 · 등급 분포</div>
+        <div class="val" id="g-spec">0</div>
+        <div class="gradebar" id="g-bar" aria-hidden="true"></div>
+        <div class="gradelegend" id="g-leg"></div>
+      </div>
+      <div class="gauge cal" style="min-width:220px">
+        <div class="lab">자동 검증 판정</div>
+        <div class="verd" id="g-verd"></div>
+        <div class="muted" style="margin-top:5px">물리 규칙 + 교차 출처 대조</div>
+      </div>
+    </div>
+    <div class="strip-note" id="gen-note"></div>
+
+    <nav class="tabs" role="tablist" aria-label="카테고리" id="tabs"></nav>
+  </div>
+</header>
+
+<main class="wrap" id="main"></main>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-title">
+  <div class="dr-head">
+    <div><h3 id="dr-title"></h3><div class="meta" id="dr-meta"></div></div>
+    <button class="dr-close" id="dr-close" type="button">닫기 ✕</button>
+  </div>
+  <div class="dr-body" id="dr-body"></div>
+</aside>
+
+<footer class="site"><div class="wrap">
+  <div class="row">
+    <div>모든 값은 표기된 출처 링크에서 직접 검증할 수 있습니다. 플래그(D)는 숨기지 않고 사유와 함께 표시합니다.</div>
+    <div class="mono" id="foot-gen"></div>
+  </div>
+</div></footer>
+
+<script type="application/json" id="dataset">{{ data_json }}</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById('dataset').textContent);
+const $ = (s,el=document)=>el.querySelector(s);
+const el = (tag,cls,html)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;};
+const esc = s => String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const GRADE_COLOR={A:'var(--gA)',B:'var(--gB)',C:'var(--gC)',D:'var(--gD)'};
+const TIER_LABEL={S1_manufacturer:'S1 제조사',S2_vendor:'S2 판매처',S3_benchmark:'S3 실측',S4_certification:'S4 인증'};
+const ORIGIN_LABEL={confirmed:'확인',claimed:'주장',unconfirmed:'미확인'};
+const CCY={USD:'$',GBP:'£',EUR:'€',KRW:'₩',CNY:'¥',JPY:'¥'};
+
+function fmtNum(v){
+  if(v==null)return null;
+  const n=Number(v);
+  if(Number.isInteger(n))return n.toLocaleString('ko-KR');
+  return n.toLocaleString('ko-KR',{maximumFractionDigits:2});
+}
+function specCell(spec){
+  if(!spec)return '<span class="dash">—</span>';
+  const val=spec.value!=null?fmtNum(spec.value):esc(spec.value_text);
+  const unit=spec.value!=null&&spec.unit?`<small style="color:var(--ink-faint)"> ${esc(spec.unit)}</small>`:'';
+  const badge=`<span class="badge b${spec.grade}" title="신뢰 등급 ${spec.grade}${spec.grade_note?' — '+esc(spec.grade_note):''}">${spec.grade}</span>`;
+  return `<span class="num">${val}${unit}</span>${badge}`;
+}
+function condText(c){
+  if(!c)return '';
+  const parts=[];
+  if(c.prop_diameter_in)parts.push(`프롭 ${c.prop_diameter_in}"`);
+  if(c.voltage_v)parts.push(`${c.voltage_v}V`);
+  if(c.duration_s)parts.push(`${c.duration_s}초`);
+  if(c.type)parts.push(c.type);
+  if(c.variant)parts.push(c.variant);
+  if(c.note)parts.push(c.note);
+  return parts.join(' · ');
+}
+
+/* ---------- 계측 스트립 ---------- */
+(function hero(){
+  const s=DATA.stats;
+  $('#g-comp').textContent=s.components;
+  $('#g-src').textContent=s.sources;
+  $('#g-spec').textContent=s.spec_rows;
+  const bar=$('#g-bar'),leg=$('#g-leg');const total=Object.values(s.grades).reduce((a,b)=>a+b,0)||1;
+  for(const g of ['A','B','C','D']){
+    const n=s.grades[g]||0;
+    const seg=el('span');seg.style.width=(n/total*100)+'%';seg.style.background=GRADE_COLOR[g];bar.appendChild(seg);
+    leg.appendChild(el('span',null,`<b style="color:${GRADE_COLOR[g]}">${g}</b> ${n}`));
+  }
+  const v=s.verdicts;
+  $('#g-verd').innerHTML=
+    `<span style="color:var(--gA)"><b>${v.pass}</b> 통과</span>`+
+    `<span style="color:var(--gC)"><b>${v.caution}</b> 주의</span>`+
+    `<span style="color:var(--gD)"><b>${v.flag+v.error}</b> 플래그</span>`;
+  const gen=new Date(DATA.generated_at).toLocaleString('ko-KR');
+  $('#gen-note').textContent=`데이터 생성 ${gen} · 일일 자동 갱신 파이프라인 (수집→추출→검증→반영)`;
+  $('#foot-gen').textContent=`ONSPEC build ${DATA.generated_at}`;
+})();
+
+/* ---------- 탭 + 카테고리 패널 ---------- */
+const tabs=$('#tabs'),main=$('#main');
+const byCat={};for(const c of DATA.components){(byCat[c.category]??=[]).push(c);}
+const sortState={};
+
+for(const cat of DATA.categories){
+  const btn=el('button',null,`${esc(cat.name_ko)}<span class="cnt">${(byCat[cat.id]||[]).length}</span>`);
+  btn.setAttribute('role','tab');btn.dataset.target='cat-'+cat.id;
+  tabs.appendChild(btn);
+  const sec=el('section','cat');sec.id='cat-'+cat.id;
+  const cols=cat.specs.filter(s=>s.compare_default);
+  sec.innerHTML=`
+    <div class="cat-head">
+      <h2>${esc(cat.name_ko)} <small>/ ${esc(cat.name_en)}</small></h2>
+      <input class="filter" type="search" placeholder="모델·제조사 검색" aria-label="${esc(cat.name_ko)} 검색">
+    </div>
+    <div class="tblwrap"><table class="cmp"><thead><tr>
+      <th data-k="__model">모델 / 제조사</th>
+      ${cols.map(s=>`<th data-k="${s.key}">${esc(s.name_ko)}${s.unit?`<span class="unit">${esc(s.unit)}</span>`:''}</th>`).join('')}
+      <th data-k="__origin">생산국<span class="unit">본사국·생산국</span></th>
+      <th data-k="__price">최근 가격<span class="unit">단가 환산</span></th>
+    </tr></thead><tbody></tbody></table></div>
+    <div class="cat-foot">행을 누르면 전체 사양·출처·검증 로그가 열립니다. 등급 칩(A~D)에 마우스를 올리면 사유가 표시됩니다. 성능 수치는 측정 조건이 다를 수 있어 셀 툴팁에 조건을 병기합니다.</div>`;
+  main.appendChild(sec);
+  renderRows(cat,sec,cols);
+  sec.querySelector('.filter').addEventListener('input',e=>{
+    const q=e.target.value.trim().toLowerCase();
+    for(const tr of sec.querySelectorAll('tbody tr')){
+      tr.style.display=tr.dataset.search.includes(q)?'':'none';
+    }
+  });
+  sec.querySelectorAll('thead th').forEach(th=>{
+    th.addEventListener('click',()=>sortBy(cat,sec,cols,th.dataset.k));
+    th.title='눌러서 정렬';
+  });
+}
+/* 방법론 탭 */
+{
+  const btn=el('button',null,'검증 방법론');
+  btn.setAttribute('role','tab');btn.dataset.target='method';
+  tabs.appendChild(btn);
+  main.appendChild(buildMethod());
+}
+
+function rowSortVal(comp,key){
+  if(key==='__model')return (comp.manufacturer.name+comp.model_name).toLowerCase();
+  if(key==='__origin')return comp.mfg_country.code||'zz';
+  if(key==='__price')return comp.prices.length?comp.prices[0].unit_amount:Infinity;
+  const s=comp.specs[key];
+  if(!s)return null;
+  return s.value!=null?Number(s.value):String(s.value_text||'').toLowerCase();
+}
+function sortBy(cat,sec,cols,key){
+  const st=sortState[cat.id]||{};
+  st.dir=(st.key===key&&st.dir==='asc')?'desc':'asc';st.key=key;sortState[cat.id]=st;
+  byCat[cat.id].sort((a,b)=>{
+    const va=rowSortVal(a,key),vb=rowSortVal(b,key);
+    if(va==null&&vb==null)return 0;if(va==null)return 1;if(vb==null)return -1;
+    const r=(typeof va==='number'&&typeof vb==='number')?va-vb:String(va).localeCompare(String(vb),'ko');
+    return st.dir==='asc'?r:-r;
+  });
+  renderRows(cat,sec,cols);
+  sec.querySelectorAll('thead th .arrow').forEach(a=>a.remove());
+  const th=sec.querySelector(`thead th[data-k="${key}"]`);
+  th.appendChild(el('span','arrow',st.dir==='asc'?'▲':'▼'));
+}
+function renderRows(cat,sec,cols){
+  const tb=sec.querySelector('tbody');tb.innerHTML='';
+  for(const comp of (byCat[cat.id]||[])){
+    const tr=el('tr');
+    tr.tabIndex=0;tr.setAttribute('role','button');
+    tr.dataset.search=(comp.manufacturer.name+' '+comp.model_name+' '+(comp.variant||'')).toLowerCase();
+    const syn=comp.is_synthetic?`<span class="tagchip tag-syn">합성 테스트</span>`:'';
+    const origin=originCell(comp);
+    const price=priceCell(comp);
+    tr.innerHTML=`<td><div class="mdl">${esc(comp.model_name)} <span class="var">${esc(comp.variant||'')}</span>${syn}</div>
+      <div class="man">${esc(comp.manufacturer.name)}</div></td>`+
+      cols.map(s=>{
+        const sp=comp.specs[s.key];
+        const cond=sp?condText(sp.conditions):'';
+        const cls=sp&&sp.grade==='D'?'cell-d':'';
+        const title=[cond?`조건: ${cond}`:null,sp&&sp.grade_note?`등급 사유: ${sp.grade_note}`:null].filter(Boolean).join('\n');
+        return `<td class="${cls}" title="${esc(title)}">${specCell(sp)}</td>`;
+      }).join('')+
+      `<td>${origin}</td><td>${price}</td>`;
+    const open=()=>openDrawer(comp,cat);
+    tr.addEventListener('click',open);
+    tr.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
+    tb.appendChild(tr);
+  }
+}
+function originCell(comp){
+  const hq=comp.manufacturer.hq_country||'—';
+  const m=comp.mfg_country;
+  const st=ORIGIN_LABEL[m.status];
+  const code=m.code?esc(m.code):'미확인';
+  const color=m.status==='confirmed'?'var(--gA)':(m.status==='claimed'?'var(--gC)':'var(--ink-faint)');
+  return `<span class="origin">${esc(hq)} <span class="st">본사</span> · <b style="color:${color}">${m.status==='unconfirmed'?'미확인':code}</b> <span class="st">${m.status==='unconfirmed'?'생산':'생산·'+st}</span></span>`;
+}
+function priceCell(comp){
+  if(!comp.prices.length)return '<span class="dash">수집 대기</span>';
+  const p=comp.prices[0];
+  const sym=CCY[p.currency]||p.currency+' ';
+  const per=p.pack_qty>1?` <small style="color:var(--ink-faint)">(${p.pack_qty}개입 ÷)</small>`:'';
+  return `<span class="num">${sym}${fmtNum(p.unit_amount)}</span>${per}`;
+}
+
+/* ---------- 탭 전환 ---------- */
+function selectTab(target){
+  tabs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.target===target)));
+  main.querySelectorAll('section').forEach(s=>s.classList.toggle('active',s.id===target));
+}
+tabs.addEventListener('click',e=>{const b=e.target.closest('button');if(b)selectTab(b.dataset.target);});
+selectTab('cat-'+DATA.categories[0].id);
+
+/* ---------- 드로어 ---------- */
+const drawer=$('#drawer'),scrim=$('#scrim');
+let lastFocus=null;
+function openDrawer(comp,cat){
+  lastFocus=document.activeElement;
+  $('#dr-title').textContent=`${comp.model_name}${comp.variant?' · '+comp.variant:''}`;
+  $('#dr-meta').textContent=`${comp.manufacturer.name} · ${cat.name_ko}`;
+  const body=$('#dr-body');body.innerHTML='';
+  if(comp.is_synthetic){
+    body.appendChild(el('div','syn-banner','<b>합성 테스트 픽스처</b> — 실제 제품이 아니라 검증 엔진 시연을 위해 만든 가상 리스팅입니다. 과장 사양이 어떻게 플래그되는지 보여줍니다.'));
+  }
+  /* 개요 */
+  const sec0=el('div','dr-sec','<h4>개요 · 원산지</h4>');
+  const m=comp.mfg_country;
+  const originClaims=(m.claims||[]).map(c=>
+    `<div class="srcline"><span class="tier">${esc(c.status==='confirmed'?'공적 근거':'판매·리스팅 표기')}</span>
+     <span>${esc(c.country)} — “${esc(c.quote||'')}”</span>
+     ${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noopener">출처 열기 ↗</a>`:''}</div>`).join('')
+    ||'<div class="muted">생산국 근거 미수집 — “미확인”으로 표기합니다.</div>';
+  sec0.appendChild(el('div','kv',
+    `<span class="k">본사국</span><span>${esc(comp.manufacturer.hq_country||'—')}</span>
+     <span class="k">생산국</span><span>${m.code?esc(m.code):'미확인'} <small class="muted">(${ORIGIN_LABEL[m.status]})</small></span>`));
+  sec0.appendChild(el('div',null,`<div style="margin-top:8px">${originClaims}</div>`));
+  body.appendChild(sec0);
+
+  /* 가격 */
+  const secP=el('div','dr-sec','<h4>가격</h4>');
+  if(comp.prices.length){
+    for(const p of comp.prices){
+      const sym=CCY[p.currency]||p.currency+' ';
+      secP.appendChild(el('div','price-line',
+        `<span class="amt">${sym}${fmtNum(p.amount)}</span>
+         ${p.pack_qty>1?`<small class="muted"> ${p.pack_qty}개입 → 단가 ${sym}${fmtNum(p.unit_amount)}</small>`:''}
+         · ${esc(p.vendor)} · <a href="${esc(p.url)}" target="_blank" rel="noopener">리스팅 ↗</a>
+         <div class="muted">관측 ${new Date(p.observed_at).toLocaleDateString('ko-KR')} · USD/KRW 환산: 환율 배치 연동 대기</div>`));
+    }
+  }else{
+    secP.appendChild(el('div','muted','가격 시계열 수집 대기 — 일일 파이프라인이 판매처 리스팅에서 축적합니다.'));
+  }
+  body.appendChild(secP);
+
+  /* 사양 전체 */
+  const secS=el('div','dr-sec','<h4>사양 · 필드별 출처와 등급</h4>');
+  for(const def of cat.specs){
+    const sp=comp.specs[def.key];
+    if(!sp)continue;
+    const item=el('div','spec-item');
+    const val=sp.value!=null?`${fmtNum(sp.value)}${sp.unit?' '+esc(sp.unit):''}`:esc(sp.value_text);
+    const cond=condText(sp.conditions);
+    item.appendChild(el('div','spec-row',
+      `<span class="nm">${esc(def.name_ko)}${cond?`<span class="cond">조건: ${esc(cond)}</span>`:''}</span>
+       <span class="vv ${sp.grade==='D'?'d':''}">${val}<span class="badge b${sp.grade}">${sp.grade}</span></span>`));
+    const src=sp.source;
+    const tierCls=src.tier.slice(0,2).toLowerCase();
+    let more=`<div class="quote">“${esc(sp.quote)}”</div>
+      <div class="srcline"><span class="tier ${tierCls}">${TIER_LABEL[src.tier]}</span>
+        <span>${esc(src.vendor||src.title||'')}</span>
+        ${src.url.startsWith('http')?`<a href="${esc(src.url)}" target="_blank" rel="noopener">출처 열기 ↗</a>`:'<span class="muted">(합성 픽스처 — 외부 링크 없음)</span>'}</div>`;
+    if(sp.grade_note)more+=`<div class="gnote">등급 사유: ${esc(sp.grade_note)}</div>`;
+    if(sp.all_sources.length>1){
+      more+=`<ul class="allsrc">${sp.all_sources.map(a=>{
+        const v=a.value!=null?`${fmtNum(a.value)}${a.unit_original?' '+esc(a.unit_original):''}`:esc(a.value_text);
+        const t=a.tier.slice(0,2).toLowerCase();
+        return `<li><span class="num">${v}</span> <span class="tier ${t}">${TIER_LABEL[a.tier]}</span>
+          <span class="muted">${esc(a.vendor||'')}</span>
+          ${a.url.startsWith('http')?`<a href="${esc(a.url)}" target="_blank" rel="noopener">↗</a>`:''}</li>`;
+      }).join('')}</ul><div class="muted" style="margin-top:4px">출처가 여러 곳이면 모든 값을 병기합니다(방법론 §2).</div>`;
+    }
+    item.appendChild(el('div','spec-more',more));
+    item.querySelector('.spec-row').addEventListener('click',()=>item.classList.toggle('open'));
+    secS.appendChild(item);
+  }
+  body.appendChild(secS);
+
+  /* 검증 로그 */
+  const secV=el('div','dr-sec','<h4>자동 검증 로그</h4>');
+  if(comp.verifications.length){
+    const label={pass:'통과',caution:'주의',flag:'플래그',error:'오류'};
+    for(const v of comp.verifications){
+      secV.appendChild(el('div','vlog '+v.verdict,
+        `<span class="vv">${label[v.verdict]}</span><span class="rid">${esc(v.rule_id)}</span>${esc(v.summary)}`));
+    }
+  }else{
+    secV.appendChild(el('div','muted','적용 가능한 규칙 없음(입력 사양 부족).'));
+  }
+  secV.appendChild(el('div','muted','규칙 정의·임계값은 「검증 방법론」 탭에 전부 공개되어 있습니다.'));
+  body.appendChild(secV);
+
+  drawer.classList.add('on');scrim.classList.add('on');
+  $('#dr-close').focus();
+}
+function closeDrawer(){
+  drawer.classList.remove('on');scrim.classList.remove('on');
+  if(lastFocus)lastFocus.focus();
+}
+$('#dr-close').addEventListener('click',closeDrawer);
+scrim.addEventListener('click',closeDrawer);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('on'))closeDrawer();});
+
+/* ---------- 방법론 ---------- */
+function buildMethod(){
+  const sec=el('section','method');sec.id='method';
+  sec.innerHTML=`
+  <h2>검증 방법론</h2>
+  <p class="muted">이 페이지의 모든 판정 로직과 임계값을 공개합니다. 방법론의 투명성이 이 DB의 신뢰 기반입니다.</p>
+
+  <h3>데이터 3원칙</h3>
+  <p><b>1. 출처 없는 데이터는 존재할 수 없다.</b> 모든 사양 값은 출처 레코드와 원문 인용에 연결되며 DB 제약조건으로 강제됩니다.
+  <b>2. 조건 없는 성능 수치는 비교할 수 없다.</b> 추력·전류·방전율은 측정 조건(프로펠러·전압·지속시간)을 함께 저장하고 표시합니다.
+  <b>3. 모든 수치는 신뢰도 등급을 갖는다.</b> 등급은 제품이 아니라 사양 필드 단위입니다 — 같은 제품이라도 무게는 B, 추력 주장은 D일 수 있습니다.</p>
+
+  <h3>출처 4계층</h3>
+  <table><tr><th>계층</th><th>성격</th><th>가중치</th></tr>
+  <tr><td>S1 제조사 공식</td><td>제품 페이지·데이터시트</td><td>1.0</td></tr>
+  <tr><td>S2 유통·판매처</td><td>리스팅 사양·가격 (마켓플레이스 값은 단독으로 C등급 상한)</td><td>0.3~0.8</td></tr>
+  <tr><td>S3 독립 실측</td><td>스러스트 스탠드·실용량 테스트</td><td>0.9 · A등급 근거</td></tr>
+  <tr><td>S4 인증·규제 DB</td><td>FCC/KC 시험성적서 — 실측 출력·생산지의 공적 근거</td><td>1.0 · A등급 근거</td></tr></table>
+
+  <h3>등급 정의</h3>
+  <table><tr><th>등급</th><th>의미</th></tr>
+  <tr><td><span class="badge bA">A</span></td><td>독립 실측(S3/S4)과 일치 확인 — <b>현재 데모 데이터에는 실측 연계가 없어 A등급이 0건입니다(Phase 1 운영 목표)</b></td></tr>
+  <tr><td><span class="badge bB">B</span></td><td>제조사 공식 출처 + 자동 검증 전부 통과</td></tr>
+  <tr><td><span class="badge bC">C</span></td><td>판매처 출처만 존재하거나 주의 판정 발생(조건 불명·경미한 불일치)</td></tr>
+  <tr><td><span class="badge bD">D</span></td><td>물리 규칙 위반·중대 불일치·논리 모순 — <b>숨기지 않고 사유와 함께 표시</b></td></tr></table>
+
+  <h3>물리 타당성 규칙 (1단계)</h3>
+  <p>대표 예 — 모터 추력의 모멘텀 이론 검사(R-M1): 주장 추력 T를 내는 데 필요한 이상적 최소 출력은</p>
+  <p><span class="formula">P<sub>ideal</sub> = T<sup>1.5</sup> / √(2·ρ·A) &nbsp;&nbsp;(ρ=1.225 kg/m³, A=프로펠러 원판 면적)</span></p>
+  <p>표기 출력으로 역산한 효율지수(FoM)가 이상적 한계 1.0을 넘으면 물리적으로 불가능한 주장이므로 플래그합니다. 소형 로터의 실측 FoM은 통상 0.5~0.7입니다.</p>
+  <table><tr><th>규칙</th><th>내용</th><th>임계</th></tr>
+  <tr><td>R-M1</td><td>모터 추력 모멘텀 이론 상한</td><td>FoM&gt;1.0 플래그 · &gt;0.85 주의</td></tr>
+  <tr><td>R-M2</td><td>최대출력 ↔ 전류×전압 정합</td><td>편차&gt;25% 주의</td></tr>
+  <tr><td>R-M4</td><td>무게-부피 밀도 상한(스테이터 치수만 있으면 외피 ×4 보정)</td><td>&gt;9,000kg/m³(강철 초과) 플래그</td></tr>
+  <tr><td>R-M5</td><td>클래스 대비 비상식 전압(KV 혼동 감지)</td><td>&gt;61V 플래그</td></tr>
+  <tr><td>R-E1/E2/E3</td><td>ESC 전류 논리·순간전류 지속시간 조건·셀수-전압 정합</td><td>오류 / 주의 / 편차&gt;5% 주의</td></tr>
+  <tr><td>R-B1</td><td>배터리 에너지밀도 = 용량×정격전압÷무게</td><td>&gt;260Wh/kg 플래그 · &gt;200 주의</td></tr>
+  <tr><td>R-B2</td><td>정격전압÷3.7V = 셀수 정합</td><td>불일치 플래그</td></tr>
+  <tr><td>R-B3</td><td>대용량 팩의 과도한 연속 C율</td><td>&gt;60C 주의</td></tr>
+  <tr><td>R-P1/P2</td><td>프로펠러 피치/직경비 · 직경 대비 무게 대역</td><td>&gt;1.2 / 0.6D~8D(g) 밖 주의</td></tr>
+  <tr><td>R-N1</td><td>정규화 단계 단위 오기 감지(예: 피치 '°' 표기)</td><td>주의</td></tr></table>
+
+  <h3>교차 출처 대조 (2단계)</h3>
+  <p>동일 사양의 출처 간 편차를 <b>신뢰 가중 평균</b> 대비로 계산합니다(R-X1). 15% 초과 플래그, 5~15% 주의 —
+  어느 경우든 <b>모든 출처 값을 병기</b>합니다. 텍스트 표기가 갈리면 전 표기를 병기하고 가중치 상위 출처를 대표값으로 합니다(R-X2).</p>
+
+  <h3>실측 연계 (3단계)</h3>
+  <p>스러스트 스탠드·실용량 테스트(S3)와 FCC 시험성적서의 실측 출력(S4)을 해당 필드에 연결해 A등급을 부여하고
+  주장 대비 편차를 공개합니다. 파생값(에너지·에너지밀도)은 입력 필드들의 최저 등급을 물려받습니다.</p>
+
+  <h3>생산국 표기</h3>
+  <p>브랜드 <b>본사국</b>과 실제 <b>생산국</b>을 분리합니다. 생산국은 공적 근거(S4)가 있을 때만 '확인',
+  판매 페이지 표기는 '주장(미검증)', 근거가 없으면 <b>'미확인'으로 정직하게 표기</b>합니다.</p>
+
+  <h3>현재 데이터의 한계 (정직 고지)</h3>
+  <ul>
+    <li>Phase 1 MVP 시드 데이터 — 부품 수가 적고 가격 시계열은 축적 시작 전입니다.</li>
+    <li><b>2207 PowerBeast는 검증 엔진 시연용 합성 픽스처(실제 제품 아님)</b>이며 사이트에 명시됩니다.</li>
+    <li>자동 규칙 임계값은 플래그율 5% 목표로 지속 튜닝하며, 플래그 항목은 사람 리뷰 승인 전까지 D등급을 유지합니다.</li>
+  </ul>`;
+  return sec;
+}
+</script>
+</body>
+</html>

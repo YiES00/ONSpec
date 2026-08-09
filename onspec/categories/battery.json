@@ -1,0 +1,19 @@
+{
+  "id": "battery",
+  "name_ko": "배터리",
+  "name_en": "Batteries",
+  "phase": 1,
+  "specs": [
+    {"key": "capacity_mah",     "name_ko": "용량",         "unit": "mAh",   "type": "integer", "compare_default": true,  "sort": 10},
+    {"key": "cells_s",          "name_ko": "셀 수(S)",     "unit": "S",     "type": "integer", "compare_default": true,  "sort": 20},
+    {"key": "nominal_voltage_v","name_ko": "정격 전압",     "unit": "V",     "type": "numeric", "compare_default": true,  "sort": 30},
+    {"key": "c_rating",         "name_ko": "방전율(C)",    "unit": "C",     "type": "numeric", "requires_conditions": true, "compare_default": true, "sort": 40},
+    {"key": "burst_c",          "name_ko": "순간 방전율",   "unit": "C",     "type": "numeric", "requires_conditions": true, "compare_default": false, "sort": 45},
+    {"key": "weight_g",         "name_ko": "무게",         "unit": "g",     "type": "numeric", "compare_default": true,  "sort": 50},
+    {"key": "energy_wh",        "name_ko": "에너지",       "unit": "Wh",    "type": "numeric", "compare_default": false, "sort": 60},
+    {"key": "energy_density",   "name_ko": "에너지밀도",    "unit": "Wh/kg", "type": "numeric", "compare_default": true,  "sort": 70, "derived": true},
+    {"key": "dimensions_mm",    "name_ko": "크기",         "unit": "mm",    "type": "text",    "compare_default": false, "sort": 80},
+    {"key": "discharge_plug",   "name_ko": "방전 커넥터",   "unit": null,    "type": "text",    "compare_default": true,  "sort": 90},
+    {"key": "chemistry",        "name_ko": "화학 조성",     "unit": null,    "type": "text",    "compare_default": false, "sort": 100}
+  ]
+}

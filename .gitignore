@@ -1,0 +1,7 @@
+# 압축 해제 완료된 원본 아카이브 — 내용은 onspec/ 에 추적됨
+files.zip
+onspec.zip
+
+__pycache__/
+*.pyc
+.DS_Store

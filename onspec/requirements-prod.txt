@@ -1,0 +1,4 @@
+# 운영 전용 추가 의존성
+anthropic>=0.40
+psycopg[binary]>=3.2
+requests>=2.32

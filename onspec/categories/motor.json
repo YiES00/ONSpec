@@ -1,0 +1,22 @@
+{
+  "id": "motor",
+  "name_ko": "모터",
+  "name_en": "Motors",
+  "phase": 1,
+  "specs": [
+    {"key": "kv",              "name_ko": "KV",             "unit": "rpm/V", "type": "integer", "compare_default": true,  "sort": 10},
+    {"key": "weight_g",        "name_ko": "무게",            "unit": "g",     "type": "numeric", "compare_default": true,  "sort": 20},
+    {"key": "stator_dia_mm",   "name_ko": "스테이터 직경",    "unit": "mm",    "type": "numeric", "compare_default": false, "sort": 30},
+    {"key": "stator_len_mm",   "name_ko": "스테이터 높이",    "unit": "mm",    "type": "numeric", "compare_default": false, "sort": 31},
+    {"key": "max_thrust_g",    "name_ko": "최대 추력",       "unit": "g",     "type": "numeric", "requires_conditions": true, "compare_default": true, "sort": 40},
+    {"key": "max_power_w",     "name_ko": "최대 출력",       "unit": "W",     "type": "numeric", "requires_conditions": true, "compare_default": true, "sort": 50},
+    {"key": "max_current_a",   "name_ko": "최대 전류",       "unit": "A",     "type": "numeric", "requires_conditions": true, "compare_default": true, "sort": 60},
+    {"key": "max_voltage_v",   "name_ko": "최대 전압",       "unit": "V",     "type": "numeric", "compare_default": false, "sort": 70},
+    {"key": "cells_range",     "name_ko": "지원 셀수",       "unit": null,    "type": "text",    "compare_default": true,  "sort": 80},
+    {"key": "prop_rec",        "name_ko": "권장 프로펠러",    "unit": null,    "type": "text",    "compare_default": false, "sort": 90},
+    {"key": "config",          "name_ko": "권선 구성",       "unit": null,    "type": "text",    "compare_default": false, "sort": 100},
+    {"key": "resistance_mohm", "name_ko": "상간 저항",       "unit": "mΩ",    "type": "numeric", "compare_default": false, "sort": 110},
+    {"key": "shaft_dia_mm",    "name_ko": "샤프트 직경",     "unit": "mm",    "type": "numeric", "compare_default": false, "sort": 120},
+    {"key": "ip_rating",       "name_ko": "방진방수 등급",    "unit": null,    "type": "text",    "compare_default": false, "sort": 130}
+  ]
+}
