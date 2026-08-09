@@ -1,20 +1,20 @@
 {
- "generated_at": "2026-08-09T04:46:24+00:00",
+ "generated_at": "2026-08-09T05:12:22+00:00",
  "stats": {
-  "components": 10,
-  "sources": 21,
-  "spec_rows": 85,
+  "components": 12,
+  "sources": 6,
+  "spec_rows": 111,
   "verdicts": {
-   "pass": 13,
-   "caution": 6,
-   "flag": 4,
+   "pass": 5,
+   "caution": 0,
+   "flag": 0,
    "error": 0
   },
   "grades": {
    "A": 0,
-   "B": 51,
-   "C": 30,
-   "D": 4
+   "B": 111,
+   "C": 0,
+   "D": 0
   }
  },
  "categories": [
@@ -369,14 +369,14 @@
  ],
  "components": [
   {
-   "id": 8,
-   "category": "battery",
+   "id": 1,
+   "category": "motor",
    "manufacturer": {
-    "name": "Tattu (Gens Ace/Grepow)",
+    "name": "T-Motor",
     "hq_country": "CN"
    },
-   "model_name": "Tattu Plus 16000mAh 6S",
-   "variant": "15C/XT90-S",
+   "model_name": "U8 Lite L",
+   "variant": "KV95",
    "is_synthetic": false,
    "mfg_country": {
     "code": null,
@@ -384,106 +384,259 @@
     "claims": []
    },
    "specs": {
-    "capacity_mah": {
-     "value": 16000.0,
+    "kv": {
+     "value": 95.0,
      "value_text": null,
-     "unit": "mAh",
+     "unit": "rpm/V",
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "Minimum Capacity: 16000mAh",
+     "quote": "KV: 95",
      "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 16000.0,
+       "value": 95.0,
        "value_text": null,
-       "value_original": 16000.0,
-       "unit_original": "mAh",
-       "quote": "Minimum Capacity: 16000mAh",
+       "value_original": 95.0,
+       "unit_original": null,
+       "quote": "KV: 95",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
        "trust": 1.0
       }
      ]
     },
-    "cells_s": {
-     "value": 6.0,
+    "weight_g": {
+     "value": 280.0,
      "value_text": null,
-     "unit": "S",
+     "unit": "g",
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "Configuration: 6S1P / 22.2V / 6Cell",
+     "quote": "Motor Weight (Incl. Cable): 280g",
      "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 6.0,
+       "value": 280.0,
        "value_text": null,
-       "value_original": 6.0,
-       "unit_original": "S",
-       "quote": "Configuration: 6S1P / 22.2V / 6Cell",
+       "value_original": 280.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 280g",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
        "trust": 1.0
       }
      ]
     },
-    "nominal_voltage_v": {
-     "value": 22.2,
+    "max_thrust_g": {
+     "value": 8521.0,
      "value_text": null,
-     "unit": "V",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Configuration: 6S1P / 22.2V / 6Cell",
-     "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 22.2,
-       "value_text": null,
-       "value_original": 22.2,
-       "unit_original": "V",
-       "quote": "Configuration: 6S1P / 22.2V / 6Cell",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "c_rating": {
-     "value": 15.0,
-     "value_text": null,
-     "unit": "C",
+     "unit": "g",
      "grade": "B",
      "grade_note": null,
      "conditions": {
-      "type": "연속"
+      "throttle": "100%",
+      "voltage_v": 47.0,
+      "propeller": "G29*9.5",
+      "source": "제조사 벤치 테스트 표",
+      "prop_diameter_in": 29.0
      },
-     "quote": "Discharge Rate: 15C",
+     "quote": "Test Data G29*9.5 @ 100%: Thrust 8521g",
      "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 8521.0,
+       "value_text": null,
+       "value_original": 8521.0,
+       "unit_original": "g",
+       "quote": "Test Data G29*9.5 @ 100%: Thrust 8521g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 1790.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180S"
+     },
+     "quote": "Max Power (180S): 1790W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1790.0,
+       "value_text": null,
+       "value_original": 1790.0,
+       "unit_original": "W",
+       "quote": "Max Power (180S): 1790W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 38.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 38A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 38.0,
+       "value_text": null,
+       "value_original": 38.0,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 38A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S(4.2V/pc) / 48-52V",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S(4.2V/pc) / 48-52V",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configu ration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configu ration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": 146.0,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 146mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 146.0,
+       "value_text": null,
+       "value_original": 146.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance: 146mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
@@ -492,1922 +645,12 @@
        "value": 15.0,
        "value_text": null,
        "value_original": 15.0,
-       "unit_original": "C",
-       "quote": "Discharge Rate: 15C",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "burst_c": {
-     "value": 30.0,
-     "value_text": null,
-     "unit": "C",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {
-      "note": "지속시간 미기재"
-     },
-     "quote": "Max Burst Discharge Rate: 30C",
-     "source": {
-      "url": "https://www.amazon.com/Tattu-16000mAh-22-2V-Battery-XT90S/dp/B0C6QRWBGX",
-      "title": "TATTU Plus 16000mAh 15C 22.2V 6S Lipo Battery Pack with XT90S - Amazon",
-      "tier": "S2_vendor",
-      "vendor": "Amazon"
-     },
-     "all_sources": [
-      {
-       "value": 30.0,
-       "value_text": null,
-       "value_original": 30.0,
-       "unit_original": "C",
-       "quote": "Max Burst Discharge Rate: 30C",
-       "tier": "S2_vendor",
-       "vendor": "Amazon",
-       "url": "https://www.amazon.com/Tattu-16000mAh-22-2V-Battery-XT90S/dp/B0C6QRWBGX",
-       "title": "TATTU Plus 16000mAh 15C 22.2V 6S Lipo Battery Pack with XT90S - Amazon",
-       "trust": 0.5
-      }
-     ]
-    },
-    "weight_g": {
-     "value": 1932.0,
-     "value_text": null,
-     "unit": "g",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Net Weight(+-20g): 1932g",
-     "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 1932.0,
-       "value_text": null,
-       "value_original": 1932.0,
-       "unit_original": "g",
-       "quote": "Net Weight(+-20g): 1932g",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      },
-      {
-       "value": 1932.0,
-       "value_text": null,
-       "value_original": 1932.0,
-       "unit_original": "g",
-       "quote": "Net Weight(+-20g): 1932g",
-       "tier": "S2_vendor",
-       "vendor": "Amazon",
-       "url": "https://www.amazon.com/Tattu-16000mAh-22-2V-Battery-XT90S/dp/B0C6QRWBGX",
-       "title": "TATTU Plus 16000mAh 15C 22.2V 6S Lipo Battery Pack with XT90S - Amazon",
-       "trust": 0.5
-      }
-     ]
-    },
-    "energy_wh": {
-     "value": 355.2,
-     "value_text": null,
-     "unit": "Wh",
-     "grade": "B",
-     "grade_note": "계산값(용량×정격전압)",
-     "conditions": {},
-     "quote": "계산값: 용량×정격전압",
-     "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": []
-    },
-    "energy_density": {
-     "value": 183.9,
-     "value_text": null,
-     "unit": "Wh/kg",
-     "grade": "B",
-     "grade_note": "계산값(용량×정격전압÷무게)",
-     "conditions": {},
-     "quote": "계산값: 용량×정격전압÷무게",
-     "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": []
-    },
-    "dimensions_mm": {
-     "value": null,
-     "value_text": "203×82×70",
-     "unit": "mm",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Dimensions: 203mm x 82mm x 70mm",
-     "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "203×82×70",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Dimensions: 203mm x 82mm x 70mm",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "discharge_plug": {
-     "value": null,
-     "value_text": "XT90-S",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Discharge Plug: XT90-S",
-     "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "XT90-S",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Discharge Plug: XT90-S",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "chemistry": {
-     "value": null,
-     "value_text": "LiPo",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Lipo Battery Pack",
-     "source": {
-      "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-      "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "LiPo",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Lipo Battery Pack",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://genstattu.com/tattu-plus-16000mah-6s-15c-22-2v-lipo-battery-pack-with-xt90s/",
-       "title": "Tattu Plus 16000mAh 6S 15C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    }
-   },
-   "verifications": [
-    {
-     "rule_id": "R-B2",
-     "verdict": "pass",
-     "summary": "셀 구성 정합 (6S ↔ 22.2V)",
-     "spec_keys": [
-      "cells_s"
-     ],
-     "detail": {
-      "stated_cells": 6,
-      "nominal_v": 22.2,
-      "implied_cells": 6
-     }
-    },
-    {
-     "rule_id": "R-B1",
-     "verdict": "pass",
-     "summary": "에너지밀도 검사 통과 (184Wh/kg)",
-     "spec_keys": [
-      "energy_density"
-     ],
-     "detail": {
-      "capacity_mah": 16000.0,
-      "voltage_v": 22.2,
-      "weight_g": 1932.0,
-      "energy_density_wh_kg": 183.9
-     }
-    }
-   ],
-   "prices": []
-  },
-  {
-   "id": 9,
-   "category": "battery",
-   "manufacturer": {
-    "name": "Tattu (Gens Ace/Grepow)",
-    "hq_country": "CN"
-   },
-   "model_name": "Tattu 16000mAh 6S",
-   "variant": "30C/XT90-S",
-   "is_synthetic": false,
-   "mfg_country": {
-    "code": null,
-    "status": "unconfirmed",
-    "claims": []
-   },
-   "specs": {
-    "capacity_mah": {
-     "value": 16000.0,
-     "value_text": null,
-     "unit": "mAh",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Minimum Capacity: 16000mAh",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 16000.0,
-       "value_text": null,
-       "value_original": 16000.0,
-       "unit_original": "mAh",
-       "quote": "Minimum Capacity: 16000mAh",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "cells_s": {
-     "value": 6.0,
-     "value_text": null,
-     "unit": "S",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Configuration: 6S / 22.2v",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 6.0,
-       "value_text": null,
-       "value_original": 6.0,
-       "unit_original": "S",
-       "quote": "Configuration: 6S / 22.2v",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "nominal_voltage_v": {
-     "value": 22.2,
-     "value_text": null,
-     "unit": "V",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Configuration: 6S / 22.2v",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 22.2,
-       "value_text": null,
-       "value_original": 22.2,
-       "unit_original": "V",
-       "quote": "Configuration: 6S / 22.2v",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "c_rating": {
-     "value": 30.0,
-     "value_text": null,
-     "unit": "C",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {
-      "type": "연속"
-     },
-     "quote": "Discharge Rate: 30C",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 30.0,
-       "value_text": null,
-       "value_original": 30.0,
-       "unit_original": "C",
-       "quote": "Discharge Rate: 30C",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "weight_g": {
-     "value": 1988.0,
-     "value_text": null,
-     "unit": "g",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Net Weight(+-20g): 1988g",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 1988.0,
-       "value_text": null,
-       "value_original": 1988.0,
-       "unit_original": "g",
-       "quote": "Net Weight(+-20g): 1988g",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "energy_wh": {
-     "value": 355.2,
-     "value_text": null,
-     "unit": "Wh",
-     "grade": "B",
-     "grade_note": "계산값(용량×정격전압)",
-     "conditions": {},
-     "quote": "계산값: 용량×정격전압",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": []
-    },
-    "energy_density": {
-     "value": 178.7,
-     "value_text": null,
-     "unit": "Wh/kg",
-     "grade": "B",
-     "grade_note": "계산값(용량×정격전압÷무게)",
-     "conditions": {},
-     "quote": "계산값: 용량×정격전압÷무게",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": []
-    },
-    "dimensions_mm": {
-     "value": null,
-     "value_text": "192×76×65",
-     "unit": "mm",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Dimensions: 192 x 76 x 65mm",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "192×76×65",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Dimensions: 192 x 76 x 65mm",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "discharge_plug": {
-     "value": null,
-     "value_text": "XT90-S(안티스파크)",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "XT90 Anti-Spark plug",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "XT90-S(안티스파크)",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "XT90 Anti-Spark plug",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "chemistry": {
-     "value": null,
-     "value_text": "LiPo",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Lipo Battery Pack",
-     "source": {
-      "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-      "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "LiPo",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Lipo Battery Pack",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.genstattu.com/ta-30c-16000-6s1p-xt90.html",
-       "title": "Tattu 16000mAh 6S 30C 22.2V Lipo Battery Pack with XT90-S Plug - Gens Tattu",
-       "trust": 1.0
-      }
-     ]
-    }
-   },
-   "verifications": [
-    {
-     "rule_id": "R-B2",
-     "verdict": "pass",
-     "summary": "셀 구성 정합 (6S ↔ 22.2V)",
-     "spec_keys": [
-      "cells_s"
-     ],
-     "detail": {
-      "stated_cells": 6,
-      "nominal_v": 22.2,
-      "implied_cells": 6
-     }
-    },
-    {
-     "rule_id": "R-B1",
-     "verdict": "pass",
-     "summary": "에너지밀도 검사 통과 (179Wh/kg)",
-     "spec_keys": [
-      "energy_density"
-     ],
-     "detail": {
-      "capacity_mah": 16000.0,
-      "voltage_v": 22.2,
-      "weight_g": 1988.0,
-      "energy_density_wh_kg": 178.7
-     }
-    }
-   ],
-   "prices": []
-  },
-  {
-   "id": 10,
-   "category": "battery",
-   "manufacturer": {
-    "name": "Tattu (Gens Ace/Grepow)",
-    "hq_country": "CN"
-   },
-   "model_name": "Tattu G-Tech 16000mAh 6S",
-   "variant": "30C/XT90-S",
-   "is_synthetic": false,
-   "mfg_country": {
-    "code": null,
-    "status": "unconfirmed",
-    "claims": []
-   },
-   "specs": {
-    "capacity_mah": {
-     "value": 16000.0,
-     "value_text": null,
-     "unit": "mAh",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Minimum Capacity 16000mAh",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 16000.0,
-       "value_text": null,
-       "value_original": 16000.0,
-       "unit_original": "mAh",
-       "quote": "Minimum Capacity 16000mAh",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "cells_s": {
-     "value": 12.0,
-     "value_text": null,
-     "unit": "S",
-     "grade": "D",
-     "grade_note": "셀 구성 모순 — 정격 22.2V는 6S에 해당하나 12S로 표기 (출처 원문 오기 추정)",
-     "conditions": {
-      "note": "공식 페이지 원문 그대로"
-     },
-     "quote": "Configuration 12S1P",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 12.0,
-       "value_text": null,
-       "value_original": 12.0,
-       "unit_original": "S",
-       "quote": "Configuration 12S1P",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "nominal_voltage_v": {
-     "value": 22.2,
-     "value_text": null,
-     "unit": "V",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Nominal Voltage 22.2V",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 22.2,
-       "value_text": null,
-       "value_original": 22.2,
-       "unit_original": "V",
-       "quote": "Nominal Voltage 22.2V",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "c_rating": {
-     "value": 30.0,
-     "value_text": null,
-     "unit": "C",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {
-      "type": "연속"
-     },
-     "quote": "16000mAh 22.2V 30C G-Tech",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 30.0,
-       "value_text": null,
-       "value_original": 30.0,
-       "unit_original": "C",
-       "quote": "16000mAh 22.2V 30C G-Tech",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "weight_g": {
-     "value": 2001.0,
-     "value_text": null,
-     "unit": "g",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Net Weight(+-20g) 2001g",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 2001.0,
-       "value_text": null,
-       "value_original": 2001.0,
-       "unit_original": "g",
-       "quote": "Net Weight(+-20g) 2001g",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "energy_wh": {
-     "value": 355.2,
-     "value_text": null,
-     "unit": "Wh",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Power 355.2 Wh",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 355.2,
-       "value_text": null,
-       "value_original": 355.2,
-       "unit_original": "Wh",
-       "quote": "Power 355.2 Wh",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "energy_density": {
-     "value": 177.5,
-     "value_text": null,
-     "unit": "Wh/kg",
-     "grade": "B",
-     "grade_note": "계산값(용량×정격전압÷무게)",
-     "conditions": {},
-     "quote": "계산값: 용량×정격전압÷무게",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": []
-    },
-    "dimensions_mm": {
-     "value": null,
-     "value_text": "193×76×64",
-     "unit": "mm",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Dimensions 193mm x 76mm x 64mm",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "193×76×64",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Dimensions 193mm x 76mm x 64mm",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "discharge_plug": {
-     "value": null,
-     "value_text": "XT90-S",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Discharge Plug XT90-S",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "XT90-S",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Discharge Plug XT90-S",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    },
-    "chemistry": {
-     "value": null,
-     "value_text": "LiPo(G-Tech 스마트)",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "G-Tech Battery",
-     "source": {
-      "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-      "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "LiPo(G-Tech 스마트)",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "G-Tech Battery",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://tattuworld.com/soft-pack-uav-battery/16000mah-30c-6s-22-2v-gtech-battery.html",
-       "title": "16000mAh 22.2V 30C G-Tech Battery - Tattu",
-       "trust": 1.0
-      }
-     ]
-    }
-   },
-   "verifications": [
-    {
-     "rule_id": "R-B2",
-     "verdict": "flag",
-     "summary": "셀 구성 모순 — 정격 22.2V는 6S에 해당하나 12S로 표기 (출처 원문 오기 추정)",
-     "spec_keys": [
-      "cells_s"
-     ],
-     "detail": {
-      "stated_cells": 12,
-      "nominal_v": 22.2,
-      "implied_cells": 6
-     }
-    },
-    {
-     "rule_id": "R-B1",
-     "verdict": "pass",
-     "summary": "에너지밀도 검사 통과 (178Wh/kg)",
-     "spec_keys": [
-      "energy_density"
-     ],
-     "detail": {
-      "capacity_mah": 16000.0,
-      "voltage_v": 22.2,
-      "weight_g": 2001.0,
-      "energy_density_wh_kg": 177.5
-     }
-    }
-   ],
-   "prices": []
-  },
-  {
-   "id": 4,
-   "category": "esc",
-   "manufacturer": {
-    "name": "Hobbywing",
-    "hq_country": "CN"
-   },
-   "model_name": "XRotor Pro 40A",
-   "variant": "OPTO",
-   "is_synthetic": false,
-   "mfg_country": {
-    "code": null,
-    "status": "unconfirmed",
-    "claims": []
-   },
-   "specs": {
-    "cont_current_a": {
-     "value": 40.0,
-     "value_text": null,
-     "unit": "A",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "XRotor Pro 40A",
-     "source": {
-      "url": "https://www.hobbywing.com/en/products/xrotor-pro-40a120",
-      "title": "XRotor Pro 40A Drone ESCs / 3-6S Speed Controller - HOBBYWING",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 40.0,
-       "value_text": null,
-       "value_original": 40.0,
-       "unit_original": "A",
-       "quote": "XRotor Pro 40A",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.hobbywing.com/en/products/xrotor-pro-40a120",
-       "title": "XRotor Pro 40A Drone ESCs / 3-6S Speed Controller - HOBBYWING",
-       "trust": 1.0
-      },
-      {
-       "value": 40.0,
-       "value_text": null,
-       "value_original": 40.0,
-       "unit_original": "A",
-       "quote": "Constant current: 40A",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    },
-    "burst_current_a": {
-     "value": 60.0,
-     "value_text": null,
-     "unit": "A",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {
-      "duration_s": 10
-     },
-     "quote": "Burst Current: 60A (10 seconds)",
-     "source": {
-      "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-      "tier": "S2_vendor",
-      "vendor": "HobbyKing"
-     },
-     "all_sources": [
-      {
-       "value": 60.0,
-       "value_text": null,
-       "value_original": 60.0,
-       "unit_original": "A",
-       "quote": "Burst Current: 60A (10 seconds)",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    },
-    "cells_range": {
-     "value": null,
-     "value_text": "3~6S",
-     "unit": null,
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Lipo Cells: 3~6S (11.3~22.6V)",
-     "source": {
-      "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-      "tier": "S2_vendor",
-      "vendor": "HobbyKing"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "3~6S",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Lipo Cells: 3~6S (11.3~22.6V)",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    },
-    "max_voltage_v": {
-     "value": 22.6,
-     "value_text": null,
-     "unit": "V",
-     "grade": "C",
-     "grade_note": "셀수(6S 만충 25.2V)와 표기 전압(22.6V) 불일치 10%",
-     "conditions": {},
-     "quote": "Lipo Cells: 3~6S (11.3~22.6V)",
-     "source": {
-      "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-      "tier": "S2_vendor",
-      "vendor": "HobbyKing"
-     },
-     "all_sources": [
-      {
-       "value": 22.6,
-       "value_text": null,
-       "value_original": 22.6,
-       "unit_original": "V",
-       "quote": "Lipo Cells: 3~6S (11.3~22.6V)",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    },
-    "bec": {
-     "value": null,
-     "value_text": "없음(OPTO)",
-     "unit": null,
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "BEC Mode: No BEC (OPTO)",
-     "source": {
-      "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-      "tier": "S2_vendor",
-      "vendor": "HobbyKing"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "없음(OPTO)",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "BEC Mode: No BEC (OPTO)",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    },
-    "weight_g": {
-     "value": 50.0,
-     "value_text": null,
-     "unit": "g",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Weight: 50g",
-     "source": {
-      "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-      "tier": "S2_vendor",
-      "vendor": "HobbyKing"
-     },
-     "all_sources": [
-      {
-       "value": 50.0,
-       "value_text": null,
-       "value_original": 50.0,
-       "unit_original": "g",
-       "quote": "Weight: 50g",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    },
-    "dimensions_mm": {
-     "value": null,
-     "value_text": "66×22×11",
-     "unit": "mm",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Size: 66 x 22 x 11mm",
-     "source": {
-      "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-      "tier": "S2_vendor",
-      "vendor": "HobbyKing"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "66×22×11",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Size: 66 x 22 x 11mm",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    },
-    "signal_hz_max": {
-     "value": 621.0,
-     "value_text": null,
-     "unit": "Hz",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Max support 621Hz throttle signal",
-     "source": {
-      "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-      "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-      "tier": "S2_vendor",
-      "vendor": "HobbyKing"
-     },
-     "all_sources": [
-      {
-       "value": 621.0,
-       "value_text": null,
-       "value_original": 621.0,
-       "unit_original": "Hz",
-       "quote": "Max support 621Hz throttle signal",
-       "tier": "S2_vendor",
-       "vendor": "HobbyKing",
-       "url": "https://hobbyking.com/en_us/hobbywing-xrotor-pro-40a-3d-muti-rotor-esc-opto.html",
-       "title": "Hobbywing XRotor Pro 40A 3D Multi-rotor ESC OPTO - HobbyKing",
-       "trust": 0.6
-      }
-     ]
-    }
-   },
-   "verifications": [
-    {
-     "rule_id": "R-E1",
-     "verdict": "pass",
-     "summary": "전류 사양 정합 (연속 40A ≤ 순간 60A)",
-     "spec_keys": [
-      "burst_current_a"
-     ],
-     "detail": {
-      "burst_a": 60.0,
-      "cont_a": 40.0
-     }
-    },
-    {
-     "rule_id": "R-E3",
-     "verdict": "caution",
-     "summary": "셀수(6S 만충 25.2V)와 표기 전압(22.6V) 불일치 10%",
-     "spec_keys": [
-      "max_voltage_v"
-     ],
-     "detail": {
-      "cells_max": 6,
-      "full_charge_v": 25.2,
-      "stated_v": 22.6,
-      "deviation": 0.103
-     }
-    }
-   ],
-   "prices": []
-  },
-  {
-   "id": 5,
-   "category": "esc",
-   "manufacturer": {
-    "name": "Hobbywing",
-    "hq_country": "CN"
-   },
-   "model_name": "XRotor 40A",
-   "variant": null,
-   "is_synthetic": false,
-   "mfg_country": {
-    "code": null,
-    "status": "unconfirmed",
-    "claims": []
-   },
-   "specs": {
-    "cont_current_a": {
-     "value": 40.0,
-     "value_text": null,
-     "unit": "A",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "XRotor 40A ESC",
-     "source": {
-      "url": "https://www.hobbywing.com/en/products/xrotor-40a122",
-      "title": "XRotor 40A 6S BLDC Brushless Drone ESC for Multirotor 2-6S - HOBBYWING",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 40.0,
-       "value_text": null,
-       "value_original": 40.0,
-       "unit_original": "A",
-       "quote": "XRotor 40A ESC",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.hobbywing.com/en/products/xrotor-40a122",
-       "title": "XRotor 40A 6S BLDC Brushless Drone ESC for Multirotor 2-6S - HOBBYWING",
-       "trust": 1.0
-      },
-      {
-       "value": 40.0,
-       "value_text": null,
-       "value_original": 40.0,
-       "unit_original": "A",
-       "quote": "Continuous current: 40A",
-       "tier": "S2_vendor",
-       "vendor": "Foxtech",
-       "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-       "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-       "trust": 0.6
-      }
-     ]
-    },
-    "burst_current_a": {
-     "value": 60.0,
-     "value_text": null,
-     "unit": "A",
-     "grade": "C",
-     "grade_note": "순간 전류의 지속시간 조건 미기재 — 비교 시 주의 (원칙 2)",
-     "conditions": {
-      "note": "지속시간 미기재"
-     },
-     "quote": "Transient current: 60A",
-     "source": {
-      "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-      "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-      "tier": "S2_vendor",
-      "vendor": "Foxtech"
-     },
-     "all_sources": [
-      {
-       "value": 60.0,
-       "value_text": null,
-       "value_original": 60.0,
-       "unit_original": "A",
-       "quote": "Transient current: 60A",
-       "tier": "S2_vendor",
-       "vendor": "Foxtech",
-       "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-       "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-       "trust": 0.6
-      }
-     ]
-    },
-    "cells_range": {
-     "value": null,
-     "value_text": "2~6S",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Drone ESC for Multirotor 2-6S",
-     "source": {
-      "url": "https://www.hobbywing.com/en/products/xrotor-40a122",
-      "title": "XRotor 40A 6S BLDC Brushless Drone ESC for Multirotor 2-6S - HOBBYWING",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "2~6S",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Drone ESC for Multirotor 2-6S",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.hobbywing.com/en/products/xrotor-40a122",
-       "title": "XRotor 40A 6S BLDC Brushless Drone ESC for Multirotor 2-6S - HOBBYWING",
-       "trust": 1.0
-      },
-      {
-       "value": null,
-       "value_text": "2~6S",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Battery pack: 2-6S",
-       "tier": "S2_vendor",
-       "vendor": "Foxtech",
-       "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-       "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-       "trust": 0.6
-      }
-     ]
-    },
-    "bec": {
-     "value": null,
-     "value_text": "없음",
-     "unit": null,
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "BEC: NO",
-     "source": {
-      "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-      "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-      "tier": "S2_vendor",
-      "vendor": "Foxtech"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "없음",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "BEC: NO",
-       "tier": "S2_vendor",
-       "vendor": "Foxtech",
-       "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-       "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-       "trust": 0.6
-      }
-     ]
-    },
-    "weight_g": {
-     "value": 26.0,
-     "value_text": null,
-     "unit": "g",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "26g (0.92oz)",
-     "source": {
-      "url": "https://www.hobbywingdirect.com/products/xrotor-40a-esc",
-      "title": "XRotor 40A ESC COB - HOBBYWING North America",
-      "tier": "S2_vendor",
-      "vendor": "Hobbywing NA(공식 딜러)"
-     },
-     "all_sources": [
-      {
-       "value": 26.0,
-       "value_text": null,
-       "value_original": 26.0,
-       "unit_original": "g",
-       "quote": "26g (0.92oz)",
-       "tier": "S2_vendor",
-       "vendor": "Hobbywing NA(공식 딜러)",
-       "url": "https://www.hobbywingdirect.com/products/xrotor-40a-esc",
-       "title": "XRotor 40A ESC COB - HOBBYWING North America",
-       "trust": 0.8
-      },
-      {
-       "value": 26.0,
-       "value_text": null,
-       "value_original": 26.0,
-       "unit_original": "g",
-       "quote": "Weight: 26g",
-       "tier": "S2_vendor",
-       "vendor": "Foxtech",
-       "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-       "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-       "trust": 0.6
-      }
-     ]
-    },
-    "dimensions_mm": {
-     "value": null,
-     "value_text": "68×25×8.7",
-     "unit": "mm",
-     "grade": "C",
-     "grade_note": "출처 간 표기 불일치: 68×25×2.7 / 68×25×8.7",
-     "conditions": {},
-     "quote": "Size / Weight 68 x 25 x 8.7mm",
-     "source": {
-      "url": "https://www.hobbywingdirect.com/products/xrotor-40a-esc",
-      "title": "XRotor 40A ESC COB - HOBBYWING North America",
-      "tier": "S2_vendor",
-      "vendor": "Hobbywing NA(공식 딜러)"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "68×25×8.7",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Size / Weight 68 x 25 x 8.7mm",
-       "tier": "S2_vendor",
-       "vendor": "Hobbywing NA(공식 딜러)",
-       "url": "https://www.hobbywingdirect.com/products/xrotor-40a-esc",
-       "title": "XRotor 40A ESC COB - HOBBYWING North America",
-       "trust": 0.8
-      },
-      {
-       "value": null,
-       "value_text": "68×25×2.7",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Dimension: 68*25*2.7mm",
-       "tier": "S2_vendor",
-       "vendor": "Foxtech",
-       "url": "https://www.foxtechfpv.com/hobbywing-xrotor-40a-escno-bec-p-1706.html",
-       "title": "Hobbywing XRotor 40A ESC(no BEC) - Foxtech",
-       "trust": 0.6
-      }
-     ]
-    },
-    "signal_hz_max": {
-     "value": 621.0,
-     "value_text": null,
-     "unit": "Hz",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "supports a throttle signal frequency of up to 621Hz",
-     "source": {
-      "url": "https://www.hobbywing.com/en/products/xrotor-40a122",
-      "title": "XRotor 40A 6S BLDC Brushless Drone ESC for Multirotor 2-6S - HOBBYWING",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 621.0,
-       "value_text": null,
-       "value_original": 621.0,
-       "unit_original": "Hz",
-       "quote": "supports a throttle signal frequency of up to 621Hz",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.hobbywing.com/en/products/xrotor-40a122",
-       "title": "XRotor 40A 6S BLDC Brushless Drone ESC for Multirotor 2-6S - HOBBYWING",
-       "trust": 1.0
-      }
-     ]
-    }
-   },
-   "verifications": [
-    {
-     "rule_id": "R-E1",
-     "verdict": "pass",
-     "summary": "전류 사양 정합 (연속 40A ≤ 순간 60A)",
-     "spec_keys": [
-      "burst_current_a"
-     ],
-     "detail": {
-      "burst_a": 60.0,
-      "cont_a": 40.0
-     }
-    },
-    {
-     "rule_id": "R-E2",
-     "verdict": "caution",
-     "summary": "순간 전류의 지속시간 조건 미기재 — 비교 시 주의 (원칙 2)",
-     "spec_keys": [
-      "burst_current_a"
-     ],
-     "detail": {}
-    },
-    {
-     "rule_id": "R-X2",
-     "verdict": "caution",
-     "summary": "출처 간 표기 불일치: 68×25×2.7 / 68×25×8.7",
-     "spec_keys": [
-      "dimensions_mm"
-     ],
-     "detail": {
-      "variants": [
-       "68×25×2.7",
-       "68×25×8.7"
-      ]
-     }
-    }
-   ],
-   "prices": []
-  },
-  {
-   "id": 1,
-   "category": "motor",
-   "manufacturer": {
-    "name": "T-Motor",
-    "hq_country": "CN"
-   },
-   "model_name": "MN505-S",
-   "variant": "KV320",
-   "is_synthetic": false,
-   "mfg_country": {
-    "code": "CN",
-    "status": "claimed",
-    "claims": [
-     {
-      "country": "CN",
-      "status": "claimed",
-      "quote": "designed by T-Motor in China",
-      "summary": "생산국 주장: CN (claimed)",
-      "url": "https://druav.com/products/t-motor-newest-navigator-serie-1"
-     },
-     {
-      "country": "CN",
-      "status": "claimed",
-      "quote": "Origin: Mainland China",
-      "summary": "생산국 주장: CN (claimed)",
-      "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1"
-     }
-    ]
-   },
-   "specs": {
-    "kv": {
-     "value": 320.0,
-     "value_text": null,
-     "unit": "rpm/V",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "MN505-S KV320",
-     "source": {
-      "url": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
-      "title": "MN505-S KV320 UAV / Drone Motor - IP45 & Overload Protection",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 320.0,
-       "value_text": null,
-       "value_original": 320.0,
-       "unit_original": "rpm/V",
-       "quote": "MN505-S KV320",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
-       "title": "MN505-S KV320 UAV / Drone Motor - IP45 & Overload Protection",
-       "trust": 1.0
-      }
-     ]
-    },
-    "weight_g": {
-     "value": 2258.0,
-     "value_text": null,
-     "unit": "g",
-     "grade": "D",
-     "grade_note": "표기 무게 2258g는 부피 대비 밀도 23,908kg/m³ — 강철(7,850)보다 무거워 물리적으로 불가 (포장중량 혼동 의심)",
-     "conditions": {},
-     "quote": "Motor weight (including cable): 2258 grams",
-     "source": {
-      "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": 2258.0,
-       "value_text": null,
-       "value_original": 2258.0,
-       "unit_original": "g",
-       "quote": "Motor weight (including cable): 2258 grams",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-       "trust": 0.5
-      }
-     ]
-    },
-    "stator_dia_mm": {
-     "value": 55.6,
-     "value_text": null,
-     "unit": "mm",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {
-      "note": "모터 외경 기준"
-     },
-     "quote": "Motor Size 055.6*38.9mm",
-     "source": {
-      "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-      "tier": "S2_vendor",
-      "vendor": "RCDrone.top"
-     },
-     "all_sources": [
-      {
-       "value": 55.6,
-       "value_text": null,
-       "value_original": 55.6,
        "unit_original": "mm",
-       "quote": "Motor Size 055.6*38.9mm",
-       "tier": "S2_vendor",
-       "vendor": "RCDrone.top",
-       "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-       "trust": 0.4
-      }
-     ]
-    },
-    "stator_len_mm": {
-     "value": 38.9,
-     "value_text": null,
-     "unit": "mm",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {
-      "note": "모터 전고 기준"
-     },
-     "quote": "Motor Size 055.6*38.9mm",
-     "source": {
-      "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-      "tier": "S2_vendor",
-      "vendor": "RCDrone.top"
-     },
-     "all_sources": [
-      {
-       "value": 38.9,
-       "value_text": null,
-       "value_original": 38.9,
-       "unit_original": "mm",
-       "quote": "Motor Size 055.6*38.9mm",
-       "tier": "S2_vendor",
-       "vendor": "RCDrone.top",
-       "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-       "trust": 0.4
-      }
-     ]
-    },
-    "max_thrust_g": {
-     "value": 7000.0,
-     "value_text": null,
-     "unit": "g",
-     "grade": "C",
-     "grade_note": "출처 간 값 편차 5.9% — 확인 필요, 모든 출처 값 병기",
-     "conditions": {
-      "note": "측정 조건(프로펠러/전압) 미기재 — 마케팅 문구"
-     },
-     "quote": "delivers up to 7kg high thrust for UAVs",
-     "source": {
-      "url": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
-      "title": "MN505-S KV320 UAV / Drone Motor - IP45 & Overload Protection",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 7000.0,
-       "value_text": null,
-       "value_original": 7000.0,
-       "unit_original": "g",
-       "quote": "delivers up to 7kg high thrust for UAVs",
+       "quote": "Shaft Diameter: 15mm",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
-       "title": "MN505-S KV320 UAV / Drone Motor - IP45 & Overload Protection",
-       "trust": 1.0
-      },
-      {
-       "value": 6600.0,
-       "value_text": null,
-       "value_original": 6600.0,
-       "unit_original": "g",
-       "quote": "Delivers 6.6kg max thrust for powerful performance",
-       "tier": "S2_vendor",
-       "vendor": "RobotShop",
-       "url": "https://www.robotshop.com/products/ligpower-navigator-mn505-s-kv320-waterproof-uav-motor-w-66kg-max-thrust",
-       "title": "LIGPOWER Navigator MN505-S KV320 Waterproof UAV Motor w/ 6.6kg Max Thrust - RobotShop",
-       "trust": 0.6
-      },
-      {
-       "value": 6700.0,
-       "value_text": null,
-       "value_original": 6700.0,
-       "unit_original": "g",
-       "quote": "6.7 kg Max Thrust",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-       "trust": 0.5
-      }
-     ]
-    },
-    "max_power_w": {
-     "value": 1200.0,
-     "value_text": null,
-     "unit": "W",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Maximum power output: 1200W",
-     "source": {
-      "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": 1200.0,
-       "value_text": null,
-       "value_original": 1200.0,
-       "unit_original": "W",
-       "quote": "Maximum power output: 1200W",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-       "trust": 0.5
-      }
-     ]
-    },
-    "max_current_a": {
-     "value": 55.0,
-     "value_text": null,
-     "unit": "A",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {
-      "duration_s": 180
-     },
-     "quote": "Peak current (180 seconds): 55A",
-     "source": {
-      "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": 55.0,
-       "value_text": null,
-       "value_original": 55.0,
-       "unit_original": "A",
-       "quote": "Peak current (180 seconds): 55A",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-       "trust": 0.5
-      }
-     ]
-    },
-    "max_voltage_v": {
-     "value": 320.0,
-     "value_text": null,
-     "unit": "V",
-     "grade": "D",
-     "grade_note": "전압 표기 320V는 이 클래스에서 비상식적 (KV값을 전압으로 오기한 것으로 추정)",
-     "conditions": {
-      "note": "리스팅 원문 그대로 — KV값 혼동 의심"
-     },
-     "quote": "Rated voltage: 320V (LiPo)",
-     "source": {
-      "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": 320.0,
-       "value_text": null,
-       "value_original": 320.0,
-       "unit_original": "V",
-       "quote": "Rated voltage: 320V (LiPo)",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-       "trust": 0.5
-      }
-     ]
-    },
-    "prop_rec": {
-     "value": null,
-     "value_text": "20~22인치",
-     "unit": null,
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Propeller recommendation: 20-22 inches",
-     "source": {
-      "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "20~22인치",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Propeller recommendation: 20-22 inches",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-       "trust": 0.5
-      }
-     ]
-    },
-    "config": {
-     "value": null,
-     "value_text": "24N28P",
-     "unit": null,
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Configuration 24N28P",
-     "source": {
-      "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-      "tier": "S2_vendor",
-      "vendor": "RCDrone.top"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "24N28P",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Configuration 24N28P",
-       "tier": "S2_vendor",
-       "vendor": "RCDrone.top",
-       "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-       "trust": 0.4
-      }
-     ]
-    },
-    "resistance_mohm": {
-     "value": 38.0,
-     "value_text": null,
-     "unit": "mΩ",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Internal resistance: 38mOhm",
-     "source": {
-      "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": 38.0,
-       "value_text": null,
-       "value_original": 38.0,
-       "unit_original": "mΩ",
-       "quote": "Internal resistance: 38mOhm",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Max Thrust 6.7KG Navigator Series - DrUAV",
-       "trust": 0.5
-      }
-     ]
-    },
-    "shaft_dia_mm": {
-     "value": 6.0,
-     "value_text": null,
-     "unit": "mm",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Shaft Diameter 6mm",
-     "source": {
-      "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-      "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-      "tier": "S2_vendor",
-      "vendor": "RCDrone.top"
-     },
-     "all_sources": [
-      {
-       "value": 6.0,
-       "value_text": null,
-       "value_original": 6.0,
-       "unit_original": "mm",
-       "quote": "Shaft Diameter 6mm",
-       "tier": "S2_vendor",
-       "vendor": "RCDrone.top",
-       "url": "https://rcdrone.top/products/t-motor-newest-navigator-serie-1",
-       "title": "T-Motor MN505-S KV320 Navigator Series - RCDrone",
-       "trust": 0.4
-      }
-     ]
-    },
-    "ip_rating": {
-     "value": null,
-     "value_text": "IP45",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "IP45 & Overload Protection",
-     "source": {
-      "url": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
-      "title": "MN505-S KV320 UAV / Drone Motor - IP45 & Overload Protection",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "IP45",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "IP45 & Overload Protection",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://store.tmotor.com/product/mn505-s-kv320-motor-navigator-type.html",
-       "title": "MN505-S KV320 UAV / Drone Motor - IP45 & Overload Protection",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
        "trust": 1.0
       }
      ]
@@ -2417,75 +660,16 @@
     {
      "rule_id": "R-M1",
      "verdict": "pass",
-     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.61)",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.42)",
      "spec_keys": [
       "max_thrust_g"
      ],
      "detail": {
-      "thrust_g": 7000.0,
-      "power_w": 1200.0,
-      "prop_in": 22.0,
-      "p_ideal_w": 733.7,
-      "fom_implied": 0.611
-     }
-    },
-    {
-     "rule_id": "R-M4",
-     "verdict": "flag",
-     "summary": "표기 무게 2258g는 부피 대비 밀도 23,908kg/m³ — 강철(7,850)보다 무거워 물리적으로 불가 (포장중량 혼동 의심)",
-     "spec_keys": [
-      "weight_g"
-     ],
-     "detail": {
-      "weight_g": 2258.0,
-      "dia_mm": 55.6,
-      "len_mm": 38.9,
-      "basis": "모터 외형",
-      "implied_density_kg_m3": 23908
-     }
-    },
-    {
-     "rule_id": "R-M5",
-     "verdict": "flag",
-     "summary": "전압 표기 320V는 이 클래스에서 비상식적 (KV값을 전압으로 오기한 것으로 추정)",
-     "spec_keys": [
-      "max_voltage_v"
-     ],
-     "detail": {
-      "voltage_v": 320.0,
-      "note": "표기 전압이 KV값과 동일 — KV/전압 혼동 오기로 추정"
-     }
-    },
-    {
-     "rule_id": "R-X1",
-     "verdict": "caution",
-     "summary": "출처 간 값 편차 5.9% — 확인 필요, 모든 출처 값 병기",
-     "spec_keys": [
-      "max_thrust_g"
-     ],
-     "detail": {
-      "weighted_mean": 6814.29,
-      "spread": 0.0587,
-      "sources": [
-       {
-        "value": 7000.0,
-        "tier": "S1_manufacturer",
-        "trust": 1.0,
-        "source_id": 1
-       },
-       {
-        "value": 6600.0,
-        "tier": "S2_vendor",
-        "trust": 0.6,
-        "source_id": 2
-       },
-       {
-        "value": 6700.0,
-        "tier": "S2_vendor",
-        "trust": 0.5,
-        "source_id": 3
-       }
-      ]
+      "thrust_g": 8521.0,
+      "power_w": 1790.0,
+      "prop_in": 29.0,
+      "p_ideal_w": 747.6,
+      "fom_implied": 0.418
      }
     }
    ],
@@ -2495,276 +679,504 @@
    "id": 2,
    "category": "motor",
    "manufacturer": {
-    "name": "iFlight",
+    "name": "T-Motor",
     "hq_country": "CN"
    },
-   "model_name": "XING2 2207",
-   "variant": "1855KV",
+   "model_name": "U8 Lite L",
+   "variant": "KV110",
    "is_synthetic": false,
    "mfg_country": {
-    "code": "CN",
-    "status": "claimed",
-    "claims": [
-     {
-      "country": "CN",
-      "status": "claimed",
-      "quote": "Country/Region of Manufacture: China",
-      "summary": "생산국 주장: CN (claimed)",
-      "url": "https://www.ebay.de/itm/175385064171"
-     }
-    ]
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
    },
    "specs": {
     "kv": {
-     "value": 1855.0,
+     "value": 110.0,
      "value_text": null,
      "unit": "rpm/V",
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "KV: 1855KV / 2755KV",
+     "quote": "KV: 110",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 1855.0,
+       "value": 110.0,
        "value_text": null,
-       "value_original": 1855.0,
-       "unit_original": "rpm/V",
-       "quote": "KV: 1855KV / 2755KV",
+       "value_original": 110.0,
+       "unit_original": null,
+       "quote": "KV: 110",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
        "trust": 1.0
       }
      ]
     },
     "weight_g": {
-     "value": 31.6,
+     "value": 282.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 282g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 282.0,
+       "value_text": null,
+       "value_original": 282.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 282g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 9847.0,
      "value_text": null,
      "unit": "g",
      "grade": "B",
      "grade_note": null,
      "conditions": {
-      "note": "케이블 포함"
+      "throttle": "100%",
+      "voltage_v": 47.0,
+      "propeller": "G28*9.2",
+      "source": "제조사 벤치 테스트 표",
+      "prop_diameter_in": 28.0
      },
-     "quote": "Weight(included wire): 31.6g",
+     "quote": "Test Data G28*9.2 @ 100%: Thrust 9847g",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 31.6,
+       "value": 9847.0,
        "value_text": null,
-       "value_original": 31.6,
+       "value_original": 9847.0,
        "unit_original": "g",
-       "quote": "Weight(included wire): 31.6g",
+       "quote": "Test Data G28*9.2 @ 100%: Thrust 9847g",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
        "trust": 1.0
-      },
-      {
-       "value": 31.6,
-       "value_text": null,
-       "value_original": 31.6,
-       "unit_original": "g",
-       "quote": "Weight: 31.6g with short wire",
-       "tier": "S2_vendor",
-       "vendor": "DefianceRC",
-       "url": "https://www.defiancerc.com/products/iflight-xing2-2207-1855-kv-motors",
-       "title": "iFlight Xing2 2207 1855/2755 KV Motors - defianceRC",
-       "trust": 0.6
-      }
-     ]
-    },
-    "stator_dia_mm": {
-     "value": 22.0,
-     "value_text": null,
-     "unit": "mm",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Stator Diameter: 22mm",
-     "source": {
-      "url": "https://www.defiancerc.com/products/iflight-xing2-2207-1855-kv-motors",
-      "title": "iFlight Xing2 2207 1855/2755 KV Motors - defianceRC",
-      "tier": "S2_vendor",
-      "vendor": "DefianceRC"
-     },
-     "all_sources": [
-      {
-       "value": 22.0,
-       "value_text": null,
-       "value_original": 22.0,
-       "unit_original": "mm",
-       "quote": "Stator Diameter: 22mm",
-       "tier": "S2_vendor",
-       "vendor": "DefianceRC",
-       "url": "https://www.defiancerc.com/products/iflight-xing2-2207-1855-kv-motors",
-       "title": "iFlight Xing2 2207 1855/2755 KV Motors - defianceRC",
-       "trust": 0.6
-      }
-     ]
-    },
-    "stator_len_mm": {
-     "value": 7.0,
-     "value_text": null,
-     "unit": "mm",
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Stator Length: 7mm",
-     "source": {
-      "url": "https://www.defiancerc.com/products/iflight-xing2-2207-1855-kv-motors",
-      "title": "iFlight Xing2 2207 1855/2755 KV Motors - defianceRC",
-      "tier": "S2_vendor",
-      "vendor": "DefianceRC"
-     },
-     "all_sources": [
-      {
-       "value": 7.0,
-       "value_text": null,
-       "value_original": 7.0,
-       "unit_original": "mm",
-       "quote": "Stator Length: 7mm",
-       "tier": "S2_vendor",
-       "vendor": "DefianceRC",
-       "url": "https://www.defiancerc.com/products/iflight-xing2-2207-1855-kv-motors",
-       "title": "iFlight Xing2 2207 1855/2755 KV Motors - defianceRC",
-       "trust": 0.6
       }
      ]
     },
     "max_power_w": {
-     "value": 841.9,
+     "value": 2140.0,
      "value_text": null,
      "unit": "W",
      "grade": "B",
      "grade_note": null,
      "conditions": {
-      "voltage_v": 24,
-      "variant": "1855KV"
+      "stated_condition": "180S"
      },
-     "quote": "Max Watt: 841.90W / 645.60W",
+     "quote": "Max Power (180S): 2140W",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 841.9,
+       "value": 2140.0,
        "value_text": null,
-       "value_original": 841.9,
+       "value_original": 2140.0,
        "unit_original": "W",
-       "quote": "Max Watt: 841.90W / 645.60W",
+       "quote": "Max Power (180S): 2140W",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
        "trust": 1.0
       }
      ]
     },
     "max_current_a": {
-     "value": 35.08,
+     "value": 45.8,
      "value_text": null,
      "unit": "A",
      "grade": "B",
      "grade_note": null,
      "conditions": {
-      "voltage_v": 24,
-      "variant": "1855KV"
+      "stated_condition": "180s"
      },
-     "quote": "Peak Current: 35.08A / 40.35A",
+     "quote": "Peak Current(180s): 45.8A",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 35.08,
+       "value": 45.8,
        "value_text": null,
-       "value_original": 35.08,
+       "value_original": 45.8,
        "unit_original": "A",
-       "quote": "Peak Current: 35.08A / 40.35A",
+       "quote": "Peak Current(180s): 45.8A",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
-       "trust": 1.0
-      }
-     ]
-    },
-    "max_voltage_v": {
-     "value": 24.0,
-     "value_text": null,
-     "unit": "V",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {
-      "variant": "1855KV"
-     },
-     "quote": "Input Volts: 24V / 16V",
-     "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 24.0,
-       "value_text": null,
-       "value_original": 24.0,
-       "unit_original": "V",
-       "quote": "Input Volts: 24V / 16V",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
        "trust": 1.0
       }
      ]
     },
     "cells_range": {
      "value": null,
-     "value_text": "4~6S",
+     "value_text": "12S(4.2V/pc) / 48-52V",
      "unit": null,
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "XING2 2207 4S 6S FPV Motor",
+     "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
        "value": null,
-       "value_text": "4~6S",
+       "value_text": "12S(4.2V/pc) / 48-52V",
        "value_original": null,
        "unit_original": null,
-       "quote": "XING2 2207 4S 6S FPV Motor",
+       "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configu ration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configu ration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": 105.0,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 105mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 105.0,
+       "value_text": null,
+       "value_original": 105.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance: 105mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.45)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 9847.0,
+      "power_w": 2140.0,
+      "prop_in": 28.0,
+      "p_ideal_w": 961.9,
+      "fom_implied": 0.449
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 3,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U3",
+   "variant": "KV700",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 700.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "U3 Power Type High Efficiency UAV Motor KV700",
+     "source": {
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 700.0,
+       "value_text": null,
+       "value_original": 700.0,
+       "unit_original": null,
+       "quote": "U3 Power Type High Efficiency UAV Motor KV700",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 128.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight Including Cables: 128g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 128.0,
+       "value_text": null,
+       "value_original": 128.0,
+       "unit_original": "g",
+       "quote": "Weight Including Cables: 128g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 123.21,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 11.1,
+      "propeller": "11.1",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 11.1 @ 100%: Thrust 123.21g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 123.21,
+       "value_text": null,
+       "value_original": 123.21,
+       "unit_original": "g",
+       "quote": "Test Data 11.1 @ 100%: Thrust 123.21g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 500.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180S"
+     },
+     "quote": "Max Power (180S): 500W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 500.0,
+       "value_text": null,
+       "value_original": 500.0,
+       "unit_original": "W",
+       "quote": "Max Power (180S): 500W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 25.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Max Continuous Current 180S"
+     },
+     "quote": "Max Continuous Current 180S: 25A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 25.0,
+       "value_text": null,
+       "value_original": 25.0,
+       "unit_original": "A",
+       "quote": "Max Continuous Current 180S: 25A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "3-4S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "No. of Cells (Lipo): 3-4S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "3-4S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "No. of Cells (Lipo): 3-4S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
        "trust": 1.0
       }
      ]
@@ -2778,8 +1190,8 @@
      "conditions": {},
      "quote": "Configuration: 12N14P",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
       "tier": "S1_manufacturer",
       "vendor": null
      },
@@ -2792,127 +1204,84 @@
        "quote": "Configuration: 12N14P",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
        "trust": 1.0
       }
      ]
     },
     "resistance_mohm": {
-     "value": 50.0,
+     "value": null,
      "value_text": null,
      "unit": "mΩ",
      "grade": "B",
      "grade_note": null,
-     "conditions": {
-      "variant": "1855KV"
-     },
-     "quote": "Interphase Resistance: 50mOhm / 41.5mOhm",
+     "conditions": {},
+     "quote": "Internal Resistance: 50mΩ",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 50.0,
+       "value": null,
        "value_text": null,
-       "value_original": 50.0,
-       "unit_original": "mΩ",
-       "quote": "Interphase Resistance: 50mOhm / 41.5mOhm",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 50mΩ",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
        "trust": 1.0
       }
      ]
     },
     "shaft_dia_mm": {
-     "value": 5.0,
+     "value": 4.0,
      "value_text": null,
      "unit": "mm",
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "Shaft Diameter: 5mm",
+     "quote": "Shaft Diameter: 4mm",
      "source": {
-      "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-      "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+      "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 5.0,
+       "value": 4.0,
        "value_text": null,
-       "value_original": 5.0,
+       "value_original": 4.0,
        "unit_original": "mm",
-       "quote": "Shaft Diameter: 5mm",
+       "quote": "Shaft Diameter: 4mm",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://shop.iflight.com/xing2-2207-4s-6s-fpv-motor-unibell-pro1464",
-       "title": "XING2 2207 4S 6S FPV Motor - iFlight",
+       "url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
        "trust": 1.0
       }
      ]
     }
    },
-   "verifications": [
-    {
-     "rule_id": "R-M2",
-     "verdict": "pass",
-     "summary": "전기 사양 정합 (출력 842W ≈ 전류×전압 842W, 편차 0.00%)",
-     "spec_keys": [
-      "max_power_w"
-     ],
-     "detail": {
-      "power_w": 841.9,
-      "i_x_v": 841.9,
-      "deviation": 0.0
-     }
-    },
-    {
-     "rule_id": "R-M4",
-     "verdict": "pass",
-     "summary": "무게-부피 검사 통과 (밀도 2,969kg/m³)",
-     "spec_keys": [
-      "weight_g"
-     ],
-     "detail": {
-      "weight_g": 31.6,
-      "dia_mm": 22.0,
-      "len_mm": 7.0,
-      "basis": "스테이터×외피보정(×4)",
-      "implied_density_kg_m3": 2969
-     }
-    }
-   ],
-   "prices": [
-    {
-     "currency": "GBP",
-     "amount": 81.82,
-     "pack_qty": 4,
-     "unit_amount": 20.45,
-     "vendor": "eBay(xintegroup)",
-     "url": "https://www.ebay.de/itm/175385064171",
-     "observed_at": "2026-08-08T02:10:00Z",
-     "amount_usd": null,
-     "amount_krw": null
-    }
-   ]
+   "verifications": [],
+   "prices": []
   },
   {
-   "id": 3,
+   "id": 4,
    "category": "motor",
    "manufacturer": {
-    "name": "FakeSpec(가상 브랜드)",
-    "hq_country": null
+    "name": "T-Motor",
+    "hq_country": "CN"
    },
-   "model_name": "2207 PowerBeast",
-   "variant": "2450KV",
-   "is_synthetic": true,
+   "model_name": "U11Ⅱ",
+   "variant": "KV120",
+   "is_synthetic": false,
    "mfg_country": {
     "code": null,
     "status": "unconfirmed",
@@ -2920,149 +1289,1711 @@
    },
    "specs": {
     "kv": {
-     "value": 2450.0,
+     "value": 120.0,
      "value_text": null,
      "unit": "rpm/V",
-     "grade": "C",
+     "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "2450KV",
+     "quote": "Test Item: KV120",
      "source": {
-      "url": "fixture://synthetic/fakespec-2207-listing",
-      "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-      "tier": "S2_vendor",
-      "vendor": "합성 마켓플레이스(테스트)"
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
      },
      "all_sources": [
       {
-       "value": 2450.0,
+       "value": 120.0,
        "value_text": null,
-       "value_original": 2450.0,
-       "unit_original": "rpm/V",
-       "quote": "2450KV",
-       "tier": "S2_vendor",
-       "vendor": "합성 마켓플레이스(테스트)",
-       "url": "fixture://synthetic/fakespec-2207-listing",
-       "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-       "trust": 0.3
+       "value_original": 120.0,
+       "unit_original": null,
+       "quote": "Test Item: KV120",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
       }
      ]
     },
     "weight_g": {
-     "value": 28.0,
+     "value": 772.0,
      "value_text": null,
      "unit": "g",
-     "grade": "C",
+     "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "only 28g",
+     "quote": "Weight (Incl. Cable): 772g",
      "source": {
-      "url": "fixture://synthetic/fakespec-2207-listing",
-      "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-      "tier": "S2_vendor",
-      "vendor": "합성 마켓플레이스(테스트)"
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
      },
      "all_sources": [
       {
-       "value": 28.0,
+       "value": 772.0,
        "value_text": null,
-       "value_original": 28.0,
+       "value_original": 772.0,
        "unit_original": "g",
-       "quote": "only 28g",
-       "tier": "S2_vendor",
-       "vendor": "합성 마켓플레이스(테스트)",
-       "url": "fixture://synthetic/fakespec-2207-listing",
-       "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-       "trust": 0.3
+       "quote": "Weight (Incl. Cable): 772g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
       }
      ]
     },
     "max_thrust_g": {
-     "value": 2800.0,
+     "value": 3.78,
      "value_text": null,
      "unit": "g",
-     "grade": "D",
-     "grade_note": "물리적으로 불가능한 추력 주장 — 이상적 최소 소요출력 801W가 표기 출력 180W의 4.4배 (모멘텀 이론 한계 초과)",
+     "grade": "B",
+     "grade_note": null,
      "conditions": {
-      "prop_diameter_in": 5.1
+      "throttle": "100%",
+      "voltage_v": 12114.0,
+      "propeller": "48",
+      "source": "제조사 벤치 테스트 표"
      },
-     "quote": "MAX THRUST 2800g!!!",
+     "quote": "Test Data 48 @ 100%: Thrust 3.78g",
      "source": {
-      "url": "fixture://synthetic/fakespec-2207-listing",
-      "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-      "tier": "S2_vendor",
-      "vendor": "합성 마켓플레이스(테스트)"
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
      },
      "all_sources": [
       {
-       "value": 2800.0,
+       "value": 3.78,
        "value_text": null,
-       "value_original": 2800.0,
+       "value_original": 3.78,
        "unit_original": "g",
-       "quote": "MAX THRUST 2800g!!!",
-       "tier": "S2_vendor",
-       "vendor": "합성 마켓플레이스(테스트)",
-       "url": "fixture://synthetic/fakespec-2207-listing",
-       "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-       "trust": 0.3
+       "quote": "Test Data 48 @ 100%: Thrust 3.78g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
       }
      ]
     },
     "max_power_w": {
-     "value": 180.0,
+     "value": 2783.0,
      "value_text": null,
      "unit": "W",
-     "grade": "C",
+     "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "Only 180W!",
+     "quote": "Max. Power: 2783W",
      "source": {
-      "url": "fixture://synthetic/fakespec-2207-listing",
-      "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-      "tier": "S2_vendor",
-      "vendor": "합성 마켓플레이스(테스트)"
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
      },
      "all_sources": [
       {
-       "value": 180.0,
+       "value": 2783.0,
        "value_text": null,
-       "value_original": 180.0,
+       "value_original": 2783.0,
        "unit_original": "W",
-       "quote": "Only 180W!",
-       "tier": "S2_vendor",
-       "vendor": "합성 마켓플레이스(테스트)",
-       "url": "fixture://synthetic/fakespec-2207-listing",
-       "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-       "trust": 0.3
+       "quote": "Max. Power: 2783W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 57.3,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 57.3A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 57.3,
+       "value_text": null,
+       "value_original": 57.3,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 57.3A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "12N14P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 12N14P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12N14P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 12N14P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 80±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 80±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 5,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U13Ⅱ",
+   "variant": "KV130",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 130.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Test Item: KV130",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 130.0,
+       "value_text": null,
+       "value_original": 130.0,
+       "unit_original": null,
+       "quote": "Test Item: KV130",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 990.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight (Incl. Cable): 990g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 990.0,
+       "value_text": null,
+       "value_original": 990.0,
+       "unit_original": "g",
+       "quote": "Weight (Incl. Cable): 990g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 10.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 24300.0,
+      "propeller": "48",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 48 @ 100%: Thrust 10g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 10.0,
+       "value_text": null,
+       "value_original": 10.0,
+       "unit_original": "g",
+       "quote": "Test Data 48 @ 100%: Thrust 10g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 5659.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Max. Power: 5659W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 5659.0,
+       "value_text": null,
+       "value_original": 5659.0,
+       "unit_original": "W",
+       "quote": "Max. Power: 5659W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 118.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 118A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 118.0,
+       "value_text": null,
+       "value_original": 118.0,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 118A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "10-14S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 10-14S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "10-14S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 10-14S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 18mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 18mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 6,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U13Ⅱ",
+   "variant": "KV65",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 65.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Test Item: KV65",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 65.0,
+       "value_text": null,
+       "value_original": 65.0,
+       "unit_original": null,
+       "quote": "Test Item: KV65",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 975.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight (Incl. Cable): 975g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 975.0,
+       "value_text": null,
+       "value_original": 975.0,
+       "unit_original": "g",
+       "quote": "Weight (Incl. Cable): 975g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 6720.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Max. Power: 6720W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 6720.0,
+       "value_text": null,
+       "value_original": 6720.0,
+       "unit_original": "W",
+       "quote": "Max. Power: 6720W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 68.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 68A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 68.0,
+       "value_text": null,
+       "value_original": 68.0,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 68A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "22-25S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 22-25S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "22-25S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 22-25S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 73mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 73mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 7,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U15II",
+   "variant": "KV80",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 80.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Test Item: U15 Ⅱ KV80",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 80.0,
+       "value_text": null,
+       "value_original": 80.0,
+       "unit_original": null,
+       "quote": "Test Item: U15 Ⅱ KV80",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1740.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight Including Cables: 1740g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1740.0,
+       "value_text": null,
+       "value_original": 1740.0,
+       "unit_original": "g",
+       "quote": "Weight Including Cables: 1740g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 5520.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 110.4,
+      "propeller": "50",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 50 @ 100%: Thrust 5520g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 5520.0,
+       "value_text": null,
+       "value_original": 5520.0,
+       "unit_original": "g",
+       "quote": "Test Data 50 @ 100%: Thrust 5520g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 8580.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180S"
+     },
+     "quote": "Max Power (180S): 8580W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 8580.0,
+       "value_text": null,
+       "value_original": 8580.0,
+       "unit_original": "W",
+       "quote": "Max Power (180S): 8580W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 143.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Max Continuous Current 180S"
+     },
+     "quote": "Max Continuous Current 180S: 143A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 143.0,
+       "value_text": null,
+       "value_original": 143.0,
+       "unit_original": "A",
+       "quote": "Max Continuous Current 180S: 143A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12-24S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "No.of Cells(Lipo): 12-24S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12-24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "No.of Cells(Lipo): 12-24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 17mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 17mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 20.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 20mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 20.0,
+       "value_text": null,
+       "value_original": 20.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 20mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 8,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U15II",
+   "variant": "KV100",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 100.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Test Item: U15 Ⅱ KV100",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 100.0,
+       "value_text": null,
+       "value_original": 100.0,
+       "unit_original": null,
+       "quote": "Test Item: U15 Ⅱ KV100",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1740.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight Including Cables: 1740g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1740.0,
+       "value_text": null,
+       "value_original": 1740.0,
+       "unit_original": "g",
+       "quote": "Weight Including Cables: 1740g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 9942.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 165.7,
+      "propeller": "60",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 60 @ 100%: Thrust 9942g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 9942.0,
+       "value_text": null,
+       "value_original": 9942.0,
+       "unit_original": "g",
+       "quote": "Test Data 60 @ 100%: Thrust 9942g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 9942.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180S"
+     },
+     "quote": "Max Power (180S): 9942W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 9942.0,
+       "value_text": null,
+       "value_original": 9942.0,
+       "unit_original": "W",
+       "quote": "Max Power (180S): 9942W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 167.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Max Continuous Current 180S"
+     },
+     "quote": "Max Continuous Current 180S: 167A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 167.0,
+       "value_text": null,
+       "value_original": 167.0,
+       "unit_original": "A",
+       "quote": "Max Continuous Current 180S: 167A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12-24S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "No.of Cells(Lipo): 12-24S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12-24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "No.of Cells(Lipo): 12-24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 12mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 12mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 20.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 20mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 20.0,
+       "value_text": null,
+       "value_original": 20.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 20mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 9,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8 Lite",
+   "variant": "KV85",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 85.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 85",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 85.0,
+       "value_text": null,
+       "value_original": 85.0,
+       "unit_original": null,
+       "quote": "KV: 85",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 243.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 243g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 243.0,
+       "value_text": null,
+       "value_original": 243.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 243g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 1.8,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 6352.0,
+      "propeller": "12S (48V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 12S (48V) @ 100%: Thrust 1.8g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1.8,
+       "value_text": null,
+       "value_original": 1.8,
+       "unit_original": "g",
+       "quote": "Test Data 12S (48V) @ 100%: Thrust 1.8g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 916.8,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 916.8W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 916.8,
+       "value_text": null,
+       "value_original": 916.8,
+       "unit_original": "W",
+       "quote": "Max. Power（180s）: 916.8W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 19.1,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 19.1A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 19.1,
+       "value_text": null,
+       "value_original": 19.1,
+       "unit_original": "A",
+       "quote": "Peak Current（180s）: 19.1A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
       }
      ]
     },
     "prop_rec": {
      "value": null,
-     "value_text": "5.1인치",
+     "value_text": "28-29”",
      "unit": null,
-     "grade": "C",
+     "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "for 5.1inch props",
+     "quote": "Propeller Recommendation: 28-29”",
      "source": {
-      "url": "fixture://synthetic/fakespec-2207-listing",
-      "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-      "tier": "S2_vendor",
-      "vendor": "합성 마켓플레이스(테스트)"
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
      },
      "all_sources": [
       {
        "value": null,
-       "value_text": "5.1인치",
+       "value_text": "28-29”",
        "value_original": null,
        "unit_original": null,
-       "quote": "for 5.1inch props",
-       "tier": "S2_vendor",
-       "vendor": "합성 마켓플레이스(테스트)",
-       "url": "fixture://synthetic/fakespec-2207-listing",
-       "title": "[합성 테스트] FakeSpec 2207 PowerBeast 마켓플레이스 리스팅",
-       "trust": 0.3
+       "quote": "Propeller Recommendation: 28-29”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 225±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 225±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
       }
      ]
     }
@@ -3070,31 +3001,31 @@
    "verifications": [
     {
      "rule_id": "R-M1",
-     "verdict": "flag",
-     "summary": "물리적으로 불가능한 추력 주장 — 이상적 최소 소요출력 801W가 표기 출력 180W의 4.4배 (모멘텀 이론 한계 초과)",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.00)",
      "spec_keys": [
       "max_thrust_g"
      ],
      "detail": {
-      "thrust_g": 2800.0,
-      "power_w": 180.0,
-      "prop_in": 5.1,
-      "p_ideal_w": 800.7,
-      "fom_implied": 4.449
+      "thrust_g": 1.8,
+      "power_w": 916.8,
+      "prop_in": 29.0,
+      "p_ideal_w": 0.0,
+      "fom_implied": 0.0
      }
     }
    ],
    "prices": []
   },
   {
-   "id": 6,
-   "category": "propeller",
+   "id": 10,
+   "category": "motor",
    "manufacturer": {
-    "name": "APC Propellers",
-    "hq_country": "US"
+    "name": "T-Motor",
+    "hq_country": "CN"
    },
-   "model_name": "15x5.5MR",
-   "variant": null,
+   "model_name": "U8 Lite",
+   "variant": "KV100",
    "is_synthetic": false,
    "mfg_country": {
     "code": null,
@@ -3102,302 +3033,287 @@
     "claims": []
    },
    "specs": {
-    "diameter_in": {
-     "value": 15.0,
+    "kv": {
+     "value": 100.0,
      "value_text": null,
-     "unit": "in",
+     "unit": "rpm/V",
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "15x5.5MR",
+     "quote": "KV: 100",
      "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mr/",
-      "title": "15x5.5MR - APC Propellers",
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 15.0,
+       "value": 100.0,
        "value_text": null,
-       "value_original": 15.0,
-       "unit_original": "in",
-       "quote": "15x5.5MR",
+       "value_original": 100.0,
+       "unit_original": null,
+       "quote": "KV: 100",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mr/",
-       "title": "15x5.5MR - APC Propellers",
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
        "trust": 1.0
-      },
-      {
-       "value": 15.0,
-       "value_text": null,
-       "value_original": 381.0,
-       "unit_original": "mm",
-       "quote": "Product Diameter 381.00mm 15in",
-       "tier": "S2_vendor",
-       "vendor": "Wheelspin Models",
-       "url": "https://wheelspinmodels.co.uk/i/apc-15x5.5-multirotor-propeller-319093/",
-       "title": "APC APCLP15055MR - APC 15x5.5 Multirotor Propeller - Wheelspin Models",
-       "trust": 0.6
-      }
-     ]
-    },
-    "pitch_in": {
-     "value": 5.5,
-     "value_text": null,
-     "unit": "in",
-     "grade": "C",
-     "grade_note": "단위 오기 의심: 'deg' → 'in'로 간주(값 유지) (원본: 5.5deg)",
-     "conditions": {},
-     "quote": "15x5.5MR",
-     "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mr/",
-      "title": "15x5.5MR - APC Propellers",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 5.5,
-       "value_text": null,
-       "value_original": 5.5,
-       "unit_original": "in",
-       "quote": "15x5.5MR",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mr/",
-       "title": "15x5.5MR - APC Propellers",
-       "trust": 1.0
-      },
-      {
-       "value": 5.5,
-       "value_text": null,
-       "value_original": 5.5,
-       "unit_original": "deg",
-       "quote": "Pitch 5.5(도 단위로 오기됨)",
-       "tier": "S2_vendor",
-       "vendor": "Wheelspin Models",
-       "url": "https://wheelspinmodels.co.uk/i/apc-15x5.5-multirotor-propeller-319093/",
-       "title": "APC APCLP15055MR - APC 15x5.5 Multirotor Propeller - Wheelspin Models",
-       "trust": 0.6
       }
      ]
     },
     "weight_g": {
-     "value": 36.0,
+     "value": 238.0,
      "value_text": null,
      "unit": "g",
-     "grade": "C",
+     "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "Weight 36.00g 1.27oz",
+     "quote": "Motor Weight (Incl. Cable): 238g",
      "source": {
-      "url": "https://wheelspinmodels.co.uk/i/apc-15x5.5-multirotor-propeller-319093/",
-      "title": "APC APCLP15055MR - APC 15x5.5 Multirotor Propeller - Wheelspin Models",
-      "tier": "S2_vendor",
-      "vendor": "Wheelspin Models"
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
      },
      "all_sources": [
       {
-       "value": 36.0,
+       "value": 238.0,
        "value_text": null,
-       "value_original": 36.0,
+       "value_original": 238.0,
        "unit_original": "g",
-       "quote": "Weight 36.00g 1.27oz",
-       "tier": "S2_vendor",
-       "vendor": "Wheelspin Models",
-       "url": "https://wheelspinmodels.co.uk/i/apc-15x5.5-multirotor-propeller-319093/",
-       "title": "APC APCLP15055MR - APC 15x5.5 Multirotor Propeller - Wheelspin Models",
-       "trust": 0.6
+       "quote": "Motor Weight (Incl. Cable): 238g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
       }
      ]
     },
-    "blades": {
-     "value": 2.0,
+    "max_thrust_g": {
+     "value": 2.42,
      "value_text": null,
-     "unit": null,
+     "unit": "g",
      "grade": "B",
      "grade_note": null,
-     "conditions": {},
-     "quote": "Multi-Rotor (2-blade 표준형)",
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 8164.0,
+      "propeller": "12S (48V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 12S (48V) @ 100%: Thrust 2.42g",
      "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mr/",
-      "title": "15x5.5MR - APC Propellers",
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
-       "value": 2.0,
+       "value": 2.42,
        "value_text": null,
-       "value_original": 2.0,
-       "unit_original": null,
-       "quote": "Multi-Rotor (2-blade 표준형)",
+       "value_original": 2.42,
+       "unit_original": "g",
+       "quote": "Test Data 12S (48V) @ 100%: Thrust 2.42g",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mr/",
-       "title": "15x5.5MR - APC Propellers",
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
        "trust": 1.0
       }
      ]
     },
-    "material": {
-     "value": null,
-     "value_text": "GFRC(유리섬유 복합)",
-     "unit": null,
-     "grade": "C",
-     "grade_note": "출처 간 표기 불일치: GFRC(유리섬유 복합) / 복합 나일론",
-     "conditions": {},
-     "quote": "Material: GFRC",
+    "max_power_w": {
+     "value": 1406.4,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 1406.4W",
      "source": {
-      "url": "https://wheelspinmodels.co.uk/i/apc-15x5.5-multirotor-propeller-319093/",
-      "title": "APC APCLP15055MR - APC 15x5.5 Multirotor Propeller - Wheelspin Models",
-      "tier": "S2_vendor",
-      "vendor": "Wheelspin Models"
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
      },
      "all_sources": [
       {
-       "value": null,
-       "value_text": "GFRC(유리섬유 복합)",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Material: GFRC",
-       "tier": "S2_vendor",
-       "vendor": "Wheelspin Models",
-       "url": "https://wheelspinmodels.co.uk/i/apc-15x5.5-multirotor-propeller-319093/",
-       "title": "APC APCLP15055MR - APC 15x5.5 Multirotor Propeller - Wheelspin Models",
-       "trust": 0.6
-      },
-      {
-       "value": null,
-       "value_text": "복합 나일론",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "provides composite nylon construction",
-       "tier": "S2_vendor",
-       "vendor": "Unmanned Systems Source",
-       "url": "https://www.unmannedsystemssource.com/shop/propellers/apc/15x5-5-mr-multi-rotor-propeller/",
-       "title": "15x5.5MR Multi-Rotor Prop - Unmanned Systems Source",
-       "trust": 0.6
+       "value": 1406.4,
+       "value_text": null,
+       "value_original": 1406.4,
+       "unit_original": "W",
+       "quote": "Max. Power（180s）: 1406.4W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
       }
      ]
     },
-    "rotation": {
+    "max_current_a": {
+     "value": 29.3,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 29.3A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 29.3,
+       "value_text": null,
+       "value_original": 29.3,
+       "unit_original": "A",
+       "quote": "Peak Current（180s）: 29.3A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
      "value": null,
-     "value_text": "CW(트랙터)",
+     "value_text": "12S",
      "unit": null,
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "15x5.5MR Multi-Rotor",
+     "quote": "Rated Voltage（Lipo）: 12S",
      "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mr/",
-      "title": "15x5.5MR - APC Propellers",
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
       "tier": "S1_manufacturer",
       "vendor": null
      },
      "all_sources": [
       {
        "value": null,
-       "value_text": "CW(트랙터)",
+       "value_text": "12S",
        "value_original": null,
        "unit_original": null,
-       "quote": "15x5.5MR Multi-Rotor",
+       "quote": "Rated Voltage（Lipo）: 12S",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mr/",
-       "title": "15x5.5MR - APC Propellers",
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
        "trust": 1.0
       }
      ]
-    }
-   },
-   "verifications": [
-    {
-     "rule_id": "R-P1",
-     "verdict": "pass",
-     "summary": "피치/직경비 정상 (0.37)",
-     "spec_keys": [
-      "pitch_in"
-     ],
-     "detail": {
-      "ratio": 0.37
-     }
     },
-    {
-     "rule_id": "R-P2",
-     "verdict": "pass",
-     "summary": "무게-직경 검사 통과 (36g)",
-     "spec_keys": [
-      "weight_g"
-     ],
-     "detail": {
-      "weight_g": 36.0,
-      "bounds_g": [
-       9.0,
-       120.0
-      ]
-     }
-    },
-    {
-     "rule_id": "R-N1",
-     "verdict": "caution",
-     "summary": "단위 오기 의심: 'deg' → 'in'로 간주(값 유지) (원본: 5.5deg)",
-     "spec_keys": [
-      "pitch_in"
-     ],
-     "detail": {
-      "anomaly": {
-       "type": "unit_suspect",
-       "detail": "단위 오기 의심: 'deg' → 'in'로 간주(값 유지)"
+    "prop_rec": {
+     "value": null,
+     "value_text": "27-28”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 27-28”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "27-28”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 27-28”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
       }
-     }
+     ]
     },
-    {
-     "rule_id": "R-X2",
-     "verdict": "caution",
-     "summary": "출처 간 표기 불일치: GFRC(유리섬유 복합) / 복합 나일론",
-     "spec_keys": [
-      "material"
-     ],
-     "detail": {
-      "variants": [
-       "GFRC(유리섬유 복합)",
-       "복합 나일론"
-      ]
-     }
-    }
-   ],
-   "prices": []
-  },
-  {
-   "id": 7,
-   "category": "propeller",
-   "manufacturer": {
-    "name": "APC Propellers",
-    "hq_country": "US"
-   },
-   "model_name": "15x5.5MRP",
-   "variant": null,
-   "is_synthetic": false,
-   "mfg_country": {
-    "code": null,
-    "status": "unconfirmed",
-    "claims": []
-   },
-   "specs": {
-    "diameter_in": {
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 170±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 170±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
      "value": 15.0,
      "value_text": null,
-     "unit": "in",
+     "unit": "mm",
      "grade": "B",
      "grade_note": null,
      "conditions": {},
-     "quote": "15x5.5MRP",
+     "quote": "Shaft Diameter: 15mm",
      "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mrp/",
-      "title": "15x5.5MRP - APC Propellers",
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
       "tier": "S1_manufacturer",
       "vendor": null
      },
@@ -3406,99 +3322,12 @@
        "value": 15.0,
        "value_text": null,
        "value_original": 15.0,
-       "unit_original": "in",
-       "quote": "15x5.5MRP",
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
        "tier": "S1_manufacturer",
        "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mrp/",
-       "title": "15x5.5MRP - APC Propellers",
-       "trust": 1.0
-      }
-     ]
-    },
-    "pitch_in": {
-     "value": 5.5,
-     "value_text": null,
-     "unit": "in",
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "15x5.5MRP",
-     "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mrp/",
-      "title": "15x5.5MRP - APC Propellers",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 5.5,
-       "value_text": null,
-       "value_original": 5.5,
-       "unit_original": "in",
-       "quote": "15x5.5MRP",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mrp/",
-       "title": "15x5.5MRP - APC Propellers",
-       "trust": 1.0
-      }
-     ]
-    },
-    "blades": {
-     "value": 2.0,
-     "value_text": null,
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Multi-Rotor Pusher (2-blade 표준형)",
-     "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mrp/",
-      "title": "15x5.5MRP - APC Propellers",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": 2.0,
-       "value_text": null,
-       "value_original": 2.0,
-       "unit_original": null,
-       "quote": "Multi-Rotor Pusher (2-blade 표준형)",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mrp/",
-       "title": "15x5.5MRP - APC Propellers",
-       "trust": 1.0
-      }
-     ]
-    },
-    "rotation": {
-     "value": null,
-     "value_text": "CCW(푸셔)",
-     "unit": null,
-     "grade": "B",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Reverse Rotation",
-     "source": {
-      "url": "https://www.apcprop.com/product/15x5-5mrp/",
-      "title": "15x5.5MRP - APC Propellers",
-      "tier": "S1_manufacturer",
-      "vendor": null
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "CCW(푸셔)",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Reverse Rotation",
-       "tier": "S1_manufacturer",
-       "vendor": null,
-       "url": "https://www.apcprop.com/product/15x5-5mrp/",
-       "title": "15x5.5MRP - APC Propellers",
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
        "trust": 1.0
       }
      ]
@@ -3506,14 +3335,672 @@
    },
    "verifications": [
     {
-     "rule_id": "R-P1",
+     "rule_id": "R-M1",
      "verdict": "pass",
-     "summary": "피치/직경비 정상 (0.37)",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.00)",
      "spec_keys": [
-      "pitch_in"
+      "max_thrust_g"
      ],
      "detail": {
-      "ratio": 0.37
+      "thrust_g": 2.42,
+      "power_w": 1406.4,
+      "prop_in": 28.0,
+      "p_ideal_w": 0.0,
+      "fom_implied": 0.0
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 11,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8 Lite",
+   "variant": "KV150",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 150.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 150",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 150.0,
+       "value_text": null,
+       "value_original": 150.0,
+       "unit_original": null,
+       "quote": "KV: 150",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 239.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 239g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 239.0,
+       "value_text": null,
+       "value_original": 239.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 239g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 1.4,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 4879.0,
+      "propeller": "6S (24V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 6S (24V) @ 100%: Thrust 1.4g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1.4,
+       "value_text": null,
+       "value_original": 1.4,
+       "unit_original": "g",
+       "quote": "Test Data 6S (24V) @ 100%: Thrust 1.4g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": null,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 712.8W / 1272W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Max. Power（180s）: 712.8W / 1272W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": null,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 29.7A / 26.5A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Peak Current（180s）: 29.7A / 26.5A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "6S / 12S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 6S / 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "6S / 12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 6S / 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "prop_rec": {
+     "value": null,
+     "value_text": "28-30” / 22”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 28-30” / 22”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "28-30” / 22”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 28-30” / 22”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 85±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 85±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 12,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8 Lite",
+   "variant": "KV190",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 190.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 190",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 190.0,
+       "value_text": null,
+       "value_original": 190.0,
+       "unit_original": null,
+       "quote": "KV: 190",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 243.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 243g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 243.0,
+       "value_text": null,
+       "value_original": 243.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 243g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 1.88,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 6761.0,
+      "propeller": "6S (24V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 6S (24V) @ 100%: Thrust 1.88g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1.88,
+       "value_text": null,
+       "value_original": 1.88,
+       "unit_original": "g",
+       "quote": "Test Data 6S (24V) @ 100%: Thrust 1.88g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 1048.8,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 1048.8W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1048.8,
+       "value_text": null,
+       "value_original": 1048.8,
+       "unit_original": "W",
+       "quote": "Max. Power（180s）: 1048.8W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 43.7,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 43.7A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 43.7,
+       "value_text": null,
+       "value_original": 43.7,
+       "unit_original": "A",
+       "quote": "Peak Current（180s）: 43.7A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "6S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 6S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "6S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 6S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "prop_rec": {
+     "value": null,
+     "value_text": "28-29”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 28-29”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "28-29”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 28-29”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 48±3mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 48±3mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.00)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 1.88,
+      "power_w": 1048.8,
+      "prop_in": 29.0,
+      "p_ideal_w": 0.0,
+      "fom_implied": 0.0
      }
     }
    ],

@@ -33,9 +33,21 @@ def main() -> int:
         print("[2/5] 인제스트(픽스처 모드) — 원문 스냅샷 → 출처·부품·주장값 스테이징")
         stats = ingest_snapshots(conn, ROOT / "fixtures" / "snapshots.json")
     else:
-        print("[2/5] 수집·추출 — 운영 모드는 collect.py/extract.py 연동 필요")
-        print("      (ANTHROPIC_API_KEY 설정 후 소스 커넥터 활성화)")
-        return 1
+        print("[2/5] 실수집 — T-Motor Store(S1) 어댑터")
+        from datetime import datetime, timezone
+        import json
+        from collect import collect_tmotor
+        data = collect_tmotor()
+        if not data["snapshots"]:
+            print("      수집 결과 0건 — 중단")
+            return 1
+        # 원칙 1: 원문 스냅샷 아카이브 보존
+        archive = (ROOT / "fixtures" / "collected" /
+                   f"tmotor-{datetime.now(timezone.utc):%Y%m%d}.json")
+        archive.parent.mkdir(parents=True, exist_ok=True)
+        archive.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"      스냅샷 아카이브: {archive.relative_to(ROOT)}")
+        stats = ingest_snapshots(conn, archive)
     print(f"      출처 {stats['sources']} · 부품 {stats['components']} · "
           f"주장값 {stats['claims']} · 가격 {stats['prices']}")
 
