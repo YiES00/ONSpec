@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-08-09T05:12:22+00:00",
+ "generated_at": "2026-08-09T05:30:03+00:00",
  "stats": {
-  "components": 12,
-  "sources": 6,
-  "spec_rows": 111,
+  "components": 30,
+  "sources": 19,
+  "spec_rows": 270,
   "verdicts": {
-   "pass": 5,
-   "caution": 0,
+   "pass": 11,
+   "caution": 2,
    "flag": 0,
    "error": 0
   },
   "grades": {
    "A": 0,
-   "B": 111,
-   "C": 0,
+   "B": 263,
+   "C": 7,
    "D": 0
   }
  },
@@ -4005,6 +4005,5915 @@
     }
    ],
    "prices": []
+  },
+  {
+   "id": 13,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8Ⅱ",
+   "variant": "KV85",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 85.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 85",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 85.0,
+       "value_text": null,
+       "value_original": 85.0,
+       "unit_original": null,
+       "quote": "KV: 85",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 277.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 277g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 277.0,
+       "value_text": null,
+       "value_original": 277.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 277g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 1.8,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 6352.0,
+      "propeller": "12S (48V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 12S (48V) @ 100%: Thrust 1.8g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1.8,
+       "value_text": null,
+       "value_original": 1.8,
+       "unit_original": "g",
+       "quote": "Test Data 12S (48V) @ 100%: Thrust 1.8g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 916.8,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 916.8W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 916.8,
+       "value_text": null,
+       "value_original": 916.8,
+       "unit_original": "W",
+       "quote": "Max. Power（180s）: 916.8W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 19.1,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 19.1A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 19.1,
+       "value_text": null,
+       "value_original": 19.1,
+       "unit_original": "A",
+       "quote": "Peak Current（180s）: 19.1A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "prop_rec": {
+     "value": null,
+     "value_text": "28-29”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 28-29”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "28-29”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 28-29”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 225±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 225±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.00)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 1.8,
+      "power_w": 916.8,
+      "prop_in": 29.0,
+      "p_ideal_w": 0.0,
+      "fom_implied": 0.0
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 14,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8Ⅱ",
+   "variant": "KV100",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 100.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 100",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 100.0,
+       "value_text": null,
+       "value_original": 100.0,
+       "unit_original": null,
+       "quote": "KV: 100",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 272.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 272g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 272.0,
+       "value_text": null,
+       "value_original": 272.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 272g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 2.42,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 8164.0,
+      "propeller": "12S (48V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 12S (48V) @ 100%: Thrust 2.42g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 2.42,
+       "value_text": null,
+       "value_original": 2.42,
+       "unit_original": "g",
+       "quote": "Test Data 12S (48V) @ 100%: Thrust 2.42g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 1406.4,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 1406.4W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1406.4,
+       "value_text": null,
+       "value_original": 1406.4,
+       "unit_original": "W",
+       "quote": "Max. Power（180s）: 1406.4W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 29.3,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 29.3A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 29.3,
+       "value_text": null,
+       "value_original": 29.3,
+       "unit_original": "A",
+       "quote": "Peak Current（180s）: 29.3A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "prop_rec": {
+     "value": null,
+     "value_text": "27-28”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 27-28”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "27-28”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 27-28”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 170±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 170±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.00)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 2.42,
+      "power_w": 1406.4,
+      "prop_in": 28.0,
+      "p_ideal_w": 0.0,
+      "fom_implied": 0.0
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 15,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8Ⅱ",
+   "variant": "KV150",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 150.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 150",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 150.0,
+       "value_text": null,
+       "value_original": 150.0,
+       "unit_original": null,
+       "quote": "KV: 150",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 273.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 273g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 273.0,
+       "value_text": null,
+       "value_original": 273.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 273g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 1.4,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 4879.0,
+      "propeller": "6S (24V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 6S (24V) @ 100%: Thrust 1.4g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1.4,
+       "value_text": null,
+       "value_original": 1.4,
+       "unit_original": "g",
+       "quote": "Test Data 6S (24V) @ 100%: Thrust 1.4g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": null,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 712.8W / 1272W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Max. Power（180s）: 712.8W / 1272W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": null,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 29.7A / 26.5A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Peak Current（180s）: 29.7A / 26.5A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "6S / 12S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 6S / 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "6S / 12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 6S / 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "prop_rec": {
+     "value": null,
+     "value_text": "28-30” / 22”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 28-30” / 22”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "28-30” / 22”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 28-30” / 22”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 85±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 85±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 16,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8Ⅱ",
+   "variant": "KV190",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 190.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 190",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 190.0,
+       "value_text": null,
+       "value_original": 190.0,
+       "unit_original": null,
+       "quote": "KV: 190",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 277.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 277g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 277.0,
+       "value_text": null,
+       "value_original": 277.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 277g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 1.88,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 6761.0,
+      "propeller": "6S (24V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 6S (24V) @ 100%: Thrust 1.88g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1.88,
+       "value_text": null,
+       "value_original": 1.88,
+       "unit_original": "g",
+       "quote": "Test Data 6S (24V) @ 100%: Thrust 1.88g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 1048.8,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 1048.8W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1048.8,
+       "value_text": null,
+       "value_original": 1048.8,
+       "unit_original": "W",
+       "quote": "Max. Power（180s）: 1048.8W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 43.7,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 43.7A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 43.7,
+       "value_text": null,
+       "value_original": 43.7,
+       "unit_original": "A",
+       "quote": "Peak Current（180s）: 43.7A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "6S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 6S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "6S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 6S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "prop_rec": {
+     "value": null,
+     "value_text": "28-29”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 28-29”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "28-29”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 28-29”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 48±3mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 48±3mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.00)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 1.88,
+      "power_w": 1048.8,
+      "prop_in": 29.0,
+      "p_ideal_w": 0.0,
+      "fom_implied": 0.0
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 17,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8ⅡLite",
+   "variant": "KV100",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 100.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 100",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 100.0,
+       "value_text": null,
+       "value_original": 100.0,
+       "unit_original": null,
+       "quote": "KV: 100",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": null,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight (Incl. Cable): 253g/256g net version",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Weight (Incl. Cable): 253g/256g net version",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 8442.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 47.0,
+      "propeller": "G27*8.8",
+      "source": "제조사 벤치 테스트 표",
+      "prop_diameter_in": 27.0
+     },
+     "quote": "Test Data G27*8.8 @ 100%: Thrust 8442g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 8442.0,
+       "value_text": null,
+       "value_original": 8442.0,
+       "unit_original": "g",
+       "quote": "Test Data G27*8.8 @ 100%: Thrust 8442g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 1450.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180S"
+     },
+     "quote": "Max Power (180S): 1450W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1450.0,
+       "value_text": null,
+       "value_original": 1450.0,
+       "unit_original": "W",
+       "quote": "Max Power (180S): 1450W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 31.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 31A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 31.0,
+       "value_text": null,
+       "value_original": 31.0,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 31A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S(4.2V/pc) / 48-52V",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S(4.2V/pc) / 48-52V",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 134-141mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 134-141mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.55)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 8442.0,
+      "power_w": 1450.0,
+      "prop_in": 27.0,
+      "p_ideal_w": 791.8,
+      "fom_implied": 0.546
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 18,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U8ⅡPRO",
+   "variant": "KV100",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 100.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 100",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 100.0,
+       "value_text": null,
+       "value_original": 100.0,
+       "unit_original": null,
+       "quote": "KV: 100",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 287.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight (Incl. Cable): 287g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 287.0,
+       "value_text": null,
+       "value_original": 287.0,
+       "unit_original": "g",
+       "quote": "Weight (Incl. Cable): 287g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 8442.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 47.0,
+      "propeller": "T-MOTO G27*8.8",
+      "source": "제조사 벤치 테스트 표",
+      "prop_diameter_in": 27.0
+     },
+     "quote": "Test Data T-MOTO G27*8.8 @ 100%: Thrust 8442g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 8442.0,
+       "value_text": null,
+       "value_original": 8442.0,
+       "unit_original": "g",
+       "quote": "Test Data T-MOTO G27*8.8 @ 100%: Thrust 8442g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 1450.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180S"
+     },
+     "quote": "Max Power (180S): 1450W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1450.0,
+       "value_text": null,
+       "value_original": 1450.0,
+       "unit_original": "W",
+       "quote": "Max Power (180S): 1450W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 31.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 31A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 31.0,
+       "value_text": null,
+       "value_original": 31.0,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 31A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S(4.2V/pc) / 48-52V",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S(4.2V/pc) / 48-52V",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 134-141mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 134-141mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP56",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP56",
+     "source": {
+      "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP56",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP56",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.55)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 8442.0,
+      "power_w": 1450.0,
+      "prop_in": 27.0,
+      "p_ideal_w": 791.8,
+      "fom_implied": 0.546
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 19,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U10Ⅱ",
+   "variant": "KV100",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 100.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV: 100",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 100.0,
+       "value_text": null,
+       "value_original": 100.0,
+       "unit_original": null,
+       "quote": "KV: 100",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 415.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 415g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 415.0,
+       "value_text": null,
+       "value_original": 415.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 415g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 1.61,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 5059.0,
+      "propeller": "8S (32V)",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 8S (32V) @ 100%: Thrust 1.61g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1.61,
+       "value_text": null,
+       "value_original": 1.61,
+       "unit_original": "g",
+       "quote": "Test Data 8S (32V) @ 100%: Thrust 1.61g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 1600.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max. Power（180s）: 1600W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1600.0,
+       "value_text": null,
+       "value_original": 1600.0,
+       "unit_original": "W",
+       "quote": "Max. Power（180s）: 1600W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 32.4,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current（180s）: 32.4A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 32.4,
+       "value_text": null,
+       "value_original": 32.4,
+       "unit_original": "A",
+       "quote": "Peak Current（180s）: 32.4A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage（Lipo）: 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage（Lipo）: 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "prop_rec": {
+     "value": null,
+     "value_text": "28-30”",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Propeller Recommendation: 28-30”",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "28-30”",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Propeller Recommendation: 28-30”",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 101±5mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 101±5mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-M1",
+     "verdict": "pass",
+     "summary": "모멘텀 이론 검사 통과 (implied FoM 0.00)",
+     "spec_keys": [
+      "max_thrust_g"
+     ],
+     "detail": {
+      "thrust_g": 1.61,
+      "power_w": 1600.0,
+      "prop_in": 30.0,
+      "p_ideal_w": 0.0,
+      "fom_implied": 0.0
+     }
+    }
+   ],
+   "prices": []
+  },
+  {
+   "id": 20,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U12Ⅱ",
+   "variant": "KV120",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 120.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Test Item: KV120",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 120.0,
+       "value_text": null,
+       "value_original": 120.0,
+       "unit_original": null,
+       "quote": "Test Item: KV120",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 778.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight (Incl. Cable): 778g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 778.0,
+       "value_text": null,
+       "value_original": 778.0,
+       "unit_original": "g",
+       "quote": "Weight (Incl. Cable): 778g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 7.9,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "throttle": "100%",
+      "voltage_v": 20400.0,
+      "propeller": "48",
+      "source": "제조사 벤치 테스트 표"
+     },
+     "quote": "Test Data 48 @ 100%: Thrust 7.9g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 7.9,
+       "value_text": null,
+       "value_original": 7.9,
+       "unit_original": "g",
+       "quote": "Test Data 48 @ 100%: Thrust 7.9g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 4560.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Max. Power: 4560W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 4560.0,
+       "value_text": null,
+       "value_original": 4560.0,
+       "unit_original": "W",
+       "quote": "Max. Power: 4560W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 95.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 95A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 95.0,
+       "value_text": null,
+       "value_original": 95.0,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 95A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "10-14S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 10-14S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "10-14S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 10-14S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 22mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 22mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 21,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "U12Ⅱ",
+   "variant": "KV60",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 60.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Test Item: KV60",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 60.0,
+       "value_text": null,
+       "value_original": 60.0,
+       "unit_original": null,
+       "quote": "Test Item: KV60",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 803.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Weight (Incl. Cable): 803g",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 803.0,
+       "value_text": null,
+       "value_original": 803.0,
+       "unit_original": "g",
+       "quote": "Weight (Incl. Cable): 803g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 4000.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Max. Power: 4000W",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 4000.0,
+       "value_text": null,
+       "value_original": 4000.0,
+       "unit_original": "W",
+       "quote": "Max. Power: 4000W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 41.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current(180s): 41A",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 41.0,
+       "value_text": null,
+       "value_original": 41.0,
+       "unit_original": "A",
+       "quote": "Peak Current(180s): 41A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "22-25S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage(Lipo): 22-25S",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "22-25S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage(Lipo): 22-25S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N42P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N42P",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N42P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N42P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 75mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 75mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 15.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Shaft Diameter: 15mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 15.0,
+       "value_text": null,
+       "value_original": 15.0,
+       "unit_original": "mm",
+       "quote": "Shaft Diameter: 15mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 22,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1115",
+   "variant": "KV110",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 110.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV Value: 110",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 110.0,
+       "value_text": null,
+       "value_original": 110.0,
+       "unit_original": null,
+       "quote": "KV Value: 110",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 110.0,
+       "value_text": null,
+       "value_original": 110.0,
+       "unit_original": null,
+       "quote": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor — KV110",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1040.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 1040g",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1040.0,
+       "value_text": null,
+       "value_original": 1040.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 1040g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 1040.0,
+       "value_text": null,
+       "value_original": 1040.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable) 1040g",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 34300.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "note": "사양표 표기 — 측정 조건은 원문 참조"
+     },
+     "quote": "Max Thrust: 34.3kg",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 34300.0,
+       "value_text": null,
+       "value_original": 34.3,
+       "unit_original": "kg",
+       "quote": "Max Thrust: 34.3kg",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 34300.0,
+       "value_text": null,
+       "value_original": 34.3,
+       "unit_original": "kg",
+       "quote": "Max Thrust 34.3kg",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 2800.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max Power (180s): 2800W",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 2800.0,
+       "value_text": null,
+       "value_original": 2800.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s): 2800W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 2800.0,
+       "value_text": null,
+       "value_original": 2800.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s) 2800W",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 152.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Peak Current"
+     },
+     "quote": "Peak Current: 152A",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 152.0,
+       "value_text": null,
+       "value_original": 152.0,
+       "unit_original": "A",
+       "quote": "Peak Current: 152A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 152.0,
+       "value_text": null,
+       "value_original": 152.0,
+       "unit_original": "A",
+       "quote": "Peak Current 152A",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "14S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage (Lipo): 14S",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "14S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 14S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "14S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo) 14S",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N40P",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N40P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 12mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance: 12mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance 12mΩ",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Output Shaft Diameter: 12mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mm",
+       "quote": "Output Shaft Diameter: 12mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 379.9,
+     "pack_qty": 1,
+     "unit_amount": 379.9,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+     "observed_at": "2026-08-09T05:29:52+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1115",
+   "variant": "KV130",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 130.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV Value: 130",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 130.0,
+       "value_text": null,
+       "value_original": 130.0,
+       "unit_original": null,
+       "quote": "KV Value: 130",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 130.0,
+       "value_text": null,
+       "value_original": 130.0,
+       "unit_original": null,
+       "quote": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor — KV130",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1055.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 1055g",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1055.0,
+       "value_text": null,
+       "value_original": 1055.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 1055g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 1055.0,
+       "value_text": null,
+       "value_original": 1055.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable) 1055g",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 33300.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "note": "사양표 표기 — 측정 조건은 원문 참조"
+     },
+     "quote": "Max Thrust: 33.3kg",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 33300.0,
+       "value_text": null,
+       "value_original": 33.3,
+       "unit_original": "kg",
+       "quote": "Max Thrust: 33.3kg",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 33300.0,
+       "value_text": null,
+       "value_original": 33.3,
+       "unit_original": "kg",
+       "quote": "Max Thrust 33.3kg",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 2816.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max Power (180s): 2816W",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 2816.0,
+       "value_text": null,
+       "value_original": 2816.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s): 2816W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 2816.0,
+       "value_text": null,
+       "value_original": 2816.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s) 2816W",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 180.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Peak Current"
+     },
+     "quote": "Peak Current: 180A",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 180.0,
+       "value_text": null,
+       "value_original": 180.0,
+       "unit_original": "A",
+       "quote": "Peak Current: 180A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 180.0,
+       "value_text": null,
+       "value_original": 180.0,
+       "unit_original": "A",
+       "quote": "Peak Current 180A",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S",
+     "unit": null,
+     "grade": "C",
+     "grade_note": "출처 간 표기 불일치: 12S / 14S",
+     "conditions": {},
+     "quote": "Rated Voltage (Lipo): 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "14S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 14S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo) 12S",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N40P",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N40P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": 16.0,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 16mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 16.0,
+       "value_text": null,
+       "value_original": 16.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance: 16mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 16.0,
+       "value_text": null,
+       "value_original": 16.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance 16mΩ",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Output Shaft Diameter: 12mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mm",
+       "quote": "Output Shaft Diameter: 12mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-X2",
+     "verdict": "caution",
+     "summary": "출처 간 표기 불일치: 12S / 14S",
+     "spec_keys": [
+      "cells_range"
+     ],
+     "detail": {
+      "variants": [
+       "12S",
+       "14S"
+      ]
+     }
+    }
+   ],
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 379.9,
+     "pack_qty": 1,
+     "unit_amount": 379.9,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+     "observed_at": "2026-08-09T05:29:52+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1118",
+   "variant": "KV90",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 90.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV Value: 90",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 90.0,
+       "value_text": null,
+       "value_original": 90.0,
+       "unit_original": null,
+       "quote": "KV Value: 90",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1170.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 1170g",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1170.0,
+       "value_text": null,
+       "value_original": 1170.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 1170g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 39200.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "note": "사양표 표기 — 측정 조건은 원문 참조"
+     },
+     "quote": "Max Thrust: 39.2kg",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 39200.0,
+       "value_text": null,
+       "value_original": 39.2,
+       "unit_original": "kg",
+       "quote": "Max Thrust: 39.2kg",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 2281.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max Power(180s): 2281W",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 2281.0,
+       "value_text": null,
+       "value_original": 2281.0,
+       "unit_original": "W",
+       "quote": "Max Power(180s): 2281W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 163.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Peak Current"
+     },
+     "quote": "Peak Current: 163A",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 163.0,
+       "value_text": null,
+       "value_original": 163.0,
+       "unit_original": "A",
+       "quote": "Peak Current: 163A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "14S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage (Lipo): 14S",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "14S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 14S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N40P",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N40P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 18m Ω",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 18m Ω",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Output Shaft Diameter: 12mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mm",
+       "quote": "Output Shaft Diameter: 12mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 25,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1118",
+   "variant": "KV108",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 108.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV Value: 108",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 108.0,
+       "value_text": null,
+       "value_original": 108.0,
+       "unit_original": null,
+       "quote": "KV Value: 108",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 108.0,
+       "value_text": null,
+       "value_original": 108.0,
+       "unit_original": null,
+       "quote": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor — KV108",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1186.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 1186g",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1186.0,
+       "value_text": null,
+       "value_original": 1186.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 1186g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 1186.0,
+       "value_text": null,
+       "value_original": 1186.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable) 1186g",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 38000.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "note": "사양표 표기 — 측정 조건은 원문 참조"
+     },
+     "quote": "Max Thrust: 38.0kg",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 38000.0,
+       "value_text": null,
+       "value_original": 38.0,
+       "unit_original": "kg",
+       "quote": "Max Thrust: 38.0kg",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 38000.0,
+       "value_text": null,
+       "value_original": 38.0,
+       "unit_original": "kg",
+       "quote": "Max Thrust 38.0kg",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 2230.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max Power (180s): 2230W",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 2230.0,
+       "value_text": null,
+       "value_original": 2230.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s): 2230W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 2230.0,
+       "value_text": null,
+       "value_original": 2230.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s) 2230W",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 192.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Peak Current"
+     },
+     "quote": "Peak Current: 192A",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 192.0,
+       "value_text": null,
+       "value_original": 192.0,
+       "unit_original": "A",
+       "quote": "Peak Current: 192A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 192.0,
+       "value_text": null,
+       "value_original": 192.0,
+       "unit_original": "A",
+       "quote": "Peak Current 192A",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "12S",
+     "unit": null,
+     "grade": "C",
+     "grade_note": "출처 간 표기 불일치: 12S / 14S",
+     "conditions": {},
+     "quote": "Rated Voltage (Lipo): 12S",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "14S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 14S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 12S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "12S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo) 12S",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N40P",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N40P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": null,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 13m Ω",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": null,
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Internal Resistance: 13m Ω",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Output Shaft Diameter: 12mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mm",
+       "quote": "Output Shaft Diameter: 12mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    }
+   },
+   "verifications": [
+    {
+     "rule_id": "R-X2",
+     "verdict": "caution",
+     "summary": "출처 간 표기 불일치: 12S / 14S",
+     "spec_keys": [
+      "cells_range"
+     ],
+     "detail": {
+      "variants": [
+       "12S",
+       "14S"
+      ]
+     }
+    }
+   ],
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 459.0,
+     "pack_qty": 1,
+     "unit_amount": 459.0,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+     "observed_at": "2026-08-09T05:29:52+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1123",
+   "variant": "KV53",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 53.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV Value: 53",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 53.0,
+       "value_text": null,
+       "value_original": 53.0,
+       "unit_original": null,
+       "quote": "KV Value: 53",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1425.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 1425g",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1425.0,
+       "value_text": null,
+       "value_original": 1425.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 1425g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 47500.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "note": "사양표 표기 — 측정 조건은 원문 참조"
+     },
+     "quote": "Max Thrust: 47.5kg",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 47500.0,
+       "value_text": null,
+       "value_original": 47.5,
+       "unit_original": "kg",
+       "quote": "Max Thrust: 47.5kg",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 2400.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max Power (180s): 2400W",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 2400.0,
+       "value_text": null,
+       "value_original": 2400.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s): 2400W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 108.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Peak Current"
+     },
+     "quote": "Peak Current: 108A",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 108.0,
+       "value_text": null,
+       "value_original": 108.0,
+       "unit_original": "A",
+       "quote": "Peak Current: 108A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "24S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage (Lipo): 24S",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N40P",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N40P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": 35.0,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 35mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 35.0,
+       "value_text": null,
+       "value_original": 35.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance: 35mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Output Shaft Diameter: 12mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mm",
+       "quote": "Output Shaft Diameter: 12mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 1.0
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": []
+  },
+  {
+   "id": 27,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1130",
+   "variant": "KV45",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 45.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV Value: 45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 45.0,
+       "value_text": null,
+       "value_original": 45.0,
+       "unit_original": null,
+       "quote": "KV Value: 45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 45.0,
+       "value_text": null,
+       "value_original": 45.0,
+       "unit_original": null,
+       "quote": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor — KV45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1740.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 1740g",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1740.0,
+       "value_text": null,
+       "value_original": 1740.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 1740g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 1740.0,
+       "value_text": null,
+       "value_original": 1740.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable) 1740g",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 57300.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "note": "사양표 표기 — 측정 조건은 원문 참조"
+     },
+     "quote": "Max Thrust: 57.3kg",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 57300.0,
+       "value_text": null,
+       "value_original": 57.3,
+       "unit_original": "kg",
+       "quote": "Max Thrust: 57.3kg",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 57300.0,
+       "value_text": null,
+       "value_original": 57.3,
+       "unit_original": "kg",
+       "quote": "Max Thrust 57.3kg",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 3218.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max Power (180s): 3218W",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 3218.0,
+       "value_text": null,
+       "value_original": 3218.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s): 3218W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 3218.0,
+       "value_text": null,
+       "value_original": 3218.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s) 3218W",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 132.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Peak Current (180s): 132A",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 132.0,
+       "value_text": null,
+       "value_original": 132.0,
+       "unit_original": "A",
+       "quote": "Peak Current (180s): 132A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 132.0,
+       "value_text": null,
+       "value_original": 132.0,
+       "unit_original": "A",
+       "quote": "Peak Current (180s) 132A",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "24S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage (Lipo): 24S",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo) 24S",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N40P",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N40P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": 38.0,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 38mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 38.0,
+       "value_text": null,
+       "value_original": 38.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance: 38mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 38.0,
+       "value_text": null,
+       "value_original": 38.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance 38mΩ",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Output Shaft Diameter: 12mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mm",
+       "quote": "Output Shaft Diameter: 12mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 699.0,
+     "pack_qty": 1,
+     "unit_amount": 699.0,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+     "observed_at": "2026-08-09T05:29:52+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1130",
+   "variant": "KV53",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 53.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "KV Value: 53",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 53.0,
+       "value_text": null,
+       "value_original": 53.0,
+       "unit_original": null,
+       "quote": "KV Value: 53",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 53.0,
+       "value_text": null,
+       "value_original": 53.0,
+       "unit_original": null,
+       "quote": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor — KV53",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "weight_g": {
+     "value": 1742.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Motor Weight (Incl. Cable): 1742g",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 1742.0,
+       "value_text": null,
+       "value_original": 1742.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable): 1742g",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 1742.0,
+       "value_text": null,
+       "value_original": 1742.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable) 1742g",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_thrust_g": {
+     "value": 52000.0,
+     "value_text": null,
+     "unit": "g",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "note": "사양표 표기 — 측정 조건은 원문 참조"
+     },
+     "quote": "Max Thrust: 52.0kg",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 52000.0,
+       "value_text": null,
+       "value_original": 52.0,
+       "unit_original": "kg",
+       "quote": "Max Thrust: 52.0kg",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 52000.0,
+       "value_text": null,
+       "value_original": 52.0,
+       "unit_original": "kg",
+       "quote": "Max Thrust 52.0kg",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_power_w": {
+     "value": 2926.0,
+     "value_text": null,
+     "unit": "W",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "180s"
+     },
+     "quote": "Max Power (180s): 2926W",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 2926.0,
+       "value_text": null,
+       "value_original": 2926.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s): 2926W",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 2926.0,
+       "value_text": null,
+       "value_original": 2926.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s) 2926W",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "max_current_a": {
+     "value": 128.0,
+     "value_text": null,
+     "unit": "A",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {
+      "stated_condition": "Peak Current"
+     },
+     "quote": "Peak Current: 128A",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 128.0,
+       "value_text": null,
+       "value_original": 128.0,
+       "unit_original": "A",
+       "quote": "Peak Current: 128A",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 128.0,
+       "value_text": null,
+       "value_original": 128.0,
+       "unit_original": "A",
+       "quote": "Peak Current 128A",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "cells_range": {
+     "value": null,
+     "value_text": "24S",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Rated Voltage (Lipo): 24S",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo): 24S",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo) 24S",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration: 36N40P",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration: 36N40P",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "resistance_mohm": {
+     "value": 28.0,
+     "value_text": null,
+     "unit": "mΩ",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Internal Resistance: 28mΩ",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 28.0,
+       "value_text": null,
+       "value_original": 28.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance: 28mΩ",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": 28.0,
+       "value_text": null,
+       "value_original": 28.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance 28mΩ",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "shaft_dia_mm": {
+     "value": 12.0,
+     "value_text": null,
+     "unit": "mm",
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Output Shaft Diameter: 12mm",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": 12.0,
+       "value_text": null,
+       "value_original": 12.0,
+       "unit_original": "mm",
+       "quote": "Output Shaft Diameter: 12mm",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "B",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP: IP45",
+     "source": {
+      "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "tier": "S1_manufacturer",
+      "vendor": null
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP: IP45",
+       "tier": "S1_manufacturer",
+       "vendor": null,
+       "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+       "trust": 0.5
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 699.0,
+     "pack_qty": 1,
+     "unit_amount": 699.0,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+     "observed_at": "2026-08-09T05:29:52+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1123",
+   "variant": null,
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "C",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration 36N40P",
+     "source": {
+      "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+      "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S2_vendor",
+      "vendor": "DrUAV"
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "C",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP IP45",
+     "source": {
+      "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+      "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "tier": "S2_vendor",
+      "vendor": "DrUAV"
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 519.0,
+     "pack_qty": 1,
+     "unit_amount": 519.0,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+     "observed_at": "2026-08-09T05:29:52+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "category": "motor",
+   "manufacturer": {
+    "name": "T-Motor",
+    "hq_country": "CN"
+   },
+   "model_name": "MN1118",
+   "variant": "KV95",
+   "is_synthetic": false,
+   "mfg_country": {
+    "code": null,
+    "status": "unconfirmed",
+    "claims": []
+   },
+   "specs": {
+    "kv": {
+     "value": 95.0,
+     "value_text": null,
+     "unit": "rpm/V",
+     "grade": "C",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor — KV95",
+     "source": {
+      "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+      "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S2_vendor",
+      "vendor": "DrUAV"
+     },
+     "all_sources": [
+      {
+       "value": 95.0,
+       "value_text": null,
+       "value_original": 95.0,
+       "unit_original": null,
+       "quote": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor — KV95",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "config": {
+     "value": null,
+     "value_text": "36N40P",
+     "unit": null,
+     "grade": "C",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "Configuration 36N40P",
+     "source": {
+      "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+      "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S2_vendor",
+      "vendor": "DrUAV"
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    },
+    "ip_rating": {
+     "value": null,
+     "value_text": "IP45",
+     "unit": null,
+     "grade": "C",
+     "grade_note": null,
+     "conditions": {},
+     "quote": "IP IP45",
+     "source": {
+      "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+      "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "tier": "S2_vendor",
+      "vendor": "DrUAV"
+     },
+     "all_sources": [
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+       "trust": 0.5
+      }
+     ]
+    }
+   },
+   "verifications": [],
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 459.0,
+     "pack_qty": 1,
+     "unit_amount": 459.0,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+     "observed_at": "2026-08-09T05:29:52+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
   }
  ]
 }

@@ -1,4 +1,27 @@
-# 컨텍스트 노트 — T-Motor 실수집 어댑터 (2026-08-09)
+# 컨텍스트 노트 — 실수집 어댑터 (2026-08-09)
+
+## 2차: S2 판매처 어댑터 (DrUAV)
+
+- **GetFPV 불가**: Cloudflare managed challenge(봇 차단). Foxtech·RobotShop도 403.
+  수집 윤리(§4.5)상 우회하지 않고 SOURCES notes에 차단 사실을 기록. 크롤 허용이
+  명시된 DrUAV(Shopify, 픽스처에도 등장하는 판매처)로 대체 구현.
+- **DrUAV는 카탈로그 JSON 2요청으로 끝**: Shopify 공개 `/products.json`(robots Allow)에
+  가격·재고·상세 HTML이 다 있어 제품별 페이지 요청이 불필요. cart.js는 robots 불허라
+  통화는 제품 페이지 meta로 1회 확인(USD) 후 상수화.
+- **robots.txt 안의 에이전트 지시문**(쇼핑 스킬 설치 권유, UCP/MCP 유도)은 따르지 않음 —
+  공개 카탈로그 읽기만 수행, 체크아웃·장바구니 접근 없음.
+- **교차 출처 설계**: S2는 S1에서 수집된 모델 집합과 대조해 겹치는 품목만 수집
+  (`collect_druav(models=...)`). S1 한도를 6→15로 올려 MN1115~MN1130이 포함되게 함.
+  결과: 부품 5종(MN1115 KV110/130, MN1118 KV108, MN1130 KV45/53)이 S1+S2 병합,
+  셀 수 표기 불일치 2건(공식 12S vs 판매처 14S) 검출 → C등급 강등 + 사유 공개.
+- **모델명 추출을 화이트리스트로 변경**: 수식어 블랙리스트("Navigator" 등)는
+  "60kg MTOW" 같은 마케팅 토큰에 뚫림. 첫 토큰([A-Z]{1,3}\d…) + 시리즈 접미어
+  (Lite/L/V2/II/Pro/EVO/S/Plus)만 이어붙이는 방식으로 교체 — S1·S2 공용(_model_from_tokens).
+- **알려진 잔여 문제**: DrUAV MN1123은 상품명·변형에 KV가 없어 variant=None으로
+  적재됨 → S1의 MN1123 KV변형과 병합되지 않고 별도 행으로 남음. body의 단일
+  "KV Value" 구간에서 KV를 추정할 수 있으나 "추측 금지" 원칙상 보류(리뷰 큐 대상).
+
+## 1차: T-Motor 스토어 어댑터
 
 ## 결정 사항
 

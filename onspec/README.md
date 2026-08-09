@@ -8,7 +8,7 @@
 
 ```bash
 python3 pipeline/run_daily.py --fixtures   # 인제스트 → 검증 → 등급 → data.json
-python3 pipeline/run_daily.py              # 실수집 모드: T-Motor Store(S1) 어댑터
+python3 pipeline/run_daily.py              # 실수집 모드: T-Motor Store(S1) + DrUAV(S2)
 python3 site/generate.py                   # site/dist/index.html 빌드
 # dist/index.html 을 브라우저로 열면 끝 (외부 요청 없는 단일 파일)
 ```
@@ -44,7 +44,7 @@ python3 site/generate.py                   # site/dist/index.html 빌드
 | | 데모(이 저장소 그대로) | 운영 전환 |
 |---|---|---|
 | DB | SQLite (`db/drone_cots.sqlite3`) | PostgreSQL — `schema.postgres.sql` 적용, `pipeline/db.py`에 psycopg 연결 추가 |
-| 수집 | 픽스처(`--fixtures`) 또는 T-Motor Store 실수집(구현됨) | `collect.py`에 나머지 소스 어댑터 추가 |
+| 수집 | 픽스처(`--fixtures`) 또는 실수집: T-Motor Store(S1)·DrUAV(S2) | `collect.py`에 나머지 소스 어댑터 추가. GetFPV·Foxtech는 봇 차단으로 보류 |
 | 추출 | 픽스처의 사전 추출 claims | `extract.py` + `ANTHROPIC_API_KEY` (근거 인용·이중 추출 프롬프트 내장) |
 | 프런트 | Python 정적 생성(단일 파일) | 동일한 `data.json` 계약 위에 Astro/Next(ISR)로 교체 가능 |
 | 환율 | 표시 대기 | 한국은행/ECB 고시 환율 일일 배치 → `prices.amount_usd/krw` |

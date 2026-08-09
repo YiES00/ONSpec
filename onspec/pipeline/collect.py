@@ -44,8 +44,11 @@ SOURCES: list[SourceAdapter] = [
     SourceAdapter("Gens Tattu", "S1_manufacturer", ["https://genstattu.com/"], daily=False),
     SourceAdapter("Tattu World", "S1_manufacturer", ["https://tattuworld.com/"], daily=False),
     SourceAdapter("GetFPV", "S2_vendor", ["https://www.getfpv.com/"], daily=True,
-                  notes="가격·재고 시계열"),
-    SourceAdapter("Foxtech", "S2_vendor", ["https://www.foxtechfpv.com/"], daily=True),
+                  notes="가격·재고 시계열 — Cloudflare 봇 차단으로 수집 불가(2026-08 확인)"),
+    SourceAdapter("Foxtech", "S2_vendor", ["https://www.foxtechfpv.com/"], daily=True,
+                  notes="WAF 403 차단으로 수집 불가(2026-08 확인)"),
+    SourceAdapter("DrUAV", "S2_vendor", ["https://druav.com/"], daily=True,
+                  notes="Shopify 공개 카탈로그 — 실구현(collect_druav)"),
     SourceAdapter("Tyto Robotics DB", "S3_benchmark", ["https://database.tytorobotics.com/"],
                   daily=False, notes="모터 실측 — A등급 연계"),
     SourceAdapter("FCC ID DB", "S4_certification", ["https://fccid.io/"], daily=False,
@@ -160,6 +163,25 @@ def _table_pairs(section_html: str) -> list[tuple[str, str]]:
     return pairs
 
 
+_MODEL_CONT_RE = re.compile(r"^(Lite|L|V2|V3|II|Ⅱ|Pro|EVO|S|Plus)$", re.I)
+
+
+def _model_from_tokens(tokens: list[str]) -> str | None:
+    """선행 토큰열 → 모델명. 첫 토큰은 영문+숫자 조합, 이후는 시리즈 접미어만 허용.
+
+    "MN505-S IP45 Navigator ..." → MN505-S / "U8 Lite L Efficiency ..." → U8 Lite L
+    (수식어 블랙리스트 대신 접미어 화이트리스트 — "60kg MTOW" 같은 마케팅 토큰 오염 방지)
+    """
+    if not tokens or not re.match(r"^[A-Z]{1,3}\d", tokens[0], re.I):
+        return None
+    model = [tokens[0]]
+    for tok in tokens[1:]:
+        if not _MODEL_CONT_RE.match(tok):
+            break
+        model.append(tok)
+    return " ".join(model)
+
+
 def _map_spec(label: str, value: str) -> dict | None:
     """T-Motor 사양 라벨 → 카테고리 표준 키. 미대응 라벨은 None(추측 금지)."""
     key = re.sub(r"[^a-z0-9]", "", label.lower())
@@ -169,9 +191,9 @@ def _map_spec(label: str, value: str) -> dict | None:
     if cond:
         conditions["stated_condition"] = cond.group(1).strip()
 
-    if key in ("kv", "testitem"):
-        # "KV: 320" | "Test Item: KV130" | "Test Item: U15 Ⅱ KV80" — KV 토큰 우선
-        # (모델명 속 숫자 오인 방지), 값 전체가 숫자일 때만 그대로 사용.
+    if key in ("kv", "testitem", "kvvalue"):
+        # "KV: 320" | "Test Item: KV130" | "Test Item: U15 Ⅱ KV80" | "KV Value: 110"
+        # — KV 토큰 우선(모델명 속 숫자 오인 방지), 값 전체가 숫자일 때만 그대로 사용.
         m = re.search(r"KV\s*(\d+)", value, re.I) or re.fullmatch(r"\s*(\d+)\s*", value)
         if not m:
             return None
@@ -200,12 +222,18 @@ def _map_spec(label: str, value: str) -> dict | None:
         num, unit = _num_unit(value)
         return {"key": "resistance_mohm", "value": num, "unit": unit, "quote": quote,
                 "conditions": {}}
-    if key == "shaftdiameter":
+    if key.endswith("shaftdiameter"):    # "Shaft Diameter" / "Output Shaft Diameter"
         num, unit = _num_unit(value)
         if num is None:      # "IN：6mm，OUT：4mm" 같은 복합 표기는 추측하지 않고 생략
             return None
         return {"key": "shaft_dia_mm", "value": num, "unit": unit, "quote": quote,
                 "conditions": {}}
+    if key.startswith("maxthrust"):      # MN1115류: "Max Thrust: 34.3kg"
+        num, unit = _num_unit(value)
+        if not conditions:
+            conditions["note"] = "사양표 표기 — 측정 조건은 원문 참조"
+        return {"key": "max_thrust_g", "value": num, "unit": unit, "quote": quote,
+                "conditions": conditions}
     if key == "ip":
         return {"key": "ip_rating", "value_text": value, "quote": quote, "conditions": {}}
     return None
@@ -275,19 +303,9 @@ class TMotorStoreAdapter:
         h1 = re.search(r'<h1[^>]*>(.*?)</h1>', body, re.S)
         title_tag = re.search(r"<title>(.*?)</title>", body, re.S)
         h1_text = _text(h1.group(1)) if h1 else ""
-        # h1 선행 토큰이 모델명: "MN505-S IP45 Navigator ..." → MN505-S,
-        # "U8 Lite L Efficiency ..." → U8 Lite L. 수식어 토큰에서 절단.
-        stop = re.compile(r"^(IP\d+|KV\d+|Navigator|Antigravity|Efficiency|Multirotor|"
-                          r"Multi(-Motor)?|UAV|Drone|Motor|Type|Waterproof|Power|High|"
-                          r"[UP]-\w+)$", re.I)
-        tokens = []
-        for tok in h1_text.split():
-            if stop.match(tok):
-                break
-            tokens.append(tok)
-        if not tokens or not re.match(r"^[A-Z]{1,3}\d", tokens[0], re.I):
+        model_name = _model_from_tokens(h1_text.split())
+        if not model_name:
             return None
-        model_name = " ".join(tokens)
 
         pairs = _table_pairs(_section(body, "basicParameterBox"))
         if not pairs:
@@ -295,7 +313,7 @@ class TMotorStoreAdapter:
         # 변형 그룹 시작 행: "KV: 320" 또는 "Test Item: KV130". 그 이전 = 공통 사양.
         # 시작 행이 없는 단일 변형 페이지(U3 등)는 h1의 "KV700"을 근거로 사용.
         def _group_kv(label: str, value: str) -> str | None:
-            if re.sub(r"[^a-z0-9]", "", label.lower()) not in ("kv", "testitem"):
+            if re.sub(r"[^a-z0-9]", "", label.lower()) not in ("kv", "testitem", "kvvalue"):
                 return None
             m = re.search(r"KV\s*(\d+)", value, re.I) or re.fullmatch(r"\s*(\d+)\s*", value)
             return m.group(1) if m else None
@@ -382,3 +400,168 @@ class TMotorStoreAdapter:
 def collect_tmotor(max_products: int = 6, log=print) -> dict:
     """run_daily.py 진입점 — snapshots.json과 동일한 봉투 형식 반환."""
     return {"snapshots": TMotorStoreAdapter().collect(max_products, log)}
+
+
+# ─────────────────────────── DrUAV 어댑터(S2_vendor, 실구현) ───────────────────────────
+# Shopify 공개 카탈로그 JSON(/products.json)에서 T-Motor 취급 품목의 가격·재고와
+# 상세 설명(body_html)에 실린 사양표를 수집한다. GetFPV·Foxtech·RobotShop은
+# 봇 차단(403/Cloudflare)으로 수집 불가 — 우회하지 않는다(§4.5 수집 윤리).
+
+DRUAV_BASE = "https://druav.com"
+DRUAV_VENDOR = {"name": "DrUAV", "country": None, "trust_weight": 0.5}
+
+_KV_SEG_RE = re.compile(r"KV\s*Value\s*(\d+)", re.I)
+
+# body_html 평문에서 뽑는 사양 패턴 — group(1)=값. quote는 매치 원문 전체.
+_DRUAV_COMMON = [
+    ("ip_rating", "text", re.compile(r"\bIP\s+(IP\d{2})\b")),
+    ("config", "text", re.compile(r"Configuration\s+(\d+N\d+P)", re.I)),
+]
+_DRUAV_PER_KV = [
+    ("cells_range", "text", re.compile(r"Rated Voltage\s*\(Lipo\)\s*([\d\-~]+S)", re.I)),
+    ("max_power_w", "W", re.compile(r"Max\.?\s*Power\s*(?:\(180[sS]\))?\s*([\d.]+)\s*W")),
+    ("max_current_a", "A", re.compile(r"Peak Current\s*(?:\(\d+[sS]\))?\s*([\d.]+)\s*A")),
+    ("weight_g", "g", re.compile(r"Motor Weight\s*\(Incl[^)]*\)\s*([\d.]+)\s*g", re.I)),
+    ("resistance_mohm", "mΩ", re.compile(r"Internal Resistance\s*([\d.]+)\s*mΩ", re.I)),
+]
+_DRUAV_THRUST_RE = re.compile(r"Max\.?\s*Thrust\s*([\d.]+)\s*(kg|g)\b", re.I)
+
+
+def _druav_specs(patterns, text: str) -> list[dict]:
+    specs = []
+    for key, unit, rx in patterns:
+        m = rx.search(text)
+        if not m:
+            continue
+        quote = re.sub(r"\s+", " ", m.group(0)).strip()
+        if unit == "text":
+            specs.append({"key": key, "value_text": m.group(1), "quote": quote,
+                          "conditions": {}})
+        else:
+            conditions = {}
+            if key in ("max_power_w", "max_current_a"):
+                stated = re.search(r"\((\d+[sS])\)", m.group(0))
+                conditions["stated_condition"] = stated.group(1) if stated else quote
+            specs.append({"key": key, "value": float(m.group(1)), "unit": unit,
+                          "quote": quote, "conditions": conditions})
+    return specs
+
+
+class DrUAVAdapter:
+    """druav.com(Shopify) T-Motor 취급 품목 수집기 — 가격·재고 + 리스팅 사양."""
+
+    def __init__(self, fetcher: PoliteFetcher | None = None):
+        self.fetcher = fetcher or PoliteFetcher()
+
+    def catalog(self, pages: int = 2) -> list[dict]:
+        prods = []
+        for page in range(1, pages + 1):
+            import json as _json
+            body = self.fetcher.fetch(f"{DRUAV_BASE}/products.json?limit=250&page={page}")
+            batch = _json.loads(body).get("products", [])
+            prods.extend(batch)
+            if len(batch) < 250:
+                break
+        return prods
+
+    @staticmethod
+    def _model(title: str) -> str | None:
+        tokens = title.split()
+        while tokens and tokens[0].lower() in ("t-motor", "tmotor", "antigravity"):
+            tokens = tokens[1:]
+        return _model_from_tokens(tokens)
+
+    def parse_product(self, p: dict, fetched_at: str) -> dict | None:
+        model_name = self._model(p["title"])
+        if not model_name:
+            return None
+        url = f"{DRUAV_BASE}/products/{p['handle']}"
+        body = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html.unescape(p.get("body_html") or "")))
+        # 추천 조합·테스트 표에는 동일 라벨이 재등장하므로 사양 구간만 사용
+        spec_zone = re.split(r"Recommended Combinations|Test Data", body)[0]
+        common = _druav_specs(_DRUAV_COMMON, spec_zone)
+
+        # "KV Value 110 ... KV Value 130 ..." → KV별 구간
+        parts = _KV_SEG_RE.split(spec_zone)
+        segments = {parts[i]: parts[i + 1] for i in range(1, len(parts) - 1, 2)}
+
+        claims = []
+        for v in p.get("variants", []):
+            v_title = v.get("title") or ""
+            # Shopify 단일 변형 플레이스홀더 — KV는 상품명에서
+            kv_m = (re.search(r"KV\s*(\d+)", v_title, re.I)
+                    or re.search(r"KV\s*(\d+)", p["title"], re.I))
+            variant = (f"KV{kv_m.group(1)}" if kv_m
+                       else (None if v_title == "Default Title" else v_title))
+            specs = list(common)
+            if kv_m:
+                specs.append({"key": "kv", "value": float(kv_m.group(1)), "unit": None,
+                              "quote": f"{p['title']} — {v['title']}", "conditions": {}})
+                seg = segments.get(kv_m.group(1))
+                if seg:
+                    specs += _druav_specs(_DRUAV_PER_KV, seg)
+                    t = _DRUAV_THRUST_RE.search(seg)
+                    if t:
+                        specs.append({
+                            "key": "max_thrust_g", "value": float(t.group(1)),
+                            "unit": t.group(2),
+                            "quote": re.sub(r"\s+", " ", t.group(0)),
+                            "conditions": {"note": "판매처 리스팅 사양표 — 측정 조건은 원문 참조"}})
+            claims.append({
+                "category": "motor",
+                "manufacturer": {"name": "T-Motor", "hq_country": "CN"},
+                "model_name": model_name, "variant": variant,
+                "mfg_country": None, "specs": specs,
+                "price": {"currency": "USD", "amount": float(v["price"]),
+                          "pack_qty": 1, "in_stock": bool(v.get("available")),
+                          "quote": f"{p['title']} — {v.get('title')}: ${v['price']} USD"},
+            })
+        if not claims:
+            return None
+        return {
+            "snapshot_id": f"snap-druav-{p['handle']}"[:64],
+            "tier": "S2_vendor", "origin_url": url,
+            "title": p["title"], "fetched_at": fetched_at,
+            "vendor": dict(DRUAV_VENDOR),
+            "raw_excerpt": body[:2000],
+            "content_hash": hashlib.sha256((p.get("body_html") or "").encode()).hexdigest()[:16],
+            "claims": claims,
+        }
+
+    def collect(self, models: set[str] | None = None, max_products: int = 8,
+                log=print) -> list[dict]:
+        """models: S1에서 수집된 모델명 집합 — 교차 출처 대상만 선별. None이면 모터 전체."""
+        from normalize import normalize_name
+        targets = {normalize_name(m) for m in models} if models else None
+        fetched_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        picked = []
+        for p in self.catalog():
+            if (p.get("vendor") or "").lower() not in ("t-motor", "tmotor"):
+                continue
+            model = self._model(p["title"])
+            if not model:
+                continue
+            if targets is not None:
+                if normalize_name(model) not in targets:
+                    continue
+            elif not ("motor" in p["title"].lower()
+                      and not re.search(r"propeller|combo|kit|esc|prop\b", p["title"], re.I)):
+                continue
+            picked.append(p)
+            if len(picked) >= max_products:
+                break
+        log(f"      DrUAV 카탈로그: 대상 {len(picked)}건"
+            + (f" (S1 모델 {len(targets)}종과 대조)" if targets else ""))
+        snapshots = []
+        for p in picked:
+            snap = self.parse_product(p, fetched_at)
+            if snap:
+                snapshots.append(snap)
+                log(f"      수집 {snap['claims'][0]['model_name']}: 변형 {len(snap['claims'])} · "
+                    f"가격 {snap['claims'][0]['price']['amount']} USD")
+        return snapshots
+
+
+def collect_druav(models: set[str] | None = None, max_products: int = 8, log=print) -> dict:
+    """run_daily.py 진입점 — snapshots.json과 동일한 봉투 형식 반환."""
+    return {"snapshots": DrUAVAdapter().collect(models, max_products, log)}
