@@ -37,14 +37,23 @@ def main() -> int:
         from datetime import datetime, timezone
         import json
         from collect import collect_tmotor, collect_druav, collect_tyto
-        data = collect_tmotor(max_products=15)
+        data = collect_tmotor(max_products=27)   # 멀티로터 모터 카테고리 전체
         if not data["snapshots"]:
             print("      수집 결과 0건 — 중단")
             return 1
         # S2·S3는 S1에서 수집된 모델만 대조 수집 → 교차 검증·가격 축적·실측 연계(A등급)
         s1_models = {c["model_name"] for s in data["snapshots"] for c in s["claims"]}
+        # 실측 추력 조건 매칭용 컨텍스트: 모델별 변형 집합 + 추력 주장 측정 조건
+        s1_variants, thrust_ctx = {}, {}
+        for s in data["snapshots"]:
+            for c in s["claims"]:
+                s1_variants.setdefault(c["model_name"], set()).add(c["variant"])
+                for sp in c["specs"]:
+                    if sp["key"] == "max_thrust_g" and sp["conditions"].get("prop_diameter_in"):
+                        thrust_ctx[(c["model_name"], c["variant"])] = sp["conditions"]
         data["snapshots"] += collect_druav(models=s1_models)["snapshots"]
-        data["snapshots"] += collect_tyto(models=s1_models)["snapshots"]
+        data["snapshots"] += collect_tyto(models=s1_models, s1_variants=s1_variants,
+                                          thrust_ctx=thrust_ctx)["snapshots"]
         # 원칙 1: 원문 스냅샷 아카이브 보존
         archive = (ROOT / "fixtures" / "collected" /
                    f"collected-{datetime.now(timezone.utc):%Y%m%d}.json")

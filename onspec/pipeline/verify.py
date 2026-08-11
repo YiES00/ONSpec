@@ -24,6 +24,10 @@ STEEL_DENSITY = 7850.0
 X1_FLAG = 0.15       # 교차 출처 수치 편차: 플래그 임계
 X1_CAUTION = 0.05    # 교차 출처 수치 편차: 주의 임계
 
+# R-X3(실측 대조): 실측(S3)은 동급 출처가 아니라 판정 기준 — 주장값의 실측 대비 편차
+X3_CAUTION = 0.10    # 10% 초과: 제조사 표기 낙관 의심
+X3_FLAG = 0.20       # 20% 초과: 실측과 불일치
+
 
 def _log(logs: list, rule_id: str, verdict: str, spec_keys: list[str],
          summary: str, **detail):
@@ -255,6 +259,29 @@ CATEGORY_RULES = {
 
 # ---------------- 공통 규칙 ----------------
 
+def _condition_groups(nums: list) -> list[tuple[str | None, list]]:
+    """프로펠러 조건별 비교 그룹. 조건 없는 주장은 모든 그룹에 참여.
+
+    반환: [(그룹 라벨 또는 None, 주장 리스트)]. 조건 명시 주장이 없으면
+    전체를 한 그룹으로(기존 동작 유지).
+    """
+    def sig(c):
+        cond = json.loads(c["conditions"]) or {}
+        dia, pitch = cond.get("prop_diameter_in"), cond.get("prop_pitch_in")
+        if not isinstance(dia, (int, float)):
+            return None
+        return (round(float(dia)), round(float(pitch)) if isinstance(pitch, (int, float)) else -1)
+
+    sigs = {}
+    for c in nums:
+        sigs.setdefault(sig(c), []).append(c)
+    wild = sigs.pop(None, [])
+    if not sigs:
+        return [(None, wild)]
+    return [(f"프로펠러 {d}x{p if p >= 0 else '?'}in", members + wild)
+            for (d, p), members in sorted(sigs.items())]
+
+
 def rules_common(claims_by_key: dict) -> list[dict]:
     logs: list[dict] = []
     for key, claims in claims_by_key.items():
@@ -266,26 +293,71 @@ def rules_common(claims_by_key: dict) -> list[dict]:
                      f"{anomaly['detail']} (원본: {c['value_num_original']}{c['unit_original']})",
                      anomaly=anomaly)
 
-        # R-X1: 교차 출처 수치 대조 (신뢰 가중 평균 대비 편차)
-        nums = [c for c in claims if c["value_num"] is not None]
-        if len(nums) >= 2 and len({round(float(c["value_num"]), 6) for c in nums}) > 1:
-            values = [float(c["value_num"]) for c in nums]
-            weights = [float(c["trust_weight"]) for c in nums]
+        # R-X1: 교차 출처 수치 대조 (신뢰 가중 평균 대비 편차).
+        # 측정 조건이 값을 좌우하는 필드(추력 등)는 프로펠러 조건이 같은 주장끼리만
+        # 비교한다 — 조건 명시가 없는 주장은 모든 그룹과 비교(제조사 대표 주장 가정).
+        # 실측(S3)은 R-X1 대상이 아니라 R-M1의 판정 기준으로 쓴다.
+        nums = [c for c in claims
+                if c["value_num"] is not None and c["tier"] != "S3_benchmark"]
+        for cond_label, members in _condition_groups(nums):
+            if len(members) < 2 \
+               or len({round(float(c["value_num"]), 6) for c in members}) <= 1:
+                continue
+            values = [float(c["value_num"]) for c in members]
+            weights = [float(c["trust_weight"]) for c in members]
             wmean = sum(v * w for v, w in zip(values, weights)) / sum(weights)
             spread = (max(values) - min(values)) / wmean
             srcs = [{"value": float(c["value_num"]), "tier": c["tier"],
                      "trust": float(c["trust_weight"]), "source_id": c["source_id"]}
-                    for c in nums]
-            d = dict(weighted_mean=round(wmean, 2), spread=round(spread, 4), sources=srcs)
+                    for c in members]
+            d = dict(weighted_mean=round(wmean, 2), spread=round(spread, 4), sources=srcs,
+                     condition_group=cond_label)
+            suffix = f" [조건: {cond_label}]" if cond_label else ""
             if spread > X1_FLAG:
                 _log(logs, "R-X1", "flag", [key],
-                     f"출처 간 값 불일치 {spread*100:.0f}% (가중평균 {wmean:,.0f}) — 모든 출처 값 병기", **d)
+                     f"출처 간 값 불일치 {spread*100:.0f}% (가중평균 {wmean:,.0f}) — 모든 출처 값 병기{suffix}", **d)
             elif spread > X1_CAUTION:
                 _log(logs, "R-X1", "caution", [key],
-                     f"출처 간 값 편차 {spread*100:.1f}% — 확인 필요, 모든 출처 값 병기", **d)
+                     f"출처 간 값 편차 {spread*100:.1f}% — 확인 필요, 모든 출처 값 병기{suffix}", **d)
             else:
                 _log(logs, "R-X1", "pass", [key],
-                     f"출처 간 값 일치(편차 {spread*100:.1f}%)", **d)
+                     f"출처 간 값 일치(편차 {spread*100:.1f}%){suffix}", **d)
+
+        # R-X3: 실측 대조 — S3 실측값을 기준으로 주장값(S1/S2)의 편차를 판정.
+        # 프로펠러 조건이 명시된 경우 어댑터와 동일한 허용 편차(직경 5%·피치 10%)로
+        # 조건 호환 주장만 비교한다. 조건 미명시 주장은 대표 주장으로 보고 비교.
+        measured = [c for c in claims
+                    if c["value_num"] is not None and c["tier"] == "S3_benchmark"]
+        for mc in measured:
+            mcond = json.loads(mc["conditions"]) or {}
+            mv = float(mc["value_num"])
+            comparable = []
+            for c in nums:
+                ccond = json.loads(c["conditions"]) or {}
+                md, cd = mcond.get("prop_diameter_in"), ccond.get("prop_diameter_in")
+                if isinstance(md, (int, float)) and isinstance(cd, (int, float)):
+                    if abs(md - cd) / cd > 0.05:
+                        continue
+                    mp, cp = mcond.get("prop_pitch_in"), ccond.get("prop_pitch_in")
+                    if isinstance(mp, (int, float)) and isinstance(cp, (int, float)) \
+                       and abs(mp - cp) / cp > 0.10:
+                        continue
+                comparable.append(c)
+            if not comparable or mv == 0:
+                continue
+            dev = max(abs(float(c["value_num"]) - mv) / mv for c in comparable)
+            d = dict(measured=mv, spread=round(dev, 4),
+                     claimed=[float(c["value_num"]) for c in comparable],
+                     test=mcond.get("test_url") or mcond.get("test_title"))
+            if dev > X3_FLAG:
+                _log(logs, "R-X3", "flag", [key],
+                     f"실측 불일치: 실측 {mv:,.0f} vs 주장 최대 편차 {dev*100:.0f}% — 제조사 표기 재검토", **d)
+            elif dev > X3_CAUTION:
+                _log(logs, "R-X3", "caution", [key],
+                     f"실측 대비 주장 편차 {dev*100:.1f}% — 표기 낙관 의심", **d)
+            else:
+                _log(logs, "R-X3", "pass", [key],
+                     f"실측 확인: 실측 {mv:,.0f} vs 주장 (편차 {dev*100:.1f}%)", **d)
 
         # R-X2: 교차 출처 텍스트 대조
         texts = {(c["value_text"] or "").strip() for c in claims if c["value_text"]}

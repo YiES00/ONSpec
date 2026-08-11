@@ -304,9 +304,10 @@ def _parse_test_data_thrust(body: str) -> dict[str, dict]:
                           "source": "제조사 벤치 테스트 표"}
             if volt is not None:
                 conditions["voltage_v"] = volt
-            dia = re.search(r"[PG]?(\d{2}(?:\.\d+)?)\s*[*xX×]", prop or "")
-            if dia:
-                conditions["prop_diameter_in"] = float(dia.group(1))
+            geom = re.search(r"(\d{2}(?:\.\d+)?)\s*[*xX×]\s*(\d+(?:\.\d+)?)", prop or "")
+            if geom:
+                conditions["prop_diameter_in"] = float(geom.group(1))
+                conditions["prop_pitch_in"] = float(geom.group(2))
             best[kv] = (throttle, {
                 "thrust_g": thrust, "conditions": conditions,
                 "quote": f"Test Data {prop or ''} @ {trailing[0]}: "
@@ -617,10 +618,19 @@ def collect_druav(models: set[str] | None = None, max_products: int = 8, log=pri
 # ──────────────── Tyto Robotics DB 어댑터(S3_benchmark, 실구현) ────────────────
 # 스러스트 스탠드 실측 DB(robots 전면 허용). /motors 목록의 인라인 JSON에서
 # 테스트 보유(benchmarks_count≥1) T-Motor 모터를 S1 모델과 대조하고, 모터 페이지의
-# 측정 속성(kv·weight)을 S3 주장값으로 수집한다. 최대 추력은 테스트마다 프로펠러가
-# 달라 제조사 '최대 추력' 주장과 동일 지표가 아니므로 조건 매칭 로직 전까지 보류.
+# 측정 속성(kv·weight)을 S3 주장값으로 수집한다.
+#
+# 실측 최대 추력 연계(조건 매칭): 테스트의 프로펠러 직경(±5%)·피치(±10%)·전압(±12%)이
+# S1 추력 주장의 측정 조건과 일치하고, 테스트가 풀스로틀에 도달한 경우에만
+# 실측 시리즈 최대값을 max_thrust_g 주장으로 채택한다. 조건이 다른 실측은
+# 동일 지표가 아니므로 채택하지 않는다(부당 플래그 방지).
 
 TYTO_BASE = "https://database.tytorobotics.com"
+
+THRUST_DIA_TOL = 0.05      # 프로펠러 직경 허용 편차
+THRUST_PITCH_TOL = 0.10    # 프로펠러 피치 허용 편차
+THRUST_VOLT_TOL = 0.12     # 전압 허용 편차
+FULL_THROTTLE_US = 1900    # µs 스로틀 풀스로틀 판정 하한
 
 _TYTO_COMPONENTS_RE = re.compile(r":components\s*=\s*'(\[.*?\])'", re.S)
 
@@ -643,30 +653,111 @@ class TytoRoboticsAdapter:
         m = _TYTO_COMPONENTS_RE.search(body)
         return _json.loads(html.unescape(m.group(1))) if m else []
 
-    def _test_provenance(self, motor_hash: str) -> dict | None:
-        """/tests/search 로 해당 모터의 실측 테스트 메타데이터 획득."""
+    def _tests(self, motor_hash: str) -> list[dict]:
+        """/tests/search 로 해당 모터의 실측 테스트 목록(프로펠러 측정치 포함) 획득."""
         import json as _json
         from urllib.parse import urlencode
         params = urlencode({
-            "per_page": 5, "page": 1,
+            "per_page": 100, "page": 1,
             "filters": _json.dumps({"conjunction": "AND", "filters": [
                 {"field": "powertrains.motor.common.hash",
                  "condition": {"operator": "=", "value": motor_hash}}]}),
-            "relations": _json.dumps(["creator"]),
+            "relations": _json.dumps(["creator", "powertrains.propeller"]),
             "aggregates": "[]", "order_by": "[]",
         })
         data = _json.loads(self.fetcher.fetch(f"{TYTO_BASE}/tests/search?{params}"))
-        tests = data.get("data", [])
-        if not tests:
-            return None
-        t = tests[0]
+        return data.get("data", [])
+
+    @staticmethod
+    def _provenance(t: dict) -> dict:
         return {"test_title": t["title"], "test_url": t["link"],
                 "device": t.get("device"),
-                "staff_verified": bool((t.get("creator") or {}).get("is_rcbenchmark_staff")),
-                "tests_total": data.get("meta", {}).get("total")}
+                "staff_verified": bool((t.get("creator") or {}).get("is_rcbenchmark_staff"))}
 
-    def collect(self, models: set[str], log=print) -> list[dict]:
-        """models: S1 수집 모델명 집합 — 대조되는 실측 보유 모터만 수집."""
+    @staticmethod
+    def _prop_matches(t: dict, s1c: dict) -> bool:
+        """테스트 프로펠러가 S1 추력 주장의 측정 프로펠러와 동일 조건인지."""
+        pts = t.get("powertrains") or []
+        if len(pts) != 1:               # 동축 등 복수 파워트레인은 비교 불가
+            return False
+        meas = ((pts[0].get("propeller") or {}).get("measures") or {})
+        dia = (meas.get("diameter") or {}).get("value")
+        pitch = (meas.get("pitch") or {}).get("value")
+        s1d, s1p = s1c.get("prop_diameter_in"), s1c.get("prop_pitch_in")
+        if not all(isinstance(x, (int, float)) for x in (dia, pitch, s1d, s1p)):
+            return False
+        return (abs(dia - s1d) / s1d <= THRUST_DIA_TOL
+                and abs(pitch - s1p) / s1p <= THRUST_PITCH_TOL)
+
+    def _measured_max_thrust(self, t: dict, s1c: dict) -> dict | None:
+        """테스트 페이지의 원본 데이터 표에서 실측 최대 추력을 추출.
+
+        채택 조건: 풀스로틀 도달 + (S1 조건에 전압이 있으면) 전압 편차 허용 내.
+        """
+        import json as _json
+        body = self.fetcher.fetch(t["link"])
+        m = re.search(r"<benchmark-data-table[^>]*:data='([^']+)'", body, re.S)
+        if not m:
+            return None
+        try:
+            table = _json.loads(html.unescape(m.group(1)))
+        except ValueError:
+            return None
+
+        def col(name_pat):
+            for k, v in table.items():
+                if re.search(name_pat, v.get("title") or k, re.I):
+                    return v
+            return None
+
+        thrust_c, thr_c, volt_c = col(r"thrust"), col(r"throttle"), col(r"voltage")
+        if not thrust_c or not thr_c:
+            return None
+        thrust = [x if isinstance(x, (int, float)) else None
+                  for x in thrust_c.get("values") or []]
+        throttle = [x if isinstance(x, (int, float)) else None
+                    for x in thr_c.get("values") or []]
+        volts = [x if isinstance(x, (int, float)) else None
+                 for x in (volt_c.get("values") or [])] if volt_c else []
+        pts = [(v, i) for i, v in enumerate(thrust) if v is not None]
+        if not pts:
+            return None
+        peak, idx = max(pts)
+        thr_vals = [x for x in throttle if x is not None]
+        if not thr_vals:
+            return None
+        full = max(thr_vals)
+        is_us = "µs" in (thr_c.get("title") or "") or full > 200
+        if (full < FULL_THROTTLE_US if is_us else full < 97) \
+           or (throttle[idx] or 0) < 0.97 * full:
+            return None                  # 풀스로틀 미도달 → '최대 추력'으로 볼 수 없음
+        volt_at_peak = volts[idx] if idx < len(volts) else None
+        s1v = s1c.get("voltage_v")
+        if isinstance(volt_at_peak, (int, float)) and isinstance(s1v, (int, float)) \
+           and abs(volt_at_peak - s1v) / s1v > THRUST_VOLT_TOL:
+            return None                  # 전압 조건 불일치
+        unit = (thrust_c.get("unit") or "kgf").strip()
+        prop = ((t.get("powertrains") or [{}])[0].get("propeller") or {})
+        meas = prop.get("measures") or {}
+        conditions = {
+            "source": "스러스트 스탠드 실측 (Tyto Robotics)",
+            "propeller": prop.get("title"),
+            "prop_diameter_in": (meas.get("diameter") or {}).get("value"),
+            "prop_pitch_in": (meas.get("pitch") or {}).get("value"),
+            "throttle": f"{throttle[idx]:.0f}{'µs' if is_us else '%'}",
+            **self._provenance(t),
+        }
+        if isinstance(volt_at_peak, (int, float)):
+            conditions["voltage_v"] = round(volt_at_peak, 1)
+        return {"value": round(peak, 3), "unit": unit,
+                "quote": f"{t['title']} — 측정 최대 thrust {round(peak, 3)} {unit} "
+                         f"(원본 데이터 {len(pts)}점)",
+                "conditions": conditions}
+
+    def collect(self, models: set[str], s1_variants: dict[str, set] | None = None,
+                thrust_ctx: dict | None = None, log=print) -> list[dict]:
+        """models: S1 수집 모델명 집합. s1_variants: 모델별 변형 집합(있으면 교집합만).
+        thrust_ctx: {(모델, 변형): S1 추력 측정 조건} — 실측 추력 조건 매칭에 사용."""
         targets = {_series_key(m): m for m in models}
         matched = []
         for e in self.listing():
@@ -674,25 +765,45 @@ class TytoRoboticsAdapter:
                 continue
             s1_model = targets.get(_series_key(e.get("name") or ""))
             kv = ((e.get("measures") or {}).get("kv_value") or {}).get("value")
-            if s1_model and kv:
-                matched.append((e, s1_model, kv))
+            if not (s1_model and kv):
+                continue
+            if s1_variants is not None \
+               and f"KV{int(kv)}" not in s1_variants.get(s1_model, set()):
+                continue                 # S1에 없는 변형은 고아 행이 되므로 제외
+            matched.append((e, s1_model, kv))
         log(f"      Tyto 목록: T-Motor 실측 보유 모터 중 S1 대조 {len(matched)}건")
 
         fetched_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
         snapshots = []
         for e, s1_model, kv in matched:
             url = e["link"]
+            variant = f"KV{int(kv)}"
             body = self.fetcher.fetch(url)          # 원문 스냅샷(원칙 1)
-            prov = self._test_provenance(e["hash"])
+            tests = self._tests(e["hash"])
             conditions = {"note": "Tyto Robotics DB 등재 측정 속성 (스러스트 스탠드 테스트 보유 모터)"}
-            if prov:
-                conditions.update(prov)
+            if tests:
+                conditions.update(self._provenance(tests[0]))
+                conditions["tests_total"] = len(tests)
             specs = [{"key": "kv", "value": float(kv), "unit": None,
                       "quote": f"Kv value (rpm/v): {kv}", "conditions": dict(conditions)}]
             weight = ((e.get("measures") or {}).get("weight") or {}).get("value")
             if weight:
                 specs.append({"key": "weight_g", "value": float(weight), "unit": "g",
                               "quote": f"weight (g): {weight}", "conditions": dict(conditions)})
+
+            # 실측 최대 추력 — S1 측정 조건과 일치하는 테스트만, 최대 2건 시도
+            s1c = (thrust_ctx or {}).get((s1_model, variant))
+            if s1c:
+                cands = [t for t in tests if self._prop_matches(t, s1c)]
+                log(f"      · {s1_model} {variant}: 테스트 {len(tests)}건 중 "
+                    f"조건 일치 {len(cands)}건")
+                for t in cands[:2]:
+                    thrust = self._measured_max_thrust(t, s1c)
+                    if thrust:
+                        specs.append({"key": "max_thrust_g", **thrust})
+                        log(f"        실측 추력 채택: {thrust['value']}{thrust['unit']} "
+                            f"← {t['title'][:50]}")
+                        break
             snapshots.append({
                 "snapshot_id": f"snap-tyto-{e['hash']}",
                 "tier": "S3_benchmark", "origin_url": url,
@@ -707,11 +818,12 @@ class TytoRoboticsAdapter:
                     "mfg_country": None, "specs": specs,
                 }],
             })
-            log(f"      실측 연계 {s1_model} KV{int(kv)} ← {e['title']} "
+            log(f"      실측 연계 {s1_model} {variant} ← {e['title']} "
                 f"(테스트 {e['benchmarks_count']}건)")
         return snapshots
 
 
-def collect_tyto(models: set[str], log=print) -> dict:
+def collect_tyto(models: set[str], s1_variants: dict[str, set] | None = None,
+                 thrust_ctx: dict | None = None, log=print) -> dict:
     """run_daily.py 진입점 — snapshots.json과 동일한 봉투 형식 반환."""
-    return {"snapshots": TytoRoboticsAdapter().collect(models, log)}
+    return {"snapshots": TytoRoboticsAdapter().collect(models, s1_variants, thrust_ctx, log)}

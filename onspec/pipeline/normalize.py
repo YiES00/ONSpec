@@ -18,6 +18,8 @@ def normalize_name(name: str) -> str:
 # (spec_key 표준단위, 원본단위) -> 변환 계수. None이면 값 유지 + 이상 신호.
 _CONVERSIONS: dict[tuple[str, str], float | None] = {
     ("g", "kg"): 1000.0,
+    ("g", "kgf"): 1000.0,   # 추력: 킬로그램힘 → 그램힘(g 표준단위와 동치 취급)
+    ("g", "gf"): 1.0,
     ("g", "oz"): 28.3495,
     ("in", "mm"): 1 / 25.4,
     ("in", "cm"): 1 / 2.54,

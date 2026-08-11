@@ -73,6 +73,8 @@ def load_canonical_specs(conn: sqlite3.Connection) -> dict:
                 elif lg["verdict"] == "caution":
                     grade = _worst(grade, "C")
                     notes.append(lg["det"]["summary"])
+                elif lg["rule_id"] == "R-X3" and lg["verdict"] == "pass":
+                    notes.append(lg["det"]["summary"])   # A등급 근거를 사이트에 노출
             conn.execute(
                 """INSERT INTO component_specs
                    (component_id, spec_def_id, value_num, value_text, unit_original,
