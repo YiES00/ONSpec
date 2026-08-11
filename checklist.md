@@ -1,5 +1,15 @@
 # 실수집 어댑터 — 체크리스트
 
+## 3차: Tyto Robotics(S3) 실측 연계 (2026-08-12)
+
+- [x] Tyto DB 정찰 — robots 전면 허용, /motors 인라인 JSON + /tests/search API 계약 파악
+- [x] U15 테스트 표 추력 오파싱 버그 수정 (헤더 기반 컬럼 매핑, 5520g→28900g)
+- [x] load_export: 대표값 정렬 실측(S3) 우선 — A등급 활성화
+- [x] collect.py: TytoRoboticsAdapter — V2↔Ⅱ 동치화 대조, kv·무게 실측 속성 수집
+- [x] 실측 최대추력은 프로펠러 조건 불일치로 보류 (부당 플래그 방지, 문서화)
+- [x] 첫 A등급 2건 발행 확인 — U15II KV80 kv·weight
+- [x] 커밋 + 배포
+
 ## 2차: S2 판매처 어댑터 (2026-08-09)
 
 - [x] GetFPV 정찰 → Cloudflare 봇 차단 확인, 우회하지 않음 (Foxtech·RobotShop도 403)

@@ -23,7 +23,7 @@ python3 site/generate.py                   # site/dist/index.html 빌드
 | §3 카테고리 표준 사양 | `categories/*.json` (4개 카테고리 × 사양 키 정의) |
 | §4.2 수집 파이프라인 | `pipeline/collect.py`(robots·레이트리밋·변경감지) → `extract.py`(LLM, 근거인용 강제·이중추출) → `ingest.py`(정규화·적재) |
 | §4.3 일일 갱신 | `pipeline/run_daily.py` + `.github/workflows/daily.yml` (KST 03:00 크론) |
-| §5 검증 3단계 | `pipeline/verify.py` — 물리 규칙 14종 + 교차 출처 대조. 실측 연계(A등급)는 S3/S4 커넥터 연동 시 활성화 |
+| §5 검증 3단계 | `pipeline/verify.py` — 물리 규칙 14종 + 교차 출처 대조 + 실측 연계(S3 Tyto 가동, 대표값 실측 우선 → A등급) |
 | §5.5 사람 리뷰 | 플래그는 D등급 유지 + Actions 알림. 리뷰 UI는 Phase 1 잔여 과제 |
 | §6 DB 설계 | 운영 정식 DDL `db/schema.postgres.sql` / 데모 실행용 `db/schema.sqlite.sql` (동일 구조) |
 | §7 사이트 | `site/` — 비교표(등급 칩·조건 툴팁), 필드별 출처 드로어, 방법론 전문 공개 |
@@ -37,7 +37,10 @@ python3 site/generate.py                   # site/dist/index.html 빌드
 - 검증 엔진이 실제 데이터에서 잡아낸 것들: 판매처 리스팅의 물리적으로 불가능한 무게 표기(밀도가 강철 초과),
   KV값을 전압으로 오기한 리스팅, 제조사 공식 페이지의 셀 구성 모순(22.2V인데 12S1P 표기),
   출처 간 최대추력 불일치(6.6/6.7/7kg), 프로펠러 피치 단위 오기('°') 등 — 전부 D/C등급 강등 + 사유 공개로 처리된다.
-- A등급(실측 검증)은 S3(스러스트 스탠드)·S4(FCC) 커넥터 연동 전이라 0건이다. 숨기지 않는다.
+- 첫 A등급(실측 연계)은 Tyto Robotics DB(S3) 어댑터로 발행됐다 — U15Ⅱ KV80의 KV·무게 2건
+  (스러스트 스탠드 테스트 보유 모터의 측정 속성, S1 값과 상호 확인). 실측 **최대 추력**은
+  테스트마다 프로펠러가 달라 제조사 주장과 동일 지표가 아니므로 조건 매칭 로직 전까지
+  주장값으로 쓰지 않는다. 숨기지 않는다.
 
 ## 데모 ↔ 운영 경계
 

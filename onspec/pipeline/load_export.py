@@ -28,7 +28,10 @@ def _worst(*grades: str) -> str:
 
 
 def _canonical_sort_key(c):
-    return (-c["trust_weight"], 0 if c["tier"] == "S1_manufacturer" else 1, c["id"])
+    # 실측(S3) > 주장(S1/S2/S4) — 계획서 §5: 실측 연계 필드가 대표값이 되어 A등급.
+    # 실측이 없으면 신뢰 가중치 순, 동률이면 제조사 공식(S1) 우선.
+    return (0 if c["tier"] == "S3_benchmark" else 1,
+            -c["trust_weight"], 0 if c["tier"] == "S1_manufacturer" else 1, c["id"])
 
 
 def load_canonical_specs(conn: sqlite3.Connection) -> dict:

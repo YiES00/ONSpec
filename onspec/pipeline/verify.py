@@ -2,7 +2,8 @@
 
 1단계: 물리 타당성 규칙 (R-M*, R-E*, R-B*, R-P*)
 2단계: 교차 출처 대조 (R-X1 수치, R-X2 텍스트) — 출처 신뢰 가중 평균 대비 편차
-3단계: 실측 데이터 연계(A등급)는 S3/S4 소스 연동 시 활성화 (데모 미포함)
+3단계: 실측 데이터 연계(A등급) — S3(Tyto Robotics) 어댑터 가동. 대표값 선정
+      (load_export._canonical_sort_key)에서 실측이 우선되어 A등급이 부여된다.
 
 모든 판정은 verification_log에 근거 수치와 함께 기록된다. detail.spec_keys가
 가리키는 사양 필드의 등급이 load 단계에서 강등된다(flag/error→D, caution→C 상한).

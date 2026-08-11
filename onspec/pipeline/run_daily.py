@@ -33,17 +33,18 @@ def main() -> int:
         print("[2/5] 인제스트(픽스처 모드) — 원문 스냅샷 → 출처·부품·주장값 스테이징")
         stats = ingest_snapshots(conn, ROOT / "fixtures" / "snapshots.json")
     else:
-        print("[2/5] 실수집 — T-Motor Store(S1) + DrUAV(S2) 어댑터")
+        print("[2/5] 실수집 — T-Motor Store(S1) + DrUAV(S2) + Tyto Robotics(S3) 어댑터")
         from datetime import datetime, timezone
         import json
-        from collect import collect_tmotor, collect_druav
+        from collect import collect_tmotor, collect_druav, collect_tyto
         data = collect_tmotor(max_products=15)
         if not data["snapshots"]:
             print("      수집 결과 0건 — 중단")
             return 1
-        # S2는 S1에서 수집된 모델만 대조 수집 → 교차 출처 검증·가격 축적
+        # S2·S3는 S1에서 수집된 모델만 대조 수집 → 교차 검증·가격 축적·실측 연계(A등급)
         s1_models = {c["model_name"] for s in data["snapshots"] for c in s["claims"]}
         data["snapshots"] += collect_druav(models=s1_models)["snapshots"]
+        data["snapshots"] += collect_tyto(models=s1_models)["snapshots"]
         # 원칙 1: 원문 스냅샷 아카이브 보존
         archive = (ROOT / "fixtures" / "collected" /
                    f"collected-{datetime.now(timezone.utc):%Y%m%d}.json")

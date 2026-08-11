@@ -242,42 +242,77 @@ def _map_spec(label: str, value: str) -> dict | None:
 def _parse_test_data_thrust(body: str) -> dict[str, dict]:
     """Test Data 표에서 KV 변형별 최대 스로틀 행의 추력을 추출.
 
+    표마다 컬럼 순서가 다르므로(MN505: Throttle·Voltage·Thrust… / U15: Voltage가
+    rowspan 선두, Thrust 7번째) 헤더 행을 파싱해 컬럼 위치를 결정한다.
     반환: {"320": {"thrust_g": ..., "conditions": {...}, "quote": ...}, ...}
     """
-    out: dict[str, dict] = {}
     section = _section(body, "testParameterBox")
     if not section:
-        return out
-    current_kv, current_prop = None, None
+        return {}
+
+    header: list[str] = []
+    th_i = tr_i = vo_i = None            # throttle/thrust/voltage 컬럼 인덱스
+    kv = prop = volt = None              # rowspan 선두 셀은 다음 행들에 sticky
     best: dict[str, tuple[float, dict]] = {}
+
+    def _idx(pat):
+        return next((i for i, h in enumerate(header) if re.search(pat, h, re.I)), None)
+
     for tr in _TR_RE.findall(section):
         tds = [_text(td) for td in _TD_RE.findall(tr)]
         if not tds:
             continue
-        # rowspan 헤더 셀: "MN505S KV320", "T-MOTOR P20*6"
-        kv_m = re.search(r"KV\s*(\d+)", tds[0], re.I)
-        if kv_m and len(tds) > 2:
-            current_kv, current_prop = kv_m.group(1), tds[1]
-            tds = tds[2:]
-        if not tds or not tds[0].endswith("%") or current_kv is None:
+        # 헤더 행 — 한 섹션에 컬럼 순서가 다른 표가 여러 개일 수 있어 매번 갱신
+        if any(re.search(r"Throttle", t, re.I) for t in tds) \
+           and any(re.search(r"Thrust", t, re.I) for t in tds):
+            header = tds
+            th_i, tr_i, vo_i = _idx(r"Throttle"), _idx(r"Thrust"), _idx(r"Voltage")
+            kv = prop = volt = None
             continue
-        throttle = float(tds[0].rstrip("%"))
+        if not header:
+            continue
+        # 행마다 스로틀 셀 위치를 동적으로 탐지 — rowspan 구성이 행마다 달라진다
+        idx_t = next((i for i, c in enumerate(tds) if re.match(r"^\d+%$", c)), None)
+        if idx_t is None:
+            continue
+        for c in tds[:idx_t]:            # 선두 셀: KV / 프로펠러 / 전압
+            if m := re.search(r"KV\s*(\d+)", c, re.I):
+                kv = m.group(1)
+            elif re.search(r"\d\s*[*x×]\s*\d", c):
+                prop = c
+            else:
+                try:
+                    volt = float(c)
+                except ValueError:
+                    pass
+        trailing = tds[idx_t:]
         try:
-            voltage, thrust = float(tds[1]), float(tds[2])
+            throttle = float(trailing[0].rstrip("%"))
+            thrust = float(trailing[tr_i - th_i])
         except (ValueError, IndexError):
             continue
-        prev = best.get(current_kv)
+        if vo_i is not None and vo_i > th_i and len(trailing) > vo_i - th_i:
+            try:
+                volt = float(trailing[vo_i - th_i])
+            except ValueError:
+                pass
+        if kv is None:
+            continue
+        prev = best.get(kv)
         if prev is None or throttle > prev[0]:
-            conditions = {"throttle": tds[0], "voltage_v": voltage,
-                          "propeller": current_prop, "source": "제조사 벤치 테스트 표"}
-            dia = re.search(r"P?(\d{2}(?:\.\d+)?)\s*\*", current_prop or "")
+            conditions = {"throttle": trailing[0], "propeller": prop,
+                          "source": "제조사 벤치 테스트 표"}
+            if volt is not None:
+                conditions["voltage_v"] = volt
+            dia = re.search(r"[PG]?(\d{2}(?:\.\d+)?)\s*[*xX×]", prop or "")
             if dia:
                 conditions["prop_diameter_in"] = float(dia.group(1))
-            best[current_kv] = (throttle, {
+            best[kv] = (throttle, {
                 "thrust_g": thrust, "conditions": conditions,
-                "quote": f"Test Data {current_prop} @ {tds[0]}: Thrust {tds[2]}g",
+                "quote": f"Test Data {prop or ''} @ {trailing[0]}: "
+                         f"Thrust {trailing[tr_i - th_i]}g".replace("  ", " "),
             })
-    return {kv: data for kv, (_, data) in best.items()}
+    return {k: data for k, (_, data) in best.items()}
 
 
 class TMotorStoreAdapter:
@@ -577,3 +612,106 @@ class DrUAVAdapter:
 def collect_druav(models: set[str] | None = None, max_products: int = 8, log=print) -> dict:
     """run_daily.py 진입점 — snapshots.json과 동일한 봉투 형식 반환."""
     return {"snapshots": DrUAVAdapter().collect(models, max_products, log)}
+
+
+# ──────────────── Tyto Robotics DB 어댑터(S3_benchmark, 실구현) ────────────────
+# 스러스트 스탠드 실측 DB(robots 전면 허용). /motors 목록의 인라인 JSON에서
+# 테스트 보유(benchmarks_count≥1) T-Motor 모터를 S1 모델과 대조하고, 모터 페이지의
+# 측정 속성(kv·weight)을 S3 주장값으로 수집한다. 최대 추력은 테스트마다 프로펠러가
+# 달라 제조사 '최대 추력' 주장과 동일 지표가 아니므로 조건 매칭 로직 전까지 보류.
+
+TYTO_BASE = "https://database.tytorobotics.com"
+
+_TYTO_COMPONENTS_RE = re.compile(r":components\s*=\s*'(\[.*?\])'", re.S)
+
+
+def _series_key(name: str) -> str:
+    """모델명 대조 키 — 세대 표기 동치화(V2 ↔ Ⅱ/II). 예: 'U15 V2'≡'U15II'≡'U15Ⅱ'."""
+    from normalize import normalize_name
+    return normalize_name(name).replace("v2", "ii")
+
+
+class TytoRoboticsAdapter:
+    """database.tytorobotics.com 실측 연계 수집기."""
+
+    def __init__(self, fetcher: PoliteFetcher | None = None):
+        self.fetcher = fetcher or PoliteFetcher()
+
+    def listing(self) -> list[dict]:
+        import json as _json
+        body = self.fetcher.fetch(f"{TYTO_BASE}/motors")
+        m = _TYTO_COMPONENTS_RE.search(body)
+        return _json.loads(html.unescape(m.group(1))) if m else []
+
+    def _test_provenance(self, motor_hash: str) -> dict | None:
+        """/tests/search 로 해당 모터의 실측 테스트 메타데이터 획득."""
+        import json as _json
+        from urllib.parse import urlencode
+        params = urlencode({
+            "per_page": 5, "page": 1,
+            "filters": _json.dumps({"conjunction": "AND", "filters": [
+                {"field": "powertrains.motor.common.hash",
+                 "condition": {"operator": "=", "value": motor_hash}}]}),
+            "relations": _json.dumps(["creator"]),
+            "aggregates": "[]", "order_by": "[]",
+        })
+        data = _json.loads(self.fetcher.fetch(f"{TYTO_BASE}/tests/search?{params}"))
+        tests = data.get("data", [])
+        if not tests:
+            return None
+        t = tests[0]
+        return {"test_title": t["title"], "test_url": t["link"],
+                "device": t.get("device"),
+                "staff_verified": bool((t.get("creator") or {}).get("is_rcbenchmark_staff")),
+                "tests_total": data.get("meta", {}).get("total")}
+
+    def collect(self, models: set[str], log=print) -> list[dict]:
+        """models: S1 수집 모델명 집합 — 대조되는 실측 보유 모터만 수집."""
+        targets = {_series_key(m): m for m in models}
+        matched = []
+        for e in self.listing():
+            if (e.get("brand") or "").lower() != "t-motor" or not e.get("benchmarks_count"):
+                continue
+            s1_model = targets.get(_series_key(e.get("name") or ""))
+            kv = ((e.get("measures") or {}).get("kv_value") or {}).get("value")
+            if s1_model and kv:
+                matched.append((e, s1_model, kv))
+        log(f"      Tyto 목록: T-Motor 실측 보유 모터 중 S1 대조 {len(matched)}건")
+
+        fetched_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        snapshots = []
+        for e, s1_model, kv in matched:
+            url = e["link"]
+            body = self.fetcher.fetch(url)          # 원문 스냅샷(원칙 1)
+            prov = self._test_provenance(e["hash"])
+            conditions = {"note": "Tyto Robotics DB 등재 측정 속성 (스러스트 스탠드 테스트 보유 모터)"}
+            if prov:
+                conditions.update(prov)
+            specs = [{"key": "kv", "value": float(kv), "unit": None,
+                      "quote": f"Kv value (rpm/v): {kv}", "conditions": dict(conditions)}]
+            weight = ((e.get("measures") or {}).get("weight") or {}).get("value")
+            if weight:
+                specs.append({"key": "weight_g", "value": float(weight), "unit": "g",
+                              "quote": f"weight (g): {weight}", "conditions": dict(conditions)})
+            snapshots.append({
+                "snapshot_id": f"snap-tyto-{e['hash']}",
+                "tier": "S3_benchmark", "origin_url": url,
+                "title": e["title"], "fetched_at": fetched_at,
+                "vendor": None,
+                "raw_excerpt": _text(body[body.find("component-attributes"):][:3000])[:2000],
+                "content_hash": hashlib.sha256(body.encode()).hexdigest()[:16],
+                "claims": [{
+                    "category": "motor",
+                    "manufacturer": {"name": "T-Motor", "hq_country": "CN"},
+                    "model_name": s1_model, "variant": f"KV{int(kv)}",
+                    "mfg_country": None, "specs": specs,
+                }],
+            })
+            log(f"      실측 연계 {s1_model} KV{int(kv)} ← {e['title']} "
+                f"(테스트 {e['benchmarks_count']}건)")
+        return snapshots
+
+
+def collect_tyto(models: set[str], log=print) -> dict:
+    """run_daily.py 진입점 — snapshots.json과 동일한 봉투 형식 반환."""
+    return {"snapshots": TytoRoboticsAdapter().collect(models, log)}
