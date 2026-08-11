@@ -16,6 +16,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: onspec   # 저장소 루트가 아닌 onspec/ 이 프로젝트 루트
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,8 +28,8 @@ jobs:
       - name: 파이프라인 실행 (수집→추출→검증→적재→내보내기)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # LLM 추출기(운영)
-        # 운영 커넥터 연동 전까지는 픽스처 모드로 빌드 검증
-        run: python pipeline/run_daily.py --fixtures
+        # 실수집 모드: T-Motor Store(S1) + DrUAV(S2). 픽스처 검증은 --fixtures
+        run: python pipeline/run_daily.py
       - name: 플래그 리뷰 알림 (KST 06:00 목표)
         run: |
           python - << 'EOF'
@@ -38,10 +41,13 @@ jobs:
       - name: 사이트 빌드
         run: python site/generate.py
       - uses: actions/upload-pages-artifact@v3
-        with: { path: site/dist }
+        with: { path: onspec/site/dist }
 
+  # Pages 배포는 옵트인: 저장소가 공개(또는 유료 플랜)로 전환돼 Pages를 켠 뒤
+  # 저장소 변수 DEPLOY_PAGES=true 를 설정하면 활성화된다. 미설정 시 스킵(빌드는 성공).
   deploy:
     needs: build
+    if: ${{ vars.DEPLOY_PAGES == 'true' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
