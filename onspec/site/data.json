@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-09T05:30:03+00:00",
+ "generated_at": "2026-08-11T16:42:35+00:00",
  "stats": {
-  "components": 30,
+  "components": 29,
   "sources": 19,
-  "spec_rows": 270,
+  "spec_rows": 268,
   "verdicts": {
    "pass": 11,
    "caution": 2,
@@ -13,7 +13,7 @@
   "grades": {
    "A": 0,
    "B": 263,
-   "C": 7,
+   "C": 5,
    "D": 0
   }
  },
@@ -7222,7 +7222,7 @@
      "unit_amount": 379.9,
      "vendor": "DrUAV",
      "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
-     "observed_at": "2026-08-09T05:29:52+00:00",
+     "observed_at": "2026-08-11T16:42:24+00:00",
      "amount_usd": null,
      "amount_krw": null
     }
@@ -7697,7 +7697,7 @@
      "unit_amount": 379.9,
      "vendor": "DrUAV",
      "url": "https://druav.com/products/mn1115-multirotor-uav-motor",
-     "observed_at": "2026-08-09T05:29:52+00:00",
+     "observed_at": "2026-08-11T16:42:24+00:00",
      "amount_usd": null,
      "amount_krw": null
     }
@@ -8476,7 +8476,7 @@
      "unit_amount": 459.0,
      "vendor": "DrUAV",
      "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
-     "observed_at": "2026-08-09T05:29:52+00:00",
+     "observed_at": "2026-08-11T16:42:24+00:00",
      "amount_usd": null,
      "amount_krw": null
     }
@@ -8524,6 +8524,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": 53.0,
+       "value_text": null,
+       "value_original": 53.0,
+       "unit_original": null,
+       "quote": "KV Value 53",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8553,6 +8565,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": 1425.0,
+       "value_text": null,
+       "value_original": 1425.0,
+       "unit_original": "g",
+       "quote": "Motor Weight (Incl. Cable) 1425g",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8584,6 +8608,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": 47500.0,
+       "value_text": null,
+       "value_original": 47.5,
+       "unit_original": "kg",
+       "quote": "Max Thrust 47.5kg",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8615,6 +8651,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": 2400.0,
+       "value_text": null,
+       "value_original": 2400.0,
+       "unit_original": "W",
+       "quote": "Max Power (180s) 2400W",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8646,6 +8694,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": 108.0,
+       "value_text": null,
+       "value_original": 108.0,
+       "unit_original": "A",
+       "quote": "Peak Current 108A",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8687,6 +8747,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "24S",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Rated Voltage (Lipo) 24S",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8716,6 +8788,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "36N40P",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "Configuration 36N40P",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8745,6 +8829,18 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": 35.0,
+       "value_text": null,
+       "value_original": 35.0,
+       "unit_original": "mΩ",
+       "quote": "Internal Resistance 35mΩ",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     },
@@ -8803,12 +8899,36 @@
        "url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
        "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
        "trust": 1.0
+      },
+      {
+       "value": null,
+       "value_text": "IP45",
+       "value_original": null,
+       "unit_original": null,
+       "quote": "IP IP45",
+       "tier": "S2_vendor",
+       "vendor": "DrUAV",
+       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+       "trust": 0.5
       }
      ]
     }
    },
    "verifications": [],
-   "prices": []
+   "prices": [
+    {
+     "currency": "USD",
+     "amount": 519.0,
+     "pack_qty": 1,
+     "unit_amount": 519.0,
+     "vendor": "DrUAV",
+     "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+     "observed_at": "2026-08-11T16:42:24+00:00",
+     "amount_usd": null,
+     "amount_krw": null
+    }
+   ]
   },
   {
    "id": 27,
@@ -9240,7 +9360,7 @@
      "unit_amount": 699.0,
      "vendor": "DrUAV",
      "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
-     "observed_at": "2026-08-09T05:29:52+00:00",
+     "observed_at": "2026-08-11T16:42:24+00:00",
      "amount_usd": null,
      "amount_krw": null
     }
@@ -9700,7 +9820,7 @@
      "unit_amount": 699.0,
      "vendor": "DrUAV",
      "url": "https://druav.com/products/mn1130-multirotor-uav-motor",
-     "observed_at": "2026-08-09T05:29:52+00:00",
+     "observed_at": "2026-08-11T16:42:24+00:00",
      "amount_usd": null,
      "amount_krw": null
     }
@@ -9708,96 +9828,6 @@
   },
   {
    "id": 29,
-   "category": "motor",
-   "manufacturer": {
-    "name": "T-Motor",
-    "hq_country": "CN"
-   },
-   "model_name": "MN1123",
-   "variant": null,
-   "is_synthetic": false,
-   "mfg_country": {
-    "code": null,
-    "status": "unconfirmed",
-    "claims": []
-   },
-   "specs": {
-    "config": {
-     "value": null,
-     "value_text": "36N40P",
-     "unit": null,
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "Configuration 36N40P",
-     "source": {
-      "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
-      "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "36N40P",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "Configuration 36N40P",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
-       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
-       "trust": 0.5
-      }
-     ]
-    },
-    "ip_rating": {
-     "value": null,
-     "value_text": "IP45",
-     "unit": null,
-     "grade": "C",
-     "grade_note": null,
-     "conditions": {},
-     "quote": "IP IP45",
-     "source": {
-      "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
-      "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
-      "tier": "S2_vendor",
-      "vendor": "DrUAV"
-     },
-     "all_sources": [
-      {
-       "value": null,
-       "value_text": "IP45",
-       "value_original": null,
-       "unit_original": null,
-       "quote": "IP IP45",
-       "tier": "S2_vendor",
-       "vendor": "DrUAV",
-       "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
-       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
-       "trust": 0.5
-      }
-     ]
-    }
-   },
-   "verifications": [],
-   "prices": [
-    {
-     "currency": "USD",
-     "amount": 519.0,
-     "pack_qty": 1,
-     "unit_amount": 519.0,
-     "vendor": "DrUAV",
-     "url": "https://druav.com/products/mn1123-multirotor-uav-motor",
-     "observed_at": "2026-08-09T05:29:52+00:00",
-     "amount_usd": null,
-     "amount_krw": null
-    }
-   ]
-  },
-  {
-   "id": 30,
    "category": "motor",
    "manufacturer": {
     "name": "T-Motor",
@@ -9909,7 +9939,7 @@
      "unit_amount": 459.0,
      "vendor": "DrUAV",
      "url": "https://druav.com/products/mn1118-multirotor-uav-motor",
-     "observed_at": "2026-08-09T05:29:52+00:00",
+     "observed_at": "2026-08-11T16:42:24+00:00",
      "amount_usd": null,
      "amount_krw": null
     }

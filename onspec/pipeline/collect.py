@@ -481,23 +481,35 @@ class DrUAVAdapter:
         spec_zone = re.split(r"Recommended Combinations|Test Data", body)[0]
         common = _druav_specs(_DRUAV_COMMON, spec_zone)
 
-        # "KV Value 110 ... KV Value 130 ..." → KV별 구간
-        parts = _KV_SEG_RE.split(spec_zone)
-        segments = {parts[i]: parts[i + 1] for i in range(1, len(parts) - 1, 2)}
+        # "KV Value 110 ... KV Value 130 ..." → KV별 구간 (매치 원문도 근거로 보존)
+        seg_matches = list(_KV_SEG_RE.finditer(spec_zone))
+        segments, seg_quotes = {}, {}
+        for i, m in enumerate(seg_matches):
+            end = seg_matches[i + 1].start() if i + 1 < len(seg_matches) else len(spec_zone)
+            segments[m.group(1)] = spec_zone[m.end():end]
+            seg_quotes[m.group(1)] = re.sub(r"\s+", " ", m.group(0))
 
         claims = []
         for v in p.get("variants", []):
             v_title = v.get("title") or ""
-            # Shopify 단일 변형 플레이스홀더 — KV는 상품명에서
+            # KV 식별 우선순위: 변형명 → 상품명 → (단일 변형 상품이면) 본문 명시 값.
+            # 본문 사용은 "KV Value N" 구간이 정확히 하나일 때만 — 복수면 귀속 불명이라 보류.
             kv_m = (re.search(r"KV\s*(\d+)", v_title, re.I)
                     or re.search(r"KV\s*(\d+)", p["title"], re.I))
-            variant = (f"KV{kv_m.group(1)}" if kv_m
+            if kv_m:
+                kv_num, kv_quote = kv_m.group(1), f"{p['title']} — {v_title}"
+            elif len(p.get("variants", [])) == 1 and len(segments) == 1:
+                kv_num = next(iter(segments))
+                kv_quote = seg_quotes[kv_num]        # 예: "KV Value 53" (리스팅 본문 원문)
+            else:
+                kv_num = None
+            variant = (f"KV{kv_num}" if kv_num
                        else (None if v_title == "Default Title" else v_title))
             specs = list(common)
-            if kv_m:
-                specs.append({"key": "kv", "value": float(kv_m.group(1)), "unit": None,
-                              "quote": f"{p['title']} — {v['title']}", "conditions": {}})
-                seg = segments.get(kv_m.group(1))
+            if kv_num:
+                specs.append({"key": "kv", "value": float(kv_num), "unit": None,
+                              "quote": kv_quote, "conditions": {}})
+                seg = segments.get(kv_num)
                 if seg:
                     specs += _druav_specs(_DRUAV_PER_KV, seg)
                     t = _DRUAV_THRUST_RE.search(seg)
