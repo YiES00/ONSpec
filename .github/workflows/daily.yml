@@ -30,7 +30,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # LLM 추출기(운영)
         # 실수집 모드: T-Motor Store(S1) + DrUAV(S2). 픽스처 검증은 --fixtures
         run: python pipeline/run_daily.py
-      - name: 수집 아카이브 커밋 (원칙 1: 원문 보존 + 가격 시계열 축적)
+      - name: "수집 아카이브 커밋 (원칙 1: 원문 보존 + 가격 시계열 축적)"
         # 파이프라인 직후 커밋 — 이후 단계가 실패해도 당일 수집분은 보존된다.
         # 같은 날 재실행 시 동일 파일이 덮어써지므로 변경 없으면 커밋 생략.
         run: |
