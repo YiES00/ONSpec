@@ -9,7 +9,7 @@ on:
   workflow_dispatch: {}     # 수동 실행
 
 permissions:
-  contents: read
+  contents: write   # 수집 아카이브 커밋(가격 시계열 축적)
   pages: write
   id-token: write
 
@@ -30,6 +30,20 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # LLM 추출기(운영)
         # 실수집 모드: T-Motor Store(S1) + DrUAV(S2). 픽스처 검증은 --fixtures
         run: python pipeline/run_daily.py
+      - name: 수집 아카이브 커밋 (원칙 1: 원문 보존 + 가격 시계열 축적)
+        # 파이프라인 직후 커밋 — 이후 단계가 실패해도 당일 수집분은 보존된다.
+        # 같은 날 재실행 시 동일 파일이 덮어써지므로 변경 없으면 커밋 생략.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fixtures/collected/
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "일일 수집 아카이브 $(date -u +%F) [skip ci]"
+            git pull --rebase origin main
+            git push
+          fi
       - name: 플래그 리뷰 알림 (KST 06:00 목표)
         run: |
           python - << 'EOF'
