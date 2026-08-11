@@ -1,0 +1,3138 @@
+{
+  "snapshots": [
+    {
+      "snapshot_id": "snap-tmotor-u8lite-l-kv110-u-efficiency",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
+      "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
+      "fetched_at": "2026-08-11T16:21:44+00:00",
+      "vendor": null,
+      "raw_excerpt": "U8 Lite L Efficiency Multirotor UAV Motor KV110 | KV 95 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Motor Weight (Incl. Cable) 280g Motor Dimensions Φ87.1×28.05mm Idle Current(18V) 0.7A Shaft Diameter 15mm Internal Resistance 146mΩ Configu ration 36N42P Peak Current(180s) 38A Cable Length 90mm Max Power (180S) 1790W Packing Size 130*111*50.6mm KV 110 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Motor Weight (Incl. Cable) 282g Motor Dimensions Φ87.1×28.05mm Idle Current(18V) 0.9A Shaft Diameter 15mm Internal Resistance 105mΩ Configu ration 36N42P Peak Current(180s) 45.8A Cable Length 90mm Max Power (180S) 2140W Packing Size 130*111*50.6mm",
+      "content_hash": "96728e6c8c3305f3",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8 Lite L",
+          "variant": "KV95",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 95.0,
+              "unit": null,
+              "quote": "KV: 95",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S(4.2V/pc) / 48-52V",
+              "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 280.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 280g",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 146.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance: 146mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configu ration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 38.0,
+              "unit": "A",
+              "quote": "Peak Current(180s): 38A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 1790.0,
+              "unit": "W",
+              "quote": "Max Power (180S): 1790W",
+              "conditions": {
+                "stated_condition": "180S"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 8521.0,
+              "unit": "g",
+              "quote": "Test Data G29*9.5 @ 100%: Thrust 8521g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 47.0,
+                "propeller": "G29*9.5",
+                "source": "제조사 벤치 테스트 표",
+                "prop_diameter_in": 29.0
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8 Lite L",
+          "variant": "KV110",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 110.0,
+              "unit": null,
+              "quote": "KV: 110",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S(4.2V/pc) / 48-52V",
+              "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 282.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 282g",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 105.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance: 105mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configu ration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 45.8,
+              "unit": "A",
+              "quote": "Peak Current(180s): 45.8A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 2140.0,
+              "unit": "W",
+              "quote": "Max Power (180S): 2140W",
+              "conditions": {
+                "stated_condition": "180S"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 9847.0,
+              "unit": "g",
+              "quote": "Test Data G28*9.2 @ 100%: Thrust 9847g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 47.0,
+                "propeller": "G28*9.2",
+                "source": "제조사 벤치 테스트 표",
+                "prop_diameter_in": 28.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u3-motor-u-power",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u3-motor-u-power.html",
+      "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
+      "fetched_at": "2026-08-11T16:21:54+00:00",
+      "vendor": null,
+      "raw_excerpt": "U3 Power Type High Efficiency UAV Motor KV700 | Internal Resistance 50mΩ Configuration 12N14P Shaft Diameter 4mm Motor Dimensions Φ41.8×30.75mm AWG 18# Cable Length 600mm Weight Including Cables 128g Weight Excluding Cables 97g No. of Cells (Lipo) 3-4S Idle Current@10v 0.5A Max Power (180S) 500W Max Continuous Current 180S 25A",
+      "content_hash": "685e7bb73b8dfdcd",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U3",
+          "variant": "KV700",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 700.0,
+              "unit": null,
+              "quote": "U3 Power Type High Efficiency UAV Motor KV700",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 50mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "12N14P",
+              "quote": "Configuration: 12N14P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 4.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 4mm",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 128.0,
+              "unit": "g",
+              "quote": "Weight Including Cables: 128g",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "3-4S",
+              "quote": "No. of Cells (Lipo): 3-4S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 500.0,
+              "unit": "W",
+              "quote": "Max Power (180S): 500W",
+              "conditions": {
+                "stated_condition": "180S"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 25.0,
+              "unit": "A",
+              "quote": "Max Continuous Current 180S: 25A",
+              "conditions": {
+                "stated_condition": "Max Continuous Current 180S"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 123.21,
+              "unit": "g",
+              "quote": "Test Data 11.1 @ 100%: Thrust 123.21g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 11.1,
+                "propeller": "11.1",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u11-v2-motor-u-power",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
+      "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
+      "fetched_at": "2026-08-11T16:22:04+00:00",
+      "vendor": null,
+      "raw_excerpt": "U11Ⅱ Power Type UAV Motor KV120 | Test Item KV120 Weight (Incl. Cable) 772g Motor Dimensions Φ79.5*51.6 mm Internal Resistance 80±5mΩ Lead 14# AWG 1250mm Configuration 12N14P Shaft Diameter 15mm Rated Voltage(Lipo) 12S Idle Current(18V) 1.5A Peak Current(180s) 57.3A Max. Power 2783W",
+      "content_hash": "156c5203d3e4fdc7",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U11Ⅱ",
+          "variant": "KV120",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 120.0,
+              "unit": null,
+              "quote": "Test Item: KV120",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 772.0,
+              "unit": "g",
+              "quote": "Weight (Incl. Cable): 772g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 80±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "12N14P",
+              "quote": "Configuration: 12N14P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage(Lipo): 12S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 57.3,
+              "unit": "A",
+              "quote": "Peak Current(180s): 57.3A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 2783.0,
+              "unit": "W",
+              "quote": "Max. Power: 2783W",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 3.78,
+              "unit": "g",
+              "quote": "Test Data 48 @ 100%: Thrust 3.78g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 12114.0,
+                "propeller": "48",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u13-v2-kv65-motor-u-power",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
+      "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
+      "fetched_at": "2026-08-11T16:22:15+00:00",
+      "vendor": null,
+      "raw_excerpt": "U13Ⅱ Power Type Multirotor UAV Motor KV65 | Test Item KV130 Weight (Incl. Cable) 990g Motor Dimensions Φ100*60mm Internal Resistance 18mΩ Lead Enameled Wire 100mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 10-14S Idle Current(18V) 1.5A Peak Current(180s) 118A Max. Power 5659W Test Item KV65 Weight (Incl. Cable) 975g Motor Dimensions Φ100*60mm Internal Resistance 73mΩ Lead Enameled Wire 100mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 22-25S Idle Current(18V) 1.7A Peak Current(180s) 68A Max. Power 6720W",
+      "content_hash": "fbbeedd3a2dfafb0",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U13Ⅱ",
+          "variant": "KV130",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 130.0,
+              "unit": null,
+              "quote": "Test Item: KV130",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 990.0,
+              "unit": "g",
+              "quote": "Weight (Incl. Cable): 990g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 18mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "10-14S",
+              "quote": "Rated Voltage(Lipo): 10-14S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 118.0,
+              "unit": "A",
+              "quote": "Peak Current(180s): 118A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 5659.0,
+              "unit": "W",
+              "quote": "Max. Power: 5659W",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 10.0,
+              "unit": "g",
+              "quote": "Test Data 48 @ 100%: Thrust 10g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 24300.0,
+                "propeller": "48",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U13Ⅱ",
+          "variant": "KV65",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 65.0,
+              "unit": null,
+              "quote": "Test Item: KV65",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 975.0,
+              "unit": "g",
+              "quote": "Weight (Incl. Cable): 975g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 73mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "22-25S",
+              "quote": "Rated Voltage(Lipo): 22-25S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 68.0,
+              "unit": "A",
+              "quote": "Peak Current(180s): 68A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 6720.0,
+              "unit": "W",
+              "quote": "Max. Power: 6720W",
+              "conditions": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u15-v2-motor-u-power-kv80",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
+      "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
+      "fetched_at": "2026-08-11T16:22:25+00:00",
+      "vendor": null,
+      "raw_excerpt": "U15II Power Type Heavy Lift Drone Motor KV80 | Test Item U15 Ⅱ KV80 Internal Resistance 17mΩ Configuration 36N42P Shaft Diameter 20mm Motor Dimensions Φ 147.5×55 mm Lead Enameled Wire Cable Length 100mm Weight Including Cables 1740g Weight Excluding Cables / No.of Cells(Lipo) 12-24S Idle Current@10v 3.8A Max Power (180S) 8580W Max Continuous Current 180S 143A Test Item U15 Ⅱ KV100 Internal Resistance 12mΩ Configuration 36N42P Shaft Diameter 20mm Motor Dimensions Φ 147.5×55 mm Lead Enameled Wire Cable Length 100mm Weight Including Cables 1740g Weight Excluding Cables / No.of Cells(Lipo) 12-24S Idle Current@10v 4.5A Max Power (180S) 9942W Max Continuous Current 180S 167A",
+      "content_hash": "a5b80f229a256573",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U15II",
+          "variant": "KV80",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 80.0,
+              "unit": null,
+              "quote": "Test Item: U15 Ⅱ KV80",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 17mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 20.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 20mm",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 1740.0,
+              "unit": "g",
+              "quote": "Weight Including Cables: 1740g",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12-24S",
+              "quote": "No.of Cells(Lipo): 12-24S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 8580.0,
+              "unit": "W",
+              "quote": "Max Power (180S): 8580W",
+              "conditions": {
+                "stated_condition": "180S"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 143.0,
+              "unit": "A",
+              "quote": "Max Continuous Current 180S: 143A",
+              "conditions": {
+                "stated_condition": "Max Continuous Current 180S"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 5520.0,
+              "unit": "g",
+              "quote": "Test Data 50 @ 100%: Thrust 5520g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 110.4,
+                "propeller": "50",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U15II",
+          "variant": "KV100",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 100.0,
+              "unit": null,
+              "quote": "Test Item: U15 Ⅱ KV100",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 12mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 20.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 20mm",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 1740.0,
+              "unit": "g",
+              "quote": "Weight Including Cables: 1740g",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12-24S",
+              "quote": "No.of Cells(Lipo): 12-24S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 9942.0,
+              "unit": "W",
+              "quote": "Max Power (180S): 9942W",
+              "conditions": {
+                "stated_condition": "180S"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 167.0,
+              "unit": "A",
+              "quote": "Max Continuous Current 180S: 167A",
+              "conditions": {
+                "stated_condition": "Max Continuous Current 180S"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 9942.0,
+              "unit": "g",
+              "quote": "Test Data 60 @ 100%: Thrust 9942g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 165.7,
+                "propeller": "60",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u8-lite-kv100-u-efficiency",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
+      "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
+      "fetched_at": "2026-08-11T16:22:36+00:00",
+      "vendor": null,
+      "raw_excerpt": "U8 Lite Efficiency Type Multirotor UAV Motor KV100 | Diameter 87.1mm Configuration 36N42P Height 27.05mm Lead Spec 90mm Shaft Diameter 15mm Packing Size 130*111*50.6mm KV 85 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 243g Propeller Recommendation 28-29” Idle Current（18V） 0.5A Quadcopter（28CF） 10kg Internal Resistance 225±5mΩ Hexacopter（28CF） 15kg Peak Current（180s） 19.1A Octocopter（28CF） 20kg Max. Power（180s） 916.8W KV 100 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 238g Propeller Recommendation 27-28” Idle Current（18V） 0.7A Quadcopter（28CF） 14kg Internal Resistance 170±5mΩ Hexacopter（28CF） 21kg Peak Current（180s） 29.3A Octocopter（28CF） 28kg Max. Power（180s） 1406.4W KV 150 Rated Voltage（Lipo） 6S / 12S Motor Weight (Incl. Cable) 239g Propeller Recommendation 28-30” / 22” Idle Current（18V） 1A Quadcopter（28CF） 8kg Internal Resistance 85±5mΩ Hexacopter（28CF） 12kg Peak Current（180s） 29.7A / 26.5A Octocopter（28CF） 16kg Max. Power（180s） 712.8W / 1272W KV 190 Rated Voltage（Lipo） 6S Motor Weight (Incl. Cable) 243g Propeller Recommendation 28-29” Idle Current（18V） 1.3A Quadcopter（28CF） 12kg Internal Resistance 48±3mΩ Hexacopter（28CF） 18kg Peak Current（180s） 43.7A Octocopter（28CF） 24kg Max. Power（180s） 1048.8W",
+      "content_hash": "e797849fea979916",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8 Lite",
+          "variant": "KV85",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 85.0,
+              "unit": null,
+              "quote": "KV: 85",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage（Lipo）: 12S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 243.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 243g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "28-29”",
+              "quote": "Propeller Recommendation: 28-29”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 225±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 19.1,
+              "unit": "A",
+              "quote": "Peak Current（180s）: 19.1A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 916.8,
+              "unit": "W",
+              "quote": "Max. Power（180s）: 916.8W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 1.8,
+              "unit": "g",
+              "quote": "Test Data 12S (48V) @ 100%: Thrust 1.8g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 6352.0,
+                "propeller": "12S (48V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8 Lite",
+          "variant": "KV100",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 100.0,
+              "unit": null,
+              "quote": "KV: 100",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage（Lipo）: 12S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 238.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 238g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "27-28”",
+              "quote": "Propeller Recommendation: 27-28”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 170±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 29.3,
+              "unit": "A",
+              "quote": "Peak Current（180s）: 29.3A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 1406.4,
+              "unit": "W",
+              "quote": "Max. Power（180s）: 1406.4W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 2.42,
+              "unit": "g",
+              "quote": "Test Data 12S (48V) @ 100%: Thrust 2.42g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 8164.0,
+                "propeller": "12S (48V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8 Lite",
+          "variant": "KV150",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 150.0,
+              "unit": null,
+              "quote": "KV: 150",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "6S / 12S",
+              "quote": "Rated Voltage（Lipo）: 6S / 12S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 239.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 239g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "28-30” / 22”",
+              "quote": "Propeller Recommendation: 28-30” / 22”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 85±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": null,
+              "unit": null,
+              "quote": "Peak Current（180s）: 29.7A / 26.5A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": null,
+              "unit": null,
+              "quote": "Max. Power（180s）: 712.8W / 1272W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 1.4,
+              "unit": "g",
+              "quote": "Test Data 6S (24V) @ 100%: Thrust 1.4g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 4879.0,
+                "propeller": "6S (24V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8 Lite",
+          "variant": "KV190",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 190.0,
+              "unit": null,
+              "quote": "KV: 190",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "6S",
+              "quote": "Rated Voltage（Lipo）: 6S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 243.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 243g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "28-29”",
+              "quote": "Propeller Recommendation: 28-29”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 48±3mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 43.7,
+              "unit": "A",
+              "quote": "Peak Current（180s）: 43.7A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 1048.8,
+              "unit": "W",
+              "quote": "Max. Power（180s）: 1048.8W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 1.88,
+              "unit": "g",
+              "quote": "Test Data 6S (24V) @ 100%: Thrust 1.88g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 6761.0,
+                "propeller": "6S (24V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u8-v2-u-efficiency-kv85",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
+      "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
+      "fetched_at": "2026-08-11T16:22:45+00:00",
+      "vendor": null,
+      "raw_excerpt": "U8Ⅱ Efficiency Multirotor UAV Motor KV85 | Diameter 87.1mm Lead Spec 90mm Height 29.1mm Ingress Protection Level IP45 Shaft Diameter 15mm Packing Size 130*111*50.6mm Configuration 36N42P KV 85 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 277g Propeller Recommendation 28-29” Idle Current（18V） 0.5A Quadcopter（28CF） 10kg Internal Resistance 225±5mΩ Hexacopter（28CF） 15kg Peak Current（180s） 19.1A Octocopter（28CF） 20kg Max. Power（180s） 916.8W KV 100 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 272g Propeller Recommendation 27-28” Idle Current（18V） 0.7A Quadcopter（28CF） 14kg Internal Resistance 170±5mΩ Hexacopter（28CF） 21kg Peak Current（180s） 29.3A Octocopter（28CF） 28kg Max. Power（180s） 1406.4W KV 150 Rated Voltage（Lipo） 6S / 12S Motor Weight (Incl. Cable) 273g Propeller Recommendation 28-30” / 22” Idle Current（18V） 1A Quadcopter（28CF） 8kg Internal Resistance 85±5mΩ Hexacopter（28CF） 12kg Peak Current（180s） 29.7A / 26.5A Octocopter（28CF） 16kg Max. Power（180s） 712.8W / 1272W KV 190 Rated Voltage（Lipo） 6S Motor Weight (Incl. Cable) 277g Propeller Recommendation 28-29” Idle Current（18V） 1.3A Quadcopter（28CF） 12kg Internal Resistance 48±3mΩ Hexacopter（28CF） 18kg Peak Current（180s） 43.7A Octocopter（28CF） 24kg Max. Power（180s） 1048.8W",
+      "content_hash": "ecdaf5b522d90fe4",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8Ⅱ",
+          "variant": "KV85",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 85.0,
+              "unit": null,
+              "quote": "KV: 85",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage（Lipo）: 12S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 277.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 277g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "28-29”",
+              "quote": "Propeller Recommendation: 28-29”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 225±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 19.1,
+              "unit": "A",
+              "quote": "Peak Current（180s）: 19.1A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 916.8,
+              "unit": "W",
+              "quote": "Max. Power（180s）: 916.8W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 1.8,
+              "unit": "g",
+              "quote": "Test Data 12S (48V) @ 100%: Thrust 1.8g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 6352.0,
+                "propeller": "12S (48V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8Ⅱ",
+          "variant": "KV100",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 100.0,
+              "unit": null,
+              "quote": "KV: 100",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage（Lipo）: 12S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 272.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 272g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "27-28”",
+              "quote": "Propeller Recommendation: 27-28”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 170±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 29.3,
+              "unit": "A",
+              "quote": "Peak Current（180s）: 29.3A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 1406.4,
+              "unit": "W",
+              "quote": "Max. Power（180s）: 1406.4W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 2.42,
+              "unit": "g",
+              "quote": "Test Data 12S (48V) @ 100%: Thrust 2.42g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 8164.0,
+                "propeller": "12S (48V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8Ⅱ",
+          "variant": "KV150",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 150.0,
+              "unit": null,
+              "quote": "KV: 150",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "6S / 12S",
+              "quote": "Rated Voltage（Lipo）: 6S / 12S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 273.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 273g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "28-30” / 22”",
+              "quote": "Propeller Recommendation: 28-30” / 22”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 85±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": null,
+              "unit": null,
+              "quote": "Peak Current（180s）: 29.7A / 26.5A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": null,
+              "unit": null,
+              "quote": "Max. Power（180s）: 712.8W / 1272W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 1.4,
+              "unit": "g",
+              "quote": "Test Data 6S (24V) @ 100%: Thrust 1.4g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 4879.0,
+                "propeller": "6S (24V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8Ⅱ",
+          "variant": "KV190",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 190.0,
+              "unit": null,
+              "quote": "KV: 190",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "6S",
+              "quote": "Rated Voltage（Lipo）: 6S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 277.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 277g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "28-29”",
+              "quote": "Propeller Recommendation: 28-29”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 48±3mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 43.7,
+              "unit": "A",
+              "quote": "Peak Current（180s）: 43.7A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 1048.8,
+              "unit": "W",
+              "quote": "Max. Power（180s）: 1048.8W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 1.88,
+              "unit": "g",
+              "quote": "Test Data 6S (24V) @ 100%: Thrust 1.88g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 6761.0,
+                "propeller": "6S (24V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u8-v2-lite-u-efficiency",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
+      "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
+      "fetched_at": "2026-08-11T16:22:55+00:00",
+      "vendor": null,
+      "raw_excerpt": "U8ⅡLite Efficiency Type Multirotor UAV Motor KV100/KV85 | Motor Size Φ87.3*26.05mm Lead Cable 90mm Stator Anti-rust treatment; 180℃ high temperature-resisting coatings Copper Wire 220℃ high temperature resistance Configuration 36N42P Coil Insulation Test 1000V/5s Shaft Diameter IN：12mm Rotor Dynamic Balance Standard ≤15Mg Bearing Imported 6901ZZ Packing Size 130*111*50.6mm Magnet Level 180℃ high temperature resistance KV 100 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Idle Current(24V) 1.0A Internal Resistance 134-141mΩ Peak Current(180s) 31A Weight (Incl. Cable) 253g/256g net version Max Power (180S) 1450W Package Weight 420g/423g net version",
+      "content_hash": "9116e2c6cf47263b",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8ⅡLite",
+          "variant": "KV100",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 100.0,
+              "unit": null,
+              "quote": "KV: 100",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S(4.2V/pc) / 48-52V",
+              "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 134-141mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 31.0,
+              "unit": "A",
+              "quote": "Peak Current(180s): 31A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": null,
+              "unit": null,
+              "quote": "Weight (Incl. Cable): 253g/256g net version",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 1450.0,
+              "unit": "W",
+              "quote": "Max Power (180S): 1450W",
+              "conditions": {
+                "stated_condition": "180S"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 8442.0,
+              "unit": "g",
+              "quote": "Test Data G27*8.8 @ 100%: Thrust 8442g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 47.0,
+                "propeller": "G27*8.8",
+                "source": "제조사 벤치 테스트 표",
+                "prop_diameter_in": 27.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u8-2-pro-u-efficiency",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
+      "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
+      "fetched_at": "2026-08-11T16:23:05+00:00",
+      "vendor": null,
+      "raw_excerpt": "U8ⅡPRO Efficiency Type Multirotor UAV Motor KV100 | Motor Size Φ87.3*29.55mm Lead Cable 90mm Stator Anti-rust treatment; 180℃ high temperature-resisting coatings Copper Wire 220℃ high temperature resistance Configuration 36N42P Coil Insulation Test 1000V/5s Shaft Diameter IN：12mm Rotor Dynamic Balance Standard ≤15Mg Bearing Imported 6901ZZ IP IP56 Magnet Level 180℃ high temperature resistance Packing Size 130*111*50.6mm KV 100 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Idle Current(24V) 1.0A Internal Resistance 134-141mΩ Peak Current(180s) 31A Weight (Incl. Cable) 287g Max Power (180S) 1450W Package Weight 454g",
+      "content_hash": "8eb96fc020f03f38",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U8ⅡPRO",
+          "variant": "KV100",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "ip_rating",
+              "value_text": "IP56",
+              "quote": "IP: IP56",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 100.0,
+              "unit": null,
+              "quote": "KV: 100",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S(4.2V/pc) / 48-52V",
+              "quote": "Rated Voltage(Lipo): 12S(4.2V/pc) / 48-52V",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 134-141mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 31.0,
+              "unit": "A",
+              "quote": "Peak Current(180s): 31A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 287.0,
+              "unit": "g",
+              "quote": "Weight (Incl. Cable): 287g",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 1450.0,
+              "unit": "W",
+              "quote": "Max Power (180S): 1450W",
+              "conditions": {
+                "stated_condition": "180S"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 8442.0,
+              "unit": "g",
+              "quote": "Test Data T-MOTO G27*8.8 @ 100%: Thrust 8442g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 47.0,
+                "propeller": "T-MOTO G27*8.8",
+                "source": "제조사 벤치 테스트 표",
+                "prop_diameter_in": 27.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u10-2-u-efficiency",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
+      "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
+      "fetched_at": "2026-08-11T16:23:15+00:00",
+      "vendor": null,
+      "raw_excerpt": "U10Ⅱ Efficiency Multirotor UAV Motor KV100 | Diameter 98.6mm Lead Spec AWG#16 90mm Height 33.1mm Ingress Protection Level IP45 Shaft Diameter 15mm Packing Size 167*129*58.5mm Configuration 36N42P KV 100 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 415g Propeller Recommendation 28-30” Idle Current（18V） 1A Quadcopter（28CF） 16kg Internal Resistance 101±5mΩ Hexacopter（28CF） 24kg Peak Current（180s） 32.4A Octocopter（28CF） 32kg Max. Power（180s） 1600W",
+      "content_hash": "ac55d04e54d02acc",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U10Ⅱ",
+          "variant": "KV100",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 100.0,
+              "unit": null,
+              "quote": "KV: 100",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage（Lipo）: 12S",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 415.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 415g",
+              "conditions": {}
+            },
+            {
+              "key": "prop_rec",
+              "value_text": "28-30”",
+              "quote": "Propeller Recommendation: 28-30”",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 101±5mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 32.4,
+              "unit": "A",
+              "quote": "Peak Current（180s）: 32.4A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 1600.0,
+              "unit": "W",
+              "quote": "Max. Power（180s）: 1600W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 1.61,
+              "unit": "g",
+              "quote": "Test Data 8S (32V) @ 100%: Thrust 1.61g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 5059.0,
+                "propeller": "8S (32V)",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-u12-v2-kv60-u-efficiency",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
+      "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
+      "fetched_at": "2026-08-11T16:23:25+00:00",
+      "vendor": null,
+      "raw_excerpt": "U12Ⅱ Efficiency Multirotor UAV Motor KV60 | Test Item KV120 Weight (Incl. Cable) 778g Motor Dimensions Φ106.8*47.6 mm Internal Resistance 22mΩ Lead Enameled Wire 90mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 10-14S Idle Current(18V) 1.5A Peak Current(180s) 95A Max. Power 4560W Test Item KV60 Weight (Incl. Cable) 803g Motor Dimensions Φ106.8*47.6 mm Internal Resistance 75mΩ Lead Enameled Wire 90mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 22-25S Idle Current(18V) 1.7A Peak Current(180s) 41A Max. Power 4000W",
+      "content_hash": "4179404dbbab5a20",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U12Ⅱ",
+          "variant": "KV120",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 120.0,
+              "unit": null,
+              "quote": "Test Item: KV120",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 778.0,
+              "unit": "g",
+              "quote": "Weight (Incl. Cable): 778g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 22mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "10-14S",
+              "quote": "Rated Voltage(Lipo): 10-14S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 95.0,
+              "unit": "A",
+              "quote": "Peak Current(180s): 95A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 4560.0,
+              "unit": "W",
+              "quote": "Max. Power: 4560W",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 7.9,
+              "unit": "g",
+              "quote": "Test Data 48 @ 100%: Thrust 7.9g",
+              "conditions": {
+                "throttle": "100%",
+                "voltage_v": 20400.0,
+                "propeller": "48",
+                "source": "제조사 벤치 테스트 표"
+              }
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "U12Ⅱ",
+          "variant": "KV60",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "kv",
+              "value": 60.0,
+              "unit": null,
+              "quote": "Test Item: KV60",
+              "conditions": {}
+            },
+            {
+              "key": "weight_g",
+              "value": 803.0,
+              "unit": "g",
+              "quote": "Weight (Incl. Cable): 803g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 75mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N42P",
+              "quote": "Configuration: 36N42P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 15.0,
+              "unit": "mm",
+              "quote": "Shaft Diameter: 15mm",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "22-25S",
+              "quote": "Rated Voltage(Lipo): 22-25S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 41.0,
+              "unit": "A",
+              "quote": "Peak Current(180s): 41A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_power_w",
+              "value": 4000.0,
+              "unit": "W",
+              "quote": "Max. Power: 4000W",
+              "conditions": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-mn1115-multirotor-uav-motor",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
+      "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "fetched_at": "2026-08-11T16:23:35+00:00",
+      "vendor": null,
+      "raw_excerpt": "MN1115 KV110/KV130 | Model No. MN1115 Motor Size Φ120.5*47.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 110 Idle Current (20V) 3.5A Max Power (180s) 2800W Internal Resistance 12mΩ Rated Voltage (Lipo) 14S Peak Current 152A Max Thrust 34.3kg Motor Weight (Incl. Cable) 1040g Package Weight 1500g KV Value 130 Idle Current (20V) 2.7A Max Power (180s) 2816W Internal Resistance 16mΩ Rated Voltage (Lipo) 12S Peak Current 180A Max Thrust 33.3kg Motor Weight (Incl. Cable) 1055g Package Weight 1500g Recommended Combinations Motor MN1115 KV110 ESC M200A14S Propeller G36 x11.5 Rated Voltage (Lipo) 14S Motor MN1115 KV130 ESC M200A14S Propeller G36x11.5 Rated Voltage (Lipo) 12S",
+      "content_hash": "85ffa2af995d4c22",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "MN1115",
+          "variant": "KV110",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP: IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration: 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 12.0,
+              "unit": "mm",
+              "quote": "Output Shaft Diameter: 12mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 110.0,
+              "unit": null,
+              "quote": "KV Value: 110",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2800.0,
+              "unit": "W",
+              "quote": "Max Power (180s): 2800W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 12.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance: 12mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "14S",
+              "quote": "Rated Voltage (Lipo): 14S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 152.0,
+              "unit": "A",
+              "quote": "Peak Current: 152A",
+              "conditions": {
+                "stated_condition": "Peak Current"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 34.3,
+              "unit": "kg",
+              "quote": "Max Thrust: 34.3kg",
+              "conditions": {
+                "note": "사양표 표기 — 측정 조건은 원문 참조"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1040.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 1040g",
+              "conditions": {}
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "MN1115",
+          "variant": "KV130",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP: IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration: 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 12.0,
+              "unit": "mm",
+              "quote": "Output Shaft Diameter: 12mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 130.0,
+              "unit": null,
+              "quote": "KV Value: 130",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2816.0,
+              "unit": "W",
+              "quote": "Max Power (180s): 2816W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 16.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance: 16mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage (Lipo): 12S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 180.0,
+              "unit": "A",
+              "quote": "Peak Current: 180A",
+              "conditions": {
+                "stated_condition": "Peak Current"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 33.3,
+              "unit": "kg",
+              "quote": "Max Thrust: 33.3kg",
+              "conditions": {
+                "note": "사양표 표기 — 측정 조건은 원문 참조"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1055.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 1055g",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "14S",
+              "quote": "Rated Voltage (Lipo): 14S",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage (Lipo): 12S",
+              "conditions": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-mn1118-multirotor-uav-motor",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
+      "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "fetched_at": "2026-08-11T16:23:45+00:00",
+      "vendor": null,
+      "raw_excerpt": "MN1118 KV90/KV108 | Model No. MN1118 Motor Size Φ 120.5*50.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 100VWithstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 90 Idle Current (20V) 2.8A Max Power(180s) 2281W Internal Resistance 18m Ω Rated Voltage (Lipo) 14S Peak Current 163A Max Thrust 39.2kg Motor Weight (Incl. Cable) 1170g Package Weight 1600g KV Value 108 Idle Current (20V) 3.3A Max Power (180s) 2230W Internal Resistance 13m Ω Rated Voltage (Lipo) 12S Peak Current 192A Max Thrust 38.0kg Motor Weight (Incl. Cable) 1186g Package Weight 1620g Recommended Combinations Motor MN1118 KV90 ESC M200A14S Propeller VZ40 x16.1 Rated Voltage (Lipo) 14S Motor MN1118 KV108 ESC M200A14S Propeller VZ40x16.1 Rated Voltage (Lipo) 12S",
+      "content_hash": "a0cf66040d5e03f5",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "MN1118",
+          "variant": "KV90",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP: IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration: 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 12.0,
+              "unit": "mm",
+              "quote": "Output Shaft Diameter: 12mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 90.0,
+              "unit": null,
+              "quote": "KV Value: 90",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2281.0,
+              "unit": "W",
+              "quote": "Max Power(180s): 2281W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 18m Ω",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "14S",
+              "quote": "Rated Voltage (Lipo): 14S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 163.0,
+              "unit": "A",
+              "quote": "Peak Current: 163A",
+              "conditions": {
+                "stated_condition": "Peak Current"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 39.2,
+              "unit": "kg",
+              "quote": "Max Thrust: 39.2kg",
+              "conditions": {
+                "note": "사양표 표기 — 측정 조건은 원문 참조"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1170.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 1170g",
+              "conditions": {}
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "MN1118",
+          "variant": "KV108",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP: IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration: 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 12.0,
+              "unit": "mm",
+              "quote": "Output Shaft Diameter: 12mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 108.0,
+              "unit": null,
+              "quote": "KV Value: 108",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2230.0,
+              "unit": "W",
+              "quote": "Max Power (180s): 2230W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "resistance_mohm",
+              "value": null,
+              "unit": null,
+              "quote": "Internal Resistance: 13m Ω",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage (Lipo): 12S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 192.0,
+              "unit": "A",
+              "quote": "Peak Current: 192A",
+              "conditions": {
+                "stated_condition": "Peak Current"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 38.0,
+              "unit": "kg",
+              "quote": "Max Thrust: 38.0kg",
+              "conditions": {
+                "note": "사양표 표기 — 측정 조건은 원문 참조"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1186.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 1186g",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "14S",
+              "quote": "Rated Voltage (Lipo): 14S",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage (Lipo): 12S",
+              "conditions": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-mn1123-multirotor-uav-motor",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
+      "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "fetched_at": "2026-08-11T16:23:55+00:00",
+      "vendor": null,
+      "raw_excerpt": "MN1123 KV53 | Model No. MN1123 Motor Size Φ120.5*58.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 53 Idle Current (20V) 2.0A Max Power (180s) 2400W Internal Resistance 35mΩ Rated Voltage (Lipo) 24S Peak Current 108A Max Thrust 47.5kg Motor Weight (Incl. Cable) 1425g Package Weight 1820g Recommended Combinations Motor MN1123 KV53 ESC M200A24S Propeller VZ42 x16.5 Rated Voltage (Lipo) 24S",
+      "content_hash": "3d434d51c9fb7dd2",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "MN1123",
+          "variant": "KV53",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP: IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration: 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 12.0,
+              "unit": "mm",
+              "quote": "Output Shaft Diameter: 12mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 53.0,
+              "unit": null,
+              "quote": "KV Value: 53",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2400.0,
+              "unit": "W",
+              "quote": "Max Power (180s): 2400W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 35.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance: 35mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo): 24S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 108.0,
+              "unit": "A",
+              "quote": "Peak Current: 108A",
+              "conditions": {
+                "stated_condition": "Peak Current"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 47.5,
+              "unit": "kg",
+              "quote": "Max Thrust: 47.5kg",
+              "conditions": {
+                "note": "사양표 표기 — 측정 조건은 원문 참조"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1425.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 1425g",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo): 24S",
+              "conditions": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-tmotor-mn1130-multirotor-uav-motor",
+      "tier": "S1_manufacturer",
+      "origin_url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
+      "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "fetched_at": "2026-08-11T16:24:05+00:00",
+      "vendor": null,
+      "raw_excerpt": "MN1130 KV45/KV53 | Model No. MN1130 Motor Size Φ120.5*65.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 45 Idle Current (20V) 2.0A Max Power (180s) 3218W Internal Resistance 38mΩ Rated Voltage (Lipo) 24S Peak Current (180s) 132A Max Thrust 57.3kg Motor Weight (Incl. Cable) 1740g Package Weight 2140g KV Value 53 Idle Current (20V) 2.4A Max Power (180s) 2926W Internal Resistance 28mΩ Rated Voltage (Lipo) 24S Peak Current 128A Max Thrust 52.0kg Motor Weight (Incl. Cable) 1742g Package Weight 2120g Recommended Combinations Motor MN1130 KV45 ESC M200A24S Propeller NS45x17.5/NS47x18 Rated Voltage (Lipo) 24S Motor MN1130 KV53 ESC M200A24S Propeller VZ40x16.1 Rated Voltage (Lipo) 24S",
+      "content_hash": "381a934bc00b65f8",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "MN1130",
+          "variant": "KV45",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP: IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration: 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 12.0,
+              "unit": "mm",
+              "quote": "Output Shaft Diameter: 12mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 45.0,
+              "unit": null,
+              "quote": "KV Value: 45",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 3218.0,
+              "unit": "W",
+              "quote": "Max Power (180s): 3218W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 38.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance: 38mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo): 24S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 132.0,
+              "unit": "A",
+              "quote": "Peak Current (180s): 132A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 57.3,
+              "unit": "kg",
+              "quote": "Max Thrust: 57.3kg",
+              "conditions": {
+                "note": "사양표 표기 — 측정 조건은 원문 참조"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1740.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 1740g",
+              "conditions": {}
+            }
+          ]
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN",
+            "website": "https://store.tmotor.com"
+          },
+          "model_name": "MN1130",
+          "variant": "KV53",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP: IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration: 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "shaft_dia_mm",
+              "value": 12.0,
+              "unit": "mm",
+              "quote": "Output Shaft Diameter: 12mm",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 53.0,
+              "unit": null,
+              "quote": "KV Value: 53",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2926.0,
+              "unit": "W",
+              "quote": "Max Power (180s): 2926W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 28.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance: 28mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo): 24S",
+              "conditions": {}
+            },
+            {
+              "key": "max_current_a",
+              "value": 128.0,
+              "unit": "A",
+              "quote": "Peak Current: 128A",
+              "conditions": {
+                "stated_condition": "Peak Current"
+              }
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 52.0,
+              "unit": "kg",
+              "quote": "Max Thrust: 52.0kg",
+              "conditions": {
+                "note": "사양표 표기 — 측정 조건은 원문 참조"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1742.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable): 1742g",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo): 24S",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo): 24S",
+              "conditions": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-druav-mn1130-multirotor-uav-motor",
+      "tier": "S2_vendor",
+      "origin_url": "https://druav.com/products/mn1130-multirotor-uav-motor",
+      "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
+      "fetched_at": "2026-08-11T16:24:05+00:00",
+      "vendor": {
+        "name": "DrUAV",
+        "country": null,
+        "trust_weight": 0.5
+      },
+      "raw_excerpt": " T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor T-MOTOR MN1130: High-efficiency cooling. Max 57kg thrust (with NS47 props). Built for 100kg 4-axis industrial multirotors. Bulk order supported. Model : MN1130 KV45/KV53 Specifications Technical Drawing Specification Model No. MN1130 Motor Size Φ120.5*65.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 45 Idle Current (20V) 2.0A Max Power (180s) 3218W Internal Resistance 38mΩ Rated Voltage (Lipo) 24S Peak Current (180s) 132A Max Thrust 57.3kg Motor Weight (Incl. Cable) 1740g Package Weight 2140g KV Value 53 Idle Current (20V) 2.4A Max Power (180s) 2926W Internal Resistance 28mΩ Rated Voltage (Lipo) 24S Peak Current 128A Max Thrust 52.0kg Motor Weight (Incl. Cable) 1742g Package Weight 2120g Recommended Combinations Motor MN1130 KV45 ESC M200A24S Propeller NS45x17.5/NS47x18 Rated Voltage (Lipo) 24S Motor MN1130 KV53 ESC M200A24S Propeller VZ40x16.1 Rated Voltage (Lipo) 24S Test Data Type Propeller Voltage (V) Throttle Current (A) RPM Thrust (gf) Power (W) Efficiency (g/W) Torque (N·m) Operating Temperature (℃) MN1130 KV45 NS45x17.5 91.94 40% 12.68 1532 11903 1165 11.70 6.34 121℃ (Ambient Temperature: 25) 91.95 42% 14.41 1598 13017 1325 11.24 6.92 91.97 44% 16.16 1660 14135 1486 10.86 7.49 91.99 46% 17.97 1718 15288 1653 10.53 8.07 91.98 48% 19.93 1780 16433 1833 10.13 8.70 91.94 50% 22.21 1844 17778 2042 9.81 9.39 91.95 52% 24.71 1908 19112 2272 9.48 10.09 91.98 54% 27.30 1969 20466 2511 9.19 10.80 91.96 56% 29.56 2025 21697 2719 8.92 11.47 91.98 58% 32.40 2086 23027 2980 8.65 12.19 92.01 60% 35.76 2148 24612 329",
+      "content_hash": "c8b731b72ab07501",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN"
+          },
+          "model_name": "MN1130",
+          "variant": "KV45",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 45.0,
+              "unit": null,
+              "quote": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor — KV45",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo) 24S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 3218.0,
+              "unit": "W",
+              "quote": "Max Power (180s) 3218W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 132.0,
+              "unit": "A",
+              "quote": "Peak Current (180s) 132A",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1740.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable) 1740g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 38.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance 38mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 57.3,
+              "unit": "kg",
+              "quote": "Max Thrust 57.3kg",
+              "conditions": {
+                "note": "판매처 리스팅 사양표 — 측정 조건은 원문 참조"
+              }
+            }
+          ],
+          "price": {
+            "currency": "USD",
+            "amount": 699.0,
+            "pack_qty": 1,
+            "in_stock": false,
+            "quote": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor — KV45: $699.00 USD"
+          }
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN"
+          },
+          "model_name": "MN1130",
+          "variant": "KV53",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 53.0,
+              "unit": null,
+              "quote": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor — KV53",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "24S",
+              "quote": "Rated Voltage (Lipo) 24S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2926.0,
+              "unit": "W",
+              "quote": "Max Power (180s) 2926W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 128.0,
+              "unit": "A",
+              "quote": "Peak Current 128A",
+              "conditions": {
+                "stated_condition": "Peak Current 128A"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1742.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable) 1742g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 28.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance 28mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 52.0,
+              "unit": "kg",
+              "quote": "Max Thrust 52.0kg",
+              "conditions": {
+                "note": "판매처 리스팅 사양표 — 측정 조건은 원문 참조"
+              }
+            }
+          ],
+          "price": {
+            "currency": "USD",
+            "amount": 699.0,
+            "pack_qty": 1,
+            "in_stock": false,
+            "quote": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor — KV53: $699.00 USD"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-druav-mn1123-multirotor-uav-motor",
+      "tier": "S2_vendor",
+      "origin_url": "https://druav.com/products/mn1123-multirotor-uav-motor",
+      "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
+      "fetched_at": "2026-08-11T16:24:05+00:00",
+      "vendor": {
+        "name": "DrUAV",
+        "country": null,
+        "trust_weight": 0.5
+      },
+      "raw_excerpt": " T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor T-MOTOR MN1123 Waterproof Motor: Designed for 80kg heavy-lift UAVs. Max 47kg thrust (with VZ42 props). Ideal for industrial transport. Customizable. Model : MN1123 KV53 Specifications Technical Drawing Specification Model No. MN1123 Motor Size Φ120.5*58.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 53 Idle Current (20V) 2.0A Max Power (180s) 2400W Internal Resistance 35mΩ Rated Voltage (Lipo) 24S Peak Current 108A Max Thrust 47.5kg Motor Weight (Incl. Cable) 1425g Package Weight 1820g Recommended Combinations Motor MN1123 KV53 ESC M200A24S Propeller VZ42 x16.5 Rated Voltage (Lipo) 24S Test Data Type Propeller Voltage (V) Throttle Current (A) RPM Thrust (gf) Power (W) Efficiency (g/W) Torque (N·m) Operating Temperature (℃) MN1123 KV53 VZ42 x16.5 91.95 40% 10.76 1745 9748 989 9.85 4.67 89℃ (Ambient Temperature: 25) 92.00 42% 12.25 1824 10640 1127 9.44 5.09 91.94 44% 13.76 1901 11660 1265 9.22 5.55 91.97 46% 15.40 1975 12636 1416 8.92 6.01 92.00 48% 17.29 2052 13750 1591 8.64 6.51 91.98 50% 19.42 2129 14919 1786 8.35 7.06 92.02 52% 21.68 2205 16171 1995 8.11 7.62 91.99 54% 23.99 2254 17354 2207 7.86 8.16 92.00 56% 26.28 2353 18573 2418 7.68 8.72 91.99 58% 28.96 2427 19906 2664 7.47 9.32 92.01 60% 31.82 2501 21215 2928 7.25 9.93 92.02 62% 34.93 2575 22634 3214 7.04 10.58 91.98 64% 38.09 2648 24040 3503 6.86 11.22 92.03 66% 41.24 2716 25388 3796 6.69 11.85 91.98 68% 44.69 2787 26877 4111 6.54 12.49 92.00 70% 48.36 2857 28307 4449 6.36 13.16 91.99 80% 69.16 3184 35956 6362 5.65 16.73 92.02 90% 87.91 3414 41739 808",
+      "content_hash": "9515aca2ee053855",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN"
+          },
+          "model_name": "MN1123",
+          "variant": null,
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration 36N40P",
+              "conditions": {}
+            }
+          ],
+          "price": {
+            "currency": "USD",
+            "amount": 519.0,
+            "pack_qty": 1,
+            "in_stock": false,
+            "quote": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor — Default Title: $519.00 USD"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-druav-mn1118-multirotor-uav-motor",
+      "tier": "S2_vendor",
+      "origin_url": "https://druav.com/products/mn1118-multirotor-uav-motor",
+      "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
+      "fetched_at": "2026-08-11T16:24:05+00:00",
+      "vendor": {
+        "name": "DrUAV",
+        "country": null,
+        "trust_weight": 0.5
+      },
+      "raw_excerpt": " T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor T-MOTOR MN1118 Industrial Multirotor Motor: Max 39kg thrust (with VZ40 propeller). For 70kg heavy-duty UAV platforms in agriculture. Custom options. Model : MN1118 KV90/KV108 Specifications Technical Drawing Specification Model No. MN1118 Motor Size Φ 120.5*50.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 100VWithstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 90 Idle Current (20V) 2.8A Max Power(180s) 2281W Internal Resistance 18m Ω Rated Voltage (Lipo) 14S Peak Current 163A Max Thrust 39.2kg Motor Weight (Incl. Cable) 1170g Package Weight 1600g KV Value 108 Idle Current (20V) 3.3A Max Power (180s) 2230W Internal Resistance 13m Ω Rated Voltage (Lipo) 12S Peak Current 192A Max Thrust 38.0kg Motor Weight (Incl. Cable) 1186g Package Weight 1620g Recommended Combinations Motor MN1118 KV90 ESC M200A14S Propeller VZ40 x16.1 Rated Voltage (Lipo) 14S Motor MN1118 KV108 ESC M200A14S Propeller VZ40x16.1 Rated Voltage (Lipo) 12S Test Data Type Propeller Voltage (V) Throttle Current (A) RPM Thrust (gf) Power (W) Efficiency (gf/W) Torque (N·m) Operating Temperature (℃) MN1118 KV90 VZ40 x16.1 53.96 40% 15.22 1622 8690 821 10.58 4.02 110℃ (Ambient Temperature: 25) 53.97 42% 17.58 1702 9622 949 10.14 4.45 53.98 44% 20.10 1781 10549 1085 9.72 4.89 53.96 46% 22.73 1856 11494 1227 9.37 5.32 53.94 48% 25.82 1938 12540 1393 9.00 5.80 53.95 50% 29.03 2014 13591 1566 8.68 6.29 53.96 52% 32.59 2089 14648 1759 8.33 6.78 53.95 54% 36.39 2162 15704 1963 8.00 7.28 53.94 56% 40.02 2230 16694 2159 7.73 7.74 53.96 58% 43.92 2304 17880 2370 7.55 8.29 53.97 60% 48.43 2377 18989 2613 7.27 8.80",
+      "content_hash": "3d9e317978881f70",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN"
+          },
+          "model_name": "MN1118",
+          "variant": "KV108",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 108.0,
+              "unit": null,
+              "quote": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor — KV108",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage (Lipo) 12S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2230.0,
+              "unit": "W",
+              "quote": "Max Power (180s) 2230W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 192.0,
+              "unit": "A",
+              "quote": "Peak Current 192A",
+              "conditions": {
+                "stated_condition": "Peak Current 192A"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1186.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable) 1186g",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 38.0,
+              "unit": "kg",
+              "quote": "Max Thrust 38.0kg",
+              "conditions": {
+                "note": "판매처 리스팅 사양표 — 측정 조건은 원문 참조"
+              }
+            }
+          ],
+          "price": {
+            "currency": "USD",
+            "amount": 459.0,
+            "pack_qty": 1,
+            "in_stock": false,
+            "quote": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor — KV108: $459.00 USD"
+          }
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN"
+          },
+          "model_name": "MN1118",
+          "variant": "KV95",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 95.0,
+              "unit": null,
+              "quote": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor — KV95",
+              "conditions": {}
+            }
+          ],
+          "price": {
+            "currency": "USD",
+            "amount": 459.0,
+            "pack_qty": 1,
+            "in_stock": false,
+            "quote": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor — KV95: $459.00 USD"
+          }
+        }
+      ]
+    },
+    {
+      "snapshot_id": "snap-druav-mn1115-multirotor-uav-motor",
+      "tier": "S2_vendor",
+      "origin_url": "https://druav.com/products/mn1115-multirotor-uav-motor",
+      "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
+      "fetched_at": "2026-08-11T16:24:05+00:00",
+      "vendor": {
+        "name": "DrUAV",
+        "country": null,
+        "trust_weight": 0.5
+      },
+      "raw_excerpt": " T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor T-MOTOR MN1115 Multirotor Motor: Max 34kg thrust (with G36 props). Designed for 60kg quadcopter industrial drones, suitable for logistics, 1pc MOQ. Model : MN1115 KV110/KV130 Specifications Technical Drawing Specification Model No. MN1115 Motor Size Φ120.5*47.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 110 Idle Current (20V) 3.5A Max Power (180s) 2800W Internal Resistance 12mΩ Rated Voltage (Lipo) 14S Peak Current 152A Max Thrust 34.3kg Motor Weight (Incl. Cable) 1040g Package Weight 1500g KV Value 130 Idle Current (20V) 2.7A Max Power (180s) 2816W Internal Resistance 16mΩ Rated Voltage (Lipo) 12S Peak Current 180A Max Thrust 33.3kg Motor Weight (Incl. Cable) 1055g Package Weight 1500g Recommended Combinations Motor MN1115 KV110 ESC M200A14S Propeller G36 x11.5 Rated Voltage (Lipo) 14S Motor MN1115 KV130 ESC M200A14S Propeller G36x11.5 Rated Voltage (Lipo) 12S Test Data Type Propeller Voltage (V) Throttle Current (A) RPM Thrust (gf) Power (W) Efficiency (g/W) Torque (N·m) Operating Temperature (℃) MN1115 KV110 G36 x11.5 53.97 40% 13.74 2019 6548 741 8.83 2.84 82℃ (Ambient Temperature: 25) 54.04 42% 15.80 2121 7338 854 8.60 3.15 54.01 44% 18.11 2221 8166 978 8.35 3.47 54.00 46% 20.45 2316 8992 1104 8.14 3.80 54.01 48% 23.25 2421 9931 1256 7.91 4.17 54.02 50% 26.32 2518 10861 1422 7.64 4.53 53.99 52% 29.48 2615 11811 1592 7.42 4.91 53.97 54% 32.92 2710 12807 1777 7.21 5.31 54.03 56% 36.55 2799 13802 1974 6.99 5.70 53.99 58% 40.61 2896 14892 2192 6.79 6.14 54.03 60% 44.71 2988 15900 2416 6.58 6.55 54.00 62% 49.03",
+      "content_hash": "a193686fc4887344",
+      "claims": [
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN"
+          },
+          "model_name": "MN1115",
+          "variant": "KV110",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 110.0,
+              "unit": null,
+              "quote": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor — KV110",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "14S",
+              "quote": "Rated Voltage (Lipo) 14S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2800.0,
+              "unit": "W",
+              "quote": "Max Power (180s) 2800W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 152.0,
+              "unit": "A",
+              "quote": "Peak Current 152A",
+              "conditions": {
+                "stated_condition": "Peak Current 152A"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1040.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable) 1040g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 12.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance 12mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 34.3,
+              "unit": "kg",
+              "quote": "Max Thrust 34.3kg",
+              "conditions": {
+                "note": "판매처 리스팅 사양표 — 측정 조건은 원문 참조"
+              }
+            }
+          ],
+          "price": {
+            "currency": "USD",
+            "amount": 379.9,
+            "pack_qty": 1,
+            "in_stock": false,
+            "quote": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor — KV110: $379.90 USD"
+          }
+        },
+        {
+          "category": "motor",
+          "manufacturer": {
+            "name": "T-Motor",
+            "hq_country": "CN"
+          },
+          "model_name": "MN1115",
+          "variant": "KV130",
+          "mfg_country": null,
+          "specs": [
+            {
+              "key": "ip_rating",
+              "value_text": "IP45",
+              "quote": "IP IP45",
+              "conditions": {}
+            },
+            {
+              "key": "config",
+              "value_text": "36N40P",
+              "quote": "Configuration 36N40P",
+              "conditions": {}
+            },
+            {
+              "key": "kv",
+              "value": 130.0,
+              "unit": null,
+              "quote": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor — KV130",
+              "conditions": {}
+            },
+            {
+              "key": "cells_range",
+              "value_text": "12S",
+              "quote": "Rated Voltage (Lipo) 12S",
+              "conditions": {}
+            },
+            {
+              "key": "max_power_w",
+              "value": 2816.0,
+              "unit": "W",
+              "quote": "Max Power (180s) 2816W",
+              "conditions": {
+                "stated_condition": "180s"
+              }
+            },
+            {
+              "key": "max_current_a",
+              "value": 180.0,
+              "unit": "A",
+              "quote": "Peak Current 180A",
+              "conditions": {
+                "stated_condition": "Peak Current 180A"
+              }
+            },
+            {
+              "key": "weight_g",
+              "value": 1055.0,
+              "unit": "g",
+              "quote": "Motor Weight (Incl. Cable) 1055g",
+              "conditions": {}
+            },
+            {
+              "key": "resistance_mohm",
+              "value": 16.0,
+              "unit": "mΩ",
+              "quote": "Internal Resistance 16mΩ",
+              "conditions": {}
+            },
+            {
+              "key": "max_thrust_g",
+              "value": 33.3,
+              "unit": "kg",
+              "quote": "Max Thrust 33.3kg",
+              "conditions": {
+                "note": "판매처 리스팅 사양표 — 측정 조건은 원문 참조"
+              }
+            }
+          ],
+          "price": {
+            "currency": "USD",
+            "amount": 379.9,
+            "pack_qty": 1,
+            "in_stock": false,
+            "quote": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor — KV130: $379.90 USD"
+          }
+        }
+      ]
+    }
+  ]
+}
