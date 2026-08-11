@@ -41,7 +41,8 @@ jobs:
             echo "변경 없음 — 커밋 생략"
           else
             git commit -m "일일 수집 아카이브 $(date -u +%F) [skip ci]"
-            git pull --rebase origin main
+            # 파이프라인이 남긴 비커밋 산출물(db·site)이 있어도 리베이스되도록 autostash
+            git pull --rebase --autostash origin main
             git push
           fi
       - name: 플래그 리뷰 알림 (KST 06:00 목표)
