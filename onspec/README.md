@@ -72,6 +72,7 @@ docs/        METHODOLOGY.md (공개 검증 방법론)
 
 1. S1/S2 실커넥터 2~3곳 구현 → 픽스처 모드 졸업, 가격 시계열 축적 시작
 2. Tyto Robotics·커뮤니티 스러스트 스탠드(S3) 연계 → 첫 A등급 발행
-3. ~~플래그 리뷰 큐 웹 UI~~ → `site/review.html` 구현됨. 잔여: 리뷰 결정 커밋의 웹 완결(현재는 JSON 내려받아 커밋)
+3. ~~플래그 리뷰 큐 웹 UI~~ → `site/review.html` 구현됨. 결정 커밋도 웹에서 완결
+   (리뷰어 본인의 fine-grained 토큰으로 GitHub Contents API 직접 커밋, JSON 내려받기 폴백)
 4. PostgreSQL 전환 + Meilisearch 검색
 5. Phase 2 카테고리 착수: EO/IR·데이터링크 — FCC ID(S4) 커넥터가 핵심 검증 수단

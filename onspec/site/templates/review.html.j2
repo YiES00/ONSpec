@@ -101,6 +101,23 @@ details.snap pre{white-space:pre-wrap;background:var(--panel-2);border:1px solid
 .exportbar button{appearance:none;font:inherit;font-weight:700;background:var(--accent);
   color:var(--accent-ink);border:1px solid var(--ink);padding:8px 18px;cursor:pointer;
   border-radius:var(--r)}
+.exportbar button.secondary{background:var(--panel-2);color:var(--ink);font-weight:600}
+.exportbar button:disabled{opacity:.5;cursor:wait}
+#commit-status{max-width:420px}
+#commit-status.ok{color:var(--gA)}
+#commit-status.err{color:var(--gD)}
+details.token-setup{margin-top:8px;font-size:12.5px}
+details.token-setup summary{cursor:pointer;font-family:var(--mono);color:var(--gB)}
+details.token-setup #token-state{color:var(--ink-faint)}
+.token-body{border:1px solid var(--line);background:var(--panel-2);padding:10px 12px;
+  margin-top:6px;border-radius:var(--r)}
+.token-body p{margin:0 0 8px;color:var(--ink-soft)}
+.token-row{display:flex;gap:8px;flex-wrap:wrap}
+.token-row input{flex:1;min-width:220px;font-family:var(--mono);font-size:12.5px;
+  padding:6px 8px;border:1px solid var(--line);border-radius:var(--r)}
+.exportbar .token-row button{appearance:none;font:inherit;font-size:12.5px;font-weight:600;
+  padding:6px 12px;cursor:pointer;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--panel);color:var(--ink)}
 .empty{text-align:center;color:var(--ink-soft);padding:40px 0;font-family:var(--mono)}
 </style>
 </head>
@@ -117,17 +134,33 @@ details.snap pre{white-space:pre-wrap;background:var(--panel-2);border:1px solid
 
 <main><div class="wrap">
   <div class="strip" id="stats"></div>
-  <p class="howto">결정(오탐 해제/확인)은 이 브라우저에 저장됩니다. 검토 후 <b>결정 JSON 내려받기</b> →
-  저장소의 <b>reviews/decisions.json</b> 으로 커밋하면 다음 일일 파이프라인 실행에서 등급에 반영됩니다.</p>
+  <p class="howto">결정(오탐 해제/확인)은 이 브라우저에 저장됩니다. 검토 후 <b>GitHub에 바로 커밋</b>
+  (최초 1회 토큰 설정)하거나 JSON을 내려받아 <b>reviews/decisions.json</b> 으로 커밋하면
+  다음 일일 파이프라인 실행에서 등급에 반영됩니다.</p>
   <div class="filters" id="filters"></div>
   <div id="queue"></div>
 </div></main>
 
 <div class="exportbar"><div class="wrap">
   <span class="cnt" id="progress"></span>
-  <button id="export">결정 JSON 내려받기</button>
-  <span class="decided-note">→ reviews/decisions.json 로 커밋</span>
-</div></div>
+  <button id="commit">GitHub에 바로 커밋</button>
+  <button id="export" class="secondary">JSON 내려받기</button>
+  <span class="decided-note" id="commit-status"></span>
+</div>
+<div class="wrap"><details class="token-setup" id="token-setup">
+  <summary>커밋 토큰 설정 <span id="token-state"></span></summary>
+  <div class="token-body">
+    <p>GitHub fine-grained 토큰이 필요합니다 — <a target="_blank" rel="noopener"
+    href="https://github.com/settings/personal-access-tokens/new">github.com/settings → 토큰 생성</a>
+    에서 <b>Repository access: 이 저장소만</b>, <b>Permissions → Contents: Read and write</b> 로 발급하세요.
+    토큰은 <b>이 브라우저에만</b> 저장되며 저장소·서버로 전송되지 않습니다(커밋 API 호출에만 사용).</p>
+    <div class="token-row">
+      <input type="password" id="token-input" placeholder="github_pat_..." autocomplete="off">
+      <button id="token-save">저장</button>
+      <button id="token-clear">삭제</button>
+    </div>
+  </div>
+</details></div></div>
 
 <script type="application/json" id="review-data">{{ review_json }}</script>
 <script>
@@ -258,18 +291,118 @@ function render() {
   });
 }
 
-document.getElementById("export").addEventListener("click", () => {
-  // 서버 반영분 + 로컬 결정 병합본을 decisions.json 형식으로 내려받기
-  const merged = {};
+function mergedDecisions(remote) {
+  // 우선순위: 저장소 파일(remote) < 이번 빌드에 반영된 결정 < 이 브라우저의 결정
+  const merged = {...(remote || {})};
   DATA.items.forEach(i => { if (i.decision) merged[i.review_key] = i.decision; });
   Object.assign(merged, local);
-  const blob = new Blob([JSON.stringify(merged, null, 1)], {type: "application/json"});
+  return merged;
+}
+
+document.getElementById("export").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(mergedDecisions(), null, 1)],
+                        {type: "application/json"});
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "decisions.json";
   a.click();
   URL.revokeObjectURL(a.href);
 });
+
+// ---------- GitHub 직접 커밋 (Contents API) ----------
+const GH = { owner: "YiES00", repo: "ONSpec",
+             path: "onspec/reviews/decisions.json", branch: "main" };
+const TOKEN_KEY = "onspec-review-gh-token";   // 이 브라우저에만 저장
+
+function token() { return localStorage.getItem(TOKEN_KEY) || ""; }
+function tokenState() {
+  document.getElementById("token-state").textContent =
+    token() ? "— 저장됨 ✓" : "— 미설정";
+}
+function status(msg, cls) {
+  const el = document.getElementById("commit-status");
+  el.innerHTML = msg; el.className = "decided-note " + (cls || "");
+}
+function b64utf8(s) {
+  const bytes = new TextEncoder().encode(s);
+  let bin = "";
+  bytes.forEach(b => { bin += String.fromCharCode(b); });
+  return btoa(bin);
+}
+async function gh(method, url, body) {
+  const res = await fetch(`https://api.github.com${url}`, {
+    method,
+    headers: { "Accept": "application/vnd.github+json",
+               "Authorization": `Bearer ${token()}`,
+               "X-GitHub-Api-Version": "2022-11-28" },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok && res.status !== 404) {
+    const detail = (await res.json().catch(() => ({}))).message || res.statusText;
+    throw new Error(`${res.status} ${detail}`);
+  }
+  return res.status === 404 ? null : res.json();
+}
+async function commitOnce() {
+  const base = `/repos/${GH.owner}/${GH.repo}/contents/${GH.path}`;
+  const cur = await gh("GET", `${base}?ref=${GH.branch}`);
+  let remote = {};
+  if (cur && cur.content) {
+    try {
+      remote = JSON.parse(new TextDecoder().decode(
+        Uint8Array.from(atob(cur.content.replace(/\n/g, "")), ch => ch.charCodeAt(0))));
+    } catch (e) {}
+  }
+  const merged = mergedDecisions(remote);
+  const n = Object.keys(merged).filter(k => !k.startsWith("_")).length;
+  const body = {
+    message: `리뷰 결정 ${n}건 — review.html 웹 커밋`,
+    content: b64utf8(JSON.stringify(merged, null, 1) + "\n"),
+    branch: GH.branch,
+  };
+  if (cur && cur.sha) body.sha = cur.sha;
+  return gh("PUT", base, body);
+}
+document.getElementById("commit").addEventListener("click", async () => {
+  if (!token()) {
+    document.getElementById("token-setup").open = true;
+    status("커밋하려면 먼저 아래에서 토큰을 설정하세요.", "err");
+    return;
+  }
+  if (!Object.keys(mergedDecisions()).length) {
+    status("커밋할 결정이 없습니다.", "err");
+    return;
+  }
+  const btn = document.getElementById("commit");
+  btn.disabled = true; status("커밋 중…");
+  try {
+    let r;
+    try { r = await commitOnce(); }
+    catch (e) {                      // sha 경합(409) 1회 재시도
+      if (String(e.message).startsWith("409")) r = await commitOnce();
+      else throw e;
+    }
+    const url = r && r.commit && r.commit.html_url;
+    status(`커밋 완료 ✓ ${url ? `<a href="${url}" target="_blank" rel="noopener">커밋 보기</a> · ` : ""}`
+           + "다음 일일 실행에서 등급에 반영됩니다.", "ok");
+  } catch (e) {
+    const hint = String(e.message).startsWith("401") ? " — 토큰이 유효한지 확인하세요"
+               : String(e.message).startsWith("403") ? " — 토큰의 Contents 쓰기 권한을 확인하세요" : "";
+    status(`커밋 실패: ${e.message}${hint}`, "err");
+  } finally {
+    btn.disabled = false;
+  }
+});
+document.getElementById("token-save").addEventListener("click", () => {
+  const v = document.getElementById("token-input").value.trim();
+  if (v) { localStorage.setItem(TOKEN_KEY, v);
+           document.getElementById("token-input").value = ""; }
+  tokenState(); status(v ? "토큰 저장됨 (이 브라우저에만)" : "토큰이 비어 있습니다.", v ? "ok" : "err");
+});
+document.getElementById("token-clear").addEventListener("click", () => {
+  localStorage.removeItem(TOKEN_KEY); tokenState(); status("토큰 삭제됨");
+});
+tokenState();
 
 render();
 </script>

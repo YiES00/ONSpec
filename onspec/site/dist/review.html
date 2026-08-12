@@ -101,6 +101,23 @@ details.snap pre{white-space:pre-wrap;background:var(--panel-2);border:1px solid
 .exportbar button{appearance:none;font:inherit;font-weight:700;background:var(--accent);
   color:var(--accent-ink);border:1px solid var(--ink);padding:8px 18px;cursor:pointer;
   border-radius:var(--r)}
+.exportbar button.secondary{background:var(--panel-2);color:var(--ink);font-weight:600}
+.exportbar button:disabled{opacity:.5;cursor:wait}
+#commit-status{max-width:420px}
+#commit-status.ok{color:var(--gA)}
+#commit-status.err{color:var(--gD)}
+details.token-setup{margin-top:8px;font-size:12.5px}
+details.token-setup summary{cursor:pointer;font-family:var(--mono);color:var(--gB)}
+details.token-setup #token-state{color:var(--ink-faint)}
+.token-body{border:1px solid var(--line);background:var(--panel-2);padding:10px 12px;
+  margin-top:6px;border-radius:var(--r)}
+.token-body p{margin:0 0 8px;color:var(--ink-soft)}
+.token-row{display:flex;gap:8px;flex-wrap:wrap}
+.token-row input{flex:1;min-width:220px;font-family:var(--mono);font-size:12.5px;
+  padding:6px 8px;border:1px solid var(--line);border-radius:var(--r)}
+.exportbar .token-row button{appearance:none;font:inherit;font-size:12.5px;font-weight:600;
+  padding:6px 12px;cursor:pointer;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--panel);color:var(--ink)}
 .empty{text-align:center;color:var(--ink-soft);padding:40px 0;font-family:var(--mono)}
 </style>
 </head>
@@ -117,17 +134,33 @@ details.snap pre{white-space:pre-wrap;background:var(--panel-2);border:1px solid
 
 <main><div class="wrap">
   <div class="strip" id="stats"></div>
-  <p class="howto">결정(오탐 해제/확인)은 이 브라우저에 저장됩니다. 검토 후 <b>결정 JSON 내려받기</b> →
-  저장소의 <b>reviews/decisions.json</b> 으로 커밋하면 다음 일일 파이프라인 실행에서 등급에 반영됩니다.</p>
+  <p class="howto">결정(오탐 해제/확인)은 이 브라우저에 저장됩니다. 검토 후 <b>GitHub에 바로 커밋</b>
+  (최초 1회 토큰 설정)하거나 JSON을 내려받아 <b>reviews/decisions.json</b> 으로 커밋하면
+  다음 일일 파이프라인 실행에서 등급에 반영됩니다.</p>
   <div class="filters" id="filters"></div>
   <div id="queue"></div>
 </div></main>
 
 <div class="exportbar"><div class="wrap">
   <span class="cnt" id="progress"></span>
-  <button id="export">결정 JSON 내려받기</button>
-  <span class="decided-note">→ reviews/decisions.json 로 커밋</span>
-</div></div>
+  <button id="commit">GitHub에 바로 커밋</button>
+  <button id="export" class="secondary">JSON 내려받기</button>
+  <span class="decided-note" id="commit-status"></span>
+</div>
+<div class="wrap"><details class="token-setup" id="token-setup">
+  <summary>커밋 토큰 설정 <span id="token-state"></span></summary>
+  <div class="token-body">
+    <p>GitHub fine-grained 토큰이 필요합니다 — <a target="_blank" rel="noopener"
+    href="https://github.com/settings/personal-access-tokens/new">github.com/settings → 토큰 생성</a>
+    에서 <b>Repository access: 이 저장소만</b>, <b>Permissions → Contents: Read and write</b> 로 발급하세요.
+    토큰은 <b>이 브라우저에만</b> 저장되며 저장소·서버로 전송되지 않습니다(커밋 API 호출에만 사용).</p>
+    <div class="token-row">
+      <input type="password" id="token-input" placeholder="github_pat_..." autocomplete="off">
+      <button id="token-save">저장</button>
+      <button id="token-clear">삭제</button>
+    </div>
+  </div>
+</details></div></div>
 
 <script type="application/json" id="review-data">{"generated_at": "2026-08-12T15:15:40+00:00", "stats": {"total": 3, "by_verdict": {"error": 0, "flag": 0, "caution": 3}, "decided": 0}, "items": [{"review_key": "dfa078c81697e4e4", "verdict": "caution", "rule_id": "R-X2", "summary": "출처 간 표기 불일치: 12S / 14S", "detail": {"spec_keys": ["cells_range"], "summary": "출처 간 표기 불일치: 12S / 14S", "variants": ["12S", "14S"]}, "component": {"manufacturer": "T-Motor", "model": "MN1115", "variant": "KV130", "category": "motor"}, "spec_keys": ["cells_range"], "claims": [{"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "12S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo): 12S", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html", "source_title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "snapshot": {"title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "fetched_at": "2026-08-11T18:16:10+00:00", "raw_excerpt": "MN1115 KV110/KV130 | Model No. MN1115 Motor Size Φ120.5*47.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 110 Idle Current (20V) 3.5A Max Power (180s) 2800W Internal Resistance 12mΩ Rated Voltage (Lipo) 14S Peak Current 152A Max Thrust 34.3kg Motor Weight (Incl. Cable) 1040g Package Weight 1500g KV Value 130 Idle Current (20V) 2.7A Max Power (180s) 2816W Internal Resistance 16mΩ Rated Voltage (Lipo) 12S Peak Current 180A Max Thrust 33.3kg Motor Weight (Incl. Cable) 1055g Package Weight 1500g Recommended Combinations Motor MN1115 KV110 ESC M200A14S Propeller G36 x11.5 Rated Voltage (Lipo) 14S Motor MN1115 KV130 ESC M200A14S Propeller G36x11.5 Rated Voltage (Lipo) 12S"}}, {"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "14S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo): 14S", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html", "source_title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "snapshot": {"title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "fetched_at": "2026-08-11T18:16:10+00:00", "raw_excerpt": "MN1115 KV110/KV130 | Model No. MN1115 Motor Size Φ120.5*47.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 110 Idle Current (20V) 3.5A Max Power (180s) 2800W Internal Resistance 12mΩ Rated Voltage (Lipo) 14S Peak Current 152A Max Thrust 34.3kg Motor Weight (Incl. Cable) 1040g Package Weight 1500g KV Value 130 Idle Current (20V) 2.7A Max Power (180s) 2816W Internal Resistance 16mΩ Rated Voltage (Lipo) 12S Peak Current 180A Max Thrust 33.3kg Motor Weight (Incl. Cable) 1055g Package Weight 1500g Recommended Combinations Motor MN1115 KV110 ESC M200A14S Propeller G36 x11.5 Rated Voltage (Lipo) 14S Motor MN1115 KV130 ESC M200A14S Propeller G36x11.5 Rated Voltage (Lipo) 12S"}}, {"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "12S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo): 12S", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html", "source_title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "snapshot": {"title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "fetched_at": "2026-08-11T18:16:10+00:00", "raw_excerpt": "MN1115 KV110/KV130 | Model No. MN1115 Motor Size Φ120.5*47.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 110 Idle Current (20V) 3.5A Max Power (180s) 2800W Internal Resistance 12mΩ Rated Voltage (Lipo) 14S Peak Current 152A Max Thrust 34.3kg Motor Weight (Incl. Cable) 1040g Package Weight 1500g KV Value 130 Idle Current (20V) 2.7A Max Power (180s) 2816W Internal Resistance 16mΩ Rated Voltage (Lipo) 12S Peak Current 180A Max Thrust 33.3kg Motor Weight (Incl. Cable) 1055g Package Weight 1500g Recommended Combinations Motor MN1115 KV110 ESC M200A14S Propeller G36 x11.5 Rated Voltage (Lipo) 14S Motor MN1115 KV130 ESC M200A14S Propeller G36x11.5 Rated Voltage (Lipo) 12S"}}, {"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "12S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo) 12S", "tier": "S2_vendor", "vendor": "DrUAV", "url": "https://druav.com/products/mn1115-multirotor-uav-motor", "source_title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "snapshot": {"title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor", "fetched_at": "2026-08-11T18:18:41+00:00", "raw_excerpt": " T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor T-MOTOR MN1115 Multirotor Motor: Max 34kg thrust (with G36 props). Designed for 60kg quadcopter industrial drones, suitable for logistics, 1pc MOQ. Model : MN1115 KV110/KV130 Specifications Technical Drawing Specification Model No. MN1115 Motor Size Φ120.5*47.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 110 Idle Current (20V) 3.5A Max Power (180s) 2800W Internal Resistance 12mΩ Rated Voltage (Lipo) 14S Peak Current 152A Max Thrust 34.3kg Motor Weight (Incl. Cable) 1040g Package Weight 1500g KV Value 130 Idle Current (20V) 2.7A Max Power (180s) 2816W Internal Resistance 16mΩ Rated Voltage (Lipo) 12S Peak Current 180A Max Thrust 33.3kg Motor Weight (Incl. Cable) 1055g Package Weight 1500g Recommended Combinations Motor MN1115 KV"}}], "decision": null}, {"review_key": "3eb30015f9b29751", "verdict": "caution", "rule_id": "R-X2", "summary": "출처 간 표기 불일치: 12S / 14S", "detail": {"spec_keys": ["cells_range"], "summary": "출처 간 표기 불일치: 12S / 14S", "variants": ["12S", "14S"]}, "component": {"manufacturer": "T-Motor", "model": "MN1118", "variant": "KV108", "category": "motor"}, "spec_keys": ["cells_range"], "claims": [{"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "12S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo): 12S", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html", "source_title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "snapshot": {"title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "fetched_at": "2026-08-11T18:16:20+00:00", "raw_excerpt": "MN1118 KV90/KV108 | Model No. MN1118 Motor Size Φ 120.5*50.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 100VWithstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 90 Idle Current (20V) 2.8A Max Power(180s) 2281W Internal Resistance 18m Ω Rated Voltage (Lipo) 14S Peak Current 163A Max Thrust 39.2kg Motor Weight (Incl. Cable) 1170g Package Weight 1600g KV Value 108 Idle Current (20V) 3.3A Max Power (180s) 2230W Internal Resistance 13m Ω Rated Voltage (Lipo) 12S Peak Current 192A Max Thrust 38.0kg Motor Weight (Incl. Cable) 1186g Package Weight 1620g Recommended Combinations Motor MN1118 KV90 ESC M200A14S Propeller VZ40 x16.1 Rated Voltage (Lipo) 14S Motor MN1118 KV108 ESC M200A14S Propeller VZ40x16.1 Rated Voltage (Lipo) 12S"}}, {"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "14S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo): 14S", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html", "source_title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "snapshot": {"title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "fetched_at": "2026-08-11T18:16:20+00:00", "raw_excerpt": "MN1118 KV90/KV108 | Model No. MN1118 Motor Size Φ 120.5*50.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 100VWithstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 90 Idle Current (20V) 2.8A Max Power(180s) 2281W Internal Resistance 18m Ω Rated Voltage (Lipo) 14S Peak Current 163A Max Thrust 39.2kg Motor Weight (Incl. Cable) 1170g Package Weight 1600g KV Value 108 Idle Current (20V) 3.3A Max Power (180s) 2230W Internal Resistance 13m Ω Rated Voltage (Lipo) 12S Peak Current 192A Max Thrust 38.0kg Motor Weight (Incl. Cable) 1186g Package Weight 1620g Recommended Combinations Motor MN1118 KV90 ESC M200A14S Propeller VZ40 x16.1 Rated Voltage (Lipo) 14S Motor MN1118 KV108 ESC M200A14S Propeller VZ40x16.1 Rated Voltage (Lipo) 12S"}}, {"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "12S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo): 12S", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html", "source_title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "snapshot": {"title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "fetched_at": "2026-08-11T18:16:20+00:00", "raw_excerpt": "MN1118 KV90/KV108 | Model No. MN1118 Motor Size Φ 120.5*50.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 100VWithstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 90 Idle Current (20V) 2.8A Max Power(180s) 2281W Internal Resistance 18m Ω Rated Voltage (Lipo) 14S Peak Current 163A Max Thrust 39.2kg Motor Weight (Incl. Cable) 1170g Package Weight 1600g KV Value 108 Idle Current (20V) 3.3A Max Power (180s) 2230W Internal Resistance 13m Ω Rated Voltage (Lipo) 12S Peak Current 192A Max Thrust 38.0kg Motor Weight (Incl. Cable) 1186g Package Weight 1620g Recommended Combinations Motor MN1118 KV90 ESC M200A14S Propeller VZ40 x16.1 Rated Voltage (Lipo) 14S Motor MN1118 KV108 ESC M200A14S Propeller VZ40x16.1 Rated Voltage (Lipo) 12S"}}, {"spec_key": "cells_range", "name_ko": "지원 셀수", "value": null, "value_text": "12S", "unit": null, "value_original": null, "unit_original": null, "conditions": {}, "quote": "Rated Voltage (Lipo) 12S", "tier": "S2_vendor", "vendor": "DrUAV", "url": "https://druav.com/products/mn1118-multirotor-uav-motor", "source_title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "snapshot": {"title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor", "fetched_at": "2026-08-11T18:18:41+00:00", "raw_excerpt": " T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor T-MOTOR MN1118 Industrial Multirotor Motor: Max 39kg thrust (with VZ40 propeller). For 70kg heavy-duty UAV platforms in agriculture. Custom options. Model : MN1118 KV90/KV108 Specifications Technical Drawing Specification Model No. MN1118 Motor Size Φ 120.5*50.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 100VWithstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 90 Idle Current (20V) 2.8A Max Power(180s) 2281W Internal Resistance 18m Ω Rated Voltage (Lipo) 14S Peak Current 163A Max Thrust 39.2kg Motor Weight (Incl. Cable) 1170g Package Weight 1600g KV Value 108 Idle Current (20V) 3.3A Max Power (180s) 2230W Internal Resistance 13m Ω Rated Voltage (Lipo) 12S Peak Current 192A Max Thrust 38.0kg Motor Weight (Incl. Cable) 1186g Package Weight 1620g Recommended Combinations Motor MN"}}], "decision": null}, {"review_key": "e305784fd8fc8394", "verdict": "caution", "rule_id": "R-X1", "summary": "출처 간 값 편차 6.9% — 확인 필요, 모든 출처 값 병기 [조건: 프로펠러 45x18in]", "detail": {"spec_keys": ["max_thrust_g"], "summary": "출처 간 값 편차 6.9% — 확인 필요, 모든 출처 값 병기 [조건: 프로펠러 45x18in]", "weighted_mean": 55770.0, "spread": 0.0686, "sources": [{"value": 53475.0, "tier": "S1_manufacturer", "trust": 1.0, "source_id": 15}, {"value": 57300.0, "tier": "S1_manufacturer", "trust": 1.0, "source_id": 15}, {"value": 57300.0, "tier": "S2_vendor", "trust": 0.5, "source_id": 32}], "condition_group": "프로펠러 45x18in"}, "component": {"manufacturer": "T-Motor", "model": "MN1130", "variant": "KV45", "category": "motor"}, "spec_keys": ["max_thrust_g"], "claims": [{"spec_key": "max_thrust_g", "name_ko": "최대 추력", "value": 57300.0, "value_text": null, "unit": "g", "value_original": 57.3, "unit_original": "kg", "conditions": {"note": "사양표 표기 — 측정 조건은 원문 참조"}, "quote": "Max Thrust: 57.3kg", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html", "source_title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor", "snapshot": {"title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor", "fetched_at": "2026-08-11T18:16:40+00:00", "raw_excerpt": "MN1130 KV45/KV53 | Model No. MN1130 Motor Size Φ120.5*65.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 45 Idle Current (20V) 2.0A Max Power (180s) 3218W Internal Resistance 38mΩ Rated Voltage (Lipo) 24S Peak Current (180s) 132A Max Thrust 57.3kg Motor Weight (Incl. Cable) 1740g Package Weight 2140g KV Value 53 Idle Current (20V) 2.4A Max Power (180s) 2926W Internal Resistance 28mΩ Rated Voltage (Lipo) 24S Peak Current 128A Max Thrust 52.0kg Motor Weight (Incl. Cable) 1742g Package Weight 2120g Recommended Combinations Motor MN1130 KV45 ESC M200A24S Propeller NS45x17.5/NS47x18 Rated Voltage (Lipo) 24S Motor MN1130 KV53 ESC M200A24S Propeller VZ40x16.1 Rated Voltage (Lipo) 24S"}}, {"spec_key": "max_thrust_g", "name_ko": "최대 추력", "value": 53475.0, "value_text": null, "unit": "g", "value_original": 53475.0, "unit_original": "g", "conditions": {"throttle": "100%", "propeller": "NS45x17.5", "source": "제조사 벤치 테스트 표", "voltage_v": 91.97, "prop_diameter_in": 45.0, "prop_pitch_in": 17.5}, "quote": "Test Data NS45x17.5 @ 100%: Thrust 53475g", "tier": "S1_manufacturer", "vendor": null, "url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html", "source_title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor", "snapshot": {"title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor", "fetched_at": "2026-08-11T18:16:40+00:00", "raw_excerpt": "MN1130 KV45/KV53 | Model No. MN1130 Motor Size Φ120.5*65.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 45 Idle Current (20V) 2.0A Max Power (180s) 3218W Internal Resistance 38mΩ Rated Voltage (Lipo) 24S Peak Current (180s) 132A Max Thrust 57.3kg Motor Weight (Incl. Cable) 1740g Package Weight 2140g KV Value 53 Idle Current (20V) 2.4A Max Power (180s) 2926W Internal Resistance 28mΩ Rated Voltage (Lipo) 24S Peak Current 128A Max Thrust 52.0kg Motor Weight (Incl. Cable) 1742g Package Weight 2120g Recommended Combinations Motor MN1130 KV45 ESC M200A24S Propeller NS45x17.5/NS47x18 Rated Voltage (Lipo) 24S Motor MN1130 KV53 ESC M200A24S Propeller VZ40x16.1 Rated Voltage (Lipo) 24S"}}, {"spec_key": "max_thrust_g", "name_ko": "최대 추력", "value": 57300.0, "value_text": null, "unit": "g", "value_original": 57.3, "unit_original": "kg", "conditions": {"note": "판매처 리스팅 사양표 — 측정 조건은 원문 참조"}, "quote": "Max Thrust 57.3kg", "tier": "S2_vendor", "vendor": "DrUAV", "url": "https://druav.com/products/mn1130-multirotor-uav-motor", "source_title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor", "snapshot": {"title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor", "fetched_at": "2026-08-11T18:18:41+00:00", "raw_excerpt": " T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor T-MOTOR MN1130: High-efficiency cooling. Max 57kg thrust (with NS47 props). Built for 100kg 4-axis industrial multirotors. Bulk order supported. Model : MN1130 KV45/KV53 Specifications Technical Drawing Specification Model No. MN1130 Motor Size Φ120.5*65.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 45 Idle Current (20V) 2.0A Max Power (180s) 3218W Internal Resistance 38mΩ Rated Voltage (Lipo) 24S Peak Current (180s) 132A Max Thrust 57.3kg Motor Weight (Incl. Cable) 1740g Package Weight 2140g KV Value 53 Idle Current (20V) 2.4A Max Power (180s) 2926W Internal Resistance 28mΩ Rated Voltage (Lipo) 24S Peak Current 128A Max Thrust 52.0kg Motor Weight (Incl. Cable) 1742g Package Weight 2120g Recommended Combinations Motor MN1130"}}], "decision": null}]}</script>
 <script>
@@ -258,18 +291,118 @@ function render() {
   });
 }
 
-document.getElementById("export").addEventListener("click", () => {
-  // 서버 반영분 + 로컬 결정 병합본을 decisions.json 형식으로 내려받기
-  const merged = {};
+function mergedDecisions(remote) {
+  // 우선순위: 저장소 파일(remote) < 이번 빌드에 반영된 결정 < 이 브라우저의 결정
+  const merged = {...(remote || {})};
   DATA.items.forEach(i => { if (i.decision) merged[i.review_key] = i.decision; });
   Object.assign(merged, local);
-  const blob = new Blob([JSON.stringify(merged, null, 1)], {type: "application/json"});
+  return merged;
+}
+
+document.getElementById("export").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(mergedDecisions(), null, 1)],
+                        {type: "application/json"});
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
   a.download = "decisions.json";
   a.click();
   URL.revokeObjectURL(a.href);
 });
+
+// ---------- GitHub 직접 커밋 (Contents API) ----------
+const GH = { owner: "YiES00", repo: "ONSpec",
+             path: "onspec/reviews/decisions.json", branch: "main" };
+const TOKEN_KEY = "onspec-review-gh-token";   // 이 브라우저에만 저장
+
+function token() { return localStorage.getItem(TOKEN_KEY) || ""; }
+function tokenState() {
+  document.getElementById("token-state").textContent =
+    token() ? "— 저장됨 ✓" : "— 미설정";
+}
+function status(msg, cls) {
+  const el = document.getElementById("commit-status");
+  el.innerHTML = msg; el.className = "decided-note " + (cls || "");
+}
+function b64utf8(s) {
+  const bytes = new TextEncoder().encode(s);
+  let bin = "";
+  bytes.forEach(b => { bin += String.fromCharCode(b); });
+  return btoa(bin);
+}
+async function gh(method, url, body) {
+  const res = await fetch(`https://api.github.com${url}`, {
+    method,
+    headers: { "Accept": "application/vnd.github+json",
+               "Authorization": `Bearer ${token()}`,
+               "X-GitHub-Api-Version": "2022-11-28" },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  if (!res.ok && res.status !== 404) {
+    const detail = (await res.json().catch(() => ({}))).message || res.statusText;
+    throw new Error(`${res.status} ${detail}`);
+  }
+  return res.status === 404 ? null : res.json();
+}
+async function commitOnce() {
+  const base = `/repos/${GH.owner}/${GH.repo}/contents/${GH.path}`;
+  const cur = await gh("GET", `${base}?ref=${GH.branch}`);
+  let remote = {};
+  if (cur && cur.content) {
+    try {
+      remote = JSON.parse(new TextDecoder().decode(
+        Uint8Array.from(atob(cur.content.replace(/\n/g, "")), ch => ch.charCodeAt(0))));
+    } catch (e) {}
+  }
+  const merged = mergedDecisions(remote);
+  const n = Object.keys(merged).filter(k => !k.startsWith("_")).length;
+  const body = {
+    message: `리뷰 결정 ${n}건 — review.html 웹 커밋`,
+    content: b64utf8(JSON.stringify(merged, null, 1) + "\n"),
+    branch: GH.branch,
+  };
+  if (cur && cur.sha) body.sha = cur.sha;
+  return gh("PUT", base, body);
+}
+document.getElementById("commit").addEventListener("click", async () => {
+  if (!token()) {
+    document.getElementById("token-setup").open = true;
+    status("커밋하려면 먼저 아래에서 토큰을 설정하세요.", "err");
+    return;
+  }
+  if (!Object.keys(mergedDecisions()).length) {
+    status("커밋할 결정이 없습니다.", "err");
+    return;
+  }
+  const btn = document.getElementById("commit");
+  btn.disabled = true; status("커밋 중…");
+  try {
+    let r;
+    try { r = await commitOnce(); }
+    catch (e) {                      // sha 경합(409) 1회 재시도
+      if (String(e.message).startsWith("409")) r = await commitOnce();
+      else throw e;
+    }
+    const url = r && r.commit && r.commit.html_url;
+    status(`커밋 완료 ✓ ${url ? `<a href="${url}" target="_blank" rel="noopener">커밋 보기</a> · ` : ""}`
+           + "다음 일일 실행에서 등급에 반영됩니다.", "ok");
+  } catch (e) {
+    const hint = String(e.message).startsWith("401") ? " — 토큰이 유효한지 확인하세요"
+               : String(e.message).startsWith("403") ? " — 토큰의 Contents 쓰기 권한을 확인하세요" : "";
+    status(`커밋 실패: ${e.message}${hint}`, "err");
+  } finally {
+    btn.disabled = false;
+  }
+});
+document.getElementById("token-save").addEventListener("click", () => {
+  const v = document.getElementById("token-input").value.trim();
+  if (v) { localStorage.setItem(TOKEN_KEY, v);
+           document.getElementById("token-input").value = ""; }
+  tokenState(); status(v ? "토큰 저장됨 (이 브라우저에만)" : "토큰이 비어 있습니다.", v ? "ok" : "err");
+});
+document.getElementById("token-clear").addEventListener("click", () => {
+  localStorage.removeItem(TOKEN_KEY); tokenState(); status("토큰 삭제됨");
+});
+tokenState();
 
 render();
 </script>

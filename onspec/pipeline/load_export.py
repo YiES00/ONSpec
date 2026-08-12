@@ -33,7 +33,8 @@ def load_reviews() -> dict:
     if not REVIEWS_PATH.exists():
         return {}
     try:
-        return json.loads(REVIEWS_PATH.read_text(encoding="utf-8"))
+        data = json.loads(REVIEWS_PATH.read_text(encoding="utf-8"))
+        return {k: v for k, v in data.items() if not k.startswith("_")}  # _* = 메타
     except ValueError:
         return {}
 
