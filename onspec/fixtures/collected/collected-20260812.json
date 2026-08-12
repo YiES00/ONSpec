@@ -5,10 +5,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u8lite-l-kv110-u-efficiency.html",
       "title": "U8 Lite L KV110 Multi-rotor UAV Motor - 11.2kg Thrust",
-      "fetched_at": "2026-08-12T15:40:54+00:00",
+      "fetched_at": "2026-08-12T18:59:43+00:00",
       "vendor": null,
       "raw_excerpt": "U8 Lite L Efficiency Multirotor UAV Motor KV110 | KV 95 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Motor Weight (Incl. Cable) 280g Motor Dimensions Φ87.1×28.05mm Idle Current(18V) 0.7A Shaft Diameter 15mm Internal Resistance 146mΩ Configu ration 36N42P Peak Current(180s) 38A Cable Length 90mm Max Power (180S) 1790W Packing Size 130*111*50.6mm KV 110 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Motor Weight (Incl. Cable) 282g Motor Dimensions Φ87.1×28.05mm Idle Current(18V) 0.9A Shaft Diameter 15mm Internal Resistance 105mΩ Configu ration 36N42P Peak Current(180s) 45.8A Cable Length 90mm Max Power (180S) 2140W Packing Size 130*111*50.6mm",
-      "content_hash": "8e646e7228f6535f",
+      "content_hash": "0b4316665e8c620e",
       "claims": [
         {
           "category": "motor",
@@ -187,10 +187,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u3-motor-u-power.html",
       "title": "U3 KV700 Industrial UAV / Drone Motor (Max.Thrust:1.8kg)",
-      "fetched_at": "2026-08-12T15:41:04+00:00",
+      "fetched_at": "2026-08-12T18:59:53+00:00",
       "vendor": null,
       "raw_excerpt": "U3 Power Type High Efficiency UAV Motor KV700 | Internal Resistance 50mΩ Configuration 12N14P Shaft Diameter 4mm Motor Dimensions Φ41.8×30.75mm AWG 18# Cable Length 600mm Weight Including Cables 128g Weight Excluding Cables 97g No. of Cells (Lipo) 3-4S Idle Current@10v 0.5A Max Power (180S) 500W Max Continuous Current 180S 25A",
-      "content_hash": "f313737449ac565c",
+      "content_hash": "14323043025d38c4",
       "claims": [
         {
           "category": "motor",
@@ -284,10 +284,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u11-v2-motor-u-power.html",
       "title": "U11Ⅱ KV120 Industrial UAV Motor for Heavy-lift Drones",
-      "fetched_at": "2026-08-12T15:41:14+00:00",
+      "fetched_at": "2026-08-12T19:00:03+00:00",
       "vendor": null,
       "raw_excerpt": "U11Ⅱ Power Type UAV Motor KV120 | Test Item KV120 Weight (Incl. Cable) 772g Motor Dimensions Φ79.5*51.6 mm Internal Resistance 80±5mΩ Lead 14# AWG 1250mm Configuration 12N14P Shaft Diameter 15mm Rated Voltage(Lipo) 12S Idle Current(18V) 1.5A Peak Current(180s) 57.3A Max. Power 2783W",
-      "content_hash": "0f8b9a494ba0819d",
+      "content_hash": "5ea0dab0dfaba35f",
       "claims": [
         {
           "category": "motor",
@@ -379,10 +379,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u13-v2-kv65-motor-u-power.html",
       "title": "U13Ⅱ KV65 Heavy-lift UAV / Drone Motor - 28.7kg thrust",
-      "fetched_at": "2026-08-12T15:41:24+00:00",
+      "fetched_at": "2026-08-12T19:00:13+00:00",
       "vendor": null,
       "raw_excerpt": "U13Ⅱ Power Type Multirotor UAV Motor KV65 | Test Item KV130 Weight (Incl. Cable) 990g Motor Dimensions Φ100*60mm Internal Resistance 18mΩ Lead Enameled Wire 100mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 10-14S Idle Current(18V) 1.5A Peak Current(180s) 118A Max. Power 5659W Test Item KV65 Weight (Incl. Cable) 975g Motor Dimensions Φ100*60mm Internal Resistance 73mΩ Lead Enameled Wire 100mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 22-25S Idle Current(18V) 1.7A Peak Current(180s) 68A Max. Power 6720W",
-      "content_hash": "9f6d2a9a2af375bf",
+      "content_hash": "0ca54d418b2cfb6b",
       "claims": [
         {
           "category": "motor",
@@ -557,10 +557,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u15-v2-motor-u-power-kv80.html",
       "title": "U15Ⅱ KV80 Heavy-lift UAV / Drone Motor - 36kg Max.thrust",
-      "fetched_at": "2026-08-12T15:41:34+00:00",
+      "fetched_at": "2026-08-12T19:00:23+00:00",
       "vendor": null,
       "raw_excerpt": "U15II Power Type Heavy Lift Drone Motor KV80 | Test Item U15 Ⅱ KV80 Internal Resistance 17mΩ Configuration 36N42P Shaft Diameter 20mm Motor Dimensions Φ 147.5×55 mm Lead Enameled Wire Cable Length 100mm Weight Including Cables 1740g Weight Excluding Cables / No.of Cells(Lipo) 12-24S Idle Current@10v 3.8A Max Power (180S) 8580W Max Continuous Current 180S 143A Test Item U15 Ⅱ KV100 Internal Resistance 12mΩ Configuration 36N42P Shaft Diameter 20mm Motor Dimensions Φ 147.5×55 mm Lead Enameled Wire Cable Length 100mm Weight Including Cables 1740g Weight Excluding Cables / No.of Cells(Lipo) 12-24S Idle Current@10v 4.5A Max Power (180S) 9942W Max Continuous Current 180S 167A",
-      "content_hash": "69bfca5409a5c4d6",
+      "content_hash": "4549bd8d741ba280",
       "claims": [
         {
           "category": "motor",
@@ -739,10 +739,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u8-lite-kv100-u-efficiency.html",
       "title": "U8 Lite KV100 Industrial UAV Motor | 7.3kg Thrust & 1000 Hours",
-      "fetched_at": "2026-08-12T15:41:45+00:00",
+      "fetched_at": "2026-08-12T19:00:33+00:00",
       "vendor": null,
       "raw_excerpt": "U8 Lite Efficiency Type Multirotor UAV Motor KV100 | Diameter 87.1mm Configuration 36N42P Height 27.05mm Lead Spec 90mm Shaft Diameter 15mm Packing Size 130*111*50.6mm KV 85 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 243g Propeller Recommendation 28-29” Idle Current（18V） 0.5A Quadcopter（28CF） 10kg Internal Resistance 225±5mΩ Hexacopter（28CF） 15kg Peak Current（180s） 19.1A Octocopter（28CF） 20kg Max. Power（180s） 916.8W KV 100 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 238g Propeller Recommendation 27-28” Idle Current（18V） 0.7A Quadcopter（28CF） 14kg Internal Resistance 170±5mΩ Hexacopter（28CF） 21kg Peak Current（180s） 29.3A Octocopter（28CF） 28kg Max. Power（180s） 1406.4W KV 150 Rated Voltage（Lipo） 6S / 12S Motor Weight (Incl. Cable) 239g Propeller Recommendation 28-30” / 22” Idle Current（18V） 1A Quadcopter（28CF） 8kg Internal Resistance 85±5mΩ Hexacopter（28CF） 12kg Peak Current（180s） 29.7A / 26.5A Octocopter（28CF） 16kg Max. Power（180s） 712.8W / 1272W KV 190 Rated Voltage（Lipo） 6S Motor Weight (Incl. Cable) 243g Propeller Recommendation 28-29” Idle Current（18V） 1.3A Quadcopter（28CF） 12kg Internal Resistance 48±3mΩ Hexacopter（28CF） 18kg Peak Current（180s） 43.7A Octocopter（28CF） 24kg Max. Power（180s） 1048.8W",
-      "content_hash": "a106ab573bc5f6cb",
+      "content_hash": "bb209ccb1b100989",
       "claims": [
         {
           "category": "motor",
@@ -1111,10 +1111,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u8-v2-u-efficiency-kv85.html",
       "title": "U8Ⅱ KV85 Multi-rotor UAV Motor - Heavy Load IP45",
-      "fetched_at": "2026-08-12T15:41:56+00:00",
+      "fetched_at": "2026-08-12T19:00:44+00:00",
       "vendor": null,
       "raw_excerpt": "U8Ⅱ Efficiency Multirotor UAV Motor KV85 | Diameter 87.1mm Lead Spec 90mm Height 29.1mm Ingress Protection Level IP45 Shaft Diameter 15mm Packing Size 130*111*50.6mm Configuration 36N42P KV 85 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 277g Propeller Recommendation 28-29” Idle Current（18V） 0.5A Quadcopter（28CF） 10kg Internal Resistance 225±5mΩ Hexacopter（28CF） 15kg Peak Current（180s） 19.1A Octocopter（28CF） 20kg Max. Power（180s） 916.8W KV 100 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 272g Propeller Recommendation 27-28” Idle Current（18V） 0.7A Quadcopter（28CF） 14kg Internal Resistance 170±5mΩ Hexacopter（28CF） 21kg Peak Current（180s） 29.3A Octocopter（28CF） 28kg Max. Power（180s） 1406.4W KV 150 Rated Voltage（Lipo） 6S / 12S Motor Weight (Incl. Cable) 273g Propeller Recommendation 28-30” / 22” Idle Current（18V） 1A Quadcopter（28CF） 8kg Internal Resistance 85±5mΩ Hexacopter（28CF） 12kg Peak Current（180s） 29.7A / 26.5A Octocopter（28CF） 16kg Max. Power（180s） 712.8W / 1272W KV 190 Rated Voltage（Lipo） 6S Motor Weight (Incl. Cable) 277g Propeller Recommendation 28-29” Idle Current（18V） 1.3A Quadcopter（28CF） 12kg Internal Resistance 48±3mΩ Hexacopter（28CF） 18kg Peak Current（180s） 43.7A Octocopter（28CF） 24kg Max. Power（180s） 1048.8W",
-      "content_hash": "478fd5eb050b5882",
+      "content_hash": "5dcc9a8c65ba0a1d",
       "claims": [
         {
           "category": "motor",
@@ -1483,10 +1483,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u8-v2-lite-u-efficiency.html",
       "title": "U8Ⅱ Lite Multi-rotor UAV Motor for Industrial Drone",
-      "fetched_at": "2026-08-12T15:42:04+00:00",
+      "fetched_at": "2026-08-12T19:00:53+00:00",
       "vendor": null,
       "raw_excerpt": "U8ⅡLite Efficiency Type Multirotor UAV Motor KV100/KV85 | Motor Size Φ87.3*26.05mm Lead Cable 90mm Stator Anti-rust treatment; 180℃ high temperature-resisting coatings Copper Wire 220℃ high temperature resistance Configuration 36N42P Coil Insulation Test 1000V/5s Shaft Diameter IN：12mm Rotor Dynamic Balance Standard ≤15Mg Bearing Imported 6901ZZ Packing Size 130*111*50.6mm Magnet Level 180℃ high temperature resistance KV 100 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Idle Current(24V) 1.0A Internal Resistance 134-141mΩ Peak Current(180s) 31A Weight (Incl. Cable) 253g/256g net version Max Power (180S) 1450W Package Weight 420g/423g net version",
-      "content_hash": "ee6e8c721cf51a2a",
+      "content_hash": "1b2677f80fe1e05b",
       "claims": [
         {
           "category": "motor",
@@ -1573,10 +1573,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u8-2-pro-u-efficiency.html",
       "title": "U8Ⅱ PRO KV100 UAV Motor - IP56 & High Efficiency",
-      "fetched_at": "2026-08-12T15:42:14+00:00",
+      "fetched_at": "2026-08-12T19:01:03+00:00",
       "vendor": null,
       "raw_excerpt": "U8ⅡPRO Efficiency Type Multirotor UAV Motor KV100 | Motor Size Φ87.3*29.55mm Lead Cable 90mm Stator Anti-rust treatment; 180℃ high temperature-resisting coatings Copper Wire 220℃ high temperature resistance Configuration 36N42P Coil Insulation Test 1000V/5s Shaft Diameter IN：12mm Rotor Dynamic Balance Standard ≤15Mg Bearing Imported 6901ZZ IP IP56 Magnet Level 180℃ high temperature resistance Packing Size 130*111*50.6mm KV 100 Rated Voltage(Lipo) 12S(4.2V/pc) / 48-52V Idle Current(24V) 1.0A Internal Resistance 134-141mΩ Peak Current(180s) 31A Weight (Incl. Cable) 287g Max Power (180S) 1450W Package Weight 454g",
-      "content_hash": "0774891c8e73de87",
+      "content_hash": "8aaaefcc645380ef",
       "claims": [
         {
           "category": "motor",
@@ -1669,10 +1669,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u10-2-u-efficiency.html",
       "title": "U10Ⅱ KV100 Multi-rotor UAV Motor - 10.6kg Thrust & IP45",
-      "fetched_at": "2026-08-12T15:42:24+00:00",
+      "fetched_at": "2026-08-12T19:01:13+00:00",
       "vendor": null,
       "raw_excerpt": "U10Ⅱ Efficiency Multirotor UAV Motor KV100 | Diameter 98.6mm Lead Spec AWG#16 90mm Height 33.1mm Ingress Protection Level IP45 Shaft Diameter 15mm Packing Size 167*129*58.5mm Configuration 36N42P KV 100 Rated Voltage（Lipo） 12S Motor Weight (Incl. Cable) 415g Propeller Recommendation 28-30” Idle Current（18V） 1A Quadcopter（28CF） 16kg Internal Resistance 101±5mΩ Hexacopter（28CF） 24kg Peak Current（180s） 32.4A Octocopter（28CF） 32kg Max. Power（180s） 1600W",
-      "content_hash": "e33eb818cbead3d2",
+      "content_hash": "b18fcd4fc50002b7",
       "claims": [
         {
           "category": "motor",
@@ -1771,10 +1771,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/u12-v2-kv60-u-efficiency.html",
       "title": "U12Ⅱ KV60 Multi-rotor UAV Motor for Heavy-lift Drone",
-      "fetched_at": "2026-08-12T15:42:34+00:00",
+      "fetched_at": "2026-08-12T19:01:23+00:00",
       "vendor": null,
       "raw_excerpt": "U12Ⅱ Efficiency Multirotor UAV Motor KV60 | Test Item KV120 Weight (Incl. Cable) 778g Motor Dimensions Φ106.8*47.6 mm Internal Resistance 22mΩ Lead Enameled Wire 90mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 10-14S Idle Current(18V) 1.5A Peak Current(180s) 95A Max. Power 4560W Test Item KV60 Weight (Incl. Cable) 803g Motor Dimensions Φ106.8*47.6 mm Internal Resistance 75mΩ Lead Enameled Wire 90mm Configuration 36N42P Shaft Diameter 15mm Rated Voltage(Lipo) 22-25S Idle Current(18V) 1.7A Peak Current(180s) 41A Max. Power 4000W",
-      "content_hash": "5c9ea52af97bc6fa",
+      "content_hash": "183e1f7358bf15ed",
       "claims": [
         {
           "category": "motor",
@@ -1949,10 +1949,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1115-multirotor-uav-motor.html",
       "title": "MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
-      "fetched_at": "2026-08-12T15:42:44+00:00",
+      "fetched_at": "2026-08-12T19:01:33+00:00",
       "vendor": null,
       "raw_excerpt": "MN1115 KV110/KV130 | Model No. MN1115 Motor Size Φ120.5*47.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 110 Idle Current (20V) 3.5A Max Power (180s) 2800W Internal Resistance 12mΩ Rated Voltage (Lipo) 14S Peak Current 152A Max Thrust 34.3kg Motor Weight (Incl. Cable) 1040g Package Weight 1500g KV Value 130 Idle Current (20V) 2.7A Max Power (180s) 2816W Internal Resistance 16mΩ Rated Voltage (Lipo) 12S Peak Current 180A Max Thrust 33.3kg Motor Weight (Incl. Cable) 1055g Package Weight 1500g Recommended Combinations Motor MN1115 KV110 ESC M200A14S Propeller G36 x11.5 Rated Voltage (Lipo) 14S Motor MN1115 KV130 ESC M200A14S Propeller G36x11.5 Rated Voltage (Lipo) 12S",
-      "content_hash": "720a0fafc0a6a456",
+      "content_hash": "3ce6a33b96d03a3b",
       "claims": [
         {
           "category": "motor",
@@ -2173,10 +2173,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1118-multirotor-uav-motor.html",
       "title": "MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
-      "fetched_at": "2026-08-12T15:42:54+00:00",
+      "fetched_at": "2026-08-12T19:01:43+00:00",
       "vendor": null,
       "raw_excerpt": "MN1118 KV90/KV108 | Model No. MN1118 Motor Size Φ 120.5*50.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 100VWithstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 90 Idle Current (20V) 2.8A Max Power(180s) 2281W Internal Resistance 18m Ω Rated Voltage (Lipo) 14S Peak Current 163A Max Thrust 39.2kg Motor Weight (Incl. Cable) 1170g Package Weight 1600g KV Value 108 Idle Current (20V) 3.3A Max Power (180s) 2230W Internal Resistance 13m Ω Rated Voltage (Lipo) 12S Peak Current 192A Max Thrust 38.0kg Motor Weight (Incl. Cable) 1186g Package Weight 1620g Recommended Combinations Motor MN1118 KV90 ESC M200A14S Propeller VZ40 x16.1 Rated Voltage (Lipo) 14S Motor MN1118 KV108 ESC M200A14S Propeller VZ40x16.1 Rated Voltage (Lipo) 12S",
-      "content_hash": "bd7413c7501a0e93",
+      "content_hash": "81157eb627cd0f7a",
       "claims": [
         {
           "category": "motor",
@@ -2397,10 +2397,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1123-multirotor-uav-motor.html",
       "title": "MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
-      "fetched_at": "2026-08-12T15:43:04+00:00",
+      "fetched_at": "2026-08-12T19:01:53+00:00",
       "vendor": null,
       "raw_excerpt": "MN1123 KV53 | Model No. MN1123 Motor Size Φ120.5*58.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 53 Idle Current (20V) 2.0A Max Power (180s) 2400W Internal Resistance 35mΩ Rated Voltage (Lipo) 24S Peak Current 108A Max Thrust 47.5kg Motor Weight (Incl. Cable) 1425g Package Weight 1820g Recommended Combinations Motor MN1123 KV53 ESC M200A24S Propeller VZ42 x16.5 Rated Voltage (Lipo) 24S",
-      "content_hash": "71c19358e541fe08",
+      "content_hash": "57481cbd39ee185d",
       "claims": [
         {
           "category": "motor",
@@ -2515,10 +2515,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1130-multirotor-uav-motor.html",
       "title": "MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
-      "fetched_at": "2026-08-12T15:43:14+00:00",
+      "fetched_at": "2026-08-12T19:02:05+00:00",
       "vendor": null,
       "raw_excerpt": "MN1130 KV45/KV53 | Model No. MN1130 Motor Size Φ120.5*65.9mm Stator Technology Imported Silicon Steel Sheet; Anti-Rust treatment; 150℃high Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N40P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6902ZZ Output Shaft Diameter 12mm Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 45 Idle Current (20V) 2.0A Max Power (180s) 3218W Internal Resistance 38mΩ Rated Voltage (Lipo) 24S Peak Current (180s) 132A Max Thrust 57.3kg Motor Weight (Incl. Cable) 1740g Package Weight 2140g KV Value 53 Idle Current (20V) 2.4A Max Power (180s) 2926W Internal Resistance 28mΩ Rated Voltage (Lipo) 24S Peak Current 128A Max Thrust 52.0kg Motor Weight (Incl. Cable) 1742g Package Weight 2120g Recommended Combinations Motor MN1130 KV45 ESC M200A24S Propeller NS45x17.5/NS47x18 Rated Voltage (Lipo) 24S Motor MN1130 KV53 ESC M200A24S Propeller VZ40x16.1 Rated Voltage (Lipo) 24S",
-      "content_hash": "72a04d5f91da931b",
+      "content_hash": "f56d1d7d9b46477e",
       "claims": [
         {
           "category": "motor",
@@ -2739,10 +2739,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1315-multirotor-uav-motor.html",
       "title": "MN1315 90kg MTOW Agriculture Multirotor UAV Propulsion System",
-      "fetched_at": "2026-08-12T15:43:24+00:00",
+      "fetched_at": "2026-08-12T19:02:13+00:00",
       "vendor": null,
       "raw_excerpt": "MN1315 KV100 | Model No. MN1315 Motor Size Φ150*51mm Stator Technology 150℃ High Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N42P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6904ZZ Output Shaft Diameter / Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 100 Idle Current (20V) 5.7A Max Power (180s) 3300W Internal Resistance 7.5mΩ Rated Voltage (Lipo) 14S Peak Current 248A Max Thrust 50kg Motor Weight (Incl. Cable) 1780g Package Weight 2400g Recommended Combinations Motor MN1315 KV100 ESC M248A14S Propeller VZ40 x16.1 Rated Voltage (Lipo) 14S",
-      "content_hash": "7ad1414e0930256e",
+      "content_hash": "78528fce7c423039",
       "claims": [
         {
           "category": "motor",
@@ -2850,10 +2850,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1320-multirotor-uav-motor.html",
       "title": "MN1320 100kg MTOW Pro High Thrust Multirotor Drone Motor",
-      "fetched_at": "2026-08-12T15:43:34+00:00",
+      "fetched_at": "2026-08-12T19:02:23+00:00",
       "vendor": null,
       "raw_excerpt": "MN1320 KV49 | Model No. MN1320 Motor Size Φ150*56mm Stator Technology 150℃ High Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N42P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6904ZZ Output Shaft Diameter / Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 49 Idle Current (20V) 3.2A Max Power (180s) 2900W Internal Resistance 20.5mΩ Rated Voltage (Lipo) 24S Peak Current 150A Max Thrust 58kg Motor Weight (Incl. Cable) 2070g Package Weight 2640g Recommended Combinations Motor MN1320 KV49 ESC M200A24S Propeller NS45 x17.5 Rated Voltage (Lipo) 24S",
-      "content_hash": "eaff6bf672b46a0e",
+      "content_hash": "a470fb8f817c0195",
       "claims": [
         {
           "category": "motor",
@@ -2961,10 +2961,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1325-multirotor-uav-motor.html",
       "title": "MN1325 120kg MTOW Heavy Lifting Industrial Drone Motor",
-      "fetched_at": "2026-08-12T15:43:44+00:00",
+      "fetched_at": "2026-08-12T19:02:33+00:00",
       "vendor": null,
       "raw_excerpt": "MN1325 KV47 | Model No. MN1325 Motor Size Φ150*61mm Stator Technology 150℃ High Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N42P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6004ZZ Output Shaft Diameter / Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 47 Idle Current (20V) 4.0A Max Power (180s) 3400W Internal Resistance 17.5mΩ Rated Voltage (Lipo) 24S Peak Current 170A Max Thrust 68kg Motor Weight (Incl. Cable) 2425g Package Weight 2990g Recommended Combinations Motor MN1325 KV47 ESC M200A24S Propeller NS47 x18 Rated Voltage (Lipo) 24S",
-      "content_hash": "c7d2844b0fd7d8e8",
+      "content_hash": "b650926a8cf4d2de",
       "claims": [
         {
           "category": "motor",
@@ -3072,10 +3072,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn1330-multirotor-uav-motor.html",
       "title": "MN1330 140kg MTOW Heavy Duty Industrial Multirotor UAV Motor",
-      "fetched_at": "2026-08-12T15:43:58+00:00",
+      "fetched_at": "2026-08-12T19:02:43+00:00",
       "vendor": null,
       "raw_excerpt": "MN1330 KV40 | Model No. MN1330 Motor Size Φ150*65mm Stator Technology 150℃ High Temperature-Resisting Coatings Copper Wire 220℃ High Temperature Resistance Magnet Level 180℃ High Temperature Resistance Coil Insulation Test 1000V Withstand Voltage Test IP IP45 Configuration 36N42P Rotor Dynamic Balance Standard ≤30mg Bearing Imported 6004ZZ Output Shaft Diameter / Wire Specification/ Length Enameled Wire*150mm Technical Parameters KV Value 40 Idle Current (20V) 3.4A Max Power (180s) 3400W Internal Resistance 19.5mΩ Rated Voltage (Lipo) 24S Peak Current 177A Max Thrust 75kg Motor Weight (Incl. Cable) 2750g Package Weight 3300g Recommended Combinations Motor MN1330 KV40 ESC M200A24S Propeller NS52x20 Rated Voltage (Lipo) 24S",
-      "content_hash": "e22531757998428b",
+      "content_hash": "9836340690ebddfc",
       "claims": [
         {
           "category": "motor",
@@ -3183,10 +3183,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn2806-motor-antigravity-type.html",
       "title": "Antigravity MN2806 UAV Motor for Lightweight & Endurance Drone",
-      "fetched_at": "2026-08-12T15:44:06+00:00",
+      "fetched_at": "2026-08-12T19:02:53+00:00",
       "vendor": null,
       "raw_excerpt": "MN2806 Antigravity Multirotor UAVs Motor KV400/KV650 | Model No./ Kv MN2806 KV400/650 Motor Size(mm) Φ35*26 Stator Technology Anti-rust treatment;180°C high temperature-resisting coatings Configuration 12N14P Shaft Diameter(mm) IN:4 OUT:4 Bearing Imported 694ZZ Magnet Temperature Resistance Grade 150℃ Lead(mm) Enameled Wire 50mm Enamelled Wires Temperature Resistance Grade 180℃ Coil Withdraw Voltage 500V/5s Rotor Dynamic Balance Standard ≤10mg KV Value KV400 Battery (lipo)/Voltage Recommendation 4-6S（4.2V/Sl）/16.8-25.2V Idle Current（18V） 0.2A ESC Recommendation AIR40A6S Peak Current（A） 9.4A/Continuous 180s Propeller Recommendation P12X4/P13X4.4 Max. Power（W） 216W/Continuous 180s Motor Weight（g） 46g Weight (incl. cables) Internal Resistance（mΩ） 645 Package Weight（g） 110g KV Value KV650 Battery (lipo)/Voltage Recommendation 4S（4.2V/Sl）/16.8V Idle Current（18V） 0.2A ESC Recommendation AIR40A6S Peak Current（A） 12.3A/持续180s Propeller Recommendation P12X4/P13X4.4 Max. Power（W） 187W/持续180s Motor Weight（g） 46g Weight (incl. cables) Internal Resistance（mΩ） 275 Package Weight（g） 110g",
-      "content_hash": "6cacc1f0718c1fed",
+      "content_hash": "5a45ec35d0422fbc",
       "claims": [
         {
           "category": "motor",
@@ -3337,10 +3337,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn4004-kv300-motor-antigravity-type.html",
       "title": "Antigravity MN4004 KV300 UAV Motor - Ultralight & Efficient Cooling",
-      "fetched_at": "2026-08-12T15:44:16+00:00",
+      "fetched_at": "2026-08-12T19:03:03+00:00",
       "vendor": null,
       "raw_excerpt": "MN4004 Antigravity Type 4-6S UAV Motor KV300 - 2PCS/SET | Test Item 300 Weight (Incl. Cable) 53g Motor Dimensions Φ44.35×19mm Internal Resistance 452mΩ Lead 50mm Configuration 18N24P Shaft Diameter 40mm Rated Voltage(Lipo) 4-6S Idle Current(22V) 0.2A Peak Current(180s) 9A Max Power (180S) 216W Test Item 400 Weight (Incl. Cable) 53g Motor Dimensions Φ44.35×19mm Internal Resistance 359mΩ Lead 50mm Configuration 18N24P Shaft Diameter 40mm Rated Voltage(Lipo) 4-6S Idle Current(22V) 0.2A Peak Current(180s) 12A Max Power (180S) 300W",
-      "content_hash": "ef5d57d7a4caf8ff",
+      "content_hash": "85e5b250c40d64ef",
       "claims": [
         {
           "category": "motor",
@@ -3519,10 +3519,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn4006-kv380-motor-antigravity-type.html",
       "title": "Antigravity MN4006 KV380 UAV Motor - Ultralight & Efficient Cooling",
-      "fetched_at": "2026-08-12T15:44:26+00:00",
+      "fetched_at": "2026-08-12T19:03:13+00:00",
       "vendor": null,
       "raw_excerpt": "MN4006 Antigravity Type 4-6S UAV Motor KV380 2PCS/SET | Test Item KV380 Weight (Incl. Cable) 68g Motor Dimensions Φ44.35×21mm Internal Resistance 194mΩ Lead 50mm Configuration 18N24P Shaft Diameter 40mm Rated Voltage(Lipo) 4-6S Idle Current(22V) 0.3A Peak Current(180s) 16A Max Power (180S) 380W",
-      "content_hash": "ed19708c90a820fa",
+      "content_hash": "e43af19639579167",
       "claims": [
         {
           "category": "motor",
@@ -3616,10 +3616,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn4006-EVO-kv380-motor-antigravity-type.html",
       "title": "Antigravity MN4006 EVO KV380 Ultralight UAV / Drone Motor",
-      "fetched_at": "2026-08-12T15:44:36+00:00",
+      "fetched_at": "2026-08-12T19:03:23+00:00",
       "vendor": null,
       "raw_excerpt": "MN4006 EVO Antigravity Type UAV Motor KV380 2PCS/SET | Motor Size Φ44.1*29.3mm Magnet Level 150℃ high temperature resistance Stator Anti-rust treatment; 180℃ high temperature-resisting coatings Lead Enameled Wire 50mm Configuration 18N24P Copper Wire 240℃ high temperature resistance Shaft Diameter IN：4mm，OUT：4mm Coil Insulation Test 500V Bearing Imported 694ZZ Package Size 113*89*40mm KV 380 Rated Voltage (LiPo) 6S Idle Current（10V） 0.7A Internal Resistance 159mΩ Peak Current（180s） 18A Weight (Incl. Cable) 73g Max. Power（180s） 300W Package Weight 235g",
-      "content_hash": "3124e9cf4dabee7d",
+      "content_hash": "2dc629a34e14b544",
       "claims": [
         {
           "category": "motor",
@@ -3692,10 +3692,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn5006-kv300-motor-antigravity-type.html",
       "title": "Antigravity MN5006 KV300 UAV Motor for Longer Flight Time",
-      "fetched_at": "2026-08-12T15:44:48+00:00",
+      "fetched_at": "2026-08-12T19:03:33+00:00",
       "vendor": null,
       "raw_excerpt": "MN5006 Antigravity Type 4-6S UAV Motor KV300 | Motor Size Φ55.6*30mm Copper Wire 180℃ high temperature resistance: Level H Stator Imported silicon steel sheet; Anti-rust treatment; 180 ℃ high temperature-resisting coatings Coil Insulation Test 500V Configuration 24N28P Centrifugal Cooling Design YES Shaft Diameter IN：6mm Rotor Dynamic Balance Standard ≤15mg Bearing Imported 696ZZ Motor Dynamic Balance Standard ≤10mg Magnet Level 150℃ high temperature resistance: Level E Packing Size 106*81*35mm Lead Cable 80mm KV 300 Rated Voltage（Lipo） 4-6S Idle Current（22V） 0.6A ESC Recommendation AIR 40A Peak Current（180s） 20A Propeller Recommendation P17-18” Max. Power（180s） 500W Motor Weight（Incl. Cable） 108g Internal Resistance 125mΩ Package Weight 170g KV 450 Rated Voltage（Lipo） 4-6S Idle Current（22V） 0.9A ESC Recommendation AIR 40A Peak Current（180s） 26A Propeller Recommendation P14-18” Max. Power（180s） 650W Motor Weight（Incl. Cable） 106g Internal Resistance 60mΩ Package Weight 170g",
-      "content_hash": "4126e6ead31bed37",
+      "content_hash": "4f944a449ac7d615",
       "claims": [
         {
           "category": "motor",
@@ -3872,10 +3872,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn5008-kv170-motor-antigravity-type.html",
       "title": "Antigravity MN5008 KV170 UAV Motor - Ultralight & Longer Flight Time",
-      "fetched_at": "2026-08-12T15:44:56+00:00",
+      "fetched_at": "2026-08-12T19:03:43+00:00",
       "vendor": null,
       "raw_excerpt": "MN5008 Antigravity Type 6-12S UAV Motor KV170 | Motor Size Φ55.6*32mm Copper Wire 180℃ high temperature resistance: Level H Stator Imported silicon steel sheet; Anti-rust treatment; 180 ℃ high temperature-resisting coatings Coil Insulation Test 500V Configuration 24N28P Centrifugal Cooling Design YES Shaft Diameter IN：6mm Rotor Dynamic Balance Standard ≤15mg Bearing Imported 696ZZ Motor Dynamic Balance Standard ≤10mg Magnet Level 150 ℃ high temperature resistance: Level E Packing Size 106*81*35mm Lead Cable 80mm KV 170 Rated Voltage（Lipo） 6-12S Idle Current（22V） 0.4A ESC Recommendation FLAME 60A 12S Peak Current（180s） 15A Propeller Recommendation P17-18” Max. Power（180s） 720W Motor Weight（Incl. Cable） 128g Internal Resistance 270mΩ Package Weight 190g KV 340 Rated Voltage（Lipo） 6S Idle Current（22V） 0.9A ESC Recommendation AIR 40A Peak Current（180s） 35A Propeller Recommendation P17-18” Max. Power（180s） 760W Motor Weight（Incl. Cable） 135g Internal Resistance 55mΩ Package Weight 200g KV 400 Rated Voltage（Lipo） 6S Idle Current（22V） 1.1A ESC Recommendation AIR 40A Peak Current（180s） 35A Propeller Recommendation P15-17” Max. Power（180s） 800W Motor Weight（Incl. Cable） 132g Internal Resistance 50mΩ Package Weight 200g",
-      "content_hash": "e9f0b6f99ccb85a1",
+      "content_hash": "387e0ab149b52134",
       "claims": [
         {
           "category": "motor",
@@ -4136,10 +4136,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn7005-kv115-motor-antigravity-type.html",
       "title": "Antigravity MN7005 UAV Motor - Ultralight & High Performance",
-      "fetched_at": "2026-08-12T15:45:07+00:00",
+      "fetched_at": "2026-08-12T19:03:53+00:00",
       "vendor": null,
       "raw_excerpt": "MN7005 Antigravity Type 6-12S UAV Motor KV115 | Motor Size Φ79*21mm Copper Wire 180 ℃ high temperature resistance: Level H Stator Imported silicon steel sheet; Anti-rust treatment; 180 ℃ high temperature-resisting coatings Coil Insulation Test 500V Configuration 24N28P Centrifugal Cooling Design YES Shaft Diameter IN ： 15mm Rotor Dynamic Balance Standard ≤ 15mg Bearing Imported 6802ZZ Motor Dynamic Balance Standard ≤ 10mg Magnet Level 150 ℃ high temperature resistance: Level E Packing Size 144*114.5*35mm Lead Cable 60mm KV 115 Internal Resistance 288mΩ Idle Current（22V） 0.4A Rated Voltage ( Lipo ) 6-12S Peak Current（180s） 15A Motor Weight (Incl. Cable) 188g Max. Power（180s） 750W Package Weight 320g KV 230 Internal Resistance 71mΩ Idle Current（22V） 0.9A Rated Voltage ( Lipo ) 6S Peak Current（180s） 28A Motor Weight (Incl. Cable) 188g Max. Power（180s） 700W Package Weight 320g",
-      "content_hash": "5bb492d5d3540efe",
+      "content_hash": "f5ae66694496dadc",
       "claims": [
         {
           "category": "motor",
@@ -4304,10 +4304,10 @@
       "tier": "S1_manufacturer",
       "origin_url": "https://store.tmotor.com/product/mn8012-motor-antigravity-type.html",
       "title": "Antigravity MN8012 KV100 UAV Motor - Ultralight & Endurance",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": null,
       "raw_excerpt": "MN8012 Antigravity Multirotor VTOL UAV Motor KV100 | Motor Size Φ87.8*29mm Magnet Level 180 ℃ high temperature resistance Stator Anti-rust treatment; 180 ℃ high temperature-resisting coatings Lead 16AWG*90mm Configuration 36N42P Copper Wire 220℃ high temperature resistance Shaft Diameter IN ： 12mm Coil Insulation Test 1000V/5s Bearing Imported 6901ZZ Rotor Dynamic Balance Standard ≤15Mg KV 100 Rated Voltage(Lipo) 12S Idle Current（24V） 1.0A Internal Resistance 85mΩ Peak Current（180s） 40A Weight (Incl. Cable) 351g Max. Power （180s） 1873W Package Weight 558g",
-      "content_hash": "63d9939bf791e838",
+      "content_hash": "9d4f52ec10b91efe",
       "claims": [
         {
           "category": "motor",
@@ -4394,7 +4394,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1330-multirotor-uav-motor",
       "title": "T-Motor MN1330 140kg MTOW Heavy Duty Industrial Multirotor UAV Motor",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -4495,7 +4495,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1325-multirotor-uav-motor",
       "title": "T-Motor MN1325 120kg MTOW Heavy Lifting Industrial Drone Motor",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -4596,7 +4596,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1320-multirotor-uav-motor",
       "title": "T-Motor MN1320 100kg MTOW Pro High Thrust Multirotor Drone Motor",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -4697,7 +4697,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1315-multirotor-uav-motor",
       "title": "T-Motor MN1315 90kg MTOW Agriculture Multirotor UAV Propulsion System",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -4798,7 +4798,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1130-multirotor-uav-motor",
       "title": "T-Motor MN1130 100kg MTOW Industrial Heavy Payload Drone Motor",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -4984,7 +4984,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1123-multirotor-uav-motor",
       "title": "T-Motor MN1123 80kg MTOW Industrial Heavy Duty Waterproof Motor",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -5085,7 +5085,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1118-multirotor-uav-motor",
       "title": "T-Motor MN1118 70kg MTOW Industrial Heavy Duty Multirotor UAV Motor",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -5217,7 +5217,7 @@
       "tier": "S2_vendor",
       "origin_url": "https://druav.com/products/mn1115-multirotor-uav-motor",
       "title": "T-Motor MN1115 60kg MTOW Heavy-Payload Multirotor UAV Motor",
-      "fetched_at": "2026-08-12T15:45:16+00:00",
+      "fetched_at": "2026-08-12T19:04:03+00:00",
       "vendor": {
         "name": "DrUAV",
         "country": null,
@@ -5403,10 +5403,10 @@
       "tier": "S3_benchmark",
       "origin_url": "https://database.tytorobotics.com/motors/697/t-motor-u15-v2",
       "title": "T-Motor U15 V2",
-      "fetched_at": "2026-08-12T15:45:27+00:00",
+      "fetched_at": "2026-08-12T19:04:15+00:00",
       "vendor": null,
       "raw_excerpt": "component-attributes :edit-component=\"false\" component-type=\"motor\" :measures='{\"shaft_diameter\":{\"name\":\"shaft diameter\",\"value\":null,\"title\":\"shaft diameter (mm)\",\"unit\":\"mm\",\"symbol\":\"mm\",\"display\":\"millimeters\"},\"mag_poles\":{\"name\":\"magnetic poles\",\"value\":42,\"title\":\"magnetic poles\",\"unit\":\"pole\",\"symbol\":null,\"display\":null},\"kv_value\":{\"name\":\"Kv value\",\"value\":80,\"title\":\"Kv value (rpm\\/v)\",\"unit\":\"kv\",\"symbol\":\"rpm\\/v\",\"display\":\"Kv constant\"},\"weight\":{\"name\":\"weight\",\"value\":1780,\"title\":\"weight (g)\",\"unit\":\"g\",\"symbol\":\"g\",\"display\":\"grams\"}}' > Test data for this motor Comments There are no comments yet. Authentication required You must log in to post a comment. Log in This database is a service offered by Tyto Robotics Inc. About Tyto Robotics / Terms of service Copyright © 2026 Contact database team Tyto Robotics sales Customer support <script type=\"module\" src=\"https://static.cloudflareinsights.com/beacon",
-      "content_hash": "d5793d99222bf5c3",
+      "content_hash": "3ac0cf60da9f4264",
       "claims": [
         {
           "category": "motor",
@@ -5455,10 +5455,10 @@
       "tier": "S3_benchmark",
       "origin_url": "https://database.tytorobotics.com/motors/zyx/t-motor-mn4006",
       "title": "T-Motor MN4006",
-      "fetched_at": "2026-08-12T15:45:27+00:00",
+      "fetched_at": "2026-08-12T19:04:15+00:00",
       "vendor": null,
       "raw_excerpt": "component-attributes :edit-component=\"false\" component-type=\"motor\" :measures='{\"shaft_diameter\":{\"name\":\"shaft diameter\",\"value\":4,\"title\":\"shaft diameter (mm)\",\"unit\":\"mm\",\"symbol\":\"mm\",\"display\":\"millimeters\"},\"mag_poles\":{\"name\":\"magnetic poles\",\"value\":24,\"title\":\"magnetic poles\",\"unit\":\"pole\",\"symbol\":null,\"display\":null},\"kv_value\":{\"name\":\"Kv value\",\"value\":380,\"title\":\"Kv value (rpm\\/v)\",\"unit\":\"kv\",\"symbol\":\"rpm\\/v\",\"display\":\"Kv constant\"},\"weight\":{\"name\":\"weight\",\"value\":68,\"title\":\"weight (g)\",\"unit\":\"g\",\"symbol\":\"g\",\"display\":\"grams\"}}' > Where to buy Added by jmmoon13 3 years ago: https://store.tmotor.com/goods.php?id=440 Test data for this motor Comments There are no comments yet. Authentication required You must log in to post a comment. Log in <nav",
-      "content_hash": "20dd2652707dbed5",
+      "content_hash": "c399648a955e323a",
       "claims": [
         {
           "category": "motor",
@@ -5525,10 +5525,10 @@
       "tier": "S3_benchmark",
       "origin_url": "https://database.tytorobotics.com/motors/6j4/t-motor-mn2806",
       "title": "T-Motor MN2806",
-      "fetched_at": "2026-08-12T15:45:27+00:00",
+      "fetched_at": "2026-08-12T19:04:15+00:00",
       "vendor": null,
       "raw_excerpt": "component-attributes :edit-component=\"false\" component-type=\"motor\" :measures='{\"shaft_diameter\":{\"name\":\"shaft diameter\",\"value\":4,\"title\":\"shaft diameter (mm)\",\"unit\":\"mm\",\"symbol\":\"mm\",\"display\":\"millimeters\"},\"mag_poles\":{\"name\":\"magnetic poles\",\"value\":14,\"title\":\"magnetic poles\",\"unit\":\"pole\",\"symbol\":null,\"display\":null},\"kv_value\":{\"name\":\"Kv value\",\"value\":650,\"title\":\"Kv value (rpm\\/v)\",\"unit\":\"kv\",\"symbol\":\"rpm\\/v\",\"display\":\"Kv constant\"},\"weight\":{\"name\":\"weight\",\"value\":46,\"title\":\"weight (g)\",\"unit\":\"g\",\"symbol\":\"g\",\"display\":\"grams\"}}' > Where to buy Added by jmmoon13 3 years ago: https://store.tmotor.com/goods.php?id=1150 Test data for this motor Comments There are no comments yet. Authentication required You must log in to post a comment. Log in <n",
-      "content_hash": "0e23df9822bb866f",
+      "content_hash": "5697566cc7a7e0d6",
       "claims": [
         {
           "category": "motor",
