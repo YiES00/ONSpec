@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from db import init_db, ROOT
 from ingest import ingest_snapshots
 from verify import run_verification
-from load_export import load_canonical_specs, export_site_data
+from load_export import load_canonical_specs, export_site_data, export_review_data
 
 
 def main() -> int:
@@ -72,9 +72,11 @@ def main() -> int:
     g = load_canonical_specs(conn)
     print(f"      등급 분포  A:{g['A']}  B:{g['B']}  C:{g['C']}  D:{g['D']}")
 
-    print("[5/5] 내보내기 — site/data.json 생성")
+    print("[5/5] 내보내기 — site/data.json + 리뷰 큐 생성")
     s = export_site_data(conn, ROOT / "site" / "data.json")
     print(f"      부품 {s['components']} · 사양행 {s['spec_rows']} · 출처 {s['sources']}")
+    rq = export_review_data(conn, ROOT / "site" / "review-data.json")
+    print(f"      리뷰 큐 {rq['total']}건 (결정 완료 {rq['decided']}건)")
     print("완료. 다음: python3 ../site/generate.py 로 정적 사이트 빌드")
     return 0
 

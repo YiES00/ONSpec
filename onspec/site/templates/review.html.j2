@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ONSPEC 리뷰 큐 — 플래그 사람 리뷰</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEFF1; --panel:#FFFFFF; --panel-2:#F6F8F9;
+  --ink:#17242B; --ink-soft:#51646E; --ink-faint:#7E8E97;
+  --line:#C7CFD4; --line-soft:#DDE3E6;
+  --accent:#CF4E0A; --accent-ink:#FFFFFF;
+  --gA:#1C7C43; --gB:#1D5FA8; --gC:#B27400; --gD:#C0392B;
+  --gA-bg:#E2F1E8; --gB-bg:#E4EDF8; --gC-bg:#F7EEDA; --gD-bg:#F8E4E1;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'IBM Plex Sans KR','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  --disp:'Chakra Petch',var(--mono);
+  --r:3px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:14.5px;line-height:1.55;}
+a{color:var(--gB);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:2px solid var(--ink);background:var(--panel)}
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;
+  padding:20px 0 14px;flex-wrap:wrap}
+.brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.brand .logo{font-family:var(--disp);font-weight:700;font-size:26px;letter-spacing:.04em}
+.brand .logo .proof{color:var(--accent)}
+.brand .sub{font-size:13px;color:var(--ink-soft)}
+.backlink{font-family:var(--mono);font-size:12.5px}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  border:1px solid var(--ink);border-radius:var(--r);overflow:hidden;
+  margin:16px 0;background:var(--panel)}
+.gauge{padding:10px 14px;border-right:1px dashed var(--line)}
+.gauge:last-child{border-right:none}
+.gauge .lab{font-size:11px;letter-spacing:.08em;color:var(--ink-faint);
+  text-transform:uppercase;font-family:var(--mono)}
+.gauge .val{font-family:var(--disp);font-weight:700;font-size:24px}
+main{padding:4px 0 60px}
+.howto{font-size:12.5px;color:var(--ink-soft);border:1px solid var(--line);
+  border-left:3px solid var(--gB);background:var(--panel-2);padding:8px 12px;
+  margin:0 0 14px;font-family:var(--mono)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.filters button{appearance:none;border:1px solid var(--line);background:var(--panel-2);
+  color:var(--ink-soft);font:inherit;font-size:12.5px;padding:5px 12px;cursor:pointer;
+  border-radius:var(--r);font-family:var(--mono)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.card{background:var(--panel);border:1px solid var(--ink);border-radius:var(--r);
+  margin-bottom:16px;overflow:hidden}
+.card.decided{opacity:.72}
+.card-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:10px 14px;border-bottom:1px solid var(--line-soft);background:var(--panel-2)}
+.chip{font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 8px;
+  border-radius:2px;border:1px solid transparent}
+.chip.error,.chip.flag{background:var(--gD-bg);color:var(--gD);border-color:var(--gD)}
+.chip.caution{background:var(--gC-bg);color:var(--gC);border-color:var(--gC)}
+.chip.rule{background:var(--panel);color:var(--ink-soft);border-color:var(--line)}
+.chip.done{background:var(--gA-bg);color:var(--gA);border-color:var(--gA)}
+.comp{font-weight:700}
+.comp small{font-weight:500;color:var(--ink-soft)}
+.card-body{padding:12px 14px}
+.summary{font-size:14px;margin:0 0 10px}
+table.claims{width:100%;border-collapse:collapse;font-size:13px;margin:0 0 6px}
+table.claims th{font-family:var(--mono);font-size:11px;text-transform:uppercase;
+  letter-spacing:.06em;color:var(--ink-faint);text-align:left;padding:4px 8px;
+  border-bottom:1px solid var(--line)}
+table.claims td{padding:6px 8px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.tier{font-family:var(--mono);font-size:11px;padding:1px 6px;border:1px solid var(--line);
+  border-radius:2px;color:var(--ink-soft);white-space:nowrap}
+.val-num{font-family:var(--mono);font-weight:600;white-space:nowrap}
+.quote{color:var(--ink-soft);font-size:12.5px}
+.quote::before{content:"“"}.quote::after{content:"”"}
+details.snap{margin:6px 0}
+details.snap summary{cursor:pointer;font-family:var(--mono);font-size:12px;color:var(--gB)}
+details.snap pre{white-space:pre-wrap;background:var(--panel-2);border:1px solid var(--line-soft);
+  padding:8px 10px;font-size:12px;font-family:var(--mono);color:var(--ink-soft);
+  max-height:220px;overflow:auto;margin:6px 0 0}
+.decide{display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+  border-top:1px dashed var(--line);margin-top:8px;padding-top:10px}
+.decide button{appearance:none;font:inherit;font-size:13px;font-weight:600;
+  padding:6px 14px;cursor:pointer;border-radius:var(--r);border:1px solid var(--ink)}
+.decide .b-dismiss{background:var(--gA-bg);color:var(--gA);border-color:var(--gA)}
+.decide .b-confirm{background:var(--gD-bg);color:var(--gD);border-color:var(--gD)}
+.decide .b-clear{background:var(--panel-2);color:var(--ink-soft);border-color:var(--line)}
+.decide button[aria-pressed="true"]{outline:3px solid currentColor;outline-offset:-1px}
+.decide input{flex:1;min-width:180px;font:inherit;font-size:13px;padding:6px 8px;
+  border:1px solid var(--line);border-radius:var(--r)}
+.decided-note{font-size:12px;color:var(--ink-soft);font-family:var(--mono)}
+.exportbar{position:sticky;bottom:0;background:var(--panel);border-top:2px solid var(--ink);
+  padding:10px 0;margin-top:20px}
+.exportbar .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.exportbar .cnt{font-family:var(--mono);font-size:13px}
+.exportbar button{appearance:none;font:inherit;font-weight:700;background:var(--accent);
+  color:var(--accent-ink);border:1px solid var(--ink);padding:8px 18px;cursor:pointer;
+  border-radius:var(--r)}
+.empty{text-align:center;color:var(--ink-soft);padding:40px 0;font-family:var(--mono)}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <div class="masthead">
+    <div class="brand">
+      <span class="logo">ONSPEC<span class="proof">/리뷰 큐</span></span>
+      <span class="sub">플래그 사람 리뷰 (§5.5) — 원문 스냅샷 · 근거 · 판정 사유 한 화면</span>
+    </div>
+    <a class="backlink" href="index.html">← 비교 테이블로</a>
+  </div>
+</div></header>
+
+<main><div class="wrap">
+  <div class="strip" id="stats"></div>
+  <p class="howto">결정(오탐 해제/확인)은 이 브라우저에 저장됩니다. 검토 후 <b>결정 JSON 내려받기</b> →
+  저장소의 <b>reviews/decisions.json</b> 으로 커밋하면 다음 일일 파이프라인 실행에서 등급에 반영됩니다.</p>
+  <div class="filters" id="filters"></div>
+  <div id="queue"></div>
+</div></main>
+
+<div class="exportbar"><div class="wrap">
+  <span class="cnt" id="progress"></span>
+  <button id="export">결정 JSON 내려받기</button>
+  <span class="decided-note">→ reviews/decisions.json 로 커밋</span>
+</div></div>
+
+<script type="application/json" id="review-data">{{ review_json }}</script>
+<script>
+"use strict";
+const DATA = JSON.parse(document.getElementById("review-data").textContent);
+const LS_KEY = "onspec-review-decisions";
+const TIER_KO = {S1_manufacturer:"S1 제조사", S2_vendor:"S2 판매처",
+                 S3_benchmark:"S3 실측", S4_certification:"S4 인증"};
+const VERDICT_KO = {error:"오류", flag:"플래그", caution:"주의"};
+
+let local = {};
+try { local = JSON.parse(localStorage.getItem(LS_KEY) || "{}"); } catch (e) {}
+
+// 서버(커밋된 decisions.json) 결정 + 로컬 결정 병합 — 로컬이 우선
+function decisionOf(item) {
+  return local[item.review_key] || item.decision || null;
+}
+function saveLocal() { localStorage.setItem(LS_KEY, JSON.stringify(local)); }
+
+let filter = "undecided";
+const FILTERS = [["undecided","미결정"], ["all","전체"], ["error","오류"],
+                 ["flag","플래그"], ["caution","주의"]];
+
+function esc(s) {
+  return String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+                        .replace(/"/g,"&quot;");
+}
+function fmtVal(c) {
+  if (c.value !== null && c.value !== undefined) {
+    let s = Number(c.value).toLocaleString("ko-KR");
+    if (c.unit) s += " " + c.unit;
+    if (c.unit_original && c.unit_original !== c.unit)
+      s += ` (원본 ${c.value_original} ${c.unit_original})`;
+    return s;
+  }
+  return c.value_text ?? "—";
+}
+
+function renderStats() {
+  const s = DATA.stats;
+  const decided = DATA.items.filter(decisionOf).length;
+  document.getElementById("stats").innerHTML = `
+    <div class="gauge"><div class="lab">리뷰 대상</div><div class="val">${s.total}</div></div>
+    <div class="gauge"><div class="lab">오류/플래그</div>
+      <div class="val">${s.by_verdict.error + s.by_verdict.flag}</div></div>
+    <div class="gauge"><div class="lab">주의</div><div class="val">${s.by_verdict.caution}</div></div>
+    <div class="gauge"><div class="lab">결정 완료</div><div class="val">${decided}</div></div>`;
+  document.getElementById("progress").textContent =
+    `결정 ${decided} / ${s.total}`;
+}
+
+function renderFilters() {
+  document.getElementById("filters").innerHTML = FILTERS.map(([k, label]) => {
+    const n = k === "all" ? DATA.items.length
+          : k === "undecided" ? DATA.items.filter(i => !decisionOf(i)).length
+          : DATA.items.filter(i => i.verdict === k).length;
+    return `<button aria-pressed="${filter === k}" data-f="${k}">${label} ${n}</button>`;
+  }).join("");
+  document.querySelectorAll("#filters button").forEach(b =>
+    b.addEventListener("click", () => { filter = b.dataset.f; render(); }));
+}
+
+function claimRow(c) {
+  const src = `<span class="tier">${TIER_KO[c.tier] || c.tier}</span> ` +
+    `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.vendor || c.source_title || c.url)}</a>`;
+  const snap = c.snapshot ? `
+    <details class="snap"><summary>원문 스냅샷 발췌 (${esc(c.snapshot.fetched_at || "")})</summary>
+    <pre>${esc(c.snapshot.raw_excerpt)}</pre></details>` : "";
+  const conds = Object.entries(c.conditions || {})
+    .filter(([k]) => !k.startsWith("_"))
+    .map(([k, v]) => `${k}: ${typeof v === "object" ? JSON.stringify(v) : v}`).join(" · ");
+  return `<tr>
+    <td>${src}</td>
+    <td><div class="val-num">${esc(c.name_ko)} = ${esc(fmtVal(c))}</div>
+        ${conds ? `<div class="quote" style="font-style:normal">${esc(conds)}</div>` : ""}</td>
+    <td><span class="quote">${esc(c.quote)}</span>${snap}</td></tr>`;
+}
+
+function card(item) {
+  const d = decisionOf(item);
+  const comp = item.component;
+  return `<article class="card ${d ? "decided" : ""}" data-key="${item.review_key}">
+    <div class="card-head">
+      <span class="chip ${item.verdict}">${VERDICT_KO[item.verdict] || item.verdict}</span>
+      <span class="chip rule">${esc(item.rule_id)}</span>
+      <span class="comp">${esc(comp.manufacturer)} ${esc(comp.model)}
+        <small>${esc(comp.variant || "")} · ${esc(comp.category)}</small></span>
+      ${d ? `<span class="chip done">${d.decision === "dismiss" ? "오탐 해제" : "확인 유지"}</span>` : ""}
+    </div>
+    <div class="card-body">
+      <p class="summary">${esc(item.summary)}</p>
+      ${item.claims.length ? `<table class="claims">
+        <thead><tr><th>출처</th><th>주장값</th><th>근거 인용 · 원문</th></tr></thead>
+        <tbody>${item.claims.map(claimRow).join("")}</tbody></table>` : ""}
+      <div class="decide">
+        <button class="b-dismiss" data-d="dismiss" aria-pressed="${d?.decision === "dismiss"}">오탐 — 강등 해제</button>
+        <button class="b-confirm" data-d="confirm" aria-pressed="${d?.decision === "confirm"}">확인 — 강등 유지</button>
+        <button class="b-clear" data-d="">결정 취소</button>
+        <input type="text" placeholder="판단 메모 (선택)" value="${esc(d?.note || "")}">
+      </div>
+      ${d?.reviewed_at ? `<div class="decided-note">결정: ${esc(d.reviewed_at)}</div>` : ""}
+    </div></article>`;
+}
+
+function render() {
+  renderStats(); renderFilters();
+  const items = DATA.items.filter(i =>
+    filter === "all" ? true :
+    filter === "undecided" ? !decisionOf(i) : i.verdict === filter);
+  const q = document.getElementById("queue");
+  q.innerHTML = items.length ? items.map(card).join("")
+    : `<p class="empty">해당 항목 없음 — 큐가 비었습니다 ✓</p>`;
+  q.querySelectorAll(".card").forEach(el => {
+    const key = el.dataset.key;
+    const input = el.querySelector("input");
+    el.querySelectorAll(".decide button").forEach(b =>
+      b.addEventListener("click", () => {
+        if (!b.dataset.d) { delete local[key]; }
+        else {
+          local[key] = { decision: b.dataset.d, note: input.value.trim(),
+                         reviewed_at: new Date().toISOString().slice(0, 19) + "Z" };
+        }
+        saveLocal(); render();
+      }));
+    input.addEventListener("change", () => {
+      if (local[key]) { local[key].note = input.value.trim(); saveLocal(); }
+    });
+  });
+}
+
+document.getElementById("export").addEventListener("click", () => {
+  // 서버 반영분 + 로컬 결정 병합본을 decisions.json 형식으로 내려받기
+  const merged = {};
+  DATA.items.forEach(i => { if (i.decision) merged[i.review_key] = i.decision; });
+  Object.assign(merged, local);
+  const blob = new Blob([JSON.stringify(merged, null, 1)], {type: "application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "decisions.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+render();
+</script>
+</body>
+</html>

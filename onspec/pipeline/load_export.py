@@ -11,12 +11,31 @@
 값·검증 로그·가격·생산국 판정을 포함한다.
 """
 from __future__ import annotations
+import hashlib
 import json
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+REVIEWS_PATH = ROOT / "reviews" / "decisions.json"
+
+
+def review_key(model: str, variant: str | None, rule_id: str,
+               spec_keys: list[str], summary: str) -> str:
+    """리뷰 결정의 안정 키 — DB 재구축 간에도 동일 판정을 추적한다."""
+    raw = f"{model}|{variant or ''}|{rule_id}|{','.join(sorted(spec_keys))}|{summary}"
+    return hashlib.sha256(raw.encode()).hexdigest()[:16]
+
+
+def load_reviews() -> dict:
+    """사람 리뷰 결정(reviews/decisions.json). {key: {decision, note, reviewed_at}}"""
+    if not REVIEWS_PATH.exists():
+        return {}
+    try:
+        return json.loads(REVIEWS_PATH.read_text(encoding="utf-8"))
+    except ValueError:
+        return {}
 
 BASE_GRADE = {"S1_manufacturer": "B", "S4_certification": "B",
               "S3_benchmark": "A", "S2_vendor": "C"}
@@ -42,13 +61,19 @@ def load_canonical_specs(conn: sqlite3.Connection) -> dict:
                      conn.execute("SELECT id, category_id, spec_key FROM spec_definitions")}
     grade_counts = {"A": 0, "B": 0, "C": 0, "D": 0}
 
-    for comp in conn.execute("SELECT id, category_id FROM components").fetchall():
+    reviews = load_reviews()
+    for comp in conn.execute(
+            "SELECT id, category_id, model_name, variant FROM components").fetchall():
         logs = [dict(r) for r in conn.execute(
             "SELECT * FROM verification_log WHERE component_id=? AND rule_id != 'R-ORIGIN'",
             (comp["id"],))]
         logs_by_key: dict[str, list] = {}
         for lg in logs:
             det = json.loads(lg["detail"])
+            # 사람 리뷰(§5.5) 반영: dismiss=오탐(강등 해제) / confirm=확인(강등 유지)
+            rk = review_key(comp["model_name"], comp["variant"], lg["rule_id"],
+                            det.get("spec_keys", []), det.get("summary", ""))
+            lg["review"] = reviews.get(rk)
             for k in det.get("spec_keys", []):
                 logs_by_key.setdefault(k, []).append({**lg, "det": det})
 
@@ -67,12 +92,20 @@ def load_canonical_specs(conn: sqlite3.Connection) -> dict:
             grade = BASE_GRADE[canon["tier"]]
             notes = []
             for lg in logs_by_key.get(key, []):
+                review = lg.get("review")
+                if review and review.get("decision") == "dismiss" \
+                   and lg["verdict"] in ("flag", "error", "caution"):
+                    notes.append(f"사람 리뷰로 해제됨({review.get('note') or '오탐'}): "
+                                 f"{lg['det']['summary']}")
+                    continue                     # 강등하지 않음
                 if lg["verdict"] in ("flag", "error"):
                     grade = "D"
-                    notes.append(lg["det"]["summary"])
+                    notes.append(lg["det"]["summary"]
+                                 + (" · 사람 리뷰 확인됨" if review else ""))
                 elif lg["verdict"] == "caution":
                     grade = _worst(grade, "C")
-                    notes.append(lg["det"]["summary"])
+                    notes.append(lg["det"]["summary"]
+                                 + (" · 사람 리뷰 확인됨" if review else ""))
                 elif lg["rule_id"] == "R-X3" and lg["verdict"] == "pass":
                     notes.append(lg["det"]["summary"])   # A등급 근거를 사이트에 노출
             conn.execute(
@@ -252,6 +285,97 @@ def export_site_data(conn: sqlite3.Connection, out_path: Path) -> dict:
         },
         "categories": categories,
         "components": components,
+    }
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    return data["stats"]
+
+
+def export_review_data(conn: sqlite3.Connection, out_path: Path) -> dict:
+    """리뷰 큐 데이터(§5.5) — flag/error/caution 판정을 원문 근거와 함께 내보낸다.
+
+    각 항목: 판정 요약·규칙·심각도, 영향 사양의 모든 출처 주장값(인용·URL),
+    원문 스냅샷 발췌(아카이브 역참조), 안정 리뷰 키, 기존 리뷰 결정.
+    """
+    reviews = load_reviews()
+    defs = {r["id"]: dict(r) for r in conn.execute("SELECT * FROM spec_definitions")}
+    archives: dict[str, dict] = {}       # 아카이브 파일 캐시: path → {snapshot_id: snap}
+
+    def snapshot_excerpt(snapshot_uri: str | None) -> dict | None:
+        if not snapshot_uri or "#" not in snapshot_uri:
+            return None
+        path, snap_id = snapshot_uri.split("#", 1)
+        if path not in archives:
+            f = ROOT / path
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+                archives[path] = {s["snapshot_id"]: s for s in data.get("snapshots", [])}
+            except (OSError, ValueError):
+                archives[path] = {}
+        snap = archives[path].get(snap_id)
+        if not snap:
+            return None
+        return {"title": snap.get("title"), "fetched_at": snap.get("fetched_at"),
+                "raw_excerpt": (snap.get("raw_excerpt") or "")[:1200]}
+
+    items = []
+    rows = conn.execute(
+        """SELECT v.*, c.model_name, c.variant, c.category_id, m.name AS manufacturer
+           FROM verification_log v
+           JOIN components c ON c.id = v.component_id
+           JOIN manufacturers m ON m.id = c.manufacturer_id
+           WHERE v.verdict IN ('flag', 'error', 'caution') AND v.rule_id != 'R-ORIGIN'""")
+    for r in rows:
+        det = json.loads(r["detail"])
+        spec_keys = det.get("spec_keys", [])
+        rk = review_key(r["model_name"], r["variant"], r["rule_id"],
+                        spec_keys, det.get("summary", ""))
+        claims = []
+        if spec_keys:
+            q = conn.execute(
+                f"""SELECT sc.value_num, sc.value_text, sc.unit_original,
+                           sc.value_num_original, sc.conditions, sc.extracted_quote,
+                           sd.spec_key, sd.name_ko, sd.unit,
+                           s.tier, s.origin_url, s.title AS source_title,
+                           s.snapshot_uri, vn.name AS vendor
+                    FROM spec_claims sc
+                    JOIN spec_definitions sd ON sd.id = sc.spec_def_id
+                    JOIN sources s ON s.id = sc.source_id
+                    LEFT JOIN vendors vn ON vn.id = s.vendor_id
+                    WHERE sc.component_id=? AND sd.spec_key IN
+                          ({','.join('?' * len(spec_keys))})""",
+                (r["component_id"], *spec_keys))
+            for c in q:
+                claims.append({
+                    "spec_key": c["spec_key"], "name_ko": c["name_ko"],
+                    "value": c["value_num"], "value_text": c["value_text"],
+                    "unit": defs and c["unit"], "value_original": c["value_num_original"],
+                    "unit_original": c["unit_original"],
+                    "conditions": json.loads(c["conditions"] or "{}"),
+                    "quote": c["extracted_quote"], "tier": c["tier"],
+                    "vendor": c["vendor"], "url": c["origin_url"],
+                    "source_title": c["source_title"],
+                    "snapshot": snapshot_excerpt(c["snapshot_uri"]),
+                })
+        items.append({
+            "review_key": rk,
+            "verdict": r["verdict"], "rule_id": r["rule_id"],
+            "summary": det.get("summary"), "detail": det,
+            "component": {"manufacturer": r["manufacturer"], "model": r["model_name"],
+                          "variant": r["variant"], "category": r["category_id"]},
+            "spec_keys": spec_keys, "claims": claims,
+            "decision": reviews.get(rk),
+        })
+
+    severity = {"error": 0, "flag": 1, "caution": 2}
+    items.sort(key=lambda i: (severity[i["verdict"]], i["component"]["model"]))
+    data = {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "stats": {"total": len(items),
+                  "by_verdict": {v: sum(1 for i in items if i["verdict"] == v)
+                                 for v in ("error", "flag", "caution")},
+                  "decided": sum(1 for i in items if i["decision"])},
+        "items": items,
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")

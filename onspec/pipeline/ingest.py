@@ -10,7 +10,7 @@ import json
 import sqlite3
 from pathlib import Path
 
-from db import spec_def_map
+from db import spec_def_map, ROOT
 from normalize import normalize_name, normalize_value
 
 TIER_TRUST = {"S1_manufacturer": 1.0, "S2_vendor": 0.6, "S3_benchmark": 0.9, "S4_certification": 1.0}
@@ -72,7 +72,10 @@ def ingest_snapshots(conn: sqlite3.Connection, snapshots_path: Path) -> dict:
                (tier, origin_url, vendor_id, title, fetched_at, snapshot_uri, content_hash)
                VALUES (?,?,?,?,?,?,?)""",
             (snap["tier"], snap["origin_url"], vendor_id, snap.get("title"),
-             snap["fetched_at"], f"fixtures/snapshots.json#{snap['snapshot_id']}", content_hash),
+             snap["fetched_at"],
+             # 원문 아카이브 실제 경로 보존 — 리뷰 UI가 원문 발췌를 역참조한다
+             f"{snapshots_path.resolve().relative_to(ROOT).as_posix()}#{snap['snapshot_id']}",
+             content_hash),
         )
         source_id = cur.lastrowid or conn.execute(
             "SELECT id FROM sources WHERE origin_url=? AND content_hash=?",

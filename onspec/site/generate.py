@@ -31,6 +31,17 @@ def build() -> Path:
     out.write_text(html, encoding="utf-8")
     print(f"빌드 완료: {out}  ({out.stat().st_size/1024:.0f} KB, "
           f"부품 {data['stats']['components']} · 사양 {data['stats']['spec_rows']})")
+
+    # 리뷰 큐 페이지(§5.5) — review-data.json이 있을 때만
+    review_path = SITE / "review-data.json"
+    if review_path.exists():
+        review = json.loads(review_path.read_text(encoding="utf-8"))
+        review_json = json.dumps(review, ensure_ascii=False).replace("</", "<\\/")
+        rhtml = env.get_template("review.html.j2").render(review_json=review_json)
+        rout = DIST / "review.html"
+        rout.write_text(rhtml, encoding="utf-8")
+        print(f"리뷰 큐 빌드: {rout}  ({rout.stat().st_size/1024:.0f} KB, "
+              f"{review['stats']['total']}건)")
     return out
 
 

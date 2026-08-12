@@ -24,7 +24,7 @@ python3 site/generate.py                   # site/dist/index.html 빌드
 | §4.2 수집 파이프라인 | `pipeline/collect.py`(robots·레이트리밋·변경감지) → `extract.py`(LLM, 근거인용 강제·이중추출) → `ingest.py`(정규화·적재) |
 | §4.3 일일 갱신 | `pipeline/run_daily.py` + `.github/workflows/daily.yml` (KST 03:00 크론) |
 | §5 검증 3단계 | `pipeline/verify.py` — 물리 규칙 14종 + 교차 출처 대조 + 실측 연계(S3 Tyto 가동, 대표값 실측 우선 → A등급) |
-| §5.5 사람 리뷰 | 플래그는 D등급 유지 + Actions 알림. 리뷰 UI는 Phase 1 잔여 과제 |
+| §5.5 사람 리뷰 | `site/review.html` 리뷰 큐 — 판정·근거 인용·원문 스냅샷 한 화면. 결정 JSON을 `reviews/decisions.json`으로 커밋하면 다음 실행에서 등급 반영(오탐 해제/확인 유지) |
 | §6 DB 설계 | 운영 정식 DDL `db/schema.postgres.sql` / 데모 실행용 `db/schema.sqlite.sql` (동일 구조) |
 | §7 사이트 | `site/` — 비교표(등급 칩·조건 툴팁), 필드별 출처 드로어, 방법론 전문 공개 |
 | 방법론 공개(신뢰 구축) | `docs/METHODOLOGY.md` = 사이트 「검증 방법론」 탭 |
@@ -72,6 +72,6 @@ docs/        METHODOLOGY.md (공개 검증 방법론)
 
 1. S1/S2 실커넥터 2~3곳 구현 → 픽스처 모드 졸업, 가격 시계열 축적 시작
 2. Tyto Robotics·커뮤니티 스러스트 스탠드(S3) 연계 → 첫 A등급 발행
-3. 플래그 리뷰 큐 웹 UI(원문 스냅샷·근거·판정 사유 한 화면, 일 30분 목표)
+3. ~~플래그 리뷰 큐 웹 UI~~ → `site/review.html` 구현됨. 잔여: 리뷰 결정 커밋의 웹 완결(현재는 JSON 내려받아 커밋)
 4. PostgreSQL 전환 + Meilisearch 검색
 5. Phase 2 카테고리 착수: EO/IR·데이터링크 — FCC ID(S4) 커넥터가 핵심 검증 수단
